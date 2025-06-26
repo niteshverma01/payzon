@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: 'index.html',
-        product: 'product.html'
+         main: resolve(__dirname, 'index.html'),
+        product: resolve(__dirname, 'product.html'),
       }
     }
   }
