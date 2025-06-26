@@ -10514,7 +10514,7 @@ function Tb({ toggle: t, setToggle: e, navLinkList: n }) {
     return u.jsxs("nav", {
         className: `menu-items-area ${t ? "active" : ""}`,
         children: [u.jsx("ul", {
-            className: "nav-menu-items d-lg-grid d-none gap-4",
+            className: "nav-menu-items d-lg-grid d-none gap-4 mt-100",
             children: n.map(c => {
                 var d;
                 return c.link ? u.jsx("li", {
@@ -10590,14 +10590,10 @@ function Tb({ toggle: t, setToggle: e, navLinkList: n }) {
 }
 const Eb = [{
     id: 1,
-    name: "Home",
-    link: "/"
-}, {
-    id: 2,
     name: "About Us",
     link: "/about-us"
 }, {
-    id: 3,
+    id: 2,
     name: "Services",
     dropdown: [{
         id: 1,
@@ -10609,7 +10605,7 @@ const Eb = [{
         link: "/service-details"
     }]
 }, {
-    id: 4,
+    id: 3,
     name: "Case Studies",
     dropdown: [{
         id: 1,
@@ -10621,19 +10617,7 @@ const Eb = [{
         link: "/case-study-details"
     }]
 }, {
-    id: 5,
-    name: "Blogs",
-    dropdown: [{
-        id: 1,
-        name: "Blogs",
-        link: "/blogs"
-    }, {
-        id: 2,
-        name: "Blog Details",
-        link: "/blog-details"
-    }]
-}, {
-    id: 6,
+    id: 4,
     name: "Team",
     dropdown: [{
         id: 1,
@@ -10645,38 +10629,38 @@ const Eb = [{
         link: "/team-details"
     }]
 }, {
-    id: 7,
+    id: 5,
     name: "FAQs",
     link: "/faqs"
 }, {
-    id: 8,
+    id: 6,
     name: "Contact",
     link: "/contact"
 }];
 function jb() {
     const [t, e] = O.useState(!1)
         , n = [
-         {
-            id: 1,
-            icon: "ph-fill ph-linkedin-logo",
-            link: "https://www.linkedin.com/company/payzonindiabhopal/"
-        },{
-            id: 2,
-            icon: "ph-fill ph-facebook-logo",
-            link: "https://www.facebook.com/PAYZONINDIA/"
-        }, {
-            id: 3,
-            icon: "ph-fill ph-instagram-logo",
-            link: "https://www.instagram.com/thepayzonindia/"
-        }, {
-            id: 4,
-            icon: "ph-fill ph-twitter-logo",
-            link: "https://www.linkedin.com/company/payzonindiabhopal/"
-        }, {
-            id: 4,
-            icon: "ph-fill ph-youtube-logo",
-            link: "https://www.youtube.com/@payzonindiadigitalsolutions"
-        }];
+            {
+                id: 1,
+                icon: "ph-fill ph-linkedin-logo",
+                link: "https://www.linkedin.com/company/payzonindiabhopal/"
+            }, {
+                id: 2,
+                icon: "ph-fill ph-facebook-logo",
+                link: "https://www.facebook.com/PAYZONINDIA/"
+            }, {
+                id: 3,
+                icon: "ph-fill ph-instagram-logo",
+                link: "https://www.instagram.com/thepayzonindia/"
+            }, {
+                id: 4,
+                icon: "ph-fill ph-twitter-logo",
+                link: "https://www.linkedin.com/company/payzonindiabhopal/"
+            }, {
+                id: 4,
+                icon: "ph-fill ph-youtube-logo",
+                link: "https://www.youtube.com/@payzonindiadigitalsolutions"
+            }];
     return u.jsxs("header", {
         className: "header-section",
         "data-lenis-prevent": !0,
@@ -10755,448 +10739,473 @@ function Cb({ }) {
                 e("")
         }
         ;
-  return u.jsxs("div", {
-  style: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    padding: "60px 20px",
-    gap: "60px",
-    flexWrap: "wrap",
-    backgroundColor: "#e7eedf",
-    fontFamily: "sans-serif"
-  },
-  children: [
-    // Left Text Section
-    u.jsxs("div", {
-      style: { maxWidth: "400px" },
-      children: [
-        u.jsx("h4", {
-          style: {
-            fontWeight: "600",
-            color: "#0f172a",
-            fontSize: "0.9rem",
-            letterSpacing: "1px"
-          },
-          children: "WEB HOSTING"
-        }),
-        u.jsx("h2", {
-          style: {
-            fontWeight: "700",
-            fontSize: "2.2rem",
-            marginBottom: "20px",
-            color: "#0f172a"
-          },
-          children: "VPS Server"
-        }),
-        u.jsx("p", {
-          style: { lineHeight: "1.7", color: "#334155" },
-          children:
-            "VPS Server hosting offers a scalable and secure environment for businesses to store and manage their website data. With dedicated resources and fast performance, it’s the ideal solution for websites needing more control and speed."
-        }),
-        u.jsx("p", {
-          style: {
-            marginTop: "20px",
-            lineHeight: "1.7",
-            color: "#334155"
-          },
-          children:
-            "Make your website hosting powerful and reliable. Ensure faster loading, high uptime, and enhanced data security with our VPS hosting plans."
-        })
-      ]
-    }),
+    return u.jsxs("div", {
+        style: {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            padding: "60px 20px",
+            gap: "60px",
+            flexWrap: "wrap",
+            backgroundColor: "#e7eedf",
+            fontFamily: "sans-serif"
+        },
+        children: [
+            // Left Text Section
+            u.jsxs("div", {
+                style: { maxWidth: "400px" },
+                children: [
+                    u.jsx("h4", {
+                        style: {
+                            fontWeight: "600",
+                            color: "#0f172a",
+                            fontSize: "0.9rem",
+                            letterSpacing: "1px"
+                        },
+                        children: "WEB HOSTING"
+                    }),
+                    u.jsx("h2", {
+                        style: {
+                            fontWeight: "700",
+                            fontSize: "2.2rem",
+                            marginBottom: "20px",
+                            color: "#0f172a"
+                        },
+                        children: "VPS Server"
+                    }),
+                    u.jsx("p", {
+                        style: { lineHeight: "1.7", color: "#334155" },
+                        children:
+                            "VPS Server hosting offers a scalable and secure environment for businesses to store and manage their website data. With dedicated resources and fast performance, it’s the ideal solution for websites needing more control and speed."
+                    }),
+                    u.jsx("p", {
+                        style: {
+                            marginTop: "20px",
+                            lineHeight: "1.7",
+                            color: "#334155"
+                        },
+                        children:
+                            "Make your website hosting powerful and reliable. Ensure faster loading, high uptime, and enhanced data security with our VPS hosting plans."
+                    })
+                ]
+            }),
 
-    // First VPS Card
-    u.jsxs("div", {
-      style: {
-        backgroundColor: "#fff",
-        borderRadius: "16px",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-        padding: "30px",
-        width: "280px",
-        textAlign: "left"
-      },
-      children: [
-        u.jsx("img", {
-          src: "/assets/images/server.jpg",
-          alt: "Linux VPS",
-          style: { width: "50px", marginBottom: "20px" }
-        }),
-        u.jsx("h3", {
-          style: {
-            fontSize: "1.2rem",
-            fontWeight: "700",
-            color: "#0f172a",
-            marginBottom: "16px"
-          },
-          children: "VPS 6 vCPU"
-        }),
-        u.jsxs("ul", {
-          style: {
-            listStyle: "none",
-            padding: "0",
-            marginBottom: "20px",
-            color: "#475569",
-            lineHeight: "1.8"
-          },
-          children: [
-            u.jsx("li", { children: "4GB RAM" }),
-            u.jsx("li", { children: "100GB SSD Storage" }),
-            u.jsx("li", { children: "750GB Bandwidth" }),
-            u.jsx("li", { children: "Bandwidth" })
-          ]
-        }),
-        u.jsx("h4", {
-          style: {
-            fontSize: "1rem",
-            fontWeight: "700",
-            color: "#0f172a",
-            marginBottom: "10px"
-          },
-          children: "Rs. 8000/- + tax / Monthly"
-        }),
-        u.jsx("p", {
-          style: { fontSize: "0.85rem", color: "#64748b", marginBottom: "20px" },
-          children: "Includes Linux server license & setup support"
-        }),
-        u.jsx("button", {
-          style: {
-            backgroundColor: "#facc15",
-            border: "none",
-            padding: "10px 20px",
-            fontWeight: "600",
-            borderRadius: "6px",
-            cursor: "pointer"
-          },
-          children: "ADD NOW"
-        })
-      ]
-    }),
+            // First VPS Card
+            u.jsxs("div", {
+                style: {
+                    backgroundColor: "#fff",
+                    borderRadius: "16px",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
+                    padding: "30px",
+                    width: "280px",
+                    textAlign: "left"
+                },
+                children: [
+                    u.jsx("img", {
+                        src: "/assets/images/server.jpg",
+                        alt: "Linux VPS",
+                        style: { width: "50px", marginBottom: "20px" }
+                    }),
+                    u.jsx("h3", {
+                        style: {
+                            fontSize: "1.2rem",
+                            fontWeight: "700",
+                            color: "#0f172a",
+                            marginBottom: "16px"
+                        },
+                        children: "VPS 6 vCPU"
+                    }),
+                    u.jsxs("ul", {
+                        style: {
+                            listStyle: "none",
+                            padding: "0",
+                            marginBottom: "20px",
+                            color: "#475569",
+                            lineHeight: "1.8"
+                        },
+                        children: [
+                            u.jsx("li", { children: "4GB RAM" }),
+                            u.jsx("li", { children: "100GB SSD Storage" }),
+                            u.jsx("li", { children: "750GB Bandwidth" }),
+                            u.jsx("li", { children: "Bandwidth" })
+                        ]
+                    }),
+                    u.jsx("h4", {
+                        style: {
+                            fontSize: "1rem",
+                            fontWeight: "700",
+                            color: "#0f172a",
+                            marginBottom: "10px"
+                        },
+                        children: "Rs. 8000/- + tax / Monthly"
+                    }),
+                    u.jsx("p", {
+                        style: { fontSize: "0.85rem", color: "#64748b", marginBottom: "20px" },
+                        children: "Includes Linux server license & setup support"
+                    }),
+                    u.jsx("button", {
+                        style: {
+                            backgroundColor: "#facc15",
+                            border: "none",
+                            padding: "10px 20px",
+                            fontWeight: "600",
+                            borderRadius: "6px",
+                            cursor: "pointer"
+                        },
+                        children: "ADD NOW"
+                    })
+                ]
+            }),
 
-    // Second VPS Card
-    u.jsxs("div", {
-      style: {
-        backgroundColor: "#fff",
-        borderRadius: "16px",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-        padding: "30px",
-        width: "280px",
-        textAlign: "left"
-      },
-      children: [
-        u.jsx("img", {
-          src: "/assets/images/icon01.png",
-          alt: "Windows VPS",
-          style: { width: "50px", marginBottom: "20px" }
-        }),
-        u.jsx("h3", {
-          style: {
-            fontSize: "1.2rem",
-            fontWeight: "700",
-            color: "#0f172a",
-            marginBottom: "16px"
-          },
-          children: "VPS 6 vCPU"
-        }),
-        u.jsxs("ul", {
-          style: {
-            listStyle: "none",
-            padding: "0",
-            marginBottom: "20px",
-            color: "#475569",
-            lineHeight: "1.8"
-          },
-          children: [
-            u.jsx("li", { children: "8GB RAM" }),
-            u.jsx("li", { children: "100GB SSD Storage" }),
-            u.jsx("li", { children: "750GB Bandwidth" }),
-            u.jsx("li", { children: "Bandwidth" })
-          ]
-        }),
-        u.jsx("h4", {
-          style: {
-            fontSize: "1rem",
-            fontWeight: "700",
-            color: "#0f172a",
-            marginBottom: "10px"
-          },
-          children: "Rs. 10000/- + tax / Monthly"
-        }),
-        u.jsx("p", {
-          style: { fontSize: "0.85rem", color: "#64748b", marginBottom: "20px" },
-          children: "Includes Windows server license & technical support"
-        }),
-        u.jsx("button", {
-          style: {
-            backgroundColor: "#facc15",
-            border: "none",
-            padding: "10px 20px",
-            fontWeight: "600",
-            borderRadius: "6px",
-            cursor: "pointer"
-          },
-          children: "PURCHASE NOW"
-        })
-      ]
-    })
-  ]
-});
+            // Second VPS Card
+            u.jsxs("div", {
+                style: {
+                    backgroundColor: "#fff",
+                    borderRadius: "16px",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
+                    padding: "30px",
+                    width: "280px",
+                    textAlign: "left"
+                },
+                children: [
+                    u.jsx("img", {
+                        src: "/assets/images/icon01.png",
+                        alt: "Windows VPS",
+                        style: { width: "50px", marginBottom: "20px" }
+                    }),
+                    u.jsx("h3", {
+                        style: {
+                            fontSize: "1.2rem",
+                            fontWeight: "700",
+                            color: "#0f172a",
+                            marginBottom: "16px"
+                        },
+                        children: "VPS 6 vCPU"
+                    }),
+                    u.jsxs("ul", {
+                        style: {
+                            listStyle: "none",
+                            padding: "0",
+                            marginBottom: "20px",
+                            color: "#475569",
+                            lineHeight: "1.8"
+                        },
+                        children: [
+                            u.jsx("li", { children: "8GB RAM" }),
+                            u.jsx("li", { children: "100GB SSD Storage" }),
+                            u.jsx("li", { children: "750GB Bandwidth" }),
+                            u.jsx("li", { children: "Bandwidth" })
+                        ]
+                    }),
+                    u.jsx("h4", {
+                        style: {
+                            fontSize: "1rem",
+                            fontWeight: "700",
+                            color: "#0f172a",
+                            marginBottom: "10px"
+                        },
+                        children: "Rs. 10000/- + tax / Monthly"
+                    }),
+                    u.jsx("p", {
+                        style: { fontSize: "0.85rem", color: "#64748b", marginBottom: "20px" },
+                        children: "Includes Windows server license & technical support"
+                    }),
+                    u.jsx("button", {
+                        style: {
+                            backgroundColor: "#facc15",
+                            border: "none",
+                            padding: "10px 20px",
+                            fontWeight: "600",
+                            borderRadius: "6px",
+                            cursor: "pointer"
+                        },
+                        children: "PURCHASE NOW"
+                    })
+                ]
+            })
+        ]
+    });
 
 
 }
 const Nb = "/assets/images/cropped_circle_image.png";
-function kb() {
-    const t = [{
-        id: 1,
-        logo: "ph-fill ph-facebook-logo",
-        link: "https://www.facebook.com/PAYZONINDIA/"
-    }, {
-        id: 2,
-        logo: "ph-fill ph-twitter-logo",
-        link: "https://x.com/PayzonIndia"
-    }, {
-        id: 3,
-        logo: "ph-fill ph-linkedin-logo",
-        link: "https://www.linkedin.com/company/payzonindiabhopal/"
-    }, {
-        id: 4,
-        logo: "ph-fill ph-instagram-logo",
-        link: "https://www.instagram.com/thepayzonindia/"
-    }]
-        , e = [{
-            id: 1,
-            title: "Web Development",
-            link: "/service-details"
-        },
-        {
-            id: 2,
-            title: "Digital Marketingl",
-            link: "/service-details"
-        }, {
-            id: 3,
-            title: "Fintech Solutions",
-            link: "/service-details"
-        },
 
-        {
-            id: 4,
-            title: "Shopping Portal API",
-            link: "/service-details"
-        }, {
-            id: 5,
-            title: "Articles & Blogs",
-            link: "/service-details"
-        },
-        {
-            id: 6,
-            title: "Contact Details",
-            link: "/service-details"
-        }]
-        , n = [{
-            id: 1,
-            title: "REST API Developments",
-            link: "/service-details"
-        }, {
-            id: 2,
-            title: "VPS Server Hostingt",
-            link: "/service-details"
-        }, {
-            id: 3,
-            title: "Portal Developments",
-            link: "/service-details"
-        }, {
-            id: 4,
-            title: "VPS Server Hosting",
-            link: "/service-details"
-        }, {
-            id: 5,
-            title: "Web Security",
-            link: "/service-details"
-        }, {
-            id: 6,
-            title: "Verification API",
-            link: "/services-details"
-        }]
-        , m = [{
-            id: 1,
-            title: "www.payzonindia.com",
-            link: "https://www.payzonindia.com/"
-        }, {
-            id: 2,
-            title: "www.payzonapi.com",
-            link: "https://www.payzonapi.com/"
-        }, {
-            id: 3,
-            title: "www.payzonmarketing.com",
-            link: "https://www.payzonmarketing.com/"
-        }, {
-            id: 4,
-            title: "www.payzonshoppy.com",
-            link: "https://www.payzonshoppy.com/"
-        }, {
-            id: 5,
-            title: "www.payzonitservices.com",
-            link: "https://www.payzonitservices.com/"
-        }, {
-            id: 6,
-            title: "www.sadaivsatya.com",
-            link: "https://www.sadaivsatya.com/"
-        }, {
-            id: 6,
-            title: "www.sadaivyuvafoundation.com",
-            link: "https://www.sadaivyuvafoundation.com/"
-        }]
-        , r = [{
-            id: 1,
-            title: "Address:",
-            text: "Address : B1, Patel Nagar,Raisen road Near HP Petrol Pump, Bhopal (MP) Pin: 462022",
-            link: "#"
-        }, {
-            id: 2,
-            title: "Phone:",
-            text: "91 755 485 9540, +91 7554923296",
-            link: "#"
-        }, {
-            id: 3,
-            title: "Email:",
-            text: "info@payzonindia.com",
-            link: "#"
-        }];
+function kb() {
+    const t = [
+        { id: 1, logo: "ph-fill ph-facebook-logo", link: "https://www.facebook.com/PAYZONINDIA/" },
+        { id: 2, logo: "ph-fill ph-instagram-logo", link: "https://www.instagram.com/thepayzonindia/" },
+        { id: 3, logo: "ph-fill ph-youtube-logo", link: "https://www.youtube.com/" },
+        { id: 4, logo: "ph-fill ph-linkedin-logo", link: "https://www.linkedin.com/company/payzonindiabhopal/" }
+    ],
+        e = [
+            { id: 1, title: "Web Development", link: "/service-details" },
+            { id: 2, title: "Digital Marketing", link: "/service-details" },
+            { id: 3, title: "Fintech Solutions", link: "/service-details" },
+            { id: 4, title: "Shopping Portal API", link: "/service-details" },
+            { id: 5, title: "Articles & Blogs", link: "/service-details" },
+            { id: 6, title: "Contact Details", link: "/service-details" }
+        ],
+        n = [
+            { id: 1, title: "REST API Development", link: "/service-details" },
+            { id: 2, title: "VPS Server Hosting", link: "/service-details" },
+            { id: 3, title: "Portal Development", link: "/service-details" },
+            { id: 4, title: "VPS Server Hosting", link: "/service-details" },
+            { id: 5, title: "Web Security", link: "/service-details" },
+            { id: 6, title: "Verification API", link: "/service-details" }
+        ],
+        m = [
+            { id: 1, title: "www.payzonindia.com", link: "https://www.payzonindia.com/" },
+            { id: 2, title: "www.payzonapi.com", link: "https://www.payzonapi.com/" },
+            { id: 3, title: "www.payzonmarketing.com", link: "https://www.payzonmarketing.com/" },
+            { id: 4, title: "www.payzonshoppy.com", link: "https://www.payzonshoppy.com/" },
+            { id: 5, title: "www.payzonitservices.com", link: "https://www.payzonitservices.com/" },
+            { id: 6, title: "www.sadaivsatya.com", link: "https://www.sadaivsatya.com/" },
+            { id: 7, title: "www.sadaivyuvafoundation.com", link: "https://www.sadaivyuvafoundation.com/" }
+        ],
+        r = [
+            { id: 1, title: "Address:", text: "B1, Patel Nagar, Raisen road Near HP Petrol Pump, Bhopal (MP) Pin: 462022", link: "#" },
+            { id: 2, title: "Email:", text: "info@payzonindia.com", link: "#" },
+            { id: 3, title: "Phone:", text: "+91 755 485 9540, +91 7554923296", link: "#" }
+        ],
+        L = [
+            { id: 1, title: "Sadaiv Satya", text: "", link: "https://www.dnb.co.in/", image: "/assets/images/jkk.png" },
+            { id: 2, title: "Sadaiv Yuva", text: "", link: "https://www.sadaivsatya.com/", image: "/assets/images/Sadaiv MEDIA 1.png" },
+            { id: 3, title: "Dun & Bradstreet", text: "", link: "https://www.dnb.com/", image: "assets/images/inffablesparklogo (1).png" },
+            { id: 4, title: "Ineffable Spark", text: "", link: "https://smarttaxidea.com/", image: "/assets/images/SMART TAX !DEA.png" },
+            { id: 5, title: "Ineffable Spark", text: "", link: "https://www.sadaivyuvafoundation.com/", image: "/assets/images/sadaivsatyalogo.jpeg" }
+        ];
+
     return u.jsxs(u.Fragment, {
-        children: [u.jsx("footer", {
-            className: "section-blur footer-section section-left-margin  bg-n900",
-            children: u.jsx("div", {
-                className: " px-4xl-14 px-3xl-12 px-xxl-10",
+        children: [
+            u.jsx("footer", {
+                className: "section-blur footer-section section-left-margin bg-n900",
                 children: u.jsx("div", {
-                    className: " justify-content-center",
-                    children: u.jsxs("div", {
-                        className: "col-3xl-11",
-                        children: [u.jsx(Cb, {}), u.jsxs("div", {
-                            className: "row g-6 pt-100 pb-100",
-                            children: [u.jsxs("div", {
-                                className: "col-lg-4 col-sm-6",
-                                children: [u.jsx("div", {
-                                    className: "footer-logo mb-4",
-                                    children: u.jsx("img", {
-                                        className: "w-100",
-                                        src: Nb,
-                                        alt: "logo"
-                                    })
-                                }), u.jsx("p", {
-                                    className: "text-n0 mb-lg-8 mb-6 me-xxl-10 me-md-6",
-                                    children: "Explore our diverse range of products and services designed to enhance your everyday living."
-                                }), u.jsx("ul", {
-                                    className: "social-items d-flex gap-3",
-                                    children: t.map(({ logo: i, link: s }) => u.jsx("li", {
-                                        children: u.jsx(oe, {
-                                            to: s,
-                                            className: "icon text-xl",
-                                            children: u.jsx("i", {
-                                                className: `${i}`
+                    className: "px-4xl-14 px-3xl-12",
+                    children: u.jsx("div", {
+                        className: "justify-content-center",
+                        children: u.jsxs("div", {
+                            className: "col-3xl-11",
+                            children: [
+                                u.jsx(Cb, {}),
+                                u.jsxs("div", {
+                                    className: "px-xxl-10 row g-6 pt-100 pb-4 pl-4",
+                                    children: [
+                                        // Left columns: logo + useful, trending, versatility menus
+                                        u.jsxs("div", {
+                                            className: "col-lg-9 col-sm-12",
+                                            children: [
+                                                u.jsxs("div", {
+                                                    className: "row g-6",
+                                                    children: [
+                                                        u.jsx("div", {
+                                                            className: "col-lg-3 col-sm-6",
+                                                            children: [
+                                                                u.jsx("div", {
+                                                                    className: "footer-logo mb-4",
+                                                                    children: u.jsx("img", {
+                                                                        className: "w-100",
+                                                                        src: Nb,
+                                                                        alt: "logo"
+                                                                    })
+                                                                }),
+                                                                u.jsx("ul", {
+                                                                    className: "footer-menu-items d-grid gap-4",
+                                                                    children: r.map(({ id: i, title: s, text: l, link: o }) =>
+                                                                        u.jsx("li", {
+                                                                            children: u.jsxs(oe, {
+                                                                                to: o,
+                                                                                className: "text-n0",
+                                                                                children: [
+                                                                                    u.jsx("span", {
+                                                                                        className: "fw-bold",
+                                                                                        children: s
+                                                                                    }),
+                                                                                    " ",
+                                                                                    l
+                                                                                ]
+                                                                            })
+                                                                        }, i)
+                                                                    )
+                                                                }),
+                                                                u.jsx("ul", {
+                                                                    className: "social-items d-flex gap-3 mt-4",
+                                                                    children: t.map(({ logo: i, link: s }) =>
+                                                                        u.jsx("li", {
+                                                                            children: u.jsx(oe, {
+                                                                                to: s,
+                                                                                className: "icon text-xl",
+                                                                                children: u.jsx("i", {
+                                                                                    className: i
+                                                                                })
+                                                                            })
+                                                                        }, i)
+                                                                    )
+                                                                })
+                                                            ]
+                                                        }),
+                                                        u.jsx("div", {
+                                                            className: "col-lg-3 col-sm-6",
+                                                            children: u.jsxs("div", {
+                                                                className: "footer-menu",
+                                                                children: [
+                                                                    u.jsx("span", {
+                                                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
+                                                                        children: "USEFUL MENU"
+                                                                    }),
+                                                                    u.jsx("ul", {
+                                                                        className: "footer-menu-items d-grid gap-4",
+                                                                        children: e.map(({ id: i, title: s, link: l }) =>
+                                                                            u.jsx("li", {
+                                                                                children: u.jsx(oe, {
+                                                                                    to: l,
+                                                                                    className: "text-n0",
+                                                                                    children: s
+                                                                                })
+                                                                            }, i)
+                                                                        )
+                                                                    })
+                                                                ]
+                                                            })
+                                                        }),
+                                                        u.jsx("div", {
+                                                            className: "col-lg-3 col-sm-6",
+                                                            children: u.jsxs("div", {
+                                                                className: "footer-menu",
+                                                                children: [
+                                                                    u.jsx("span", {
+                                                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
+                                                                        children: "TRENDING SERVICES"
+                                                                    }),
+                                                                    u.jsx("ul", {
+                                                                        className: "footer-menu-items d-grid gap-4",
+                                                                        children: n.map(({ id: i, title: s, link: l }) =>
+                                                                            u.jsx("li", {
+                                                                                children: u.jsx(oe, {
+                                                                                    to: l,
+                                                                                    className: "text-n0",
+                                                                                    children: s
+                                                                                })
+                                                                            }, i)
+                                                                        )
+                                                                    })
+                                                                ]
+                                                            })
+                                                        }),
+                                                        u.jsx("div", {
+                                                            className: "col-lg-3 col-sm-6",
+                                                            children: u.jsxs("div", {
+                                                                className: "footer-menu",
+                                                                children: [
+                                                                    u.jsx("span", {
+                                                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
+                                                                        children: "OUR ONLINE VERSATILITY"
+                                                                    }),
+                                                                    u.jsx("ul", {
+                                                                        className: "footer-menu-items d-grid gap-4",
+                                                                        children: m.map(({ id: i, title: s, link: l }) =>
+                                                                            u.jsx("li", {
+                                                                                children: u.jsx(oe, {
+                                                                                    to: l,
+                                                                                    className: "text-n0",
+                                                                                    children: s
+                                                                                })
+                                                                            }, i)
+                                                                        )
+                                                                    })
+                                                                ]
+                                                            })
+                                                        })
+                                                    ]
+                                                }),
+                                            ]
+                                        }),
+
+                                        u.jsx("div", {
+                                            className: "col-12 mt-6",
+                                            children: u.jsx("div", {
+                                                className: "footer-menu d-flex align-items-center flex-wrap gap-4", // horizontal line + spacing
+                                                children: [
+                                                    u.jsx("span", {
+                                                        className: "text-2xl text-n0 fw-extra-bold d-inline-block",
+                                                        style: { minWidth: "180px" }, // adjust width as needed
+                                                        children: [
+                                                            "OUR BUSINESS",
+                                                            u.jsx("br", {}),
+                                                            "COLLABORATION"
+                                                        ]
+                                                    }),
+                                                    u.jsx("ul", {
+                                                        className: "footer-menu-items d-flex flex-wrap gap-4 align-items-center mb-0",
+                                                        style: { listStyle: "none", padding: 0, margin: 0 },
+                                                        children: L.map(({ id: i, title: s, link: o, image: img }) => u.jsx("li", {
+                                                            className: "d-inline-block",
+                                                            children: u.jsx(oe, {
+                                                                to: o,
+                                                                className: "text-n1",
+                                                                children: u.jsx("img", {
+                                                                    src: img,
+                                                                    alt: s,
+                                                                    className: "collaboration-logo",
+                                                                    style: {
+                                                                        height: "120px",
+                                                                        width: "auto",
+                                                                        objectFit: "contain"
+                                                                    }
+                                                                })
+                                                            })
+                                                        }, i))
+                                                    })
+                                                ]
                                             })
                                         })
-                                    }, i))
-                                })]
-                            }), u.jsx("div", {
-                                className: "col-lg-2 col-sm-6",
-                                children: u.jsxs("div", {
-                                    className: "footer-menu",
-                                    children: [u.jsx("span", {
-                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                        children: "USEFUL MENU"
-                                    }), u.jsx("ul", {
-                                        className: "footer-menu-items d-grid gap-4",
-                                        children: e.map(({ id: i, title: s, link: l }) => u.jsx("li", {
-                                            children: u.jsx(oe, {
-                                                to: l,
-                                                className: "text-n0",
-                                                children: s
-                                            })
-                                        }, i))
-                                    })]
+
+
+                                    ]
                                 })
-                            }), u.jsx("div", {
-                                className: "col-lg-3 col-sm-6",
-                                children: u.jsxs("div", {
-                                    className: "footer-menu",
-                                    children: [u.jsx("span", {
-                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                        children: "TRENDING SERVICES"
-                                    }), u.jsx("ul", {
-                                        className: "footer-menu-items d-grid gap-4",
-                                        children: n.map(({ id: i, title: s, link: l }) => u.jsx("li", {
-                                            children: u.jsx(oe, {
-                                                to: l,
-                                                className: "text-n0",
-                                                children: s
-                                            })
-                                        }, i))
-                                    })]
-                                })
-                            }), u.jsx("div", {
-                                className: "col-lg-3 col-sm-6",
-                                children: u.jsxs("div", {
-                                    className: "footer-menu",
-                                    children: [u.jsx("span", {
-                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                        children: "OUR ONLINE VERSATILITY"
-                                    }), u.jsx("ul", {
-                                        className: "footer-menu-items d-grid gap-4",
-                                        children: m.map(({ id: i, title: s, link: l }) => u.jsx("li", {
-                                            children: u.jsx(oe, {
-                                                to: l,
-                                                className: "text-n0",
-                                                children: s
-                                            })
-                                        }, i))
-                                    })]
-                                })
-                            }), u.jsx("div", {
-                                className: "col-lg-3 col-sm-6",
-                                children: u.jsxs("div", {
-                                    className: "footer-menu",
-                                    children: [u.jsx("span", {
-                                        className: "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                        children: "Address"
-                                    }), u.jsx("ul", {
-                                        className: "footer-menu-items d-grid gap-4",
-                                        children: r.map(({ id: i, title: s, text: l, link: o }) => u.jsx("li", {
-                                            children: u.jsxs(oe, {
-                                                to: `${o}`,
-                                                className: "text-n0",
-                                                children: [u.jsxs("span", {
-                                                    className: "fw-bold",
-                                                    children: [" ", s, " "]
-                                                }), l]
-                                            })
-                                        }, i))
-                                    })]
-                                })
-                            })]
-                        })]
+                            ]
+                        })
                     })
                 })
+            }),
+            u.jsx("div", {
+                className: "py-lg-6 py-4 text-center",
+                children: u.jsxs("p", {
+                    className: "text-n900",
+                    children: [
+                        "Copyright © ",
+                        u.jsx("span", { children: new Date().getFullYear() }),
+                        " PAYZONINDIA PVT LTD. All Rights Reserved."
+                    ]
+                })
+            }),
+            u.jsx("div", {
+                className: "py-lg-2 py-1 text-center",
+                children: u.jsxs("p", {
+                    className: "text-n900",
+                    children: [
+                        u.jsx(oe, { to: "/privacy-policy", children: "Privacy Policy" }),
+                        " | ",
+                        u.jsx(oe, { to: "/refund-policy", children: "Refund Policy" }),
+                        " | ",
+                        u.jsx(oe, { to: "/cancellation-policy", children: "Cancellation Policy" })
+                    ]
+                })
             })
-        }), u.jsx("div", {
-            className: "py-lg-6 py-4 text-center",
-            children: u.jsxs("p", {
-                className: "text-n900",
-                children: ["Copyright © ", u.jsx("span", {
-                    children: new Date().getFullYear()
-                }), " . All Rights Reserved."]
-            })
-        })]
-    })
+        ]
+    });
+    ;
 }
+
 function jr(t) {
     if (t === void 0)
         throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return t
+    return t;
 }
+
 function Sx(t, e) {
     t.prototype = Object.create(e.prototype),
         t.prototype.constructor = t,
-        t.__proto__ = e
+        t.__proto__ = e;
 }
 /*!
  * GSAP 3.12.5
@@ -20996,7 +21005,7 @@ function y1({ sliderText: t }) {
             }
         },
         modules: [jh],
-        className: "text-slider py-lg-10 py-md-8 py-6 bg-primary-300",
+        className: "text-slider py-lg-10 py-md-8 py-6  slider",
         children: t.map(({ id: e, text: n, icon: r }) => u.jsxs(_c, {
             className: "d-flex align-items-center gap-4",
             children: [u.jsx("span", {
@@ -21068,7 +21077,7 @@ function yC() {
         })
     }];
     return u.jsxs("section", {
-        className: "home-hero-section section-left-margin overflow-visible",
+        className: "home-hero-section section-left-margin overflow-visible ",
         children: [u.jsx("div", {
             className: "container-fluid px-0",
             children: u.jsxs("div", {
@@ -21090,8 +21099,8 @@ function yC() {
                         children: u.jsxs("div", {
                             className: "col-xl-9",
                             children: [u.jsxs("span", {
-                                className: "d-block main-title text-secondary-50 fw-semibold text-decoration-underline mb-4",
-                                children: [" ", "Payzon IT Services Pvt. Ttd."]
+                                className: "d-block text-secondary-50 fw-semibold text-decoration-underline mb-4 main-title",
+                                children: [" ", "Payzon IT Pvt. Ltd. "]
                             }), u.jsxs(W, {
                                 className: "display-two text-n0 mb-lg-8 mb-6",
                                 splitType: "chars",
@@ -21099,13 +21108,12 @@ function yC() {
                                 staggerDelay: .03,
                                 children: [u.jsx("span", {
                                     className: "d-block",
-                                    children: "Empowering Your"
-                                }), u.jsx("span", {
-
-                                    children: "Business with Smart"
+                                    children: "We Provided"
                                 }), u.jsx("span", {
                                     className: "bg-primary-300 text-n900 px-4",
-                                    children: " IT Solutions"
+                                    children: "IT Solutions"
+                                }), u.jsx("span", {
+                                    children: " Service"
                                 })]
                             }), u.jsx(W, {
                                 className: "text-n0 mb-lg-10 mb-8",
@@ -21113,19 +21121,12 @@ function yC() {
                                 child: "word",
                                 staggerDelay: .01,
                                 children: u.jsx("p", {
-                                    children: u.jsxs(u.Fragment, {
-                                        children: [
-                                            "We are a top Software Development Company in India, offering secure,",
-                                            u.jsx("br", {}),
-                                            "innovative, and growth-focused IT solutions for startups and enterprises."
-                                        ]
-                                    })
+                                    children: "We are a top-rated Software Development Company in India, delivering secure, scalable, and innovative IT solutions for startups, enterprises, and growing businesses worldwide."
                                 })
-
                             }), u.jsxs("div", {
                                 className: "hero-btn-wrapper d-flex flex-wrap gap-4",
                                 children: [u.jsxs(oe, {
-                                    to: "/contact",
+                                    to: "#",
                                     className: "primary-btn",
                                     children: [u.jsx("span", {
                                         className: "text front",
@@ -21135,7 +21136,7 @@ function yC() {
                                         children: "Send A Request"
                                     })]
                                 }), u.jsxs(oe, {
-                                    to: "/about-us",
+                                    to: "#",
                                     className: "outline-btn text-base",
                                     children: [u.jsx("span", {
                                         children: "Learn More"
@@ -21261,7 +21262,7 @@ function SC() {
     const t = {
         subHeading: "Our Services",
         heading: "Web Development",
-        description: "From cybersecurity to cloud computing, we offer comprehensive IT solutions tailored to your business needs. Empower your organization"
+        description: "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications"
     };
     return u.jsx("section", {
         className: "service-section section-blur section-left-margin pt-120 pb-120",
@@ -21568,11 +21569,11 @@ function EC() {
                         children: [u.jsx("div", {
                             className: "col-md-4 col-sm-6",
                             children: u.jsx(Sd, {
-                                percentage: 82,
+                                percentage: 92,
                                 symbol: "+",
                                 title: "Active User",
-                                subtitle: "Complete",
-                                description: "We recently done our 8k+ project"
+                                subtitle: "Proven Impact",
+                                description: "Successfully delivered 8K+ projects with 82+ active users"
                             })
                         }), u.jsx("div", {
                             className: "col-md-4 col-sm-6",
@@ -21580,8 +21581,8 @@ function EC() {
                                 percentage: 27,
                                 symbol: "+",
                                 title: "Active User",
-                                subtitle: "Year Of Experience",
-                                description: "We have been providing service"
+                                subtitle: "Trusted Delivery",
+                                description: "Completed high-impact software solutions across industries"
                             })
                         }), u.jsx("div", {
                             className: "col-md-4 col-sm-6",
@@ -21589,8 +21590,8 @@ function EC() {
                                 percentage: 90,
                                 symbol: "+",
                                 title: "Active User",
-                                subtitle: "Team",
-                                description: "Remote IT Providers access to care"
+                                subtitle: "Project Power",
+                                description: "82+ ongoing users, 8K+ milestones achieved"
                             })
                         })]
                     })]
@@ -21652,7 +21653,7 @@ function NC({ swiperData: t, swiperBtn: e }) {
 }
 function Nh() {
     const t = {
-        subHeading: "Testimonial",
+
         heading: "Verification Services",
         description: "We got our business website developed by Payzon India – Software Development Company in India, and the result was excellent! The site is fast, SEO-friendly, and mobile responsive. Their team is very professional. Highly recommended for web development services in Bhopal!"
     }
@@ -21790,16 +21791,16 @@ function b1({ name: t, position: e, image: n }) {
         })
     });
 }
-const kC = "/assets/images/fintech x1.png"
-    , AC = "/assets/images/img2.png"
-    , PC = "/assets/images/Recharge.png"
-    , OC = "/assets/images/img2.png"
-    , IC = "/assets/images/img2.png"
-    , LC = "/assets/images/img2.png"
+const kC = "/assets/images/fintech.jpg"
+    , AC = "/assets/images/shoping.jpeg"
+    , PC = "/assets/images/H4.webp"
+    , OC = "/assets/images/travel.jpg"
+    , IC = "/assets/images/gaming.jpeg"
+    , LC = "/assets/images/grocery.jpeg"
     , T1 = [{
         id: 1,
         name: "Fintech Portal Development",
-        position: "Get secure, scalable fintech portal solutions in Bhopal. Payzon builds custom platforms for finance, lending & digital payments. Trusted fintech development company in Bhopal.",
+        position: "Payzon offers secure, scalable fintech portal solutions in Bhopal. We specialize in building custom platforms for finance, lending, and digital payments. Trusted by clients, we deliver innovative, compliant, and reliable fintech development services in Bhopal.",
         image: kC,
 
     }, {
@@ -21828,7 +21829,7 @@ const kC = "/assets/images/fintech x1.png"
 
     }, {
         id: 6,
-        name: " Grocery/Mart Portal Development",
+        name: " Grocery Portal Development",
         position: "Build your online grocery store with Payzon—trusted grocery/mart portal development company in Bhopal. Feature-rich, responsive, and designed for local market success.",
         image: LC,
 
@@ -21927,9 +21928,10 @@ const j1 = ({ children: t }) => u.jsx("div", {
                 children: t
             })
     }
-    , N1 = "/assets/images/fintech x1.png"
-    , k1 = "/assets/images/img2.png"
-    , A1 = "/assets/images/Recharge.png"
+    , N1 = "/assets/images/ppc.jpg"
+    , k1 = "/assets/images/seo.avif"
+    , A1 = "/assets/images/ad-campaign.jpg"
+
     , MC = [{
         number: "01",
         title: "Paid AD Campaign",
@@ -21962,7 +21964,7 @@ const j1 = ({ children: t }) => u.jsx("div", {
         number: "04",
         title: "Bulk Email/SMS",
         description: "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability. ",
-        imageSrc: N1,
+        imageSrc: "/assets/images/sms.png",
         bgColor: "bg-gradient-to-r from-purple-500 to-purple-600",
         textColor: "text-n0",
         link: "/case-study-details",
@@ -21972,7 +21974,7 @@ const j1 = ({ children: t }) => u.jsx("div", {
         number: "05",
         title: "Meta Verified Whatsapps ",
         description: "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
-        imageSrc: N1,
+        imageSrc: "/assets/images/meta.avif",
         bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
         textColor: "text-n0",
         link: "/case-study-details",
@@ -22060,32 +22062,41 @@ function O1({ spaceTop: t, spaceBottom: e }) {
 const I1 = [{
     id: 1,
     question: "2FA Authentication",
-    answer: "We offer complete software services including web and app development, API software, Fintech, blockchain, Web hosting, Marketing And Sales Funnel, Landing Website  and secure portal solutions—tailored to your business needs."
+    answer: " Secure every login with Two-Factor Authentication and prevent unauthorized access with industry-standard multi-layered protection."
 }, {
     id: 2,
-    question: "Website",
-    answer: "Our solutions are a blend of creativity, security, and business analysis. We deliver results-driven services all under one roof—trusted by top businesses in Bhopal."
+    question: "Website Security",
+    answer: " Protect your website from malware, intrusion attempts, and vulnerabilities with real-time monitoring and firewall defenses."
 }, {
     id: 3,
-    question: "Database",
-    answer: "We use robust encryption, secure hosting, and strict compliance practices to protect your data at every stage of development and deployment."
+    question: "Database Security",
+    answer: " Keep your data safe with encryption, access controls, and frequent audits for leak-proof database management."
 }, {
     id: 4,
-    question: "Network",
-    answer: "Feel free to reach out! Our expert team is always ready to answer your questions and provide personalized guidance based on your business goals. For More Email Us Info@payzonindia.com "
+    question: "Network Security",
+    answer: " Shield your network infrastructure from external threats, unauthorized traffic, and cyberattacks with expert-driven protection systems."
 }, {
     id: 5,
-    question: "COde Audit",
-    answer: "Yes, we offer reliable post-development support and maintenance, ensuring your website, app, or software runs smoothly with timely updates, security patches, and expert assistance."
+    question: "Code Audit",
+    answer: " Get your codebase professionally reviewed to eliminate bugs, security loopholes, and performance issues before deployment."
 }, {
     id: 6,
     question: "DDOS Protection",
-    answer: "We follow a transparent refund policy. If a project is cancelled before development begins, a partial refund is applicable. Once development starts, refunds are based on the project stage and resources used."
+    answer: " Prevent downtime and traffic overload with enterprise-level DDoS mitigation solutions for stable and secure online operations."
 }];
+
+
+
+
+// for FAQ
+
+
+
+
 function L1() {
     const t = {
-        heading: "Security & Auditing",
-        description: "Find answers to common queries about our IT solutions, services, and processes. We're here to provide clarity and address any concerns you may have."
+        heading: "Advanced Security and Auditing Solutions",
+        description: "Explore insights into our security practices and auditing protocols. We’re committed to transparency, ensuring your data and operations remain protected and compliant."
     };
     return u.jsx("section", {
         className: "section-blur faqs-section section-left-margin pt-120 pb-120 bg-primary-75",
@@ -22137,104 +22148,90 @@ const DC = "/assets/images/blog-1-vPCzt-h7.png"
     , M1 = [{
         id: 1,
         imageSrc: DC,
-        title: "Fintech Portal",
-        shortDesc: "Learn about the importance of network infrastructure optimization for business operations, including tips for improving network performance, scalability, and security.",
+        title: " Voice of Young India",
+        midTitle: " Empowering Youth with Honest Journalism & Digital Innovation",
+        shortDesc: " Sadaiv Yuva is a dynamic youth-centric news platform developed in collaboration with Payzon India Private Limited. It delivers fast, reliable, and engaging content focused on youth voices, social trends, education, career, and startups—making it the go-to digital destination for young minds in India.",
 
     }, {
         id: 2,
         imageSrc: RC,
-        title: "Shopping Portal",
-        shortDesc: "Discover why data backup and disaster recovery planning are essential for businesses of all sizes, along with best practices for implementing effective backup strategies.",
-    }, {
-        id: 3,
-        imageSrc: zC,
-        title: "Recharge Portal",
-        shortDesc: "Learn about the importance of network infrastructure optimization for business operations, including tips for improving network performance, scalability, and security.",
-
-    }, {
-        id: 4,
-        imageSrc: FC,
-        title: "Travel Portal",
-        shortDesc: "Learn the fundamental concepts of AI and ML, including algorithms, neural networks, and applications in various industries. Explore the potential of these.",
-
-    }, {
-        id: 5,
-        imageSrc: BC,
-        title: "Gaming Portal",
-        shortDesc: "In the remote work era, cybersecurity threats are on the rise. Learn how to protect your organization with best practices and proactive measures against cyber threats.",
-
-    }, {
-        id: 6,
-        imageSrc: VC,
-        title: "Grocery/Mart Portal",
-        shortDesc: "Discover how augmented reality (AR) is revolutionizing business applications, from enhancing customer experiences to improving employee training.",
-
-    },
-    {
-        id: 7,
-        imageSrc: VC,
-        title: "E-Kyc Portal",
-        shortDesc: "Discover how augmented reality (AR) is revolutionizing business applications, from enhancing customer experiences to improving employee training.",
-
-    },
-    {
-        id: 8,
-        imageSrc: VC,
-        title: "Web Hosting",
-        shortDesc: "Discover how augmented reality (AR) is revolutionizing business applications, from enhancing customer experiences to improving employee training.",
-
+        title: "News & Media Services",
+        midTitle: "Your Trusted Source for Real & Responsible Journalism",
+        shortDesc: " Sadaiv Satya, powered by Payzon India, is a responsible and unbiased digital news portal committed to truth-first reporting. With a clean user interface, secure backend, and high-speed performance, it brings authentic news to readers across Bhopal and India with integrity and digital precision.",
     }];
-    
-function D1({ imageSrc: t, title: e, shortDesc: n }) {
+
+function D1({ imageSrc: t, title: e, midTitle: b, shortDesc: n }) {
     return u.jsxs("div", {
         className: "blog-card p-xl-10 p-lg-8 p-sm-6 p-4 border n900-border position-relative",
-        children: [u.jsx("div", {
-            className: "blog-card-img mb-lg-10 mb-md-8 mb-6",
-            children: u.jsx(ia, {
-                direction: "left",
-                children: u.jsx("img", {
-                    className: "w-100 h-100",
-                    src: t,
-                    alt: "blog image"
-                })
-            })
-        }), u.jsxs("div", {
-            className: "blog-card-content",
-            children: [u.jsxs("div", {
-                className: "d-flex flex-wrap align-items-center gap-lg-5 gap-3 mb-lg-8 mb-6",
-                children: [u.jsxs("div", {
-                    className: "d-flex align-items-center gap-2",
-                    children: [u.jsx("span", {
-                        className: "text-2xl",
-                    })]
-                })]
-            }), u.jsx(oe, {
-                to: "/blog-details",
-                children: u.jsx(W, {
-                    className: "fw-extra-bold mb-4",
-                    splitType: "lines",
-                    child: "line",
-                    staggerDelay: .01,
-                    children: u.jsx("h3", {
-                        children: e
+        children: [
+            u.jsx("div", {
+                className: "blog-card-img mb-lg-10 mb-md-8 mb-6",
+                children: u.jsx(ia, {
+                    direction: "left",
+                    children: u.jsx("img", {
+                        className: "w-100 h-100",
+                        src: t,
+                        alt: "blog image"
                     })
                 })
-            }), u.jsx(W, {
-                className: "mb-lg-8 mb-6",
-                splitType: "words",
-                child: "word",
-                staggerDelay: .01,
-                children: u.jsx("p", {
-                    children: n
-                })
-            }), u.jsx(oe, {
-                to: "/blog-details",
-                className: "text-2xl text-decoration-underline text-secondary-50",
-                children: "Read More"
-            })]
-        })]
-    })
+            }),
+            u.jsxs("div", {
+                className: "blog-card-content",
+                children: [
+                    u.jsxs("div", {
+                        className: "d-flex flex-wrap align-items-center gap-lg-5 gap-3 mb-lg-8 mb-6",
+                        children: [
+                            u.jsxs("div", {
+                                className: "d-flex align-items-center gap-2",
+                                children: [
+                                    u.jsx("span", {
+                                        className: "text-2xl"
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    u.jsx(oe, {
+                        to: "/blog-details",
+                        children: u.jsx(W, {
+                            className: "fw-extra-bold mb-4",
+                            splitType: "lines",
+                            child: "line",
+                            staggerDelay: 0.01,
+                            children: u.jsx("h3", {
+                                children: e
+                            })
+                        })
+                    }),
+                    u.jsx(W, {
+                        className: "mb-lg-8 mb-6 fw-semibold",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                            children: b
+                        })
+                    }),
+                    u.jsx(W, {
+                        className: "mb-lg-8 mb-6",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                            children: n
+                        })
+                    }),
+                    u.jsx(oe, {
+                        to: "/blog-details",
+                        className: "text-2xl text-decoration-underline text-secondary-50",
+                        children: "Read More"
+                    })
+                ]
+            })
+        ]
+    });
 }
+
 function WC() {
     const t = {
         subHeading: "WEB HOSTING",
@@ -22288,7 +22285,11 @@ const Ug = "/assets/images/logoc1.png"
     , Gg = "/assets/images/logoc2.png"
     , Yg = "/assets/images/logoc3.png"
     , Xg = "/assets/images/logoc6.png"
-    , Qg = "/assets/images/logoc5.png";
+    , Qg = "/assets/images/logoc5.png"
+    , Qg_img = "/assets/images/SMART TAX !DEA.png"
+    , Xg_img = "/assets/images/logo.png"
+    , Yg_img = "/assets/images/I WAY SHOPPE LOGO.png"
+    , Gg_img = "/assets/images/I WAY TOUR & TRAVEL LOGO.png";
 function HC({ img: t }) {
     return u.jsx(Sc, {
         slidesPerView: "auto",
@@ -22324,7 +22325,7 @@ function HC({ img: t }) {
     })
 }
 function R1() {
-    const t = [Ug, Gg, Yg, Xg, Qg, Ug, Gg, Yg, Xg, Qg];
+    const t = [Ug, Gg, Yg, Xg, Qg, Ug, Gg_img, Yg_img, Xg_img, Qg_img];
     return u.jsx("section", {
         className: "trusted-by-section  pt-120 pb-120 section-left-margin",
         children: u.jsx("div", {
@@ -22422,7 +22423,7 @@ function XC() {
     const t = {
         subHeading: "Core Values",
         heading: "That's the value we provide to every customer",
-        description: "From cybersecurity to cloud computing, we offer comprehensive IT solutions tailored to your business needs. Empower your organization"
+        description: "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications"
     };
     return u.jsx("section", {
         className: "core-value-section section-blur section-left-margin pt-120 pb-120 bg-primary-75",
@@ -22445,7 +22446,74 @@ function XC() {
                         children: YC.map(e => u.jsx(GC, {
                             ...e
                         }, e.id))
-                    })]
+                    }), u.jsxs("div", {
+                        className: "team-section pt-120 team-bg",
+                        children: [
+                            u.jsx("h2", {
+                                className: "display-three mb-14 text-center fw-bold",
+                                children: "Meet Our Creative Team"
+                            }),
+                            u.jsx("div", {
+                                className: "row g-6 justify-content-center",
+                                children: [
+                                    {
+                                        img: "./assets/images/user-3-BR0pf4AF.png",
+                                        name: "Anjali Sharma",
+                                        role: "UI/UX Designer",
+                                        desc: "Crafts intuitive and elegant designs that enhance digital experiences.",
+                                        exp: "5+ years of design expertise"
+                                    },
+                                    {
+                                        img: "./assets/images/user-4-DPb7cPfr.png",
+                                        name: "Rohit Verma",
+                                        role: "Full Stack Developer",
+                                        desc: "Builds robust web applications with seamless frontend-backend integration.",
+                                        exp: "6+ years of development experience"
+                                    },
+                                    {
+                                        img: "./assets/images/user-1-DUiwW2H-.png",
+                                        name: "Neha Patel",
+                                        role: "Product Manager",
+                                        desc: "Aligns product vision with user needs and business goals.",
+                                        exp: "7+ years in product strategy"
+                                    }
+                                ].map((member, index) =>
+                                    u.jsx("div", {
+                                        className: "col-xl-4 col-md-6",
+                                        children: u.jsx("div", {
+                                            className: "team-card text-center p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 h-100 d-flex flex-column justify-content-between",
+                                            children: u.jsxs(u.Fragment, {
+                                                children: [
+                                                    u.jsx("img", {
+                                                        className: "rounded-full w-28 h-28 mx-auto mb-5 object-cover border-4 border-secondary-50",
+                                                        src: member.img,
+                                                        alt: `Photo of ${member.name}`
+                                                    }),
+                                                    u.jsx("h4", {
+                                                        className: "text-xl fw-bold text-n900 mb-1",
+                                                        children: member.name
+                                                    }),
+                                                    u.jsx("p", {
+                                                        className: "text-sm text-secondary-50 mb-3",
+                                                        children: member.role
+                                                    }),
+                                                    u.jsx("p", {
+                                                        className: "text-sm text-gray-600 mb-3 px-2",
+                                                        children: member.desc
+                                                    }),
+                                                    u.jsx("span", {
+                                                        className: "text-xs text-gray-500 italic",
+                                                        children: member.exp
+                                                    })
+                                                ]
+                                            })
+                                        })
+                                    }, index)
+                                )
+                            })
+                        ]
+                    })
+                    ]
                 })
             })
         })
@@ -23047,95 +23115,102 @@ function _d({ start: t, end: e, decimals: n, separator: r }) {
 function mN() {
     return u.jsxs("section", {
         className: "about-hero-section section-left-margin pt-120 pb-120 overflow-visible",
-        children: [u.jsx("div", {
-            className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
-            children: u.jsx("div", {
-                className: "row justify-content-center",
-                children: u.jsxs("div", {
-                    className: "col-3xl-11",
-                    children: [u.jsx(W, {
-                        className: "display-two mb-lg-13 mb-md-10 mb-8",
-                        splitType: "words",
-                        child: "word",
-                        staggerDelay: .03,
-                        children: u.jsx("span", {
-                            children: "About Us"
-                        })
-                    }), u.jsxs("div", {
-                        className: "row g-6 justify-content-between align-items-center",
-                        children: [u.jsxs("div", {
-                            className: "col-xl-5 col-lg-6",
-                            children: [u.jsx(W, {
-                                className: "text-n900 mb-lg-6 mb-4",
+        children: [
+            u.jsx("div", {
+                className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+                children: u.jsx("div", {
+                    className: "row justify-content-center",
+                    children: u.jsxs("div", {
+                        className: "col-3xl-11",
+                        children: [
+                            u.jsx(W, {
+                                className: "display-two mb-lg-13 mb-md-10 mb-8",
                                 splitType: "words",
                                 child: "word",
-                                staggerDelay: .01,
-                                children: u.jsx("p", {
-                                    children: "Payzon India Private Limited is a Bhopal-based software development company that was founded in 2017 and offers a range of web services and solutions, including domain registration, web hosting, eCommerce web development, block-chain software development, sales and marketing, API and fintech software development, and website design and development. We have solid expertise creating websites on several platforms, and we research upcoming trends and technology to include into the site for improved user experience and conversion."
+                                staggerDelay: .03,
+                                children: u.jsx("span", {
+                                    children: "About Us"
                                 })
-                            }), u.jsxs("div", {
-                                className: "d-flex flex-wrap flex-sm-nowrap gap-4 justify-content-between",
-                                children: [u.jsxs("div", {
-                                    className: "",
-                                    children: [u.jsxs("h2", {
-                                        className: "d-center display-four fw-bolder text-secondary-50",
-                                        children: [u.jsx(_d, {
-                                            start: 0,
-                                            end: 350
-                                        }), u.jsx("span", {
-                                            children: "+"
-                                        })]
-                                    }), u.jsx("span", {
-                                        children: "Project Completed"
-                                    })]
-                                }), u.jsxs("div", {
-                                    className: "",
-                                    children: [u.jsxs("h2", {
-                                        className: "d-center display-four fw-bolder text-secondary-50",
-                                        children: [u.jsx(_d, {
-                                            start: 0,
-                                            end: 75
-                                        }), u.jsx("span", {
-                                            children: "+"
-                                        })]
-                                    }), u.jsx("span", {
-                                        children: "Award Winning"
-                                    })]
-                                }), u.jsxs("div", {
-                                    className: "",
-                                    children: [u.jsxs("h2", {
-                                        className: "d-center display-four fw-bolder text-secondary-50",
-                                        children: [u.jsx(_d, {
-                                            start: 0,
-                                            end: 200
-                                        }), u.jsx("span", {
-                                            children: "+"
-                                        })]
-                                    }), u.jsx("span", {
-                                        children: "Trusted Companies"
-                                    })]
-                                })]
-                            })]
-                        }), u.jsx("div", {
-                            className: "col-lg-6",
-                            children: u.jsx("div", {
-                                className: "about-us-banner",
-                                children: u.jsx(ia, {
-                                    direction: "left",
-                                    children: u.jsx("img", {
-                                        className: "w-100 h-100",
-                                        src: QC,
-                                        alt: "why choose us img"
+                            }),
+                            u.jsxs("div", {
+                                className: "row g-6 justify-content-between align-items-center",
+                                children: [
+                                    u.jsxs("div", {
+                                        className: "col-xl-5 col-lg-6",
+                                        children: [
+                                            u.jsx(W, {
+                                                className: "text-n900 mb-lg-6 mb-4",
+                                                splitType: "words",
+                                                child: "word",
+                                                staggerDelay: .01,
+                                                children: u.jsx("p", {
+                                                    children: "Payzon India Private Limited is a Bhopal-based software development company that was founded in 2017 and offers a range of web services and solutions, including domain registration, web hosting, eCommerce web development, block-chain software development, sales and marketing, API and fintech software development, and website design and development. We have solid expertise creating websites on several platforms, and we research upcoming trends and technology to include into the site for improved user experience and conversion."
+                                                })
+                                            }),
+                                            u.jsxs("div", {
+                                                className: "d-flex flex-wrap flex-sm-nowrap gap-4 justify-content-between",
+                                                children: [
+                                                    u.jsxs("div", {
+                                                        className: "",
+                                                        children: [
+                                                            u.jsxs("h2", {
+                                                                className: "d-center display-four fw-bolder text-secondary-50",
+                                                                children: [u.jsx(_d, { start: 0, end: 350 }), u.jsx("span", { children: "+" })]
+                                                            }),
+                                                            u.jsx("span", { children: "Project Completed" })
+                                                        ]
+                                                    }),
+                                                    u.jsxs("div", {
+                                                        className: "",
+                                                        children: [
+                                                            u.jsxs("h2", {
+                                                                className: "d-center display-four fw-bolder text-secondary-50",
+                                                                children: [u.jsx(_d, { start: 0, end: 75 }), u.jsx("span", { children: "+" })]
+                                                            }),
+                                                            u.jsx("span", { children: "Award Winning" })
+                                                        ]
+                                                    }),
+                                                    u.jsxs("div", {
+                                                        className: "",
+                                                        children: [
+                                                            u.jsxs("h2", {
+                                                                className: "d-center display-four fw-bolder text-secondary-50",
+                                                                children: [u.jsx(_d, { start: 0, end: 200 }), u.jsx("span", { children: "+" })]
+                                                            }),
+                                                            u.jsx("span", { children: "Trusted Companies" })
+                                                        ]
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    u.jsx("div", {
+                                        className: "col-lg-6",
+                                        children: u.jsx("div", {
+                                            className: "about-us-banner",
+                                            children: u.jsx(ia, {
+                                                direction: "left",
+                                                children: u.jsx("img", {
+                                                    className: "w-100 h-100",
+                                                    src: QC,
+                                                    alt: "why choose us img"
+                                                })
+                                            })
+                                        })
                                     })
-                                })
-                            })
-                        })]
-                    })]
+                                ]
+                            }),
+
+
+                        ]
+                    })
                 })
-            })
-        }), u.jsx(bh, {})]
+            }),
+            u.jsx(bh, {})
+        ]
     })
 }
+
 function gN() {
     return u.jsxs(u.Fragment, {
         children: [u.jsx(mN, {}), u.jsx(XC, {}), u.jsx(Nh, {}), u.jsx(E1, {}), u.jsx(R1, {}), u.jsx(L1, {})]
@@ -24587,6 +24662,8 @@ function YN({ blogPost }) {
         })
     })
 }
+
+// yaha se lenahe 
 function XN() {
     const { id } = useParams();
     const blogPost = M1.find(post => post.id === parseInt(id));
@@ -24642,7 +24719,7 @@ function KN() {
     const t = {
         subHeading: "Our Team",
         heading: "Meet Our Amazing Team",
-        description: "From cybersecurity to cloud computing, we offer comprehensive IT solutions tailored to your business needs. Empower your organization "
+        description: "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications"
     };
     return u.jsxs(u.Fragment, {
         children: [u.jsx(yr, {
@@ -24903,7 +24980,7 @@ function $N() {
     const t = {
         subHeading: "Team Details",
         heading: "Team Single",
-        description: "From cybersecurity to cloud computing, we offer comprehensive IT solutions tailored to your business needs. Empower your organization "
+        description: "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications"
     };
     return u.jsxs(u.Fragment, {
         children: [u.jsx(yr, {
