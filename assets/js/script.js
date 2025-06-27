@@ -11746,54 +11746,53 @@ function kb() {
                       ],
                     }),
 
-                    u.jsx("div", {
-                      className: "col-12 mt-6",
-                      children: u.jsx("div", {
-                        className:
-                          "footer-menu d-flex align-items-center flex-wrap gap-4", // horizontal line + spacing
-                        children: [
-                          u.jsx("span", {
-                            className:
-                              "text-2xl text-n0 fw-extra-bold d-inline-block",
-                            style: { minWidth: "180px" }, // adjust width as needed
-                            children: [
-                              "OUR BUSINESS",
-                              u.jsx("br", {}),
-                              "COLLABORATION",
-                            ],
-                          }),
-                          u.jsx("ul", {
-                            className:
-                              "footer-menu-items d-flex flex-wrap gap-4 align-items-center mb-0",
-                            style: { listStyle: "none", padding: 0, margin: 0 },
-                            children: L.map(
-                              ({ id: i, title: s, link: o, image: img }) =>
-                                u.jsx(
-                                  "li",
-                                  {
-                                    className: "d-inline-block",
-                                    children: u.jsx(oe, {
-                                      to: o,
-                                      className: "text-n1",
-                                      children: u.jsx("img", {
-                                        src: img,
-                                        alt: s,
-                                        className: "collaboration-logo",
-                                        style: {
-                                          height: "120px",
-                                          width: "auto",
-                                          objectFit: "contain",
-                                        },
-                                      }),
-                                    }),
-                                  },
-                                  i
-                                )
-                            ),
-                          }),
-                        ],
-                      }),
-                    }),
+                   u.jsx("div", {
+  className: "col-12 mt-6",
+  children: u.jsx("div", {
+    className:
+      "footer-menu d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-4",
+    children: [
+      u.jsx("span", {
+        className: "text-2xl text-n0 fw-extra-bold d-block text-center text-md-start",
+        style: { minWidth: "180px" },
+        children: [
+          "OUR BUSINESS",
+          u.jsx("br", {}),
+          "COLLABORATION",
+        ],
+      }),
+      u.jsx("ul", {
+        className:
+          "footer-menu-items d-flex flex-wrap justify-content-center justify-content-md-start gap-3 align-items-center mb-0",
+        style: { listStyle: "none", padding: 0, margin: 0 },
+        children: L.map(({ id: i, title: s, link: o, image: img }) =>
+          u.jsx(
+            "li",
+            {
+              className: "d-inline-block",
+              children: u.jsx(oe, {
+                to: o,
+                className: "text-n1",
+                children: u.jsx("img", {
+                  src: img,
+                  alt: s,
+                  className: "collaboration-logo img-fluid",
+                  style: {
+                    maxHeight: "60px",
+                    width: "auto",
+                    objectFit: "contain",
+                  },
+                }),
+              }),
+            },
+            i
+          )
+        ),
+      }),
+    ],
+  }),
+}),
+
                   ],
                 }),
               ],
@@ -25106,7 +25105,7 @@ function yC() {
                     u.jsxs("span", {
                       className:
                         "d-block text-secondary-50 fw-semibold text-decoration-underline mb-4 main-title",
-                      children: [" ", "Payzon IT Pvt. Ltd. "],
+                      children: [" ", "Payzon India IT Pvt. Ltd. "],
                     }),
                     u.jsxs(W, {
                       className: "display-two text-n0 mb-lg-8 mb-6",
@@ -25776,7 +25775,7 @@ function NC({ swiperData: t, swiperBtn: e }) {
         prevEl: e.prevBtn,
       },
       className: "testimonial-slider",
-      children: t.map(({ id: n, heading: r, text: i }) =>
+      children: t.map(({ id: n, heading: r, text: i, link: l }) =>
         u.jsx(
           _c,
           {
@@ -25785,10 +25784,17 @@ function NC({ swiperData: t, swiperBtn: e }) {
               className:
                 "testimonial-card p-lg-xl-10 p-lg-8 p-sm-6 p-4 border n900-border",
               children: [
-                u.jsx("span", {
-                  className: "text-h4 fw-extra-bold text-n900 mb-4",
-                  children: r,
-                }),
+                l && l !== "#"
+                  ? u.jsx("a", {
+                      href: l,
+                      className:
+                        "text-h4 fw-extra-bold text-n900 mb-4 nav-link",
+                      children: r,
+                    })
+                  : u.jsx("span", {
+                      className: "text-h4 fw-extra-bold text-n900 mb-4",
+                      children: r,
+                    }),
                 u.jsx("p", {
                   className: "text-n900 mb-lg-6 mb-4",
                   children: i,
@@ -25813,27 +25819,32 @@ function Nh() {
         id: 1,
         heading: "Aadhar Verification",
         text: '"Aadhaar is the world’s largest biometric ID system, managed by UIDAI, providing a 12-digit unique identity to every Indian resident. Aadhaar verification confirms a person’s identity using methods like biometrics, OTP, or QR code scanning. It\'s widely used in financial services, government schemes, and telecom, ensuring authenticity and preventing fraud "',
+        link: "/aadhar-verification",
       },
       {
         id: 2,
         heading: "Pan Verification",
         text: ` "PAN (Permanent Account Number) is a 10-digit alphanumeric ID issued by India’s Income Tax Department to identify taxpayers and monitor financial activities like income and tax filings. It is essential for tasks like opening bank accounts, filing returns, and financial transactions.
 PAN verification ensures the authenticity of a PAN through official or third-party systems."`,
+        link: "/pan-verification",
       },
       {
         id: 3,
         heading: "Bank Account Verification",
         text: "\"Bank account verification is essential for confirming the authenticity and accuracy of an individual's bank details. It supports customer onboarding, fraud prevention, KYC compliance, and secure payment processing. With the rise of digital banking, the process faces challenges like data mismatches, security risks, and verification delays.",
+        link: "/bank-verification",
       },
       {
         id: 4,
         heading: "GST Verification",
         text: '"GST (Goods and Services Tax) is a unified indirect tax in India that replaces multiple central and state taxes. Businesses dealing in goods or services must register under GST and fulfill tax obligations.GST verification confirms the authenticity of GST registration details, helping ensure compliance, prevent fraud, and maintain tax system integrity.',
+        link: "/gst-verification",
       },
       {
         id: 5,
         heading: "Live Face  Verification",
         text: "\"Live Face Recognition is a technology that verifies identity by capturing a live image or video of a person's face and matching it with a known database. It's widely used in security, banking, retail, and access control for enhanced authentication and fraud prevention.Despite its growth, it faces challenges in ensuring accuracy, efficiency, and security.\" ",
+        link: "/face-verification",
       },
     ];
   return u.jsxs("section", {
@@ -26298,53 +26309,57 @@ const I1 = [
     id: 1,
     question: "2FA Authentication",
     answer:
-      " Secure every login with Two-Factor Authentication and prevent unauthorized access with industry-standard multi-layered protection.",
+      "Secure every login with Two-Factor Authentication and prevent unauthorized access with industry-standard multi-layered protection.",
+    icon: "🔒",
   },
   {
     id: 2,
     question: "Website Security",
     answer:
-      " Protect your website from malware, intrusion attempts, and vulnerabilities with real-time monitoring and firewall defenses.",
+      "Protect your website from malware, intrusion attempts, and vulnerabilities with real-time monitoring and firewall defenses.",
+    icon: "🌐",
   },
   {
     id: 3,
     question: "Database Security",
     answer:
-      " Keep your data safe with encryption, access controls, and frequent audits for leak-proof database management.",
+      "Keep your data safe with encryption, access controls, and frequent audits for leak-proof database management.",
+    icon: "🗄️",
   },
   {
     id: 4,
     question: "Network Security",
     answer:
-      " Shield your network infrastructure from external threats, unauthorized traffic, and cyberattacks with expert-driven protection systems.",
+      "Shield your network infrastructure from external threats, unauthorized traffic, and cyberattacks with expert-driven protection systems.",
+    icon: "🛡️",
   },
   {
     id: 5,
     question: "Code Audit",
     answer:
-      " Get your codebase professionally reviewed to eliminate bugs, security loopholes, and performance issues before deployment.",
+      "Get your codebase professionally reviewed to eliminate bugs, security loopholes, and performance issues before deployment.",
+    icon: "💻",
   },
   {
     id: 6,
     question: "DDOS Protection",
     answer:
-      " Prevent downtime and traffic overload with enterprise-level DDoS mitigation solutions for stable and secure online operations.",
+      "Prevent downtime and traffic overload with enterprise-level DDoS mitigation solutions for stable and secure online operations.",
+    icon: "⚡",
   },
 ];
 
-// for FAQ
-
 function L1() {
   const t = {
-    heading: "Advanced Security and Auditing Solutions",
+    heading: " Security & Auditing Solutions",
     description:
-      "Explore insights into our security practices and auditing protocols. We’re committed to transparency, ensuring your data and operations remain protected and compliant.",
+      "Dive into our cutting-edge security practices and auditing protocols. We're dedicated to transparency, ensuring your data and operations are safeguarded with unmatched expertise.",
   };
   return u.jsx("section", {
     className:
-      "section-blur faqs-section section-left-margin pt-120 pb-120 bg-primary-75",
+      "section-blur faqs-section section-left-margin pt-120 pb-120 bg-[#e7eedf] relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] before:from-green-400/10 before:via-blue-400/5 before:to-transparent before:z-0 after:content-[''] after:absolute after:inset-0 after:bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%236B7280\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1\"%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] after:z-0",
     children: u.jsx("div", {
-      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10 relative z-10",
       children: u.jsx("div", {
         className: "row justify-content-center",
         children: u.jsxs("div", {
@@ -26356,35 +26371,62 @@ function L1() {
                 className: "col-xl-5 col-lg-6 text-center",
                 children: u.jsx(Hr, {
                   ...t,
+                  className: "",
                 }),
               }),
             }),
             u.jsx("div", {
               className: "row g-6",
-              children: I1.map((e) =>
+              children: I1.map((e, index) =>
                 u.jsx(
                   "div",
                   {
                     className: "col-lg-6",
                     children: u.jsxs("div", {
                       className:
-                        "p-lg-8 p-sm-6 p-4 border n900-border bg-primary-75",
+                        "group p-lg-8 p-sm-6 p-4 border border-gray-300/30 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl  hover:border-green-400/50 transition-all duration-700 animate__animated animate__fadeInUp hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500",
+                      // style: { animationDelay: `${index * 150}ms` },
                       children: [
-                        u.jsx("h4", {
-                          className:
-                            "title title-animation-line fw-extra-bold mb-lg-6 mb-4 text-center",
-                          children: e.question,
+                        u.jsx("div", {
+                          className: "absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-y-16 translate-x-16"
+                        }),
+                        u.jsxs("div", {
+                          className: "flex items-center justify-start mb-lg-6 mb-4 relative z-10",
+                          children: [
+                            u.jsx("div", {
+                              className: "relative mr-6",
+                              children: u.jsx("span", {
+                                className:
+                                  "text-6xl transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 filter drop-shadow-lg group-hover:drop-shadow-2xl inline-block",
+                                children: e.icon,
+                              }),
+                            }),
+                            u.jsx("h4", {
+                              className:
+                                "title title-animation-line fw-extra-bold mb-0 text-gray-800 font-extrabold tracking-tight text-xl group-hover:text-green-700 transition-colors duration-500 leading-tight",
+                              children: e.question,
+                            }),
+                          ],
                         }),
                         u.jsx("div", {
                           className:
-                            "content ps-xxl-20 ps-lg-15 ps-md-10 ps-sm-6 ps-4",
+                            "content ps-xxl-20 ps-lg-15 ps-md-10 ps-sm-6 ps-4 relative z-10",
                           children: u.jsx("p", {
+                            className: "text-gray-600 text-base leading-relaxed font-medium group-hover:text-gray-800 transition-colors duration-500 mb-4",
                             children: e.answer,
                           }),
                         }),
-                        u.jsx("span", {
-                          className: "toggle-icon d-block text-end text-2xl",
+                        u.jsx("div", {
+                          className: "flex justify-end items-center relative z-10",
+                          children: u.jsx("span", {
+                            className:
+                              "toggle-icon text-2xl text-green-600 group-hover:text-green-800 transition-all duration-500 transform group-hover:translate-x-2 group-hover:scale-110 inline-block",
+                            children: "→",
+                          }),
                         }),
+                        u.jsx("div", {
+                          className: "absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"
+                        })
                       ],
                     }),
                   },
@@ -27954,10 +27996,13 @@ function wN() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(yN, {}),
-      u.jsx(y1, {
-        sliderText: e,
-      }),
+      u.jsx(SC, {}),
+      u.jsx(Nh, {}),
+      u.jsx(E1, {}),
+
+      // u.jsx(y1, {
+      //   sliderText: e,
+      // }),
       u.jsx(O1, {
         spaceTop: !0,
       }),
@@ -28795,7 +28840,7 @@ function NY1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon IT Services, our web development solutions are crafted to elevate your digital presence, combining creativity with cutting-edge technologies. From concept to launch, we deliver scalable, secure, and high-performing websites that align with your business goals. Whether it's a sleek corporate site, an engaging e-commerce platform, or a dynamic web application, we ensure responsive designs, fast load times, and intuitive user experiences.",
+                            "At Payzon India Services, our web development solutions are crafted to elevate your digital presence, combining creativity with cutting-edge technologies. From concept to launch, we deliver scalable, secure, and high-performing websites that align with your business goals. Whether it's a sleek corporate site, an engaging e-commerce platform, or a dynamic web application, we ensure responsive designs, fast load times, and intuitive user experiences.",
                             u.jsx("br", {}),
                             " With a focus on custom solutions and performance-driven development, we help businesses stand out in the competitive digital landscape. Our expert developers build robust front-end and back-end architectures, ensuring your website is not only visually appealing but also functionally powerful.",
                           ],
@@ -28980,7 +29025,6 @@ function NY2() {
         desc: "Flawless user experience across all screen sizes and devices, ensuring you never lose a lead due to poor design.",
         img: bN,
       },
-      
     ],
     n = [
       {
@@ -29076,7 +29120,7 @@ function NY2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon IT Services, we specialize in building high-converting landing pages that capture attention, drive engagement, and deliver measurable results. Whether you're promoting a product, launching a campaign, or collecting leads, our landing website solutions are built with one goal in mind — maximizing conversions.",
+                            "At Payzon India Services, we specialize in building high-converting landing pages that capture attention, drive engagement, and deliver measurable results. Whether you're promoting a product, launching a campaign, or collecting leads, our landing website solutions are built with one goal in mind — maximizing conversions.",
                             u.jsx("br", {}),
                             "By combining modern design principles with persuasive copywriting and seamless user flow, we ensure that every landing page we create delivers a powerful first impression and encourages action. From single-product showcases to lead generation funnels, we build responsive, lightning-fast, and SEO-optimized landing pages that get results.",
                           ],
@@ -29149,7 +29193,7 @@ function NY2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Discover cutting-edge landing page development services with Payzon IT Services. Our creative and technical teams work hand-in-hand to create visually stunning and strategically designed pages that convert. Whether you're launching a new product, capturing event registrations, or testing a marketing idea — we’ve got you covered with fast, functional, and conversion-optimized landing websites.",
+                            "Discover cutting-edge landing page development services with Payzon India Services. Our creative and technical teams work hand-in-hand to create visually stunning and strategically designed pages that convert. Whether you're launching a new product, capturing event registrations, or testing a marketing idea — we’ve got you covered with fast, functional, and conversion-optimized landing websites.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -29225,6 +29269,2853 @@ function NY2() {
     }),
   });
 }
+function NY3() {
+  const t = [
+      {
+        id: 1,
+        name: "Digital Banking Portals",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Investment & Wealth Management Platforms",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Loan & EMI Management Systems",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Expense Tracking & Budgeting Tools",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Bank-Grade Security & Encryption",
+        desc: "Implementing the latest security protocols, including SSL, 2FA, and data encryption to protect sensitive financial data.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Digital Wallet & Payment Gateway Integration",
+        desc: "Enable seamless online transactions with support for UPI, cards, net banking, and digital wallets.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How the Process Works",
+        description:
+          "We begin by understanding your financial service model and compliance needs. Then we design secure system architecture, build custom workflows, and test for performance, usability, and risk mitigation. After launch, we provide continuous support and upgrades to help you stay ahead.",
+      },
+      {
+        id: 2,
+        title: "What Makes Us Different?",
+        description:
+          "We combine financial domain expertise with technical mastery to deliver fintech portals that are not only powerful but also secure and user-focused. With our team by your side, you're empowered to innovate in the financial space without compromising on trust, compliance, or performance.",
+      },
+      // {
+      //   id: 3,
+      //   title: "What are the benefits of our services?",
+      //   description:
+      //     " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, we build secure, scalable, and user-friendly Fintech portals designed to simplify financial operations, enhance digital experiences, and drive customer trust. From online banking platforms and digital wallets to investment dashboards and loan management systems — our fintech solutions are built with precision, performance, and compliance in mind.",
+                            u.jsx("br", {}),
+                            "With a focus on data security, real-time processing, and intuitive interfaces, our fintech portals are engineered to meet the evolving needs of both users and institutions. We ensure full regulatory compliance, seamless integrations with third-party APIs, and a mobile-first approach — helping you deliver modern financial services with confidence.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With a focus on user-centric design, robust architecture, and seamless functionality, our Web Portal Development services empower businesses to streamline operations, enhance user engagement, and centralize access to critical resources. We deliver secure, scalable, and customized portals tailored to your organizational workflows and business goals.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover tailored Fintech Portal Development services at Payzon India Services. We specialize in building secure and scalable platforms that handle high-volume transactions, sensitive data, and complex business logic. Whether you're launching a digital bank, investment platform, or payment app — we provide robust fintech solutions aligned with your vision and the industry's best practices.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Partnering with Payzon India IT Services means getting a technology partner that understands finance, compliance, and user behavior. We don’t just build fintech platforms — we build trust-driven digital ecosystems that empower your customers.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NY4() {
+  const t = [
+      {
+        id: 1,
+        name: "Social Media Management",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Lead Funnel & Conversion Strategy",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Marketing Automation & CRM Setup",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Reputation & Review Management",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " Digital Marketing Strategy",
+        desc: "Targeted campaigns across SEO, SEM, social media, and email to attract and engage your ideal audience.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Lead Generation & Nurturing",
+        desc: "Capture high-quality leads and guide them through the sales funnel with personalized communication and automated workflows.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How the Process Works",
+        description:
+          "We start by understanding your goals, target audience, and current performance metrics. Our team then creates a custom strategy, builds automated systems, executes campaigns, and continuously optimizes based on data insights.",
+      },
+      {
+        id: 2,
+        title: "What Makes Us Different?",
+        description:
+          "At Payzon, we don't believe in one-size-fits-all. Our marketing and sales solutions are tailored, data-driven, and designed to grow with you. We blend tech and creativity to bring your brand closer to your audience — and your business closer to its next milestone.",
+      },
+      // {
+      //   id: 3,
+      //   title: "What are the benefits of our services?",
+      //   description:
+      //     " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, we power your growth with result-driven Marketing & Sales Solutions tailored to your business objectives. In today’s competitive digital ecosystem, it’s not just about having a presence — it’s about standing out, reaching the right audience, and converting interest into revenue.",
+                            u.jsx("br", {}),
+                            "Our expert team blends strategy, creativity, and technology to deliver impactful marketing campaigns and sales automation that fuel business performance. From brand positioning and lead generation to CRM integration and funnel optimization — we provide end-to-end solutions that drive visibility, engagement, and conversions.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With a focus on data-driven strategy, customer-centric campaigns, and seamless automation, our Marketing & Sales solutions empower businesses to boost visibility, generate quality leads, and accelerate revenue growth. We deliver tailored, scalable systems designed to align with your sales goals and marketing workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Unlock your full business potential with Payzon’s Marketing & Sales Services. Whether you're a startup looking to build awareness or an established brand aiming to scale, we tailor our strategies to fit your goals and industry.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "When you work with Payzon India IT Services, you gain more than just marketing support — you gain a strategic growth partner. Our solutions are built for scalability, flexibility, and performance — ensuring your marketing efforts translate into real business outcomes.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NY5() {
+  const t = [
+      {
+        id: 1,
+        name: "binance blockchain",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "tron blockchain",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "solana block chain",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "sui blockchain ",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Private & Public Blockchain Integration",
+        desc: "Whether you need a secure private blockchain or want to tap into the power of public networks like Ethereum or Solana, we deliver fully integrated solutions.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Tokenization & NFT Development",
+        desc: "Create and manage tokens, NFTs, and digital assets with blockchain-backed ownership and smart contract logic.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How the Process Works",
+        description:
+          "We begin by evaluating your business goals and identifying the right blockchain strategy. After architecture design and prototype development, we move to secure coding, rigorous testing, and scalable deployment. Post-launch, we continue to monitor, upgrade, and support your platform.",
+      },
+      {
+        id: 2,
+        title: "What Makes Us Different?",
+        description:
+          "At Payzon, we blend technical mastery with industry insight to deliver blockchain solutions that are practical, powerful, and compliant. Whether you're building a new product or transforming existing workflows, we provide tools to lead in a decentralized future.",
+      },
+      // {
+      //   id: 3,
+      //   title: "What are the benefits of our services?",
+      //   description:
+      //     " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, we deliver powerful Blockchain Development solutions designed to drive innovation, enhance transparency, and strengthen data security. Whether you're looking to build decentralized applications (dApps), smart contracts, or private blockchain networks — our team of experts ensures seamless development, deployment, and integration tailored to your business needs.",
+                            u.jsx("br", {}),
+                            "With a focus on scalability, decentralization, and trustless architecture, we help startups, enterprises, and institutions leverage blockchain to create future-ready systems that improve operational efficiency, reduce fraud, and empower user autonomy.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Create and manage tokens, NFTs, and digital assets with blockchain-backed ownership and smart contract logic.Implement end-to-end blockchain solutions for finance, logistics, healthcare, and more — increasing visibility, security, and speed across operations.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Unlock new business models and digital opportunities with custom blockchain development from Payzon India Services. We help you harness the decentralized future with tailored solutions that ensure high performance, interoperability, and airtight security.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By choosing Payzon India IT Services as your blockchain development partner, you're investing in secure, scalable, and future-ready technology that empowers your business and protects your data.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NY6() {
+  const t = [
+      {
+        id: 1,
+        name: "Custom API Development (REST/SOAP/GraphQL)",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Secure Authentication (OAuth2, JWT, API Keys",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Payment Gateway APIs (Razorpay, Stripe, PayPal)",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Real-Time Data Synchronization ",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "CRM, ERP, Social Media & Analytics Integration ",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Webhooks & Callback Services ",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " Seamless System Integration",
+        desc: "Smooth communication between multiple applications and platforms.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Secure Data Exchange",
+        desc: "Industry-standard authentication and encryption for safe data transmission.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "At Payzon India Services, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "We begin with your integration goals and business requirements. Our team plans the API architecture, creates secure endpoints, documents every interaction, and rigorously tests performance and compatibility — ensuring seamless implementation and long-term scalability.",
+      },
+      {
+        id: 3,
+        title: " What Are the Benefits of Our Services?",
+        description:
+          "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our API development solutions enable seamless integration, data exchange, and functionality across platforms, empowering your business with scalable and secure digital connectivity. Whether you're building a new app or modernizing legacy systems, our custom APIs ensure performance, interoperability, and future-readiness.",
+                            u.jsx("br", {}),
+                            "We design RESTful, SOAP, GraphQL, and third-party API integrations that simplify complex workflows, connect services, and improve automation. With a focus on performance, security, and modularity, our APIs unlock new possibilities for digital transformation and business growth.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Design, build, and deploy secure, scalable APIs that power your applications and enable seamless communication between systems — tailored precisely to your business logic.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover reliable and high-performance API development solutions at Payzon. Our team delivers intelligent connectivity between applications, driving agility, automation, and scalability for your business processes.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By partnering with Payzon, you get more than just integration — you get an API-first architecture that supports growth, scalability, and digital resilience.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NY7() {
+  const t = [
+      {
+        id: 1,
+        name: "Android App Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "UI/UX Design & Prototyping",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "App Maintenance & Support",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Backend & API Integration ",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "MVP & Startup App Development",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Real-Time Notifications, Payments, and Integrations",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Android App Development",
+        desc: "We build native apps that offer fast performance and seamless experiences on iOS and Android devices.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Cross-Platform App Development",
+        desc: "Develop once, deploy everywhere. We use frameworks like Flutter and React Native to build high-performing apps for all platforms.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "At Payzon India Services, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "We begin with your integration goals and business requirements. Our team plans the API architecture, creates secure endpoints, documents every interaction, and rigorously tests performance and compatibility — ensuring seamless implementation and long-term scalability.",
+      },
+      {
+        id: 3,
+        title: " What Are the Benefits of Our Services?",
+        description:
+          "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our App Development solutions empower businesses to transform ideas into engaging digital experiences. Whether you need a feature-rich mobile application or a cross-platform solution, we deliver scalable, secure, and user-centric apps that drive performance and enhance customer engagement.",
+                            u.jsx("br", {}),
+                            "Utilizing modern frameworks like Flutter, React Native, Swift, and Kotlin, we develop apps tailored to your industry and audience. From strategy and UI/UX design to development, testing, and deployment, our team ensures smooth delivery, high functionality, and stunning visual appeal.With a focus on performance, security, and innovation, we create applications that meet business goals and exceed user expectations.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Design, build, and deploy secure, scalable Apps that power your applications and enable seamless communication between systems — tailored precisely to your business logic.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover top-tier app development solutions at Payzon. Our team brings your vision to life with high-quality apps that captivate users and streamline operations. With end-to-end development, proactive support, and design-driven thinking, we deliver apps that make an impact.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By choosing Payzon India Services for app development, you gain a trusted digital partner focused on delivering results. We blend technical expertise with creative innovation to ensure your app stands out in the crowded market.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NhQ1() {
+  const t = [
+      {
+        id: 1,
+        name: "Aadhaar eKYC & Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: " Biometric/OTP-Based Verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "UIDAI API Integration",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Fraud Detection & Prevention ",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Real-Time Aadhaar Validation",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: " Consent-Based Data Access",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Instant Identity Verification",
+        desc: "Verify users' Aadhaar details instantly through UIDAI integration using OTP or biometric-based validation.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " eKYC Integration",
+        desc: "Fetch and validate Aadhaar-linked demographic information for smooth customer KYC compliance.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "By choosing Payzon India Services for Aadhaar Verification, you gain a reliable digital partner focused on compliance, performance, and security. Our Aadhaar-based verification tools are designed to reduce onboarding time, minimize manual data errors, and maintain trust in digital workflows.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "At Payzon India Services, we understand the critical need for secure and compliant identity verification. We offer scalable, UIDAI-compliant, and fully encrypted API-based solutions that keep your business protected and your users’ data safe. Our experience in identity management, API integrations, and security protocols ensures that your verification flow is smooth, reliable, and audit-ready.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Aadhar Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Pan verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Bank Account Verification",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "GSt Verification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Live face verification",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our Aadhaar Verification solutions simplify and secure the identity verification process by integrating with UIDAI’s Aadhaar services. Whether you're onboarding users, validating customer data, or meeting regulatory KYC mandates, our system ensures seamless, real-time authentication with minimal friction.",
+                            u.jsx("br", {}),
+                            "We enable organizations to digitally verify Aadhaar details via secure APIs and biometric/OTP-based validation — reducing fraud, improving user trust, and accelerating workflows.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We help organizations digitally verify Aadhaar details via secure APIs using biometric or OTP-based validation, reducing fraud, improving user trust, and accelerating operational efficiency.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Design, build, and deploy secure, scalable Apps that power your applications and enable seamless communication between systems — tailored precisely to your business logic.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By integrating Aadhaar Verification through Payzon, businesses can secure user onboarding, reduce manual verification processes, and comply with government-mandated KYC norms — all through a scalable digital solution.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NhQ2() {
+  const t = [
+      {
+        id: 1,
+        name: "PAN Number Validation via API",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Name & PAN Number Match Check",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Regulatory KYC/AML Compliance",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Fraud Detection & Duplicate Check",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "GST-PAN Linkage Verification",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Real-Time PAN Status Reporting",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " Instant PAN Verification",
+        desc: "Validate PAN details instantly with official databases via secure API integration.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " KYC Compliance Integration",
+        desc: "Easily fulfill KYC and AML regulatory norms with verified PAN data.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "By choosing Payzon India Services for PAN Verification, you gain a trusted partner with deep domain expertise in regulatory compliance, identity verification, and secure API systems. We ensure fast integration, high accuracy, and complete security — helping you build trust with every user interaction.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "At Payzon India Services, we understand the critical importance of secure, real-time, and compliant identity verification. Our PAN Verification process is built using authorized government data sources and is integrated via fully encrypted, API-based solutions that ensure data safety, accuracy, and compliance.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Aadhar Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Pan verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Bank Account Verification",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "GSt Verification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Live face verification",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our PAN Verification solutions streamline and secure identity authentication processes by integrating with authorized PAN data providers. Whether you're onboarding customers, validating tax details, or fulfilling mandatory KYC/AML checks, our real-time system delivers instant, accurate results with minimum manual effort.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We enable businesses to verify PAN credentials using secure APIs, reducing fraud, enhancing trust, and ensuring compliance across sectors like finance, e-commerce, and digital services.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By integrating PAN Verification through Payzon, businesses can automate user identity checks, speed up customer onboarding, reduce risk, and comply with regulatory standards — all through a secure and scalable digital platform.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We help organizations digitally verify PAN details using secure APIs, reducing onboarding time, enhancing identity validation accuracy, and preventing fraudulent registrations.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NhQ3() {
+  const t = [
+      {
+        id: 1,
+        name: "Real-Time GSTIN Status Check",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "PAN-GST Link Validation",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "GSTIN Structure & Format Checks",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Business Name & Jurisdiction Match",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Fraud Detection & Audit Trail",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "API-Based Bulk GSTIN Verification",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Real-Time GSTIN Validation",
+        desc: "Verify the authenticity of GST numbers instantly by connecting with official GST networks.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Business Details Extraction",
+        desc: "Automatically retrieve and cross-check legal business names, addresses, and registration statuses linked to the GST number.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "By choosing Payzon India Services for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "By choosing Payzon India Services for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Aadhar Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Pan verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Bank Account Verification",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "GSt Verification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Live face verification",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our GST Verification solutions are designed to simplify and secure the business identity validation process. By integrating with the official GSTIN (Goods and Services Tax Identification Number) API, we offer instant verification of business credentials — enabling seamless onboarding, validating vendor information, and ensuring regulatory compliance.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or e-commerce platform, our solution helps reduce risks by detecting fake or inactive GSTINs, preventing fraudulent activities, and enabling clean KYC/KYB flows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Unlock seamless compliance and identity workflows through our secure and scalable API-based GST verification services.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We help organizations verify GSTINs digitally with our robust APIs, reducing processing time, improving data accuracy, and preventing fraudulent or invalid business entries.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NhQ4() {
+  const t = [
+      {
+        id: 1,
+        name: "Real-Time Bank Account Status Check",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Account Holder Name Match",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "IFSC & Branch Code Validation",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bank Account Type Identification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Fraud Detection & Duplicate Account Check",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "API-Based Bulk Account Verification",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Automated Verification Systems",
+        desc: "Adopting automation in verification processes can help banks reduce human errors, speed up the verification process, and improve accuracy. These systems use AI and machine learning to verify documents and detect inconsistencies in real-time.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Biometric Authentication",
+        desc: "Biometric authentication (such as fingerprints, facial recognition, or iris scans) enhances security and ensures that the person completing the verification is the legitimate account holder.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "By choosing Payzon India Services for Bank Account Verification, you’re partnering with a tech-first team specialized in regulatory compliance, financial data validation, and secure API integration. We ensure fast setup, real-time results, and complete data protection — helping you scale operations while staying fully compliant.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "By choosing Payzon India Services for Bank Account Verification, you gain a reliable partner with expertise in financial compliance, digital verification, and secure banking APIs. We offer a swift, scalable, and secure process built for modern businesses.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Aadhar Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Pan verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Bank Account Verification",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "GSt Verification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Live face verification",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our Bank Account Verification solution makes it simple to authenticate financial credentials by integrating with trusted banking APIs and Open Banking platforms. Whether onboarding customers, validating payment sources, or meeting regulatory requirements, our system delivers instant, reliable results with minimal effort.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or e-commerce platform, our solution helps reduce risks by detecting invalid or mismatched bank details, preventing fraudulent transactions, and enabling seamless KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Unlock seamless compliance and identity workflows through our secure and scalable API-based Bank Account verification services.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We help organizations verify bank accounts digitally using robust APIs, reducing onboarding time, improving data accuracy, and preventing fraudulent or invalid financial entries.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NhQ5() {
+  const t = [
+      {
+        id: 1,
+        name: "Selfie‑to‑ID Matching",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Liveness Detection & Anti‑Spoofing",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Document Authenticity Verification",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "ID Document Type Recognition",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "API‑Based Bulk Live Verification",
+        link: "#",
+      },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Multi-Factor Authentication (MFA)",
+        desc: "Combining face recognition with other forms of authentication (e.g., voice recognition, OTPs, or fingerprints) significantly increases security and prevents spoofing.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Liveness Detection Algorithms",
+        desc: "Liveness detection algorithms analyze signs of life, such as blinking, head movements, or slight shifts in facial features, to differentiate between a live person and a static image or video.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "By choosing Payzon India Services for Live Verification, you’re partnering with a tech-driven team specializing in secure biometric systems, fraud mitigation, and compliance-ready identity workflows. We offer fast integration, instant results, and enterprise-grade security—helping you grow with confidence and compliance.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "By choosing Payzon India Services for Live Verification, you gain a trusted ally in digital identity validation. We ensure a fast, secure, and seamless real-time verification experience.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Aadhar Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Pan verification",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Bank Account Verification",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "GSt Verification",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Live face verification",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Services, our Live Verification solution empowers businesses to verify user identities in real time via secure video or selfie-based checks. Ideal for compliance, fraud prevention, and user trust enhancement—our system delivers instant, authenticated results with zero friction.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Unlock seamless identity confirmation and fraud protection with our secure, API-based Live Verification",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We help organizations verify identities in real time using robust APIs, reducing onboarding time, improving verification accuracy, and preventing fraudulent registrations.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
 function NN() {
   return u.jsx("section", {
     className: "service-section section-blur section-left-margin pb-120 ",
@@ -29334,7 +32225,7 @@ function QQ() {
     subHeading: "Service Details",
     heading: "Fintech Development",
     description:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "A fintech portal is your secure digital gateway to manage financial services, transactions, and data — all in one place. Seamlessly access banking, payments, investments, and analytics through a unified, user-friendly platform.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -29342,8 +32233,8 @@ function QQ() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NY, {}),
-      u.jsx(NN, {}),
+      u.jsx(NY3, {}),
+      // u.jsx(NN, {}),
     ],
   });
 }
@@ -29372,7 +32263,7 @@ function Q2() {
     subHeading: "Service Details",
     heading: "Marketing Sales&Funnel",
     description:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "Your centralized hub for managing campaigns, leads, and conversions.Streamline your marketing and sales processes through a unified portal that brings together customer data, campaign performance, lead tracking, and sales funnels — all in one powerful platform. Drive engagement, optimize outreach, and close deals faster with real-time insights and automation.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -29380,8 +32271,8 @@ function Q2() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NY, {}),
-      u.jsx(NN, {}),
+      u.jsx(NY4, {}),
+      // u.jsx(NN, {}),
     ],
   });
 }
@@ -29391,7 +32282,7 @@ function Q3() {
     subHeading: "Service Details",
     heading: "Blockchain Development",
     description:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "Leverage the power of blockchain through a unified portal that enables seamless access to smart contracts, digital assets, decentralized applications (dApps), and secure data exchanges. Experience transparency, traceability, and tamper-proof transactions — all from one streamlined platform.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -29399,8 +32290,8 @@ function Q3() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NY, {}),
-      u.jsx(NN, {}),
+      u.jsx(NY5, {}),
+      // u.jsx(NN, {}),
     ],
   });
 }
@@ -29410,7 +32301,7 @@ function Q4() {
     subHeading: "Service Details",
     heading: "API Development",
     description:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "Your centralized hub for seamless system integration and data flow.Unlock the full potential of your digital ecosystem with a robust API portal. Access, manage, and connect services, applications, and databases — all in one place. Our API development solutions ensure secure, scalable, and efficient communication between systems, empowering your business with automation, flexibility, and real-time insights.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -29418,8 +32309,8 @@ function Q4() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NY, {}),
-      u.jsx(NN, {}),
+      u.jsx(NY6, {}),
+      // u.jsx(NN, {}),
     ],
   });
 }
@@ -29428,7 +32319,7 @@ function Q5() {
     subHeading: "Service Details",
     heading: "App Development",
     description:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "A mobile app is your personalized gateway to delivering powerful, on-the-go experiences. Seamlessly engage users, manage services, and scale operations — all from the convenience of a responsive, high-performance application.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -29436,12 +32327,105 @@ function Q5() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NY, {}),
-      u.jsx(NN, {}),
+      u.jsx(NY7, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+function NhQ() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Aadhar Verifitcation ",
+    description:
+      "Streamline identity verification with real-time Aadhaar authentication — enabling faster onboarding, enhanced security, and regulatory compliance across your digital platforms.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NhQ1, {}),
+      // u.jsx(NN, {}),
     ],
   });
 }
 
+function NhA() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Pan Verifitcation ",
+    description:
+      "Ensure authenticity and regulatory compliance with seamless, real-time PAN card verification. Instantly validate user identities, prevent fraud, and streamline your KYC workflows.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NhQ2, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NhB() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "GST Verifitcation ",
+    description:
+      "Ensure business legitimacy and streamline B2B onboarding with real-time GSTIN verification. Authenticate GST details directly from government databases to enhance compliance, prevent fraud, and accelerate partner trust.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NhQ3, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NhC() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Bank Account Verifitcation ",
+    description:
+      "Ensure banking details authenticity and compliance in real time with seamless bank account verification. Instantly confirm account ownership, prevent fraud, and streamline KYC/AML processes.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NhQ4, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NhD() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Live face  Verifitcation ",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NhQ5, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
 const AN = "/assets/recent-project-4-CECl9tg3.png",
   PN = [
     {
@@ -31571,6 +34555,29 @@ const dk = () => {
             u.jsx(on, {
               path: "/app-development",
               element: u.jsx(Q5, {}),
+            }),
+
+            u.jsx(on, {
+              path: "/aadhar-verification",
+              element: u.jsx(NhQ, {}),
+            }),
+
+            u.jsx(on, {
+              path: "/pan-verification",
+              element: u.jsx(NhA, {}),
+            }),
+
+            u.jsx(on, {
+              path: "/gst-verification",
+              element: u.jsx(NhB, {}),
+            }),
+            u.jsx(on, {
+              path: "/bank-verification",
+              element: u.jsx(NhC, {}),
+            }),
+            u.jsx(on, {
+              path: "/face-verification",
+              element: u.jsx(NhD, {}),
             }),
             u.jsx(on, {
               path: "/case-studies",
