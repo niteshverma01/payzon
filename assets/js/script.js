@@ -11045,17 +11045,17 @@ const Eb = [
         name: "Landing Websites",
         link: "/service-details",
       },
-       {
+      {
         id: 3,
         name: "Recharge Portal",
         link: "/service-details",
       },
-       {
+      {
         id: 4,
         name: "Marketing/Sales Funnel",
-        link: "/service-details",
+        link: "/digital-marketing",
       },
-       {
+      {
         id: 5,
         name: "Block Chain Development",
         link: "/service-details",
@@ -11245,7 +11245,7 @@ function jb() {
         setToggle: e,
         navLinkList: Eb,
       }),
-    ],  
+    ],
   });
 }
 function Cb({}) {
@@ -11586,7 +11586,6 @@ function kb() {
             children: u.jsxs("div", {
               className: "col-3xl-11",
               children: [
-                
                 u.jsxs("div", {
                   className: "px-xxl-10 row g-6 pt-100 pb-4 pl-4",
                   children: [
@@ -25263,7 +25262,7 @@ const Ch = [
     shortDesc:
       "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
     icon: "ph-fill ph-shield-checkered",
-    link: "/service-details",
+    link: "/web-portal",
   },
   {
     id: 2,
@@ -25271,7 +25270,7 @@ const Ch = [
     shortDesc:
       "A landing website is a single, focused web page designed to drive specific actions or outcomes from visitors. Typically part of a broader marketing or promotional strategy, a landing page is optimized for conversions, guiding visitors toward a clear objective such as signing up for a newsletter, purchasing a product, or downloading a resource.",
     icon: "ph-fill ph-cloud",
-    link: "/service-details",
+    link: "/digital-marketing",
   },
   {
     id: 3,
@@ -25279,7 +25278,7 @@ const Ch = [
     shortDesc:
       "A Recharge Portal is a specialized online platform designed to enable users to easily recharge their accounts, services, or prepaid products such as mobile phones, utility services, or subscription-based offerings. The portal provides a secure, user-friendly interface for processing payments and managing recharge transactions. It streamlines the process, making it convenient for customers to top up their balances anytime, anywhere.",
     icon: "ph-fill ph-users-three",
-    link: "/service-details",
+    link: "/fintech-development",
   },
   {
     id: 4,
@@ -25287,7 +25286,7 @@ const Ch = [
     shortDesc:
       "A Marketing & Sales Funnel is a strategic model used to guide potential customers through a series of stages, from initial awareness to the final purchase and beyond. This funnel represents the journey that a lead takes as they move through different phases of engagement with a brand or business. The goal of the funnel is to convert prospects into loyal customers by nurturing them at each stage with the right messaging, offers, and touchpoints.",
     icon: "ph-fill ph-laptop",
-    link: "/service-details",
+    link: "/marketing&sales",
   },
   {
     id: 5,
@@ -25295,7 +25294,7 @@ const Ch = [
     shortDesc:
       "Blockchain Development refers to the process of creating decentralized digital systems that enable secure, transparent, and immutable transactions through a distributed ledger technology (DLT). It is at the core of many innovative technologies like cryptocurrencies, smart contracts, decentralized applications (dApps), and more. Blockchain technology enables the recording of data in a way that ensures its integrity and security, making it resistant to fraud and tampering..",
     icon: "ph-fill ph-app-window",
-    link: "/service-details",
+    link: "/blockchain-development",
   },
   {
     id: 6,
@@ -25303,7 +25302,7 @@ const Ch = [
     shortDesc:
       "API Development is the process of designing and building Application Programming Interfaces that allow software systems to communicate and share data. APIs define the methods and data formats used for interaction between applications.",
     icon: "ph-fill ph-device-mobile-camera",
-    link: "/service-details",
+    link: "/api-development",
   },
   {
     id: 7,
@@ -25311,7 +25310,7 @@ const Ch = [
     shortDesc:
       "API Development is the process of designing and building Application Programming Interfaces that allow software systems to communicate and share data. APIs define the methods and data formats used for interaction between applications.",
     icon: "ph-fill ph-device-mobile-camera",
-    link: "/service-details",
+    link: "/app-development",
   },
 ];
 function SC() {
@@ -26050,7 +26049,7 @@ function E1() {
             }),
             u.jsx("div", {
               className: "row g-6",
-              children: T1.slice(0, 6).map((e) =>
+              children: T1.slice(0).map((e) =>
                 u.jsx(
                   "div",
                   {
@@ -26616,12 +26615,11 @@ function HC({ img: t }) {
 function R1() {
   const t = [Ug, Gg, Yg, Xg, Qg, Ug, Gg_img, Yg_img, Xg_img, Qg_img];
   return u.jsx("section", {
-     style:{
-backgroundColor:"#e7eedf"
-      },
+    style: {
+      backgroundColor: "#e7eedf",
+    },
     className: "trusted-by-section  pt-120 pb-120 section-left-margin",
     children: u.jsx("div", {
-     
       className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
       children: u.jsx("div", {
         className: "row justify-content-center",
@@ -27963,7 +27961,7 @@ function wN() {
       u.jsx(O1, {
         spaceTop: !0,
       }),
-      u.jsx(Nh, {}),
+      u.jsx(L1, {}),
     ],
   });
 }
@@ -28183,7 +28181,7 @@ function CN() {
       {
         id: 3,
         name: "Fintech Development",
-        link: "#",
+        link: "/fintech-development",
       },
       {
         id: 4,
@@ -28389,283 +28387,844 @@ function CN() {
     }),
   });
 }
-// function YN() {
-//   const t = [
-//       {
-//         id: 1,
-//         name: "Cloud Computing",
-//         link: "#",
-//       },
-//       {
-//         id: 2,
-//         name: "Cyber Security",
-//         link: "#",
-//       },
-//       {
-//         id: 3,
-//         name: "IT Solutions",
-//         link: "#",
-//       },
-//       {
-//         id: 4,
-//         name: "Virtualization",
-//         link: "#",
-//       },
-//     ],
-//     e = [
-//       {
-//         id: 1,
-//         title: "Endpoint Security",
-//         desc: "Our endpoint security solutions provide robust protection.",
-//         img: _N,
-//       },
-//       {
-//         id: 2,
-//         title: "Network security",
-//         desc: "Secure your network with our comprehensive solutions.",
-//         img: bN,
-//       },
-//     ],
-//     n = [
-//       {
-//         id: 1,
-//         title: "Why we are the best company?",
-//         description:
-//           " At techpulse, we stand out as the premier choice for cybersecurity solutions due to our unwavering commitment to excellence. Our team of highly skilled professionals boasts.",
-//       },
-//       {
-//         id: 2,
-//         title: "How the template process works?",
-//         description:
-//           " Our highly dedicated team engages in fast-paced research, utilizing the latest industry knowledge and cutting-edge tools to deliver comprehensive solutions tailored to your needs.",
-//       },
-//       {
-//         id: 3,
-//         title: "What are the benefits of our services?",
-//         description:
-//           " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
-//       },
-//     ],
-//     r = [
-//       {
-//         id: 1,
-//         name: "Web Development",
-//         link: "#",
-//       },
-//       {
-//         id: 2,
-//         name: "API Software Development",
-//         link: "#",
-//       },
-//       {
-//         id: 3,
-//         name: "Fintech Development",
-//         link: "#",
-//       },
-//       {
-//         id: 4,
-//         name: "Secure Blockchain Development",
-//         link: "#",
-//       },
-//       {
-//         id: 5,
-//         name: "Digital Marketing",
-//         link: "#",
-//       },
-//       {
-//         id: 6,
-//         name: "Software Development",
-//         link: "#",
-//       },
-//     ];
-//   return u.jsx("section", {
-//     className:
-//       "service-details-section section-blur section-left-margin pt-120 pb-120 ",
-//     children: u.jsx("div", {
-//       className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
-//       children: u.jsx("div", {
-//         className: "row justify-content-center",
-//         children: u.jsx("div", {
-//           className: "col-3xl-11",
-//           children: u.jsxs("div", {
-//             className: "row g-6",
-//             children: [
-//               u.jsxs("div", {
-//                 className: "col-lg-8",
-//                 children: [
-//                   u.jsx("div", {
-//                     className: "service-details-banner mb-lg-10 mb-8",
-//                     children: u.jsx("img", {
-//                       className: "w-100",
-//                       src: SN,
-//                       alt: "service details banner",
-//                     }),
-//                   }),
-//                   u.jsxs("div", {
-//                     className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
-//                     children: [
-//                       u.jsx(W, {
-//                         className: "text-n900 fw-extra-bold",
-//                         splitType: "lines",
-//                         child: "line",
-//                         staggerDelay: 0.03,
-//                         children: u.jsx("h1", {
-//                           children: "Service Overview",
-//                         }),
-//                       }),
-//                       u.jsx(W, {
-//                         className: "text-n500",
-//                         splitType: "words",
-//                         child: "word",
-//                         staggerDelay: 0.01,
-//                         children: u.jsx("p", {
-//                           children:
-//                             "Our cybersecurity solutions offer comprehensive protection against evolving cyber threats, safeguarding your digital assets and ensuring business continuity. Utilizing advanced threat intelligence and cutting-edge technologies, we deploy robust security measures such as threat detection, endpoint security, and network monitoring. With a focus on proactive defense and rapid response, we help mitigate risks, prevent data breaches, and maintain regulatory compliance. Our customizable solutions are tailored to meet the unique needs of your organization, providing peace of mind and enabling you to focus on your core business activities without compromising security.",
-//                         }),
-//                       }),
-//                       u.jsx("div", {
-//                         className:
-//                           "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
-//                         children: e.map((i) =>
-//                           u.jsxs(
-//                             "div",
-//                             {
-//                               className:
-//                                 "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
-//                               children: [
-//                                 u.jsx("div", {
-//                                   className: "rounded-circle overflow-hidden",
-//                                   children: u.jsx("img", {
-//                                     className: "w-100",
-//                                     src: i.img,
-//                                     alt: "service icon",
-//                                   }),
-//                                 }),
-//                                 u.jsxs("div", {
-//                                   children: [
-//                                     u.jsx("h4", {
-//                                       className: "text-n900 fw-extra-bold mb-4",
-//                                       children: i.title,
-//                                     }),
-//                                     u.jsx("p", {
-//                                       className: "text-n500",
-//                                       children: i.desc,
-//                                     }),
-//                                   ],
-//                                 }),
-//                               ],
-//                             },
-//                             i.id
-//                           )
-//                         ),
-//                       }),
-//                       u.jsx(W, {
-//                         className: "text-n500",
-//                         splitType: "words",
-//                         child: "word",
-//                         staggerDelay: 0.01,
-//                         children: u.jsx("p", {
-//                           children:
-//                             "With a focus on proactive defense and rapid response, we help mitigate risks, prevent data breaches, and maintain regulatory compliance. Our customizable solutions are tailored to meet the unique needs of your organization, providing peace of mind and enabling you to focus on your core business.",
-//                         }),
-//                       }),
-//                     ],
-//                   }),
-//                   u.jsxs("div", {
-//                     className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
-//                     children: [
-//                       u.jsx(W, {
-//                         className: "text-n900 fw-extra-bold",
-//                         splitType: "lines",
-//                         child: "line",
-//                         staggerDelay: 0.03,
-//                         children: u.jsx("h2", {
-//                           children: "We provide best services:",
-//                         }),
-//                       }),
-//                       u.jsx(W, {
-//                         className: "text-n500",
-//                         splitType: "words",
-//                         child: "word",
-//                         staggerDelay: 0.01,
-//                         children: u.jsx("p", {
-//                           children:
-//                             "Discover top-tier cybersecurity solutions at techpulse. Our expert team delivers comprehensive protection against evolving cyber threats, ensuring the safety and integrity of your digital assets. With tailored services, proactive monitoring, and 24/7 support, we are committed to providing unmatched cybersecurity excellence. Safeguard your business today with our industry-leading expertise.",
-//                         }),
-//                       }),
-//                       u.jsx("ul", {
-//                         className:
-//                           "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
-//                         children: t.map((i) =>
-//                           u.jsx(
-//                             "li",
-//                             {
-//                               children: u.jsx(oe, {
-//                                 to: i.link,
-//                                 children: i.name,
-//                               }),
-//                             },
-//                             i.id
-//                           )
-//                         ),
-//                       }),
-//                     ],
-//                   }),
-//                   u.jsxs("div", {
-//                     className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
-//                     children: [
-//                       u.jsx(W, {
-//                         className: "text-n900 fw-extra-bold",
-//                         splitType: "lines",
-//                         child: "line",
-//                         staggerDelay: 0.03,
-//                         children: u.jsx("h3", {
-//                           children: "We provide Work Benefits",
-//                         }),
-//                       }),
-//                       u.jsx(W, {
-//                         className: "text-n500",
-//                         splitType: "words",
-//                         child: "word",
-//                         staggerDelay: 0.01,
-//                         children: u.jsx("p", {
-//                           children:
-//                             "Our cybersecurity solutions offer numerous benefits to your organization. By partnering with us, you'll enjoy enhanced protection against cyber threats, peace of mind knowing your sensitive data is secure, compliance with industry regulations, expert guidance from experienced professionals, and proactive monitoring to detect and mitigate risks promptly. Let us safeguard your digital assets while you focus on growing your business.",
-//                         }),
-//                       }),
-//                     ],
-//                   }),
-//                   u.jsx(W, {
-//                     className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
-//                     splitType: "words",
-//                     child: "word",
-//                     staggerDelay: 0.01,
-//                     children: u.jsx("h4", {
-//                       children: "Why Choose Us?",
-//                     }),
-//                   }),
-//                   u.jsx(TN, {
-//                     accordionData: n,
-//                   }),
-//                 ],
-//               }),
-//               u.jsxs("div", {
-//                 className:
-//                   "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
-//                 children: [
-//                   u.jsx(jN, {
-//                     serviceList: r,
-//                   }),
-//                   u.jsx(EN, {}),
-//                 ],
-//               }),
-//             ],
-//           }),
-//         }),
-//       }),
-//     }),
-//   });
-// }
+function NY() {
+  const t = [
+      {
+        id: 1,
+        name: "Cloud Computing",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Cyber Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "IT Solutions",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Virtualization",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Endpoint Security",
+        desc: "Our endpoint security solutions provide robust protection.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Network security",
+        desc: "Secure your network with our comprehensive solutions.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why we are the best company?",
+        description:
+          " At techpulse, we stand out as the premier choice for cybersecurity solutions due to our unwavering commitment to excellence. Our team of highly skilled professionals boasts.",
+      },
+      {
+        id: 2,
+        title: "How the template process works?",
+        description:
+          " Our highly dedicated team engages in fast-paced research, utilizing the latest industry knowledge and cutting-edge tools to deliver comprehensive solutions tailored to your needs.",
+      },
+      {
+        id: 3,
+        title: "What are the benefits of our services?",
+        description:
+          " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our cybersecurity solutions offer comprehensive protection against evolving cyber threats, safeguarding your digital assets and ensuring business continuity. Utilizing advanced threat intelligence and cutting-edge technologies, we deploy robust security measures such as threat detection, endpoint security, and network monitoring. With a focus on proactive defense and rapid response, we help mitigate risks, prevent data breaches, and maintain regulatory compliance. Our customizable solutions are tailored to meet the unique needs of your organization, providing peace of mind and enabling you to focus on your core business activities without compromising security.",
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With a focus on proactive defense and rapid response, we help mitigate risks, prevent data breaches, and maintain regulatory compliance. Our customizable solutions are tailored to meet the unique needs of your organization, providing peace of mind and enabling you to focus on your core business.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover top-tier cybersecurity solutions at techpulse. Our expert team delivers comprehensive protection against evolving cyber threats, ensuring the safety and integrity of your digital assets. With tailored services, proactive monitoring, and 24/7 support, we are committed to providing unmatched cybersecurity excellence. Safeguard your business today with our industry-leading expertise.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our cybersecurity solutions offer numerous benefits to your organization. By partnering with us, you'll enjoy enhanced protection against cyber threats, peace of mind knowing your sensitive data is secure, compliance with industry regulations, expert guidance from experienced professionals, and proactive monitoring to detect and mitigate risks promptly. Let us safeguard your digital assets while you focus on growing your business.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NY1() {
+  const t = [
+      {
+        id: 1,
+        name: "Web Design & UX/UI",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Integration",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "E-Commerce Solutions",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Custom Web Development",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Front-End Development",
+        desc: "Engaging, user-friendly interfaces designed to deliver seamless experiences across all devices.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Back-End Development",
+        desc: "Scalable and secure server-side logic that ensures your website runs smoothly and efficiently.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How the Process Works",
+        description:
+          "Our team works in agile sprints — starting with in-depth research and discovery, followed by wireframing, design, development, and QA testing. We use the latest tools and frameworks to ensure modern, maintainable, and reliable code.",
+      },
+      {
+        id: 2,
+        title: "What Makes Us Different?",
+        description:
+          "We combine strategic thinking, beautiful design, and technical excellence to create digital experiences that drive engagement and growth. With an eye for detail and user behavior, we ensure every element works in harmony to deliver your goals.",
+      },
+      // {
+      //   id: 3,
+      //   title: "What are the benefits of our services?",
+      //   description:
+      //     " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon IT Services, our web development solutions are crafted to elevate your digital presence, combining creativity with cutting-edge technologies. From concept to launch, we deliver scalable, secure, and high-performing websites that align with your business goals. Whether it's a sleek corporate site, an engaging e-commerce platform, or a dynamic web application, we ensure responsive designs, fast load times, and intuitive user experiences.",
+                            u.jsx("br", {}),
+                            " With a focus on custom solutions and performance-driven development, we help businesses stand out in the competitive digital landscape. Our expert developers build robust front-end and back-end architectures, ensuring your website is not only visually appealing but also functionally powerful.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With a focus on user-centric design, robust architecture, and seamless functionality, our Web Portal Development services empower businesses to streamline operations, enhance user engagement, and centralize access to critical resources. We deliver secure, scalable, and customized portals tailored to your organizational workflows and business goals.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover top-tier cybersecurity solutions at techpulse. Our expert team delivers comprehensive protection against evolving cyber threats, ensuring the safety and integrity of your digital assets. With tailored services, proactive monitoring, and 24/7 support, we are committed to providing unmatched cybersecurity excellence. Safeguard your business today with our industry-leading expertise.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By choosing Payzon India IT Services as your digital partner, you unlock more than just web development — you gain access to a team committed to your long-term success. Our solutions are designed with performance, usability, and scalability at their core, helping you create a strong digital footprint while maximizing ROI.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NY2() {
+  const t = [
+      {
+        id: 1,
+        name: "Landing Page UI/UX Design",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Single-Page Promotional Websites",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Custom CTA and Form Integration",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Hosting & Deployment Support",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Conversion-Focused Design",
+        desc: "Strategically designed layouts and CTAs that guide users toward your desired action — be it a sign-up, purchase, or inquiry.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Responsive & Mobile-Optimized",
+        desc: "Flawless user experience across all screen sizes and devices, ensuring you never lose a lead due to poor design.",
+        img: bN,
+      },
+      
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How the Process Works",
+        description:
+          "Our process is streamlined yet thorough — starting with campaign objectives and audience analysis. We then move to design mockups, development, testing, and final deployment. Everything is optimized for speed, engagement, and conversions.",
+      },
+      {
+        id: 2,
+        title: "What Makes Us Different?",
+        description:
+          "We blend marketing psychology with technical precision. Our landing pages are not just beautiful — they’re purpose-driven. With clear messaging, engaging visuals, and performance in mind, we help you turn visitors into customers.",
+      },
+      // {
+      //   id: 3,
+      //   title: "What are the benefits of our services?",
+      //   description:
+      //     " Our dedicated team provides 24/7 support to ensure timely resolution of any IT-related issues. We prioritize customer satisfaction and strive to exceed expectations.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Web Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "API Software Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Fintech Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Secure Blockchain Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "Software Development",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon IT Services, we specialize in building high-converting landing pages that capture attention, drive engagement, and deliver measurable results. Whether you're promoting a product, launching a campaign, or collecting leads, our landing website solutions are built with one goal in mind — maximizing conversions.",
+                            u.jsx("br", {}),
+                            "By combining modern design principles with persuasive copywriting and seamless user flow, we ensure that every landing page we create delivers a powerful first impression and encourages action. From single-product showcases to lead generation funnels, we build responsive, lightning-fast, and SEO-optimized landing pages that get results.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With a focus on user-centric design, robust architecture, and seamless functionality, our Web Portal Development services empower businesses to streamline operations, enhance user engagement, and centralize access to critical resources. We deliver secure, scalable, and customized portals tailored to your organizational workflows and business goals.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover cutting-edge landing page development services with Payzon IT Services. Our creative and technical teams work hand-in-hand to create visually stunning and strategically designed pages that convert. Whether you're launching a new product, capturing event registrations, or testing a marketing idea — we’ve got you covered with fast, functional, and conversion-optimized landing websites.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "By partnering with Payzon India IT Services, you're choosing a team that prioritizes performance, design, and results. Our landing website development services are focused on helping you achieve real business outcomes through strategic design and reliable execution.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
 function NN() {
   return u.jsx("section", {
     className: "service-section section-blur section-left-margin pb-120 ",
@@ -28748,6 +29307,141 @@ function kN() {
     ],
   });
 }
+
+// services details page start
+
+function NQ() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Landing Web Sites",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY2, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function QQ() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Fintech Development",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY, {}),
+      u.jsx(NN, {}),
+    ],
+  });
+}
+
+function Q6() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Web Portal",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY1, {}),
+      // u.jsx(SC, {}),
+    ],
+  });
+}
+
+function Q2() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Marketing Sales&Funnel",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY, {}),
+      u.jsx(NN, {}),
+    ],
+  });
+}
+
+function Q3() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Blockchain Development",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY, {}),
+      u.jsx(NN, {}),
+    ],
+  });
+}
+
+function Q4() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "API Development",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY, {}),
+      u.jsx(NN, {}),
+    ],
+  });
+}
+function Q5() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "App Development",
+    description:
+      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NY, {}),
+      u.jsx(NN, {}),
+    ],
+  });
+}
+
 const AN = "/assets/recent-project-4-CECl9tg3.png",
   PN = [
     {
@@ -30849,6 +31543,34 @@ const dk = () => {
             u.jsx(on, {
               path: "/service-details",
               element: u.jsx(kN, {}),
+            }),
+            u.jsx(on, {
+              path: "/digital-marketing",
+              element: u.jsx(NQ, {}),
+            }),
+            u.jsx(on, {
+              path: "/fintech-development",
+              element: u.jsx(QQ, {}),
+            }),
+            u.jsx(on, {
+              path: "/web-portal",
+              element: u.jsx(Q6, {}),
+            }),
+            u.jsx(on, {
+              path: "/marketing&sales",
+              element: u.jsx(Q2, {}),
+            }),
+            u.jsx(on, {
+              path: "/blockchain-development",
+              element: u.jsx(Q3, {}),
+            }),
+            u.jsx(on, {
+              path: "/api-development",
+              element: u.jsx(Q4, {}),
+            }),
+            u.jsx(on, {
+              path: "/app-development",
+              element: u.jsx(Q5, {}),
             }),
             u.jsx(on, {
               path: "/case-studies",

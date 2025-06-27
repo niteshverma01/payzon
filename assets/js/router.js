@@ -124,6 +124,7 @@ const router = new Router({
             </div>
         </div>
     `,
+    '/digital-marketing': async () => await loadHTML('/digital-marketing.html'),
     '404': () => `
         <div class="text-center py-10">
             <h2 class="text-2xl font-bold text-red-600">Page Not Found</h2>
