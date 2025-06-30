@@ -11147,25 +11147,38 @@ function jb() {
         className: "menu-control-area",
         children: u.jsxs("div", {
           className:
-            "d-flex flex-lg-column justify-content-lg-around justify-content-between align-items-center gap-xxl-20 gap-xl-15 gap-lg-10  py-xl-15 py-lg-10 py-3 px-4 px-sm-6 px-lg-0",
+            "d-flex flex-lg-column justify-content-lg-around justify-content-between align-items-center gap-xxl-20 gap-xl-15 gap-lg-10 py-xl-15 py-lg-10 py-3 px-4 px-sm-6 px-lg-0",
           children: [
-            u.jsxs(oe, {
-              to: "/",
-              title: "TechPulse",
-              className: "header-logo",
+            // 👇 Logo + Company Name Wrapper for mobile/tablet
+            u.jsxs("div", {
+              className: "d-flex align-items-center gap-2",
               children: [
-                u.jsx("img", {
-                  className: "w-100 d-none d-lg-block",
-                  src: xb,
-                  alt: "logo",
+                u.jsxs(oe, {
+                  to: "/",
+                  title: "payzon",
+                  className: "header-logo",
+                  children: [
+                    u.jsx("img", {
+                      className: "w-100 d-none d-lg-block",
+                      src: xb,
+                      alt: "logo",
+                    }),
+                    u.jsx("img", {
+                      className: "d-block my-image d-lg-none",
+                      src: wx,
+                      alt: "favicon",
+                    }),
+                  ],
                 }),
-                u.jsx("img", {
-                  className: "d-block my-image d-lg-none",
-                  src: wx,
-                  alt: "favicon",
+                // 👇 Company name only for mobile & tablet
+                u.jsx("span", {
+                  className: "fw-bold text-yellow text-lg d-lg-none",
+                  children: "Payzon",
                 }),
               ],
             }),
+
+            // Menu toggle
             u.jsxs("div", {
               className: `menu-toggle-btn d-lg-grid justify-content-lg-center align-items-lg-center gap-lg-5 cursor-pointer ${
                 t ? "active" : ""
@@ -11176,15 +11189,9 @@ function jb() {
                   className:
                     "menu-toggle-icon d-grid gap-2 justify-content-center",
                   children: [
-                    u.jsx("span", {
-                      className: "bar bar-1",
-                    }),
-                    u.jsx("span", {
-                      className: "bar bar-2",
-                    }),
-                    u.jsx("span", {
-                      className: "bar bar-3",
-                    }),
+                    u.jsx("span", { className: "bar bar-1" }),
+                    u.jsx("span", { className: "bar bar-2" }),
+                    u.jsx("span", { className: "bar bar-3" }),
                   ],
                 }),
                 u.jsxs("div", {
@@ -11204,13 +11211,13 @@ function jb() {
                 }),
               ],
             }),
+
+            // Social icons (Desktop only)
             u.jsxs("div", {
               className:
                 "social-list-area d-lg-flex d-none flex-column justify-content-center align-items-center gap-3",
               children: [
-                u.jsx("div", {
-                  className: "vr-line mx-auto",
-                }),
+                u.jsx("div", { className: "vr-line mx-auto" }),
                 u.jsx("ul", {
                   className:
                     "social-list d-inline-grid gap-3 border primary500-border justify-content-center align-items-center",
@@ -11221,9 +11228,7 @@ function jb() {
                         children: u.jsx("a", {
                           href: r.link,
                           className: "text-xl",
-                          children: u.jsx("i", {
-                            className: r.icon,
-                          }),
+                          children: u.jsx("i", { className: r.icon }),
                         }),
                       },
                       r.id
@@ -11240,6 +11245,7 @@ function jb() {
           ],
         }),
       }),
+
       u.jsx(Tb, {
         toggle: t,
         setToggle: e,
@@ -11746,53 +11752,55 @@ function kb() {
                       ],
                     }),
 
-                   u.jsx("div", {
-  className: "col-12 mt-6",
-  children: u.jsx("div", {
-    className:
-      "footer-menu d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-4",
-    children: [
-      u.jsx("span", {
-        className: "text-2xl text-n0 fw-extra-bold d-block text-center text-md-start",
-        style: { minWidth: "180px" },
-        children: [
-          "OUR BUSINESS",
-          u.jsx("br", {}),
-          "COLLABORATION",
-        ],
-      }),
-      u.jsx("ul", {
-        className:
-          "footer-menu-items d-flex flex-wrap justify-content-center justify-content-md-start gap-3 align-items-center mb-0",
-        style: { listStyle: "none", padding: 0, margin: 0 },
-        children: L.map(({ id: i, title: s, link: o, image: img }) =>
-          u.jsx(
-            "li",
-            {
-              className: "d-inline-block",
-              children: u.jsx(oe, {
-                to: o,
-                className: "text-n1",
-                children: u.jsx("img", {
-                  src: img,
-                  alt: s,
-                  className: "collaboration-logo img-fluid",
-                  style: {
-                    maxHeight: "60px",
-                    width: "auto",
-                    objectFit: "contain",
-                  },
-                }),
-              }),
-            },
-            i
-          )
-        ),
-      }),
-    ],
-  }),
-}),
-
+                    u.jsx("div", {
+                      className: "col-12 mt-6",
+                      children: u.jsx("div", {
+                        className:
+                          "footer-menu d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-4",
+                        children: [
+                          u.jsx("span", {
+                            className:
+                              "text-2xl text-n0 fw-extra-bold d-block text-center text-md-start",
+                            style: { minWidth: "180px" },
+                            children: [
+                              "OUR BUSINESS",
+                              u.jsx("br", {}),
+                              "COLLABORATION",
+                            ],
+                          }),
+                          u.jsx("ul", {
+                            className:
+                              "footer-menu-items d-flex flex-wrap justify-content-center justify-content-md-start gap-3 align-items-center mb-0",
+                            style: { listStyle: "none", padding: 0, margin: 0 },
+                            children: L.map(
+                              ({ id: i, title: s, link: o, image: img }) =>
+                                u.jsx(
+                                  "li",
+                                  {
+                                    className: "d-inline-block",
+                                    children: u.jsx(oe, {
+                                      to: o,
+                                      className: "text-n1",
+                                      children: u.jsx("img", {
+                                        src: img,
+                                        alt: s,
+                                        className:
+                                          "collaboration-logo img-fluid",
+                                        style: {
+                                          maxHeight: "60px",
+                                          width: "auto",
+                                          objectFit: "contain",
+                                        },
+                                      }),
+                                    }),
+                                  },
+                                  i
+                                )
+                            ),
+                          }),
+                        ],
+                      }),
+                    }),
                   ],
                 }),
               ],
@@ -25105,7 +25113,7 @@ function yC() {
                     u.jsxs("span", {
                       className:
                         "d-block text-secondary-50 fw-semibold text-decoration-underline mb-4 main-title",
-                      children: [" ", "Payzon India IT Pvt. Ltd. "],
+                      children: [" ", "Payzon India Pvt. Ltd. "],
                     }),
                     u.jsxs(W, {
                       className: "display-two text-n0 mb-lg-8 mb-6",
@@ -25917,9 +25925,9 @@ PAN verification ensures the authenticity of a PAN through official or third-par
     ],
   });
 }
-function b1({ name: t, position: e, image: n }) {
+function b1({ name: t, position: e, image: n, link: l }) {
   return u.jsx("div", {
-    className: "team-card border n900-border p-4 rounded", // Added full border to entire card
+    className: "team-card border n900-border p-4 rounded",
     style: {
       borderWidth: "2px",
       borderStyle: "solid",
@@ -25944,9 +25952,9 @@ function b1({ name: t, position: e, image: n }) {
           }),
         }),
 
-        // Team info section with border added to position
+        // Team info section
         u.jsxs("div", {
-          className: "team-info text-start", // Changed from text-center to text-start
+          className: "team-info text-start",
           children: [
             u.jsx(oe, {
               className: "text-h4 text-n900 mb-3",
@@ -25956,13 +25964,22 @@ function b1({ name: t, position: e, image: n }) {
               children: t,
             }),
             u.jsx("span", {
-              className: "text-n900 border    px-3 py-2 d-inline-block rounded",
+              className: "text-n900 border px-3 py-2 d-inline-block rounded",
               style: {
                 borderWidth: "1px",
                 borderStyle: "solid",
               },
               children: e,
             }),
+            l &&
+              u.jsx("div", {
+                className: "mt-3",
+                children: u.jsx("a", {
+                  href: l,
+                  className: "text-primary",
+                  children: "Learn More",
+                }),
+              }),
           ],
         }),
       ],
@@ -25982,6 +25999,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Payzon offers secure, scalable fintech portal solutions in Bhopal. We specialize in building custom platforms for finance, lending, and digital payments. Trusted by clients, we deliver innovative, compliant, and reliable fintech development services in Bhopal.",
       image: kC,
+      link: "/fitech-portal",
     },
     {
       id: 2,
@@ -25989,6 +26007,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Launch your eCommerce success with the best shopping portal development in Bhopal. Payzon creates fast, mobile-ready online stores tailored to your brand and customers.",
       image: AC,
+      link: "/shopping-portal",
     },
     {
       id: 3,
@@ -25996,6 +26015,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Build your online recharge business with our expert recharge portal development services in Bhopal. Easy API integration for mobile, DTH, utility & wallet systems.",
       image: PC,
+      link: "/recharge-portal",
     },
     {
       id: 4,
@@ -26003,6 +26023,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Create a smart travel booking platform with Bhopal's trusted travel portal developers. Payzon builds portals for flights, hotels & holiday packages—seamless & user-friendly.",
       image: OC,
+      link: "/travel-portal",
     },
     {
       id: 5,
@@ -26010,6 +26031,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Level up with custom gaming portal development in Bhopal. Payzon delivers engaging, secure, and scalable gaming solutions tailored to your audience and business goals.  ",
       image: IC,
+      link: "/gaming-portal",
     },
     {
       id: 6,
@@ -26017,6 +26039,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Build your online grocery store with Payzon—trusted grocery/mart portal development company in Bhopal. Feature-rich, responsive, and designed for local market success.",
       image: LC,
+      link: "/grocery-portal",
     },
     {
       id: 7,
@@ -26024,6 +26047,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "The KYC Portal is a secure, user-friendly platform that streamlines identity verification with document checks, facial recognition, and automation—helping businesses across industries reduce fraud, ensure compliance, and enhance customer onboarding efficiently and reliably.",
       image: LC,
+      link: "/e-KYC-portal",
     },
     {
       id: 8,
@@ -26031,6 +26055,7 @@ const kC = "/assets/images/fintech.jpg",
       position:
         "Web hosting enables individuals and organizations to publish websites online. Providers offer shared, VPS, dedicated, and cloud hosting options, each suited to different needs. Selecting the right hosting ensures optimal website performance, security, and reliability.",
       image: LC,
+      link: "/web-hosting",
     },
   ];
 function E1() {
@@ -26140,7 +26165,7 @@ const j1 = ({ children: t }) =>
       imageSrc: A1,
       bgColor: "bg-primary-75",
       textColor: "text-n900",
-      link: "/case-study-details",
+      link: "/paid-campaign",
       headingColor: "text-primary-400",
     },
     {
@@ -26151,7 +26176,7 @@ const j1 = ({ children: t }) =>
       imageSrc: k1,
       bgColor: "bg-primary-300",
       textColor: "text-n900",
-      link: "/case-study-details",
+      link: "/seo-optimization",
       headingColor: "text-primary-400",
     },
     {
@@ -26162,7 +26187,7 @@ const j1 = ({ children: t }) =>
       imageSrc: N1,
       bgColor: "bg-gradient-to-r from-blue-500 to-blue-600",
       textColor: "text-n0",
-      link: "/case-study-details",
+      link: "/google-ppc",
       headingColor: "text-n0",
     },
     {
@@ -26173,7 +26198,7 @@ const j1 = ({ children: t }) =>
       imageSrc: "/assets/images/sms.png",
       bgColor: "bg-gradient-to-r from-purple-500 to-purple-600",
       textColor: "text-n0",
-      link: "/case-study-details",
+      link: "/bulk-sms",
       headingColor: "text-n0",
     },
     {
@@ -26184,7 +26209,7 @@ const j1 = ({ children: t }) =>
       imageSrc: "/assets/images/meta.avif",
       bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
       textColor: "text-n0",
-      link: "/case-study-details",
+      link: "/meta-verified",
       headingColor: "text-n0",
     },
   ];
@@ -26311,6 +26336,7 @@ const I1 = [
     answer:
       "Secure every login with Two-Factor Authentication and prevent unauthorized access with industry-standard multi-layered protection.",
     icon: "🔒",
+    link:"/2fa-Authentication"
   },
   {
     id: 2,
@@ -26318,6 +26344,8 @@ const I1 = [
     answer:
       "Protect your website from malware, intrusion attempts, and vulnerabilities with real-time monitoring and firewall defenses.",
     icon: "🌐",
+        link:"/website-Security"
+
   },
   {
     id: 3,
@@ -26325,6 +26353,7 @@ const I1 = [
     answer:
       "Keep your data safe with encryption, access controls, and frequent audits for leak-proof database management.",
     icon: "🗄️",
+    link:"/database-Security"
   },
   {
     id: 4,
@@ -26332,6 +26361,7 @@ const I1 = [
     answer:
       "Shield your network infrastructure from external threats, unauthorized traffic, and cyberattacks with expert-driven protection systems.",
     icon: "🛡️",
+    link:"/network-Security"
   },
   {
     id: 5,
@@ -26339,6 +26369,7 @@ const I1 = [
     answer:
       "Get your codebase professionally reviewed to eliminate bugs, security loopholes, and performance issues before deployment.",
     icon: "💻",
+    link:"/code-Audit"
   },
   {
     id: 6,
@@ -26346,6 +26377,7 @@ const I1 = [
     answer:
       "Prevent downtime and traffic overload with enterprise-level DDoS mitigation solutions for stable and secure online operations.",
     icon: "⚡",
+    link:"/ddos-Protection"
   },
 ];
 
@@ -26357,7 +26389,7 @@ function L1() {
   };
   return u.jsx("section", {
     className:
-      "section-blur faqs-section section-left-margin pt-120 pb-120 bg-[#e7eedf] relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] before:from-green-400/10 before:via-blue-400/5 before:to-transparent before:z-0 after:content-[''] after:absolute after:inset-0 after:bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%236B7280\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1\"%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] after:z-0",
+      'section-blur faqs-section section-left-margin pt-120 pb-120 bg-[#e7eedf] relative overflow-hidden before:content-[\'\'] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] before:from-green-400/10 before:via-blue-400/5 before:to-transparent before:z-0 after:content-[\'\'] after:absolute after:inset-0 after:bg-[url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236B7280" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')] after:z-0',
     children: u.jsx("div", {
       className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10 relative z-10",
       children: u.jsx("div", {
@@ -26382,52 +26414,60 @@ function L1() {
                   "div",
                   {
                     className: "col-lg-6",
-                    children: u.jsxs("div", {
-                      className:
-                        "group p-lg-8 p-sm-6 p-4 border border-gray-300/30 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl  hover:border-green-400/50 transition-all duration-700 animate__animated animate__fadeInUp hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500",
-                      // style: { animationDelay: `${index * 150}ms` },
-                      children: [
-                        u.jsx("div", {
-                          className: "absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-y-16 translate-x-16"
-                        }),
-                        u.jsxs("div", {
-                          className: "flex items-center justify-start mb-lg-6 mb-4 relative z-10",
-                          children: [
-                            u.jsx("div", {
-                              className: "relative mr-6",
-                              children: u.jsx("span", {
-                                className:
-                                  "text-6xl transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 filter drop-shadow-lg group-hover:drop-shadow-2xl inline-block",
-                                children: e.icon,
-                              }),
-                            }),
-                            u.jsx("h4", {
-                              className:
-                                "title title-animation-line fw-extra-bold mb-0 text-gray-800 font-extrabold tracking-tight text-xl group-hover:text-green-700 transition-colors duration-500 leading-tight",
-                              children: e.question,
-                            }),
-                          ],
-                        }),
-                        u.jsx("div", {
-                          className:
-                            "content ps-xxl-20 ps-lg-15 ps-md-10 ps-sm-6 ps-4 relative z-10",
-                          children: u.jsx("p", {
-                            className: "text-gray-600 text-base leading-relaxed font-medium group-hover:text-gray-800 transition-colors duration-500 mb-4",
-                            children: e.answer,
-                          }),
-                        }),
-                        u.jsx("div", {
-                          className: "flex justify-end items-center relative z-10",
-                          children: u.jsx("span", {
+                    children: u.jsx("a", {
+                      href: e.link,
+                      className: "block",
+                      children: u.jsxs("div", {
+                        className:
+                          "group p-lg-8 p-sm-6 p-4 border border-gray-300/30 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl hover:border-green-400/50 transition-all duration-700 animate__animated animate__fadeInUp hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500",
+                        children: [
+                          u.jsx("div", {
                             className:
-                              "toggle-icon text-2xl text-green-600 group-hover:text-green-800 transition-all duration-500 transform group-hover:translate-x-2 group-hover:scale-110 inline-block",
-                            children: "→",
+                              "absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-y-16 translate-x-16",
                           }),
-                        }),
-                        u.jsx("div", {
-                          className: "absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"
-                        })
-                      ],
+                          u.jsxs("div", {
+                            className:
+                              "flex items-center justify-start mb-lg-6 mb-4 relative z-10",
+                            children: [
+                              u.jsx("div", {
+                                className: "relative mr-6",
+                                children: u.jsx("span", {
+                                  className:
+                                    "text-6xl transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 filter drop-shadow-lg group-hover:drop-shadow-2xl inline-block",
+                                  children: e.icon,
+                                }),
+                              }),
+                              u.jsx("h4", {
+                                className:
+                                  "title title-animation-line fw-extra-bold mb-0 text-gray-800 font-extrabold tracking-tight text-xl group-hover:text-green-700 transition-colors duration-500 leading-tight",
+                                children: e.question,
+                              }),
+                            ],
+                          }),
+                          u.jsx("div", {
+                            className:
+                              "content ps-xxl-20 ps-lg-15 ps-md-10 ps-sm-6 ps-4 relative z-10",
+                            children: u.jsx("p", {
+                              className:
+                                "text-gray-600 text-base leading-relaxed font-medium group-hover:text-gray-800 transition-colors duration-500 mb-4",
+                              children: e.answer,
+                            }),
+                          }),
+                          u.jsx("div", {
+                            className:
+                              "flex justify-end items-center relative z-10",
+                            children: u.jsx("span", {
+                              className:
+                                "toggle-icon text-2xl text-green-600 group-hover:text-green-800 transition-all duration-500 transform group-hover:translate-x-2 group-hover:scale-110 inline-block",
+                              children: "→",
+                            }),
+                          }),
+                          u.jsx("div", {
+                            className:
+                              "absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full",
+                          }),
+                        ],
+                      }),
                     }),
                   },
                   e.id
@@ -28840,7 +28880,7 @@ function NY1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our web development solutions are crafted to elevate your digital presence, combining creativity with cutting-edge technologies. From concept to launch, we deliver scalable, secure, and high-performing websites that align with your business goals. Whether it's a sleek corporate site, an engaging e-commerce platform, or a dynamic web application, we ensure responsive designs, fast load times, and intuitive user experiences.",
+                            "At Payzon India Pvt. Ltd, our web development solutions are crafted to elevate your digital presence, combining creativity with cutting-edge technologies. From concept to launch, we deliver scalable, secure, and high-performing websites that align with your business goals. Whether it's a sleek corporate site, an engaging e-commerce platform, or a dynamic web application, we ensure responsive designs, fast load times, and intuitive user experiences.",
                             u.jsx("br", {}),
                             " With a focus on custom solutions and performance-driven development, we help businesses stand out in the competitive digital landscape. Our expert developers build robust front-end and back-end architectures, ensuring your website is not only visually appealing but also functionally powerful.",
                           ],
@@ -29120,7 +29160,7 @@ function NY2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, we specialize in building high-converting landing pages that capture attention, drive engagement, and deliver measurable results. Whether you're promoting a product, launching a campaign, or collecting leads, our landing website solutions are built with one goal in mind — maximizing conversions.",
+                            "At Payzon India Pvt. Ltd, we specialize in building high-converting landing pages that capture attention, drive engagement, and deliver measurable results. Whether you're promoting a product, launching a campaign, or collecting leads, our landing website solutions are built with one goal in mind — maximizing conversions.",
                             u.jsx("br", {}),
                             "By combining modern design principles with persuasive copywriting and seamless user flow, we ensure that every landing page we create delivers a powerful first impression and encourages action. From single-product showcases to lead generation funnels, we build responsive, lightning-fast, and SEO-optimized landing pages that get results.",
                           ],
@@ -29193,7 +29233,7 @@ function NY2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Discover cutting-edge landing page development services with Payzon India Services. Our creative and technical teams work hand-in-hand to create visually stunning and strategically designed pages that convert. Whether you're launching a new product, capturing event registrations, or testing a marketing idea — we’ve got you covered with fast, functional, and conversion-optimized landing websites.",
+                            "Discover cutting-edge landing page development services with Payzon India Pvt. Ltd. Our creative and technical teams work hand-in-hand to create visually stunning and strategically designed pages that convert. Whether you're launching a new product, capturing event registrations, or testing a marketing idea — we’ve got you covered with fast, functional, and conversion-optimized landing websites.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -29400,7 +29440,7 @@ function NY3() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, we build secure, scalable, and user-friendly Fintech portals designed to simplify financial operations, enhance digital experiences, and drive customer trust. From online banking platforms and digital wallets to investment dashboards and loan management systems — our fintech solutions are built with precision, performance, and compliance in mind.",
+                            "At Payzon India Pvt. Ltd, we build secure, scalable, and user-friendly Fintech portals designed to simplify financial operations, enhance digital experiences, and drive customer trust. From online banking platforms and digital wallets to investment dashboards and loan management systems — our fintech solutions are built with precision, performance, and compliance in mind.",
                             u.jsx("br", {}),
                             "With a focus on data security, real-time processing, and intuitive interfaces, our fintech portals are engineered to meet the evolving needs of both users and institutions. We ensure full regulatory compliance, seamless integrations with third-party APIs, and a mobile-first approach — helping you deliver modern financial services with confidence.",
                           ],
@@ -29473,7 +29513,7 @@ function NY3() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Discover tailored Fintech Portal Development services at Payzon India Services. We specialize in building secure and scalable platforms that handle high-volume transactions, sensitive data, and complex business logic. Whether you're launching a digital bank, investment platform, or payment app — we provide robust fintech solutions aligned with your vision and the industry's best practices.",
+                            "Discover tailored Fintech Portal Development services at Payzon India Pvt. Ltd. We specialize in building secure and scalable platforms that handle high-volume transactions, sensitive data, and complex business logic. Whether you're launching a digital bank, investment platform, or payment app — we provide robust fintech solutions aligned with your vision and the industry's best practices.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -29681,7 +29721,7 @@ function NY4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, we power your growth with result-driven Marketing & Sales Solutions tailored to your business objectives. In today’s competitive digital ecosystem, it’s not just about having a presence — it’s about standing out, reaching the right audience, and converting interest into revenue.",
+                            "At Payzon India Pvt. Ltd, we power your growth with result-driven Marketing & Sales Solutions tailored to your business objectives. In today’s competitive digital ecosystem, it’s not just about having a presence — it’s about standing out, reaching the right audience, and converting interest into revenue.",
                             u.jsx("br", {}),
                             "Our expert team blends strategy, creativity, and technology to deliver impactful marketing campaigns and sales automation that fuel business performance. From brand positioning and lead generation to CRM integration and funnel optimization — we provide end-to-end solutions that drive visibility, engagement, and conversions.",
                           ],
@@ -29962,7 +30002,7 @@ function NY5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, we deliver powerful Blockchain Development solutions designed to drive innovation, enhance transparency, and strengthen data security. Whether you're looking to build decentralized applications (dApps), smart contracts, or private blockchain networks — our team of experts ensures seamless development, deployment, and integration tailored to your business needs.",
+                            "At Payzon India Pvt. Ltd, we deliver powerful Blockchain Development solutions designed to drive innovation, enhance transparency, and strengthen data security. Whether you're looking to build decentralized applications (dApps), smart contracts, or private blockchain networks — our team of experts ensures seamless development, deployment, and integration tailored to your business needs.",
                             u.jsx("br", {}),
                             "With a focus on scalability, decentralization, and trustless architecture, we help startups, enterprises, and institutions leverage blockchain to create future-ready systems that improve operational efficiency, reduce fraud, and empower user autonomy.",
                           ],
@@ -30035,7 +30075,7 @@ function NY5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Unlock new business models and digital opportunities with custom blockchain development from Payzon India Services. We help you harness the decentralized future with tailored solutions that ensure high performance, interoperability, and airtight security.",
+                            "Unlock new business models and digital opportunities with custom blockchain development from Payzon India Pvt. Ltd. We help you harness the decentralized future with tailored solutions that ensure high performance, interoperability, and airtight security.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -30164,7 +30204,7 @@ function NY6() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "At Payzon India Services, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
+          "At Payzon India Pvt. Ltd, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
       },
       {
         id: 2,
@@ -30253,7 +30293,7 @@ function NY6() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our API development solutions enable seamless integration, data exchange, and functionality across platforms, empowering your business with scalable and secure digital connectivity. Whether you're building a new app or modernizing legacy systems, our custom APIs ensure performance, interoperability, and future-readiness.",
+                            "At Payzon India Pvt. Ltd, our API development solutions enable seamless integration, data exchange, and functionality across platforms, empowering your business with scalable and secure digital connectivity. Whether you're building a new app or modernizing legacy systems, our custom APIs ensure performance, interoperability, and future-readiness.",
                             u.jsx("br", {}),
                             "We design RESTful, SOAP, GraphQL, and third-party API integrations that simplify complex workflows, connect services, and improve automation. With a focus on performance, security, and modularity, our APIs unlock new possibilities for digital transformation and business growth.",
                           ],
@@ -30455,7 +30495,7 @@ function NY7() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "At Payzon India Services, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
+          "At Payzon India Pvt. Ltd, we lead with a deep understanding of API architecture, industry best practices, and client-specific needs. Our experienced developers deliver APIs that are secure, well-documented, and future-proof, ensuring performance and reliability across any scale.",
       },
       {
         id: 2,
@@ -30544,7 +30584,7 @@ function NY7() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our App Development solutions empower businesses to transform ideas into engaging digital experiences. Whether you need a feature-rich mobile application or a cross-platform solution, we deliver scalable, secure, and user-centric apps that drive performance and enhance customer engagement.",
+                            "At Payzon India Pvt. Ltd, our App Development solutions empower businesses to transform ideas into engaging digital experiences. Whether you need a feature-rich mobile application or a cross-platform solution, we deliver scalable, secure, and user-centric apps that drive performance and enhance customer engagement.",
                             u.jsx("br", {}),
                             "Utilizing modern frameworks like Flutter, React Native, Swift, and Kotlin, we develop apps tailored to your industry and audience. From strategy and UI/UX design to development, testing, and deployment, our team ensures smooth delivery, high functionality, and stunning visual appeal.With a focus on performance, security, and innovation, we create applications that meet business goals and exceed user expectations.",
                           ],
@@ -30657,7 +30697,7 @@ function NY7() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "By choosing Payzon India Services for app development, you gain a trusted digital partner focused on delivering results. We blend technical expertise with creative innovation to ensure your app stands out in the crowded market.",
+                            "By choosing Payzon India Pvt. Ltd for app development, you gain a trusted digital partner focused on delivering results. We blend technical expertise with creative innovation to ensure your app stands out in the crowded market.",
                         }),
                       }),
                     ],
@@ -30746,13 +30786,13 @@ function NhQ1() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "By choosing Payzon India Services for Aadhaar Verification, you gain a reliable digital partner focused on compliance, performance, and security. Our Aadhaar-based verification tools are designed to reduce onboarding time, minimize manual data errors, and maintain trust in digital workflows.",
+          "By choosing Payzon India Pvt. Ltd for Aadhaar Verification, you gain a reliable digital partner focused on compliance, performance, and security. Our Aadhaar-based verification tools are designed to reduce onboarding time, minimize manual data errors, and maintain trust in digital workflows.",
       },
       {
         id: 2,
         title: "How the Process Works",
         description:
-          "At Payzon India Services, we understand the critical need for secure and compliant identity verification. We offer scalable, UIDAI-compliant, and fully encrypted API-based solutions that keep your business protected and your users’ data safe. Our experience in identity management, API integrations, and security protocols ensures that your verification flow is smooth, reliable, and audit-ready.",
+          "At Payzon India Pvt. Ltd, we understand the critical need for secure and compliant identity verification. We offer scalable, UIDAI-compliant, and fully encrypted API-based solutions that keep your business protected and your users’ data safe. Our experience in identity management, API integrations, and security protocols ensures that your verification flow is smooth, reliable, and audit-ready.",
       },
       // {
       //   id: 3,
@@ -30830,7 +30870,7 @@ function NhQ1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our Aadhaar Verification solutions simplify and secure the identity verification process by integrating with UIDAI’s Aadhaar services. Whether you're onboarding users, validating customer data, or meeting regulatory KYC mandates, our system ensures seamless, real-time authentication with minimal friction.",
+                            "At Payzon India Pvt. Ltd, our Aadhaar Verification solutions simplify and secure the identity verification process by integrating with UIDAI’s Aadhaar services. Whether you're onboarding users, validating customer data, or meeting regulatory KYC mandates, our system ensures seamless, real-time authentication with minimal friction.",
                             u.jsx("br", {}),
                             "We enable organizations to digitally verify Aadhaar details via secure APIs and biometric/OTP-based validation — reducing fraud, improving user trust, and accelerating workflows.",
                           ],
@@ -31032,13 +31072,13 @@ function NhQ2() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "By choosing Payzon India Services for PAN Verification, you gain a trusted partner with deep domain expertise in regulatory compliance, identity verification, and secure API systems. We ensure fast integration, high accuracy, and complete security — helping you build trust with every user interaction.",
+          "By choosing Payzon India Pvt. Ltd for PAN Verification, you gain a trusted partner with deep domain expertise in regulatory compliance, identity verification, and secure API systems. We ensure fast integration, high accuracy, and complete security — helping you build trust with every user interaction.",
       },
       {
         id: 2,
         title: "How the Process Works",
         description:
-          "At Payzon India Services, we understand the critical importance of secure, real-time, and compliant identity verification. Our PAN Verification process is built using authorized government data sources and is integrated via fully encrypted, API-based solutions that ensure data safety, accuracy, and compliance.",
+          "At Payzon India Pvt. Ltd, we understand the critical importance of secure, real-time, and compliant identity verification. Our PAN Verification process is built using authorized government data sources and is integrated via fully encrypted, API-based solutions that ensure data safety, accuracy, and compliance.",
       },
       // {
       //   id: 3,
@@ -31116,7 +31156,7 @@ function NhQ2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our PAN Verification solutions streamline and secure identity authentication processes by integrating with authorized PAN data providers. Whether you're onboarding customers, validating tax details, or fulfilling mandatory KYC/AML checks, our real-time system delivers instant, accurate results with minimum manual effort.",
+                            "At Payzon India Pvt. Ltd, our PAN Verification solutions streamline and secure identity authentication processes by integrating with authorized PAN data providers. Whether you're onboarding customers, validating tax details, or fulfilling mandatory KYC/AML checks, our real-time system delivers instant, accurate results with minimum manual effort.",
                           ],
                         }),
                       }),
@@ -31316,13 +31356,13 @@ function NhQ3() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "By choosing Payzon India Services for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
+          "By choosing Payzon India Pvt. Ltd for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
       },
       {
         id: 2,
         title: "How the Process Works",
         description:
-          "By choosing Payzon India Services for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
+          "By choosing Payzon India Pvt. Ltd for GST Verification, you’re partnering with a tech-first team specialized in regulatory compliance, tax data validation, and seamless API integration. We ensure fast setup, real-time results, and secure handling — helping you scale operations while staying compliant.",
       },
       // {
       //   id: 3,
@@ -31400,7 +31440,7 @@ function NhQ3() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our GST Verification solutions are designed to simplify and secure the business identity validation process. By integrating with the official GSTIN (Goods and Services Tax Identification Number) API, we offer instant verification of business credentials — enabling seamless onboarding, validating vendor information, and ensuring regulatory compliance.",
+                            "At Payzon India Pvt. Ltd, our GST Verification solutions are designed to simplify and secure the business identity validation process. By integrating with the official GSTIN (Goods and Services Tax Identification Number) API, we offer instant verification of business credentials — enabling seamless onboarding, validating vendor information, and ensuring regulatory compliance.",
                           ],
                         }),
                       }),
@@ -31600,13 +31640,13 @@ function NhQ4() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "By choosing Payzon India Services for Bank Account Verification, you’re partnering with a tech-first team specialized in regulatory compliance, financial data validation, and secure API integration. We ensure fast setup, real-time results, and complete data protection — helping you scale operations while staying fully compliant.",
+          "By choosing Payzon India Pvt. Ltd for Bank Account Verification, you’re partnering with a tech-first team specialized in regulatory compliance, financial data validation, and secure API integration. We ensure fast setup, real-time results, and complete data protection — helping you scale operations while staying fully compliant.",
       },
       {
         id: 2,
         title: "How the Process Works",
         description:
-          "By choosing Payzon India Services for Bank Account Verification, you gain a reliable partner with expertise in financial compliance, digital verification, and secure banking APIs. We offer a swift, scalable, and secure process built for modern businesses.",
+          "By choosing Payzon India Pvt. Ltd for Bank Account Verification, you gain a reliable partner with expertise in financial compliance, digital verification, and secure banking APIs. We offer a swift, scalable, and secure process built for modern businesses.",
       },
       // {
       //   id: 3,
@@ -31684,7 +31724,7 @@ function NhQ4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our Bank Account Verification solution makes it simple to authenticate financial credentials by integrating with trusted banking APIs and Open Banking platforms. Whether onboarding customers, validating payment sources, or meeting regulatory requirements, our system delivers instant, reliable results with minimal effort.",
+                            "At Payzon India Pvt. Ltd, our Bank Account Verification solution makes it simple to authenticate financial credentials by integrating with trusted banking APIs and Open Banking platforms. Whether onboarding customers, validating payment sources, or meeting regulatory requirements, our system delivers instant, reliable results with minimal effort.",
                           ],
                         }),
                       }),
@@ -31884,13 +31924,13 @@ function NhQ5() {
         id: 1,
         title: "Why We Are the Best Company?",
         description:
-          "By choosing Payzon India Services for Live Verification, you’re partnering with a tech-driven team specializing in secure biometric systems, fraud mitigation, and compliance-ready identity workflows. We offer fast integration, instant results, and enterprise-grade security—helping you grow with confidence and compliance.",
+          "By choosing Payzon India Pvt. Ltd for Live Verification, you’re partnering with a tech-driven team specializing in secure biometric systems, fraud mitigation, and compliance-ready identity workflows. We offer fast integration, instant results, and enterprise-grade security—helping you grow with confidence and compliance.",
       },
       {
         id: 2,
         title: "How the Process Works",
         description:
-          "By choosing Payzon India Services for Live Verification, you gain a trusted ally in digital identity validation. We ensure a fast, secure, and seamless real-time verification experience.",
+          "By choosing Payzon India Pvt. Ltd for Live Verification, you gain a trusted ally in digital identity validation. We ensure a fast, secure, and seamless real-time verification experience.",
       },
       // {
       //   id: 3,
@@ -31968,7 +32008,7 @@ function NhQ5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Services, our Live Verification solution empowers businesses to verify user identities in real time via secure video or selfie-based checks. Ideal for compliance, fraud prevention, and user trust enhancement—our system delivers instant, authenticated results with zero friction.",
+                            "At Payzon India Pvt. Ltd, our Live Verification solution empowers businesses to verify user identities in real time via secure video or selfie-based checks. Ideal for compliance, fraud prevention, and user trust enhancement—our system delivers instant, authenticated results with zero friction.",
                           ],
                         }),
                       }),
@@ -32080,6 +32120,2401 @@ function NhQ5() {
                         children: u.jsx("p", {
                           children:
                             "We help organizations verify identities in real time using robust APIs, reducing onboarding time, improving verification accuracy, and preventing fraudulent registrations.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NIQ1() {
+  const t = [
+      {
+        id: 1,
+        name: "Digital Payments (UPI/Cards/Net Banking)",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Bill Payment Software",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Money Transfer Services",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Fintech API Services",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Commission-based Admin Panel",
+        link: "#",
+      },
+      {
+        id: 6   ,
+        name: "White Label & Reseller Panel",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Real-Time Data Analytics:",
+        desc: "Access actionable insights with real-time financial data aggregation and analytics for smarter decision-making in Bhopal.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Robust Security & Compliance",
+        desc: "Ensure secure transactions and regulatory compliance with KYC, AML, and GDPR-ready features tailored for India’s fintech landscape.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Company?",
+        description:
+          "At Payzon, we take pride in being the best fintech API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable fintech solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works",
+        description:
+          "When it comes to choosing the best company for fintech portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete fintech portal software solution that is secure, scalable, and fully customizable.",
+      },
+      {
+        id: 3,
+        title: " Why should I choose Payzon over other fintech portal software companies?",
+        description:
+          "Choosing Payzon means partnering with a company that truly understands the digital fintech ecosystem. Unlike generic platforms, Payzon provides a fully customizable fintech portal software solution designed for scalability, performance, and profitability. Our software comes with integrated Fintech API, reseller panels, and secure admin access — ideal for businesses of all sizes. Plus, with local support in Bhopal and PAN India service, you're never alone on your journey. We don't just sell software — we build long-term business success with our clients.",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Payzon offers a reliable fintech portal software solution designed for businesses across India, with a strong presence in Bhopal. Our cutting-edge platform combines powerful features like Payment Gateway API Integration, bill payment support, multi-service handling, and admin control to deliver seamless and secure services. Whether you're a startup or an enterprise, our system ensures uninterrupted performance, scalability, and full white-label support. With Payzon, stay ahead in the fast-growing fintech industry with an all-in-one solution tailored to your business needs.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover India’s leading fintech portal software company – Payzon. We empower businesses with all-in-one solutions for digital payments, bill payments, money transfers, and more. With 24/7 support, secure architecture, and customized admin dashboards, we simplify operations. Our software includes reseller panels, commission setup, and supports Payment Gateway API Integration for maximum scalability. Whether you operate in Bhopal or across India, we ensure your digital fintech business runs smoothly and profitably.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our fintech portal software company delivers scalable, affordable, and secure solutions tailored to your business. Partnering with Payzon ensures uninterrupted digital service delivery with automated features, real-time reports, and API customization. Enjoy benefits like low-cost setup, multi-service support, bill payments, full control panel, and 24/7 uptime. Whether you're in Bhopal or expanding pan-India, we help you grow your fintech business with peace of mind.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NIQ2() {
+  const t = [
+      {
+        id: 1,
+        name: "Online Store Creation",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Multi-Vendor Marketplace Software",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Payment Gateway Integration",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Product & Inventory Management",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Commission-based Admin Panel",
+        link: "#",
+      },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Multi-Factor Authentication (MFA)",
+        desc: "Effortlessly manage multiple vendors with dedicated seller dashboards and commission tracking in Bhopal.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Advanced Product Search",
+        desc: "AI-powered search and filtering for a seamless shopping experience, optimized for customer satisfaction.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why we are the best shopping portal software company?",
+        description:
+          "At Payzon, we take pride in being the best e-commerce API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable shopping portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency",
+      },
+      {
+        id: 2,
+        title: "Which Company is Best for Shopping Portal Software?",
+        description:
+          "When it comes to choosing the best company for shopping portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete shopping portal software solution that is secure, scalable, and fully customizable.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+     r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Payzon offers a reliable shopping portal software solution designed for businesses across India, with a strong presence in Bhopal. Our cutting-edge platform combines powerful features like Payment Gateway API Integration, multi-vendor support, product management, and admin control to deliver seamless and secure e-commerce services. Whether you're a startup or an enterprise, our system ensures uninterrupted performance, scalability, and full white-label support. With Payzon, stay ahead in the fast-growing e-commerce industry with an all-in-one solution tailored to your business needs.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Discover India’s leading shopping portal software company – Payzon. We empower businesses with all-in-one e-commerce solutions for online stores, multi-vendor marketplaces, payment processing, and more. With 24/7 support, secure architecture, and customized admin dashboards, we simplify operations. Our software includes reseller panels, commission setup, and supports Payment Gateway API Integration for maximum scalability. Whether you operate in Bhopal or across India, we ensure your digital shopping business runs smoothly and profitably.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our shopping portal software company delivers scalable, affordable, and secure solutions tailored to your business. Partnering with Payzon ensures uninterrupted digital service delivery with automated features, real-time reports, and API customization. Enjoy benefits like low-cost setup, multi-vendor support, secure payments, full control panel, and 24/7 uptime. Whether you're in Bhopal or expanding pan-India, we help you grow your e-commerce business with peace of mind.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NIQ3() {
+  const t = [
+      {
+        id: 1,
+        name: "Mobile Recharge (Prepaid/Postpaid)",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "DTH Recharge Software",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "BBPS & Bill Payments",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Multi Recharge API Services",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Commission-based Admin Panel",
+        link: "#",
+      },
+      {
+        id: 6   ,
+        name: "White Label & Reseller Panel",
+        link: "#",
+      },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Easy API Integration",
+        desc: "Quick, seamless, and secure recharge API setup In Bhopal",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "User-Friendly Interface",
+        desc: "Simple, responsive, and intuitive dashboard for all.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why we are the best recharge software company?",
+        description:
+          " At Payzon, we take pride in being the best recharge API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable recharge solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "Which Company is Best for Recharge Software?",
+        description:
+          "When it comes to choosing the best company for recharge software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete mobile recharge software solution that is secure, scalable, and fully customizable.",
+      },
+      {
+        id: 3,
+        title: "Why should I choose Payzon over other recharge software companies?",
+        description:
+          "Choosing Payzon means partnering with a company that truly understands the digital recharge ecosystem. Unlike generic platforms, Payzon provides a fully customizable multi recharge software solution designed for scalability, performance, and profitability. Our software comes with integrated Recharge API, reseller panels, and secure admin access — ideal for businesses of all sizes. Plus, with local support in Bhopal and PAN India service, you're never alone on your journey. We don't just sell software — we build long-term business success with our clients",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            " Payzon offers a reliable mobile recharge software solution designed for businesses across India, with a strong presence in Bhopal. Our cutting-edge platform combines powerful features like Recharge API Integration, DTH recharge, multi-operator handling, and admin control to deliver seamless and secure services. Whether you're a startup or an enterprise, our system ensures uninterrupted performance, scalability, and full white-label support. With Payzon, stay ahead in the fast-growing telecom industry with an all-in-one solution tailored to your business needs.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            " Discover India’s leading multi recharge software company – Payzon. We empower businesses with all-in-one solutions for mobile recharge, DTH, data card, and bill payments. With 24/7 support, secure architecture, and customized admin dashboards, we simplify operations. Our software includes reseller panels, commission setup, and supports Recharge API Integration for maximum scalability. Whether you operate in Bhopal or across India, we ensure your digital recharge business runs smoothly and profitably.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            " Our multi recharge software company delivers scalable, affordable, and secure solutions tailored to your business. Partnering with Payzon ensures uninterrupted digital service delivery with automated features, real-time reports, and API customization. Enjoy benefits like low-cost setup, multi-operator support, DTH recharge, full control panel, and 24/7 uptime. Whether you're in Bhopal or expanding pan-India, we help you grow your recharge business with peace of mind.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NIQ4() {
+  const t = [
+      {
+        id: 1,
+        name: "Real-Time Flight Booking",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Hotel & Resort Reservations",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Tour & Activity Planning",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Travel API Connectivity",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Flexible Commission Management",
+        link: "#",
+      },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Global API Connectivity",
+        desc: "Integrate with leading travel APIs (e.g., Amadeus, Sabre) for real-time flight, hotel, and car rental bookings in Bhopal.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Smart Itinerary Builder",
+        desc: "Enable travelers to create and manage personalized travel plans with integrated maps and schedules.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Travel Portal Software Company?",
+        description:
+          "At Payzon, we take pride in being the best travel API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable travel portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works for Our Travel Portal Software?",
+        description:
+          "When it comes to choosing the best company for travel portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete travel portal software solution that is secure, scalable, and fully customizable.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Payzon provides a robust travel portal software solution crafted for businesses across India, with a strong foothold in Bhopal. Our state-of-the-art platform integrates advanced features like Booking API Integration, support for flights, hotels, and tour packages, and powerful admin controls to ensure seamless and secure travel services. Whether you’re a startup or a large enterprise, our solution guarantees high performance, scalability, and complete white-label customization. With Payzon, lead the booming travel industry with a comprehensive, tailored platform.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon leads as India’s premier travel portal development company, equipping businesses with comprehensive solutions for online travel bookings, itinerary planning, and customer management. Our platform offers 24/7 technical support, secure payment systems, and customizable dashboards to optimize operations. Featuring reseller modules, flexible commission structures, and seamless Booking API integration, Payzon ensures scalability and profitability. Whether based in Bhopal or expanding nationwide, our travel portal software drives your business toward success with efficiency and innovation.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon’s travel portal software offers powerful, cost-efficient, and secure platforms designed for your travel business. By partnering with us, you gain access to automated booking systems, detailed analytics, and customizable APIs that streamline operations. Enjoy low startup costs, support for multiple travel services, secure payment processing, intuitive admin panels, and uninterrupted uptime. From Bhopal to pan-India expansion, Payzon fuels your travel business growth with reliability and innovation.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NIQ5() {
+  const t = [
+      {
+        id: 1,
+        name: "Online Game Hosting",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Multiplayer Game Support",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Esports Tournament Management",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Gaming API Integration",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Commission & Reward Systems",
+        link: "#",
+      },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Multiplayer Game Integration",
+        desc: "Enable seamless multiplayer gaming with real-time connectivity and API support for Bhopal-based gaming businesses.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Interactive Leaderboards",
+        desc: "Engage players with dynamic, real-time leaderboards and reward systems to boost competition and retention.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: " Why We Are the Best Gaming Portal Software Company?",
+        description:
+          "At Payzon, we take pride in being the best gaming API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable gaming portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works for Our Gaming Portal Software?",
+        description:
+          "When it comes to choosing the best company for gaming portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete gaming portal software solution that is secure, scalable, and fully customizable.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "At Payzon India Pvt. Ltd, our Live Verification solution empowers businesses to verify user identities in real time via secure video or selfie-based checks. Ideal for compliance, fraud prevention, and user trust enhancement—our system delivers instant, authenticated results with zero friction.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon stands as India’s premier gaming portal development company, empowering businesses with comprehensive solutions for online gaming, esports platforms, and community engagement. Our platform offers 24/7 support, secure infrastructure, and customizable dashboards to streamline game management. Featuring reseller modules, commission systems, and robust Gaming API integration, Payzon ensures scalability and profitability. Whether operating in Bhopal or expanding across India, we make your gaming business engaging, secure, and successful.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon’s gaming portal software delivers dynamic, cost-effective, and secure platforms tailored for your gaming business. Partnering with us provides access to automated game management, real-time player analytics, and flexible API integration for a seamless experience. Benefit from low setup costs, support for diverse gaming services, secure transactions, intuitive admin panels, and 24/7 uptime. From Bhopal to nationwide growth, Payzon fuels your gaming portal’s success with innovation and reliability.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+
+function NIQ6() {
+  const t = [
+      {
+        id: 1,
+        name: "Online Grocery Store Setup",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Real-Time Inventory Management",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Order & Delivery Tracking",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Payment API Integration",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Commission & Discount Systems",
+        link: "#",
+      },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Real-Time Inventory Sync",
+        desc: "Effortlessly manage stock levels with live updates and API-driven inventory tracking for Bhopal grocery businesses.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Quick Delivery Scheduler",
+        desc: "Offer customers flexible delivery slots with integrated scheduling for a seamless shopping experience.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best Grocery Portal Software Company?",
+        description:
+          "At Payzon, we take pride in being the best grocery API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable grocery portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works for Our Grocery Portal Software?",
+        description:
+          "When it comes to choosing the best company for grocery portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete grocery portal software solution that is secure, scalable, and fully customizable.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Payzon offers a dynamic grocery portal software solution designed for businesses across India, with a strong base in Bhopal. Our innovative platform integrates essential features like payment API integration, real-time inventory tracking, order management, and intuitive admin tools to provide a smooth, secure shopping experience. Ideal for startups and established grocery retailers, our software ensures reliability, scalability, and fully customizable white-label options. With Payzon, transform your grocery business and lead the booming online grocery market with a tailored, all-in-one platform.   ",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon is India’s top grocery portal development company, empowering businesses with end-to-end solutions for online grocery stores, delivery systems, and customer engagement. Our platform provides 24/7 support, secure payment gateways, and customizable dashboards to optimize your operations. With reseller modules, commission management, and robust Payment API integration, Payzon ensures scalability and profitability. Whether in Bhopal or expanding across India, we drive your grocery business to success with efficiency and innovation.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon’s grocery portal software delivers powerful, cost-efficient, and secure platforms tailored for your online grocery business. Partnering with us provides automated order processing, real-time stock analytics, and flexible API integration for a seamless operation. Enjoy low setup costs, support for multiple grocery services, secure transactions, user-friendly admin panels, and 24/7 uptime. From Bhopal to nationwide growth, Payzon powers your grocery business with reliability and cutting-edge technology.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NIQ7() {
+  const t = [
+      {
+        id: 1,
+        name: "Instant ID Verification",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Automated Compliance Tools",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Seamless API Integration",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: " Customizable Dashboards",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Instant ID Verification",
+        desc: "Rapid, secure KYC checks with Aadhaar-based verification and biometric authentication for Bhopal businesses.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Automated Compliance Tools",
+        desc: "Effortless KYC/AML compliance with automated workflows and regulatory reporting for seamless operations.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "Why We Are the Best e-KYC Portal Software Company?",
+        description:
+          "At Payzon, we take pride in being the best e-KYC API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable e-KYC portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+      },
+      {
+        id: 2,
+        title: "How the Process Works for Our e-KYC Portal Software?",
+        description:
+          "When it comes to choosing the best company for e-KYC portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete e-KYC portal software solution that is secure, scalable, and fully customizable.",
+      },
+      // {
+      //   id: 3,
+      //   title: " What Are the Benefits of Our Services?",
+      //   description:
+      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Looking for a trusted e-KYC portal provider in Bhopal? Payzon delivers cutting-edge e-KYC solutions for businesses, from startups to enterprises. Recognized as India’s leading e-KYC software provider, we ensure fast, secure identity verification with 99.9% uptime and expert support. Whether you need seamless KYC API integration or robust compliance tools, our platforms are built to enhance security and streamline operations for your business in India.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Choosing the ideal e-KYC platform is key to secure and efficient operations. Payzon provides customized e-KYC solutions for businesses of all sizes—whether you’re onboarding users for a fintech startup or ensuring compliance for a telecom giant. Our e-KYC services include:",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We excel in providing affordable, secure e-KYC portal software in India, optimized for speed and regulatory adherence. Whether you’re in fintech, banking, or e-commerce, our advanced infrastructure, round-the-clock support, and intuitive control panels make Payzon the go-to choice in Bhopal and beyond.Discover our cutting-edge and budget-friendly e-KYC services—and unlock seamless identity verification with Payzon.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NIQ8() {
+  const t = [
+      {
+        id: 1,
+        name: " VPS Hosting",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Cloud Hosting",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Dedicated Server ",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: " Shared Hosting",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " VPS Hosting",
+        desc: " High-performance, flexible VPS hosting with full root access for businesses that need control, speed, and scalability.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Cloud Hosting",
+        desc: " Ultra-fast, secure cloud hosting ideal for modern web apps and sites — powered by top-tier data centers.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What is Web Hosting?",
+        description:
+          " Web hosting is a service that allows individuals and businesses to publish their websites online. It involves storing your website files on a secure server that is accessible via the internet. At Payzon, we offer affordable web hosting in India with high uptime, fast load speeds, and 24/7 support for seamless website performance.",
+      },
+      {
+        id: 2,
+        title: "What are the Top 10 Web Hosting Services in Bhopal?",
+        description:
+          "While there are several hosting providers in Bhopal, Payzon leads the list due to its powerful infrastructure, local support, and reliable hosting services. Other services may include Hostinger, Bluehost, GoDaddy, Hostgator, A2 Hosting, SiteGround, etc., but Payzon stands out for localized support and performance for businesses in Bhopal.",
+      },
+      {
+        id: 3,
+        title: "hich is the Best Web Hosting in India?",
+        description:
+          "The best web hosting in India depends on your specific needs — but for overall value, performance, and support, Payzon is highly recommended. We offer Windows hosting, VPS, cloud, and dedicated servers — all optimized for Indian audiences with competitive pricing and 24/7 technical assistance.",
+      },
+       {
+        id: 4,
+        title: "What are the Top 10 Web Hosting Companies in India?",
+        description:
+          " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Fintech Portal Development",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Shopping Portal Development",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Recharge Portal Development",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Travel Portal Development",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Gaming Portal Development",
+        link: "#",
+      },
+         {
+        id: 6,
+        name: "Grocery Portal Development",
+        link: "#",
+      },
+         {
+        id: 7,
+        name: "e-KYC Portal",
+        link: "#",
+      },
+         {
+        id: 8,
+        name: "Web Hosting",
+        link: "#",
+      },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            " Looking for a reliable web hosting company in Bhopal? Payzon offers powerful hosting solutions for every need — from startups to enterprise-grade projects. We are recognized as the best domain and hosting provider company in India, trusted for fast servers, 99.9% uptime, and professional support. Whether you need the best Windows hosting in India or scalable cloud infrastructure, our hosting plans are designed to match your growth and performance needs.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Finding the right server is essential for your online success. At Payzon, we provide hosting services that suit all business sizes — whether you’re launching your first website or managing complex applications. Our hosting includes:",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We specialize in cheap, reliable Windows hosting in India, optimized for performance and affordability. Whether you're a developer, freelancer, or enterprise, our robust infrastructure, expert support, and easy control panels make us the first choice in Bhopal and across India.",
                         }),
                       }),
                     ],
@@ -32426,6 +34861,385 @@ function NhD() {
     ],
   });
 }
+
+function NIA() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Fintech Portal  Development ",
+    description:
+      "Payzon offers India’s top Fintech Portal Software Solution with Payment Gateway API Integration, bill payment support & multi-service software for businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ1, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIB() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Shopping Portal ",
+    description:
+      "Payzon offers India’s top Shopping Portal Software Solution with Payment Gateway API Integration, multi-vendor support & e-commerce software for businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ2, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIC() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Recharge Portal  Development ",
+    description:
+      "Payzon offers India’s top Mobile Recharge Software Solution with Recharge API Integration, DTH support & multi recharge software for businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ3, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NID() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Travel Portal  Development ",
+    description:
+      "yzon delivers India’s premier Travel Portal Software with advanced booking API integration, multi-service travel solutions, and scalable platforms for travel businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ4, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIE() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Gaming Portal  Development ",
+    description:
+      " Payzon crafts India’s top Gaming Portal Software with seamless API integration, multiplayer support, and dynamic platforms for gaming businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ5, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIF() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Gaming Portal   ",
+    description:
+      " Payzon builds India’s leading Grocery Portal Software with seamless payment API integration, inventory management, and scalable solutions for online grocery businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ6, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIG() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Grocery Portal ",
+    description:
+      "Payzon builds India’s leading Grocery Portal Software with seamless payment API integration, inventory management, and scalable solutions for online grocery businesses.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ6, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NIH() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Web Hosting ",
+    description:
+      "Payzon is the best domain and hosting provider company offering VPS, Cloud, Shared & Windows hosting solutions in Bhopal and across India.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NII() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "e-KYC Portal Hosting ",
+    description:
+      "Payzon offers India’s top e-KYC Portal Software with secure API integration, real-time verification, and scalable solutions for businesses in Bhopal and beyond.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ7, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NAA() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Paid AD Campaign",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NAB() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "SEO/SME Optimization",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NAC() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Google PPC",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NAD() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Bulk Email/SMS",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NAE() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Meta Verified Whatsapps",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+
+function NBA() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "2FA Authentication",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+function NBB() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Website Security",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NBC() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Database Security",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
+function NBD() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Network Security",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+function NBE() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "Code Audit",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+function NBF() {
+  const t = {
+    subHeading: "Service Details",
+    heading: "DDOS Protection",
+    description:
+      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+  };
+
+  return u.jsxs(u.Fragment, {
+    children: [
+      u.jsx(yr, {
+        pageHeading: t,
+      }),
+      u.jsx(NIQ8, {}),
+      // u.jsx(NN, {}),
+    ],
+  });
+}
+
 const AN = "/assets/recent-project-4-CECl9tg3.png",
   PN = [
     {
@@ -34578,6 +37392,82 @@ const dk = () => {
             u.jsx(on, {
               path: "/face-verification",
               element: u.jsx(NhD, {}),
+            }),
+            u.jsx(on, {
+              path: "/fitech-portal",
+              element: u.jsx(NIA, {}),
+            }),
+            u.jsx(on, {
+              path: "/shopping-portal",
+              element: u.jsx(NIB, {}),
+            }),
+            u.jsx(on, {
+              path: "/recharge-portal",
+              element: u.jsx(NIC, {}),
+            }),
+            u.jsx(on, {
+              path: "/travel-portal",
+              element: u.jsx(NID, {}),
+            }),
+            u.jsx(on, {
+              path: "/gaming-portal",
+              element: u.jsx(NIE, {}),
+            }),
+            u.jsx(on, {
+              path: "/grocery-portal",
+              element: u.jsx(NIG, {}),
+            }),
+            u.jsx(on, {
+              path: "/e-kyc-portal",
+              element: u.jsx(NII, {}),
+            }),
+            u.jsx(on, {
+              path: "/web-hosting",
+              element: u.jsx(NIH, {}),
+            }),
+              u.jsx(on, {
+              path: "/paid-campaign",
+              element: u.jsx(NAA, {}),
+            }),
+              u.jsx(on, {
+              path: "/seo-optimization",
+              element: u.jsx(NAB, {}),
+            }),
+               u.jsx(on, {
+              path: "/google-ppc",
+              element: u.jsx(NAC, {}),
+            }),
+              u.jsx(on, {
+              path: "/bulk-sms",
+              element: u.jsx(NAD, {}),
+            }),
+               u.jsx(on, {
+              path: "/meta-verified",
+              element: u.jsx(NAE, {}),
+            }),
+               u.jsx(on, {
+              path: "/2fa-Authentication",
+              element: u.jsx(NBA, {}),
+            }),
+               u.jsx(on, {
+              path: "/website-Security",
+              element: u.jsx(NBB, {}),
+            }),
+               u.jsx(on, {
+              path: "/database-Security",
+              element: u.jsx(NBC, {}),
+            }),
+               u.jsx(on, {
+              path: "/network-Security",
+              element: u.jsx(NBD, {}),
+            }),
+               u.jsx(on, {
+              path: "/code-Audit",
+              element: u.jsx(NBE, {}),
+            }),
+               u.jsx(on, {
+              path: "/ddos-Protection",
+              element: u.jsx(NBF, {}),
             }),
             u.jsx(on, {
               path: "/case-studies",
