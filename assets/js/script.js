@@ -10680,8 +10680,8 @@ function vb(t, e) {
     [c, a, d, r, i, n, t, s, l, o]
   );
 }
-const xb = "./assets/images/cropped_circle_image.png",
-  wx = "./assets/images/cropped_circle_image.png";
+const xb = "../assets/images/cropped_circle_image.png",
+  wx = "../assets/images/cropped_circle_image.png";
 function yb(t) {
   const e = parseFloat(t);
   return !isNaN(e) && isFinite(e);
@@ -11257,7 +11257,7 @@ function jb() {
 function Cb({}) {
   const VPS_CARDS = [
     {
-      img: "/assets/images/server.jpg",
+      img: "./assets/images/server.jpg",
       title: "Linux VPS 6 vCPU",
       specs: ["4GB RAM", "100GB SSD Storage", "750GB Bandwidth"],
       price: "Rs. 8000/- + tax / Monthly",
@@ -11265,7 +11265,7 @@ function Cb({}) {
       btn: "ADD NOW",
     },
     {
-      img: "/assets/images/icon01.png",
+      img: "./assets/images/icon01.png",
       title: "Windows VPS 6 vCPU",
       specs: ["8GB RAM", "100GB SSD Storage", "750GB Bandwidth"],
       price: "Rs. 10000/- + tax / Monthly",
@@ -11436,10 +11436,8 @@ function Cb({}) {
                     fontSize: "0.95rem",
                     transition: "background 0.3s",
                   },
-                  onMouseEnter: (e) =>
-                    (e.target.style.background = "#c2410c"),
-                  onMouseLeave: (e) =>
-                    (e.target.style.background = "#ea580c"),
+                  onMouseEnter: (e) => (e.target.style.background = "#c2410c"),
+                  onMouseLeave: (e) => (e.target.style.background = "#ea580c"),
                   children: card.btn,
                 }),
               ],
@@ -11452,7 +11450,7 @@ function Cb({}) {
   });
 }
 
-const Nb = "/assets/images/cropped_circle_image.png";
+const Nb = "./assets/images/cropped_circle_image.png";
 
 function kb() {
   const t = [
@@ -11547,14 +11545,14 @@ function kb() {
         title: "Sadaiv Satya",
         text: "",
         link: "https://www.dnb.co.in/",
-        image: "/assets/images/jkk.png",
+        image: "./assets/images/jkk.png",
       },
       {
         id: 2,
         title: "Sadaiv Yuva",
         text: "",
         link: "https://www.sadaivsatya.com/",
-        image: "/assets/images/Sadaiv MEDIA 1.png",
+        image: "./assets/images/Sadaiv MEDIA 1.png",
       },
       {
         id: 3,
@@ -11568,14 +11566,14 @@ function kb() {
         title: "Ineffable Spark",
         text: "",
         link: "https://smarttaxidea.com/",
-        image: "/assets/images/SMART TAX !DEA.png",
+        image: "./assets/images/SMART TAX !DEA.png",
       },
       {
         id: 5,
         title: "Ineffable Spark",
         text: "",
         link: "https://www.sadaivyuvafoundation.com/",
-        image: "/assets/images/sadaivsatyalogo.jpeg",
+        image: "./assets/images/sadaivsatyalogo.jpeg",
       },
     ];
 
@@ -25096,7 +25094,7 @@ function yC() {
               loop: !0,
               playsInline: !0,
               children: u.jsx("source", {
-                src: "/assets/images/demo video1.mp4",
+                src: "../assets/images/demo video1.mp4",
                 type: "video/mp4",
               }),
             }),
@@ -25435,9 +25433,9 @@ function SC() {
     }),
   });
 }
-const Hg = "/assets/images/download (1).png",
-  _C = "/assets/images/download (2).png",
-  bC = "/assets/images/why-choose-us-O76HB7IO.png";
+const Hg = "./assets/images/download (1).png",
+  _C = "./assets/images/download (2).png",
+  bC = "./assets/images/why-choose-us-O76HB7IO.png";
 function TC({ accordionData: t }) {
   const [e, n] = O.useState(null);
   return u.jsx("div", {
@@ -26097,13 +26095,12 @@ function b1({ name: t, position: e, image: n, link: l }) {
   });
 }
 
-
-const kC = "/assets/images/fintech.jpg",
-  AC = "/assets/images/shoping.jpeg",
-  PC = "/assets/images/H4.webp",
-  OC = "/assets/images/travel.jpg",
-  IC = "/assets/images/gaming.jpeg",
-  LC = "/assets/images/grocery.jpeg",
+const kC = "./assets/images/fintech.jpg",
+  AC = "./assets/images/shoping.jpeg",
+  PC = "./assets/images/H4.webp",
+  OC = "./assets/images/travel.jpg",
+  IC = "./assets/images/gaming.jpeg",
+  LC = "./assets/images/grocery.jpeg",
   T1 = [
     {
       id: 1,
@@ -26288,67 +26285,66 @@ const j1 = ({ children: t }) =>
       })
     );
   },
-  N1 = "/assets/images/ppc.jpg",
-  k1 = "/assets/images/seo.avif",
-  A1 = "/assets/images/ad-campaign.jpg",
-MC = [
-  {
-    number: "01",
-    title: "Paid AD Campaign",
-    description:
-      "Paid ad campaigns, commonly referred to as paid advertising or pay-per-click (PPC) campaigns, are a powerful tool for businesses to drive targeted traffic, increase brand visibility, and achieve measurable results. These campaigns allow businesses to reach their ideal audience through various platforms such as Google Ads, Facebook Ads, LinkedIn Ads, and more.",
-    imageSrc: A1,
-    bgColor: "bg-gradient-to-br from-yellow-50 via-orange-100 to-yellow-50",
-    textColor: "text-gray-800",
-    link: "/paid-campaign",
-    headingColor: "text-orange-500",
-  },
-  {
-    number: "02",
-    title: "SEO/SME Optimization",
-    description:
-      "Launch your online store with a secure, scalable shopping portal. We create SEO-optimized eCommerce websites for Bhopal’s top retailers, complete with payment gateway, product catalog, and easy navigation.",
-    imageSrc: k1,
-    bgColor: "bg-gradient-to-br from-gray-100 via-blue-50 to-white",
-    textColor: "text-gray-900",
-    link: "/seo-optimization",
-    headingColor: "text-blue-500",
-  },
-  {
-    number: "03",
-    title: "Google PPC",
-    description:
-      "SEO improves website visibility on search engines, driving organic traffic, enhancing user experience, building brand credibility, and offering a cost-effective strategy for long-term online growth and lead generation without relying heavily on paid advertising.",
-    imageSrc: N1,
-    bgColor: "bg-gradient-to-br from-gray-50 via-indigo-100 to-white",
-    textColor: "text-gray-900",
-    link: "/google-ppc",
-    headingColor: "text-indigo-500",
-  },
-  {
-    number: "04",
-    title: "Bulk Email/SMS",
-    description:
-      "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability.",
-    imageSrc: "/assets/images/sms.png",
-    bgColor: "bg-gradient-to-br from-fuchsia-50 via-pink-100 to-white",
-    textColor: "text-gray-800",
-    link: "/bulk-sms",
-    headingColor: "text-pink-500",
-  },
-  {
-    number: "05",
-    title: "Meta Verified Whatsapps",
-    description:
-      "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
-    imageSrc: "/assets/images/meta.avif",
-    bgColor: "bg-gradient-to-br from-emerald-50 via-green-100 to-white",
-    textColor: "text-gray-900",
-    link: "/meta-verified",
-    headingColor: "text-emerald-600",
-  },
-];
-
+  N1 = "./assets/images/ppc.jpg",
+  k1 = "./assets/images/seo.avif",
+  A1 = "./assets/images/ad-campaign.jpg",
+  MC = [
+    {
+      number: "01",
+      title: "Paid AD Campaign",
+      description:
+        "Paid ad campaigns, commonly referred to as paid advertising or pay-per-click (PPC) campaigns, are a powerful tool for businesses to drive targeted traffic, increase brand visibility, and achieve measurable results. These campaigns allow businesses to reach their ideal audience through various platforms such as Google Ads, Facebook Ads, LinkedIn Ads, and more.",
+      imageSrc: A1,
+      bgColor: "bg-gradient-to-br from-yellow-50 via-orange-100 to-yellow-50",
+      textColor: "text-gray-800",
+      link: "/paid-campaign",
+      headingColor: "text-orange-500",
+    },
+    {
+      number: "02",
+      title: "SEO/SME Optimization",
+      description:
+        "Launch your online store with a secure, scalable shopping portal. We create SEO-optimized eCommerce websites for Bhopal’s top retailers, complete with payment gateway, product catalog, and easy navigation.",
+      imageSrc: k1,
+      bgColor: "bg-gradient-to-br from-gray-100 via-blue-50 to-white",
+      textColor: "text-gray-900",
+      link: "/seo-optimization",
+      headingColor: "text-blue-500",
+    },
+    {
+      number: "03",
+      title: "Google PPC",
+      description:
+        "SEO improves website visibility on search engines, driving organic traffic, enhancing user experience, building brand credibility, and offering a cost-effective strategy for long-term online growth and lead generation without relying heavily on paid advertising.",
+      imageSrc: N1,
+      bgColor: "bg-gradient-to-br from-gray-50 via-indigo-100 to-white",
+      textColor: "text-gray-900",
+      link: "/google-ppc",
+      headingColor: "text-indigo-500",
+    },
+    {
+      number: "04",
+      title: "Bulk Email/SMS",
+      description:
+        "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability.",
+      imageSrc: "./assets/images/sms.png",
+      bgColor: "bg-gradient-to-br from-fuchsia-50 via-pink-100 to-white",
+      textColor: "text-gray-800",
+      link: "/bulk-sms",
+      headingColor: "text-pink-500",
+    },
+    {
+      number: "05",
+      title: "Meta Verified Whatsapps",
+      description:
+        "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
+      imageSrc: "./assets/images/meta.avif",
+      bgColor: "bg-gradient-to-br from-emerald-50 via-green-100 to-white",
+      textColor: "text-gray-900",
+      link: "/meta-verified",
+      headingColor: "text-emerald-600",
+    },
+  ];
 
 function P1({
   number: t,
@@ -26433,40 +26429,38 @@ function P1({
           }),
         ],
       }),
-     u.jsx("div", {
-  className: "project-img",
-  style: {
-    width: "50%",
-    maxWidth: "500px",
-    height: "100%", // Ensure it fills the parent
-    minHeight: "350px",
-    borderRadius: "20px",
-    overflow: "hidden",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-    display: "flex",
-    alignItems: "center", // Optional: center image vertically
-    justifyContent: "center", // Optional: center image horizontally
-    padding: "0", // Remove internal padding
-    margin: "0",  // Remove external margin
-    boxSizing: "border-box",
-  },
-  children: u.jsx("img", {
-    className: "w-100",
-    src: r,
-    alt: "project img",
-    style: {
-      display: "block", // Remove default spacing from inline img
-      width: "100%",
-      height: "100%",
-      objectFit: "cover", // Ensures image covers fully
-    },
-  }),
-}),
-
+      u.jsx("div", {
+        className: "project-img",
+        style: {
+          width: "50%",
+          maxWidth: "500px",
+          height: "100%", // Ensure it fills the parent
+          minHeight: "350px",
+          borderRadius: "20px",
+          overflow: "hidden",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+          display: "flex",
+          alignItems: "center", // Optional: center image vertically
+          justifyContent: "center", // Optional: center image horizontally
+          padding: "0", // Remove internal padding
+          margin: "0", // Remove external margin
+          boxSizing: "border-box",
+        },
+        children: u.jsx("img", {
+          className: "w-100",
+          src: r,
+          alt: "project img",
+          style: {
+            display: "block", // Remove default spacing from inline img
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // Ensures image covers fully
+          },
+        }),
+      }),
     ],
   });
 }
-
 
 function O1({ spaceTop: t, spaceBottom: e }) {
   const n = {
@@ -26568,7 +26562,6 @@ function O1({ spaceTop: t, spaceBottom: e }) {
     }),
   });
 }
-
 
 const I1 = [
   {
@@ -26802,12 +26795,12 @@ function L1() {
   });
 }
 
-const DC = "/assets/images/blog-1-vPCzt-h7.png",
-  RC = "/assets/images/blog-1-vPCzt-h7.png",
-  zC = "/assets/images/blog-1-vPCzt-h7.png",
-  FC = "/assets/images/blog-1-vPCzt-h7.png",
-  BC = "/assets/images/blog-1-vPCzt-h7.png",
-  VC = "/assets/images/blog-1-vPCzt-h7.png",
+const DC = "./assets/images/blog-1-vPCzt-h7.png",
+  RC = "./assets/images/blog-1-vPCzt-h7.png",
+  zC = "./assets/images/blog-1-vPCzt-h7.png",
+  FC = "./assets/images/blog-1-vPCzt-h7.png",
+  BC = "./assets/images/blog-1-vPCzt-h7.png",
+  VC = "./assets/images/blog-1-vPCzt-h7.png",
   M1 = [
     {
       id: 1,
@@ -26967,15 +26960,15 @@ function WC() {
     }),
   });
 }
-const Ug = "/assets/images/logoc1.png",
-  Gg = "/assets/images/logoc2.png",
-  Yg = "/assets/images/logoc3.png",
-  Xg = "/assets/images/logoc6.png",
-  Qg = "/assets/images/logoc5.png",
-  Qg_img = "/assets/images/SMART TAX !DEA.png",
-  Xg_img = "/assets/images/logo.png",
-  Yg_img = "/assets/images/I WAY SHOPPE LOGO.png",
-  Gg_img = "/assets/images/I WAY TOUR & TRAVEL LOGO.png";
+const Ug = "./assets/images/logoc1.png",
+  Gg = "./assets/images/logoc2.png",
+  Yg = "./assets/images/logoc3.png",
+  Xg = "./assets/images/logoc6.png",
+  Qg = "./assets/images/logoc5.png",
+  Qg_img = "./assets/images/SMART TAX !DEA.png",
+  Xg_img = "./assets/images/logo.png",
+  Yg_img = "./assets/images/I WAY SHOPPE LOGO.png",
+  Gg_img = "./assets/images/I WAY TOUR & TRAVEL LOGO.png";
 function HC({ img: t }) {
   return u.jsx(Sc, {
     slidesPerView: "auto",
@@ -27194,21 +27187,21 @@ function XC() {
                   className: "row g-6 justify-content-center",
                   children: [
                     {
-                      img: "./assets/images/user-3-BR0pf4AF.png",
+                      img: "../assets/images/user-3-BR0pf4AF.png",
                       name: "Anjali Sharma",
                       role: "UI/UX Designer",
                       desc: "Crafts intuitive and elegant designs that enhance digital experiences.",
                       exp: "5+ years of design expertise",
                     },
                     {
-                      img: "./assets/images/user-4-DPb7cPfr.png",
+                      img: "../assets/images/user-4-DPb7cPfr.png",
                       name: "Rohit Verma",
                       role: "Full Stack Developer",
                       desc: "Builds robust web applications with seamless frontend-backend integration.",
                       exp: "6+ years of development experience",
                     },
                     {
-                      img: "./assets/images/user-1-DUiwW2H-.png",
+                      img: "../assets/images/user-1-DUiwW2H-.png",
                       name: "Neha Patel",
                       role: "Product Manager",
                       desc: "Aligns product vision with user needs and business goals.",
@@ -27262,7 +27255,7 @@ function XC() {
     }),
   });
 }
-const QC = "/assets/images/about-banner-KxBODxER.png";
+const QC = "./assets/images/about-banner-KxBODxER.png";
 var kh = {},
   Zu = function () {
     return (
@@ -28140,8 +28133,8 @@ function gN() {
     ],
   });
 }
-const vN = "/assets/images/tree-vector-1-CO9qXzXa.png",
-  xN = "/assets/images/tree-vector-2-CFWRyx4X.png";
+const vN = "./assets/images/tree-vector-1-CO9qXzXa.png",
+  xN = "./assets/images/tree-vector-2-CFWRyx4X.png";
 function yr({ pageHeading: t }) {
   return u.jsx("section", {
     className:
@@ -28372,9 +28365,9 @@ function wN() {
     ],
   });
 }
-const SN = "/assets/images/service-details-banner-BFch8xzX.png",
-  _N = "/assets/images/endpoint-security-lO6qB5mk.png",
-  bN = "/assets/images/network-security-e89DiW7s.png";
+const SN = "./assets/images/service-details-banner-BFch8xzX.png",
+  _N = "./assets/images/endpoint-security-lO6qB5mk.png",
+  bN = "./assets/images/network-security-e89DiW7s.png";
 function TN({ accordionData: t }) {
   const [e, n] = O.useState(1);
   return u.jsx("div", {
@@ -36079,9 +36072,9 @@ function BN() {
     ],
   });
 }
-const VN = "/assets/images/blog-details-banner-Oq3CCKtb.png",
-  WN = "/assets/images/blog-post-1-B5uQwJlp.png",
-  HN = "/assets/images/author-dB7BTEB4.png";
+const VN = "./assets/images/blog-details-banner-Oq3CCKtb.png",
+  WN = "./assets/images/blog-post-1-B5uQwJlp.png",
+  HN = "./assets/images/author-dB7BTEB4.png";
 function UN() {
   const t = [
     {
@@ -36888,7 +36881,7 @@ function KN() {
     ],
   });
 }
-const qN = "/assets/images/team-1-B_rixN8C.png";
+const qN = "./assets/images/team-1-B_rixN8C.png";
 function JN({ skill: t, percentage: e }) {
   const n = O.useRef(null);
   return (
@@ -37303,12 +37296,12 @@ function tk() {
     ],
   });
 }
-const nk = "/assets/images/sydney-1-V-y30AFW.png",
-  rk = "/assets/images/sydney-2-CFiMHIqK.png",
-  ik = "/assets/images/london-1-D7sOVOA_.png",
-  sk = "/assets/images/london-1-D7sOVOA_.png",
-  lk = "/assets/images/location-1-DlhfyxP3.png",
-  ok = "/assets/images/location-2-CntCyDAN.png";
+const nk = "./assets/images/sydney-1-V-y30AFW.png",
+  rk = "./assets/images/sydney-2-CFiMHIqK.png",
+  ik = "./assets/images/london-1-D7sOVOA_.png",
+  sk = "./assets/images/london-1-D7sOVOA_.png",
+  lk = "./assets/images/location-1-DlhfyxP3.png",
+  ok = "./assets/images/location-2-CntCyDAN.png";
 function ak() {
   const t = [
     {
