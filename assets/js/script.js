@@ -11255,205 +11255,203 @@ function jb() {
   });
 }
 function Cb({}) {
-  const [t, e] = O.useState(""),
-    n = (r) => {
-      r.preventDefault(), console.log(t), e("");
-    };
-  return u.jsxs("div", {
+  const VPS_CARDS = [
+    {
+      img: "/assets/images/server.jpg",
+      title: "Linux VPS 6 vCPU",
+      specs: ["4GB RAM", "100GB SSD Storage", "750GB Bandwidth"],
+      price: "Rs. 8000/- + tax / Monthly",
+      note: "Includes Linux server license & setup support",
+      btn: "ADD NOW",
+    },
+    {
+      img: "/assets/images/icon01.png",
+      title: "Windows VPS 6 vCPU",
+      specs: ["8GB RAM", "100GB SSD Storage", "750GB Bandwidth"],
+      price: "Rs. 10000/- + tax / Monthly",
+      note: "Includes Windows server license & technical support",
+      btn: "PURCHASE NOW",
+    },
+  ];
+
+  return u.jsxs("section", {
     style: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "flex-start",
-      padding: "60px 20px",
-      gap: "60px",
-      flexWrap: "wrap",
-      backgroundColor: "",
-      fontFamily: "sans-serif",
+      // background: "rgb(231, 238, 223)",
+      padding: "100px 24px",
+      fontFamily: "'Inter', sans-serif",
     },
     children: [
-      // Left Text Section
+      // Header Section
       u.jsxs("div", {
-        style: { maxWidth: "400px" },
+        style: {
+          maxWidth: "800px",
+          margin: "0 auto",
+          textAlign: "center",
+          marginBottom: "80px",
+        },
         children: [
           u.jsx("h4", {
             style: {
-              fontWeight: "600",
-              color: "#0f172a",
+              color: "#ea580c",
               fontSize: "0.9rem",
+              fontWeight: "700",
+              textTransform: "uppercase",
               letterSpacing: "1px",
+              marginBottom: "12px",
             },
-            children: "WEB HOSTING",
+            children: "Web Hosting",
           }),
           u.jsx("h2", {
             style: {
-              fontWeight: "700",
-              fontSize: "2.2rem",
+              fontSize: "2.8rem",
+              fontWeight: "800",
+              color: "#000",
               marginBottom: "20px",
-              color: "#0f172a",
+              lineHeight: "1.2",
             },
-            children: "VPS Server",
-          }),
-          u.jsx("p", {
-            style: { lineHeight: "1.7", color: "#334155" },
-            children:
-              "VPS Server hosting offers a scalable and secure environment for businesses to store and manage their website data. With dedicated resources and fast performance, it’s the ideal solution for websites needing more control and speed.",
+            children: "Premium VPS Hosting Plans",
           }),
           u.jsx("p", {
             style: {
-              marginTop: "20px",
-              lineHeight: "1.7",
-              color: "#334155",
+              color: "#1e293b",
+              fontSize: "1.1rem",
+              lineHeight: "1.75",
+              maxWidth: "600px",
+              margin: "0 auto",
             },
             children:
-              "Make your website hosting powerful and reliable. Ensure faster loading, high uptime, and enhanced data security with our VPS hosting plans.",
+              "Experience blazing-fast performance with full control over your server, industry-level uptime, and 24/7 technical support — all in one plan.",
           }),
         ],
       }),
 
-      // First VPS Card
-      u.jsxs("div", {
+      // Cards
+      u.jsx("div", {
         style: {
-          backgroundColor: "#e7eedf",
-          borderRadius: "16px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-          padding: "30px",
-          width: "280px",
-          textAlign: "left",
+          display: "flex",
+          justifyContent: "center",
+          gap: "40px",
+          flexWrap: "wrap",
         },
-        children: [
-          u.jsx("img", {
-            src: "/assets/images/server.jpg",
-            alt: "Linux VPS",
-            style: { width: "50px", marginBottom: "20px" },
-          }),
-          u.jsx("h3", {
-            style: {
-              fontSize: "1.2rem",
-              fontWeight: "700",
-              color: "#0f172a",
-              marginBottom: "16px",
+        children: VPS_CARDS.map((card, i) =>
+          u.jsxs(
+            "div",
+            {
+              style: {
+                background: "#ffffff",
+                borderRadius: "24px",
+                padding: "36px",
+                width: "300px",
+                boxShadow: "0 15px 35px rgba(0,0,0,0.08)",
+                display: "flex",
+                flexDirection: "column",
+                transition: "all 0.4s ease",
+                border: "1px solid #ea580c",
+              },
+              onMouseEnter: (e) =>
+                (e.currentTarget.style.transform = "translateY(-5px)"),
+              onMouseLeave: (e) =>
+                (e.currentTarget.style.transform = "translateY(0)"),
+              children: [
+                u.jsx("img", {
+                  src: card.img,
+                  alt: card.title,
+                  style: {
+                    width: "60px",
+                    marginBottom: "24px",
+                    borderRadius: "12px",
+                    objectFit: "cover",
+                  },
+                }),
+                u.jsx("h3", {
+                  style: {
+                    fontSize: "1.25rem",
+                    fontWeight: "700",
+                    color: "#0f172a",
+                    marginBottom: "16px",
+                  },
+                  children: card.title,
+                }),
+                u.jsx("ul", {
+                  style: {
+                    padding: "0",
+                    marginBottom: "24px",
+                    color: "#475569",
+                    fontSize: "0.95rem",
+                    listStyle: "none",
+                    lineHeight: "1.8",
+                  },
+                  children: card.specs.map((s, idx) =>
+                    u.jsxs(
+                      "li",
+                      {
+                        style: {
+                          marginBottom: "8px",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                        },
+                        children: [
+                          u.jsx("span", {
+                            style: {
+                              width: "8px",
+                              height: "8px",
+                              backgroundColor: "#ea580c",
+                              borderRadius: "999px",
+                              display: "inline-block",
+                            },
+                          }),
+                          s,
+                        ],
+                      },
+                      idx
+                    )
+                  ),
+                }),
+                u.jsx("h4", {
+                  style: {
+                    fontSize: "1.1rem",
+                    fontWeight: "700",
+                    color: "#0f172a",
+                    marginBottom: "12px",
+                  },
+                  children: card.price,
+                }),
+                u.jsx("p", {
+                  style: {
+                    fontSize: "0.85rem",
+                    color: "#64748b",
+                    marginBottom: "28px",
+                  },
+                  children: card.note,
+                }),
+                u.jsx("button", {
+                  style: {
+                    background: "#ea580c",
+                    color: "#ffffff",
+                    border: "none",
+                    padding: "12px 24px",
+                    borderRadius: "999px",
+                    fontWeight: "700",
+                    fontSize: "0.95rem",
+                    transition: "background 0.3s",
+                  },
+                  onMouseEnter: (e) =>
+                    (e.target.style.background = "#c2410c"),
+                  onMouseLeave: (e) =>
+                    (e.target.style.background = "#ea580c"),
+                  children: card.btn,
+                }),
+              ],
             },
-            children: "VPS 6 vCPU",
-          }),
-          u.jsxs("ul", {
-            style: {
-              listStyle: "none",
-              padding: "0",
-              marginBottom: "20px",
-              color: "#475569",
-              lineHeight: "1.8",
-            },
-            children: [
-              u.jsx("li", { children: "4GB RAM" }),
-              u.jsx("li", { children: "100GB SSD Storage" }),
-              u.jsx("li", { children: "750GB Bandwidth" }),
-              u.jsx("li", { children: "Bandwidth" }),
-            ],
-          }),
-          u.jsx("h4", {
-            style: {
-              fontSize: "1rem",
-              fontWeight: "700",
-              color: "#0f172a",
-              marginBottom: "10px",
-            },
-            children: "Rs. 8000/- + tax / Monthly",
-          }),
-          u.jsx("p", {
-            style: {
-              fontSize: "0.85rem",
-              color: "#64748b",
-              marginBottom: "20px",
-            },
-            children: "Includes Linux server license & setup support",
-          }),
-          u.jsx("button", {
-            style: {
-              backgroundColor: "#facc15",
-              border: "none",
-              padding: "10px 20px",
-              fontWeight: "600",
-              borderRadius: "6px",
-              cursor: "pointer",
-            },
-            children: "ADD NOW",
-          }),
-        ],
-      }),
-
-      // Second VPS Card
-      u.jsxs("div", {
-        style: {
-          backgroundColor: "#e7eedf",
-          borderRadius: "16px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-          padding: "30px",
-          width: "280px",
-          textAlign: "left",
-        },
-        children: [
-          u.jsx("img", {
-            src: "/assets/images/icon01.png",
-            alt: "Windows VPS",
-            style: { width: "50px", marginBottom: "20px" },
-          }),
-          u.jsx("h3", {
-            style: {
-              fontSize: "1.2rem",
-              fontWeight: "700",
-              color: "#0f172a",
-              marginBottom: "16px",
-            },
-            children: "VPS 6 vCPU",
-          }),
-          u.jsxs("ul", {
-            style: {
-              listStyle: "none",
-              padding: "0",
-              marginBottom: "20px",
-              color: "#475569",
-              lineHeight: "1.8",
-            },
-            children: [
-              u.jsx("li", { children: "8GB RAM" }),
-              u.jsx("li", { children: "100GB SSD Storage" }),
-              u.jsx("li", { children: "750GB Bandwidth" }),
-              u.jsx("li", { children: "Bandwidth" }),
-            ],
-          }),
-          u.jsx("h4", {
-            style: {
-              fontSize: "1rem",
-              fontWeight: "700",
-              color: "#0f172a",
-              marginBottom: "10px",
-            },
-            children: "Rs. 10000/- + tax / Monthly",
-          }),
-          u.jsx("p", {
-            style: {
-              fontSize: "0.85rem",
-              color: "#64748b",
-              marginBottom: "20px",
-            },
-            children: "Includes Windows server license & technical support",
-          }),
-          u.jsx("button", {
-            style: {
-              backgroundColor: "#facc15",
-              border: "none",
-              padding: "10px 20px",
-              fontWeight: "600",
-              borderRadius: "6px",
-              cursor: "pointer",
-            },
-            children: "PURCHASE NOW",
-          }),
-        ],
+            i
+          )
+        ),
       }),
     ],
   });
 }
+
 const Nb = "/assets/images/cropped_circle_image.png";
 
 function kb() {
@@ -25192,48 +25190,62 @@ function yC() {
     ],
   });
 }
-function wC({ icon: t, title: e, shortDesc: n, link: r }) {
+function wC({ title, shortDesc, icon, link, points }) {
   return u.jsx("div", {
-    className: "service-card-wrapper hover-bg-transform col-lg-4 col-sm-6",
-    children: u.jsxs("div", {
-      className: "service-card p-xl-10 p-sm-6 p-4",
-      children: [
-        u.jsx("div", {
-          className: "card-icon mb-lg-6 mb-4 text-h3",
-          children: u.jsx("i", {
-            className: t,
-          }),
-        }),
-        u.jsxs("div", {
-          className: "service-card-body",
-          children: [
-            u.jsx(oe, {
-              to: r,
-              children: u.jsx(W, {
-                className: "text-n900 my-title mb-4 w-3xl-50",
-                splitType: "lines",
-                child: "line",
-                staggerDelay: 0.01,
-                children: u.jsx("h3", {
-                  children: e,
-                }),
+    className: "col-lg-4 col-sm-6 mb-4",
+    children: u.jsx("div", {
+      className:
+        "service-card card p-4 border n900-border min-h-[450px] flex flex-col bg-white",
+      children: u.jsxs("div", {
+        className: "card-body flex flex-col h-full",
+        children: [
+          u.jsxs("div", {
+            className: "d-flex align-items-center mb-4",
+            children: [
+              u.jsx("i", {
+                className: `${icon} fs-2 text-orange-600 bg-orange-100 p-2 rounded-full me-3`,
               }),
-            }),
-            u.jsx(W, {
-              className: "text-n500 mb-lg-10 mb-md-8 mb-sm-6 mb-4",
-              splitType: "words",
-              child: "word",
-              staggerDelay: 0.01,
-              children: n,
-            }),
-            u.jsx(oe, {
-              to: r,
-              className: "text-n900 text-decoration-underline text-2xl",
-              children: "More Information",
-            }),
-          ],
-        }),
-      ],
+              u.jsx("h3", {
+                className: "card-title mb-0 text-n900 font-bold text-2xl",
+                children: title,
+              }),
+            ],
+          }),
+          u.jsx("p", {
+            className:
+              "card-text mb-4 text-n500 text-sm font-semibold leading-relaxed line-clamp-3",
+            children: shortDesc,
+          }),
+          u.jsx("ul", {
+            className: "list-unstyled mb-4 flex-grow",
+            children: points.map((point, index) =>
+              u.jsx(
+                "li",
+                {
+                  className: "mb-2 flex items-center",
+                  children: u.jsxs("span", {
+                    className: "text-n700 text-sm font-semibold",
+                    children: [
+                      u.jsx("i", {
+                        className:
+                          "ph-fill ph-check-circle text-orange-600 me-2",
+                      }),
+                      point,
+                    ],
+                  }),
+                },
+                index
+              )
+            ),
+          }),
+          u.jsx("a", {
+            href: link,
+            className:
+              "inline-block text-center px-4 py-2 bg-gradient-to-r from-orange-400 to-orange-500 text-white font-semibold rounded-full hover:from-orange-500 hover:to-orange-600 transition-all duration-200 transform hover:-translate-y-1 mt-auto",
+            children: "Learn More",
+          }),
+        ],
+      }),
     }),
   });
 }
@@ -25270,38 +25282,68 @@ const Ch = [
       "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
     icon: "ph-fill ph-shield-checkered",
     link: "/web-portal",
+    points: [
+      "Centralized access to multiple services",
+      "Customizable user dashboards",
+      "Secure data management",
+      "Scalable architecture",
+    ],
   },
   {
     id: 2,
     title: "Landing Web Sites",
     shortDesc:
-      "A landing website is a single, focused web page designed to drive specific actions or outcomes from visitors. Typically part of a broader marketing or promotional strategy, a landing page is optimized for conversions, guiding visitors toward a clear objective such as signing up for a newsletter, purchasing a product, or downloading a resource.",
+      "A landing page is a focused web page designed to drive specific actions, guiding visitors toward goals like sign-ups, purchases, or downloads as part of a marketing strategy.",
     icon: "ph-fill ph-cloud",
     link: "/digital-marketing",
+    points: [
+      "Optimized for conversions",
+      "Clear call-to-action design",
+      "Responsive across devices",
+      "Integrated analytics tracking",
+    ],
   },
   {
     id: 3,
     title: "Fintech Development",
     shortDesc:
-      "A Recharge Portal is a specialized online platform designed to enable users to easily recharge their accounts, services, or prepaid products such as mobile phones, utility services, or subscription-based offerings. The portal provides a secure, user-friendly interface for processing payments and managing recharge transactions. It streamlines the process, making it convenient for customers to top up their balances anytime, anywhere.",
+      "A Recharge Portal is an online platform that enables users to securely recharge mobiles, utilities, or subscriptions through a user-friendly interface, offering convenience and access anytime, anywhere.",
     icon: "ph-fill ph-users-three",
     link: "/fintech-development",
+    points: [
+      "Secure payment processing",
+      "User-friendly interface",
+      "Real-time transaction updates",
+      "Multi-service support",
+    ],
   },
   {
     id: 4,
     title: "Marketing Sales&Funnel",
     shortDesc:
-      "A Marketing & Sales Funnel is a strategic model used to guide potential customers through a series of stages, from initial awareness to the final purchase and beyond. This funnel represents the journey that a lead takes as they move through different phases of engagement with a brand or business. The goal of the funnel is to convert prospects into loyal customers by nurturing them at each stage with the right messaging, offers, and touchpoints.",
+      "A Marketing & Sales Funnel guides potential customers from awareness to purchase, converting leads into loyal buyers through targeted messaging, offers, and engagement at each stage of the journey.",
     icon: "ph-fill ph-laptop",
     link: "/marketing&sales",
+    points: [
+      "Lead nurturing strategies",
+      "Automated email campaigns",
+      "Conversion rate optimization",
+      "Customer retention tools",
+    ],
   },
   {
     id: 5,
     title: "Blockchain Development",
     shortDesc:
-      "Blockchain Development refers to the process of creating decentralized digital systems that enable secure, transparent, and immutable transactions through a distributed ledger technology (DLT). It is at the core of many innovative technologies like cryptocurrencies, smart contracts, decentralized applications (dApps), and more. Blockchain technology enables the recording of data in a way that ensures its integrity and security, making it resistant to fraud and tampering..",
+      "Blockchain Development creates decentralized systems using distributed ledger technology, enabling secure, transparent, and tamper-proof transactions for cryptocurrencies, smart contracts, dApps, and other innovations.",
     icon: "ph-fill ph-app-window",
     link: "/blockchain-development",
+    points: [
+      "Decentralized architecture",
+      "Smart contract integration",
+      "Enhanced security protocols",
+      "Transparent transaction records",
+    ],
   },
   {
     id: 6,
@@ -25310,16 +25352,29 @@ const Ch = [
       "API Development is the process of designing and building Application Programming Interfaces that allow software systems to communicate and share data. APIs define the methods and data formats used for interaction between applications.",
     icon: "ph-fill ph-device-mobile-camera",
     link: "/api-development",
+    points: [
+      "Seamless system integration",
+      "Secure data exchange",
+      "Scalable API architecture",
+      "Comprehensive documentation",
+    ],
   },
   {
     id: 7,
     title: "App Development",
     shortDesc:
-      "API Development is the process of designing and building Application Programming Interfaces that allow software systems to communicate and share data. APIs define the methods and data formats used for interaction between applications.",
+      "App Development is the process of designing and building applications for mobile or desktop devices, enabling seamless user experiences and functionality. Apps are tailored to meet specific business or user needs.",
     icon: "ph-fill ph-device-mobile-camera",
     link: "/app-development",
+    points: [
+      "Cross-platform compatibility",
+      "Intuitive user interfaces",
+      "High-performance backend",
+      "Regular updates and support",
+    ],
   },
 ];
+
 function SC() {
   const t = {
     subHeading: "Our Services",
@@ -25327,6 +25382,7 @@ function SC() {
     description:
       "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications",
   };
+
   return u.jsx("section", {
     className: "service-section section-blur section-left-margin pt-120 pb-120",
     children: u.jsx("div", {
@@ -25336,7 +25392,7 @@ function SC() {
         children: u.jsx("div", {
           className: "col-3xl-11",
           children: u.jsxs("div", {
-            className: "row justify-content-center g-0",
+            className: "row justify-content-center",
             children: [
               u.jsxs("div", {
                 className: "col-lg-4 col-sm-6 pe-lg-6",
@@ -25711,7 +25767,7 @@ function EC() {
                 u.jsx("div", {
                   className: "col-md-4 col-sm-6",
                   children: u.jsx(Sd, {
-                    percentage: 92,
+                    percentage: 98,
                     symbol: "+",
                     title: "Active User",
                     subtitle: "Proven Impact",
@@ -25722,7 +25778,7 @@ function EC() {
                 u.jsx("div", {
                   className: "col-md-4 col-sm-6",
                   children: u.jsx(Sd, {
-                    percentage: 27,
+                    percentage: 99,
                     symbol: "+",
                     title: "Active User",
                     subtitle: "Trusted Delivery",
@@ -25733,7 +25789,7 @@ function EC() {
                 u.jsx("div", {
                   className: "col-md-4 col-sm-6",
                   children: u.jsx(Sd, {
-                    percentage: 90,
+                    percentage: 98,
                     symbol: "+",
                     title: "Active User",
                     subtitle: "Project Power",
@@ -25753,29 +25809,18 @@ function NC({ swiperData: t, swiperBtn: e }) {
   return u.jsx(u.Fragment, {
     children: u.jsx(Sc, {
       slidesPerView: 1,
-      loop: !0,
-      spaceBetween: 16,
-      speed: 1e3,
+      loop: true,
+      spaceBetween: 24,
+      speed: 1000,
       autoplay: {
-        delay: 6e3,
+        delay: 6000,
+        disableOnInteraction: false,
       },
       breakpoints: {
-        576: {
-          slidesPerView: 1.5,
-        },
-        768: {
-          slidesPerView: 1.8,
-          speed: 1e4,
-          autoplay: {
-            delay: 1,
-          },
-        },
-        991: {
-          slidesPerView: 2,
-        },
-        1400: {
-          slidesPerView: 2.5,
-        },
+        576: { slidesPerView: 1.1 },
+        768: { slidesPerView: 1.6 },
+        991: { slidesPerView: 2 },
+        1400: { slidesPerView: 2.4 },
       },
       modules: [xC],
       navigation: {
@@ -25783,39 +25828,101 @@ function NC({ swiperData: t, swiperBtn: e }) {
         prevEl: e.prevBtn,
       },
       className: "testimonial-slider",
-      children: t.map(({ id: n, heading: r, text: i, link: l }) =>
-        u.jsx(
-          _c,
-          {
-            className: "d-flex align-items-center gap-4",
-            children: u.jsxs("div", {
-              className:
-                "testimonial-card p-lg-xl-10 p-lg-8 p-sm-6 p-4 border n900-border",
-              children: [
-                l && l !== "#"
-                  ? u.jsx("a", {
-                      href: l,
-                      className:
-                        "text-h4 fw-extra-bold text-n900 mb-4 nav-link",
-                      children: r,
-                    })
-                  : u.jsx("span", {
-                      className: "text-h4 fw-extra-bold text-n900 mb-4",
-                      children: r,
+      children: t.map(
+        ({ id: n, heading: r, text: i, link: l, why: w, how: h, icon: ic }) =>
+          u.jsx(
+            _c,
+            {
+              className: "h-full",
+              children: u.jsxs("div", {
+                className:
+                  "h-full min-h-[540px] bg-white border-2 border-orange-300 hover:border-orange-400 hover:shadow-lg rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-10 flex flex-col justify-between gap-6 transition-all duration-300",
+                children: [
+                  u.jsxs("div", {
+                    className: "flex items-start gap-4",
+                    children: [
+                      u.jsx("div", {
+                        className:
+                          "w-14 h-14 flex items-center justify-center rounded-2xl bg-orange-100 text-orange-600 text-3xl",
+                        children: u.jsx("i", { className: ic }),
+                      }),
+                      l && l !== "#"
+                        ? u.jsx("a", {
+                            href: l,
+                            className:
+                              "text-2xl font-bold text-gray-900 underline decoration-orange-500 underline-offset-4",
+                            children: r,
+                          })
+                        : u.jsx("span", {
+                            className: "text-xl font-bold text-gray-900",
+                            children: r,
+                          }),
+                    ],
+                  }),
+
+                  u.jsx("p", {
+                    className:
+                      "text-sm font-semibold text-gray-700 leading-relaxed mt-2",
+                    children: i,
+                  }),
+
+                  u.jsxs("div", {
+                    className:
+                      "bg-gray-50 p-4 rounded-xl text-sm text-gray-800",
+                    children: [
+                      u.jsxs("div", {
+                        className:
+                          "flex items-center gap-2 font-semibold text-gray-900 mb-1",
+                        children: [
+                          u.jsx("i", {
+                            className: "ph ph-question text-orange-600",
+                          }),
+                          "Why it matters",
+                        ],
+                      }),
+                      u.jsx("p", { className: "pl-6", children: w }),
+                    ],
+                  }),
+
+                  u.jsxs("div", {
+                    className:
+                      "bg-gray-50 p-4 rounded-xl text-sm text-gray-800",
+                    children: [
+                      u.jsxs("div", {
+                        className:
+                          "flex items-center gap-2 font-semibold text-gray-900 mb-1",
+                        children: [
+                          u.jsx("i", {
+                            className: "ph ph-gear text-orange-600",
+                          }),
+                          "How it works",
+                        ],
+                      }),
+                      u.jsx("p", { className: "pl-6", children: h }),
+                    ],
+                  }),
+
+                  l &&
+                    l !== "#" &&
+                    u.jsx("div", {
+                      className: "pt-4 mt-auto",
+                      children: u.jsx("a", {
+                        href: l,
+                        className:
+                          "inline-block text-sm font-semibold text-white bg-orange-600 px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition-colors duration-200",
+                        children: "Learn More",
+                      }),
                     }),
-                u.jsx("p", {
-                  className: "text-n900 mb-lg-6 mb-4",
-                  children: i,
-                }),
-              ],
-            }),
-          },
-          n
-        )
+                ],
+              }),
+            },
+            n
+          )
       ),
     }),
   });
 }
+
 function Nh() {
   const t = {
       heading: "Verification Services",
@@ -25826,38 +25933,52 @@ function Nh() {
       {
         id: 1,
         heading: "Aadhar Verification",
-        text: '"Aadhaar is the world’s largest biometric ID system, managed by UIDAI, providing a 12-digit unique identity to every Indian resident. Aadhaar verification confirms a person’s identity using methods like biometrics, OTP, or QR code scanning. It\'s widely used in financial services, government schemes, and telecom, ensuring authenticity and preventing fraud "',
+        text: "Aadhaar is the world’s largest biometric ID system, managed by UIDAI, providing a 12-digit unique identity to every Indian resident. Aadhaar verification confirms a person’s identity using methods like biometrics, OTP, or QR code scanning. It's widely used in financial services, government schemes, and telecom, ensuring authenticity and preventing fraud.",
         link: "/aadhar-verification",
+        why: "Aadhaar verification ensures secure identity authentication and helps prevent fraud in essential services.",
+        how: "It uses biometric data, OTP, or QR code scanning to verify identities through UIDAI’s secure systems.",
+        icon: "ph ph-fingerprint",
       },
       {
         id: 2,
         heading: "Pan Verification",
-        text: ` "PAN (Permanent Account Number) is a 10-digit alphanumeric ID issued by India’s Income Tax Department to identify taxpayers and monitor financial activities like income and tax filings. It is essential for tasks like opening bank accounts, filing returns, and financial transactions.
-PAN verification ensures the authenticity of a PAN through official or third-party systems."`,
+        text: "PAN (Permanent Account Number) is a 10-digit alphanumeric ID issued by India’s Income Tax Department to identify taxpayers and monitor financial activities like income and tax filings. It is essential for tasks like opening bank accounts, filing returns, and financial transactions. PAN verification ensures the authenticity of a PAN through official or third-party systems.",
         link: "/pan-verification",
+        why: "PAN verification ensures compliance with tax regulations and prevents fraudulent financial activities.",
+        how: "Verification is done by checking the PAN against the Income Tax Department’s database or authorized platforms.",
+        icon: "ph ph-cardholder",
       },
       {
         id: 3,
         heading: "Bank Account Verification",
-        text: "\"Bank account verification is essential for confirming the authenticity and accuracy of an individual's bank details. It supports customer onboarding, fraud prevention, KYC compliance, and secure payment processing. With the rise of digital banking, the process faces challenges like data mismatches, security risks, and verification delays.",
+        text: "Bank account verification is essential for confirming the authenticity and accuracy of an individual's bank details. It supports customer onboarding, fraud prevention, KYC compliance, and secure payment processing. With the rise of digital banking, the process faces challenges like data mismatches, security risks, and verification delays.",
         link: "/bank-verification",
+        why: "It ensures secure transactions and compliance with KYC norms, reducing the risk of financial fraud.",
+        how: "Verification involves checking account details against bank records, often using penny drop or API-based systems.",
+        icon: "ph ph-bank",
       },
       {
         id: 4,
         heading: "GST Verification",
-        text: '"GST (Goods and Services Tax) is a unified indirect tax in India that replaces multiple central and state taxes. Businesses dealing in goods or services must register under GST and fulfill tax obligations.GST verification confirms the authenticity of GST registration details, helping ensure compliance, prevent fraud, and maintain tax system integrity.',
+        text: "GST (Goods and Services Tax) is a unified indirect tax in India that replaces multiple central and state taxes. Businesses dealing in goods or services must register under GST and fulfill tax obligations. GST verification confirms the authenticity of GST registration details, helping ensure compliance, prevent fraud, and maintain tax system integrity.",
         link: "/gst-verification",
+        why: "GST verification ensures businesses comply with tax laws and prevents fraudulent transactions.",
+        how: "It is performed by validating GSTIN details through the GST portal or authorized third-party services.",
+        icon: "ph ph-file-text",
       },
       {
         id: 5,
-        heading: "Live Face  Verification",
-        text: "\"Live Face Recognition is a technology that verifies identity by capturing a live image or video of a person's face and matching it with a known database. It's widely used in security, banking, retail, and access control for enhanced authentication and fraud prevention.Despite its growth, it faces challenges in ensuring accuracy, efficiency, and security.\" ",
+        heading: "Live Face Verification",
+        text: "Live Face Recognition is a technology that verifies identity by capturing a live image or video of a person's face and matching it with a known database. It's widely used in security, banking, retail, and access control for enhanced authentication and fraud prevention. Despite its growth, it faces challenges in ensuring accuracy, efficiency, and security.",
         link: "/face-verification",
+        why: "Live face verification enhances security by ensuring real-time identity authentication.",
+        how: "It captures live facial data and matches it against a database using advanced AI algorithms.",
+        icon: "ph ph-face-mask",
       },
     ];
   return u.jsxs("section", {
     className:
-      "section-blur testimonial-section section-left-margin pt-120 pb-120",
+      "section-blur testimonial-section section-left-margin pt-120 pb-120 bg-gradient-to-r from-gray-100 ",
     children: [
       u.jsx("div", {
         className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
@@ -25886,13 +26007,15 @@ PAN verification ensures the authenticity of a PAN through official or third-par
                         "swiper-btns d-flex gap-2 align-items-center justify-content-end",
                       children: [
                         u.jsx("button", {
-                          className: "btn-prev ts-prev text-xl fw-extra-bold",
+                          className:
+                            "btn-prev ts-prev text-xl fw-extra-bold bg-n900 text-black rounded-full p-3  transition-colors duration-200",
                           children: u.jsx("i", {
                             className: "ph ph-arrow-left",
                           }),
                         }),
                         u.jsx("button", {
-                          className: "btn-next ts-next text-xl fw-extra-bold",
+                          className:
+                            "btn-next ts-next text-xl fw-extra-bold bg-n900 text-black rounded-full p-3 -600 transition-colors duration-200",
                           children: u.jsx("i", {
                             className: "ph ph-arrow-right",
                           }),
@@ -25925,50 +26048,36 @@ PAN verification ensures the authenticity of a PAN through official or third-par
     ],
   });
 }
+
 function b1({ name: t, position: e, image: n, link: l }) {
   return u.jsx("div", {
-    className: "team-card border n900-border p-4 rounded",
-    style: {
-      borderWidth: "2px",
-      borderStyle: "solid",
-    },
+    className:
+      "max-w-sm w-full bg-gradient-to-br from-white to-[#f7faf9] rounded-3xl shadow-lg border border-gray-200 overflow-hidden flex flex-col",
     children: u.jsxs("div", {
       children: [
-        // Team image section
+        // Image Top Section
         u.jsx("div", {
-          className:
-            "team-img border n900-border mb-lg-6 mb-4 position-relative overflow-hidden rounded",
-          children: u.jsxs(ia, {
-            direction: "left",
-            children: [
-              u.jsx(oe, {
-                children: u.jsx("img", {
-                  className: "w-100",
-                  src: n,
-                  alt: "team image",
-                }),
-              }),
-            ],
+          className: "h-60 w-full overflow-hidden rounded-t-3xl border-b",
+          children: u.jsx("img", {
+            src: n,
+            alt: t,
+            className: "w-full h-full object-cover",
           }),
         }),
 
-        // Team info section
+        // Info Section
         u.jsxs("div", {
-          className: "team-info text-start",
+          className:
+            "px-8 py-8 flex flex-col items-center text-center gap-4 bg-white",
           children: [
-            u.jsx(oe, {
-              className: "text-h4 text-n900 mb-3",
-              style: {
-                textAlign: "center",
-              },
+            u.jsx("h3", {
+              className:
+                "text-2xl font-extrabold text-gray-900 tracking-tight leading-snug",
               children: t,
             }),
             u.jsx("span", {
-              className: "text-n900 border px-3 py-2 d-inline-block rounded",
-              style: {
-                borderWidth: "1px",
-                borderStyle: "solid",
-              },
+              className:
+                " text-black text-sm font-semibold  py-2 border rounded",
               children: e,
             }),
             l &&
@@ -25976,7 +26085,8 @@ function b1({ name: t, position: e, image: n, link: l }) {
                 className: "mt-3",
                 children: u.jsx("a", {
                   href: l,
-                  className: "text-primary",
+                  className:
+                    "inline-block text-white bg-orange-500 px-6 py-2 text-sm font-semibold rounded-xl transition-colors duration-300",
                   children: "Learn More",
                 }),
               }),
@@ -25986,6 +26096,8 @@ function b1({ name: t, position: e, image: n, link: l }) {
     }),
   });
 }
+
+
 const kC = "/assets/images/fintech.jpg",
   AC = "/assets/images/shoping.jpeg",
   PC = "/assets/images/H4.webp",
@@ -26061,37 +26173,59 @@ const kC = "/assets/images/fintech.jpg",
 function E1() {
   const t = {
     subHeading: "OUR PRODUCTS",
-    heading: "OUR PRODUCTS CATALOGUE ",
-    description: "Then make the right choice Let’s start on your case together",
+    heading: "Explore Our Product Catalogue",
+    description:
+      "Discover the perfect solution for your needs. Let’s find the right product together!",
   };
+
   return u.jsx("section", {
     className:
-      "section-blur team-section section-left-margin pt-120 pb-120 bg-primary-75",
+      "section-blur team-section section-left-margin pt-28 pb-28 bg-gradient-to-br from-[#f6f9f1] to-[#e4edd8] relative overflow-hidden",
     children: u.jsx("div", {
-      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      className: "container mx-auto px-4 sm:px-6 lg:px-12",
       children: u.jsx("div", {
-        className: "row justify-content-center",
+        className: "flex flex-col items-center",
         children: u.jsxs("div", {
-          className: "col-3xl-11",
+          className: "w-full max-w-7xl",
           children: [
             u.jsx("div", {
-              className: "row justify-content-center mb-lg-15 mb-md-10 mb-8",
+              className: "flex justify-center mb-14 md:mb-20",
               children: u.jsx("div", {
-                className: "col-xxl-5 col-xl-6 col-lg-8 col-md-10 text-center",
+                className: "text-center max-w-3xl",
                 children: u.jsx(Hr, {
-                  ...t,
+                  subHeading: t.subHeading,
+                  heading: t.heading,
+                  description: t.description,
+                  subHeadingClassName:
+                    "text-orange-600 text-lg md:text-xl font-semibold mb-3 tracking-wide uppercase",
+                  headingClassName:
+                    "text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5",
+                  descriptionClassName:
+                    "text-base md:text-lg text-gray-700 leading-relaxed",
                 }),
               }),
             }),
             u.jsx("div", {
-              className: "row g-6",
+              className:
+                "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10",
               children: T1.slice(0).map((e) =>
                 u.jsx(
                   "div",
                   {
-                    className: "col-lg-4 col-sm-6",
+                    className: "flex justify-center",
                     children: u.jsx(b1, {
                       ...e,
+                      className:
+                        "bg-white rounded-2xl shadow-md overflow-hidden max-w-sm ring-1 ring-gray-100",
+                      imageClassName: "w-full h-60 object-cover",
+                      titleClassName:
+                        "text-2xl font-semibold text-gray-900 mb-2 px-6 pt-6",
+                      descriptionClassName:
+                        "text-gray-600 text-sm leading-relaxed mb-4 px-6 line-clamp-3",
+                      priceClassName:
+                        "text-orange-500 font-extrabold text-xl px-6 mb-2",
+                      buttonClassName:
+                        "block bg-orange-500 text-white px-6 py-2.5 rounded-xl font-medium mb-6 mx-6 text-center transition-colors duration-200",
                     }),
                   },
                   e.id
@@ -26104,6 +26238,7 @@ function E1() {
     }),
   });
 }
+
 Xt.registerPlugin(Z);
 const j1 = ({ children: t }) =>
     u.jsx("div", {
@@ -26156,94 +26291,141 @@ const j1 = ({ children: t }) =>
   N1 = "/assets/images/ppc.jpg",
   k1 = "/assets/images/seo.avif",
   A1 = "/assets/images/ad-campaign.jpg",
-  MC = [
-    {
-      number: "01",
-      title: "Paid AD Campaign",
-      description:
-        "Paid ad campaigns, commonly referred to as paid advertising or pay-per-click (PPC) campaigns, are a powerful tool for businesses to drive targeted traffic, increase brand visibility, and achieve measurable results. These campaigns allow businesses to reach their ideal audience through various platforms such as Google Ads, Facebook Ads, LinkedIn Ads, and more.",
-      imageSrc: A1,
-      bgColor: "bg-primary-75",
-      textColor: "text-n900",
-      link: "/paid-campaign",
-      headingColor: "text-primary-400",
-    },
-    {
-      number: "02",
-      title: "SEO/SME Optimization",
-      description:
-        "Launch your online store with a secure, scalable shopping portal. We create SEO-optimized eCommerce websites for Bhopal’s top retailers, complete with payment gateway, product catalog, and easy navigation.",
-      imageSrc: k1,
-      bgColor: "bg-primary-300",
-      textColor: "text-n900",
-      link: "/seo-optimization",
-      headingColor: "text-primary-400",
-    },
-    {
-      number: "03",
-      title: "Google PPC",
-      description:
-        "SEO improves website visibility on search engines, driving organic traffic, enhancing user experience, building brand credibility, and offering a cost-effective strategy for long-term online growth and lead generation without relying heavily on paid advertising. ",
-      imageSrc: N1,
-      bgColor: "bg-gradient-to-r from-blue-500 to-blue-600",
-      textColor: "text-n0",
-      link: "/google-ppc",
-      headingColor: "text-n0",
-    },
-    {
-      number: "04",
-      title: "Bulk Email/SMS",
-      description:
-        "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability. ",
-      imageSrc: "/assets/images/sms.png",
-      bgColor: "bg-gradient-to-r from-purple-500 to-purple-600",
-      textColor: "text-n0",
-      link: "/bulk-sms",
-      headingColor: "text-n0",
-    },
-    {
-      number: "05",
-      title: "Meta Verified Whatsapps ",
-      description:
-        "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
-      imageSrc: "/assets/images/meta.avif",
-      bgColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
-      textColor: "text-n0",
-      link: "/meta-verified",
-      headingColor: "text-n0",
-    },
-  ];
+MC = [
+  {
+    number: "01",
+    title: "Paid AD Campaign",
+    description:
+      "Paid ad campaigns, commonly referred to as paid advertising or pay-per-click (PPC) campaigns, are a powerful tool for businesses to drive targeted traffic, increase brand visibility, and achieve measurable results. These campaigns allow businesses to reach their ideal audience through various platforms such as Google Ads, Facebook Ads, LinkedIn Ads, and more.",
+    imageSrc: A1,
+    bgColor: "bg-gradient-to-br from-yellow-50 via-orange-100 to-yellow-50",
+    textColor: "text-gray-800",
+    link: "/paid-campaign",
+    headingColor: "text-orange-500",
+  },
+  {
+    number: "02",
+    title: "SEO/SME Optimization",
+    description:
+      "Launch your online store with a secure, scalable shopping portal. We create SEO-optimized eCommerce websites for Bhopal’s top retailers, complete with payment gateway, product catalog, and easy navigation.",
+    imageSrc: k1,
+    bgColor: "bg-gradient-to-br from-gray-100 via-blue-50 to-white",
+    textColor: "text-gray-900",
+    link: "/seo-optimization",
+    headingColor: "text-blue-500",
+  },
+  {
+    number: "03",
+    title: "Google PPC",
+    description:
+      "SEO improves website visibility on search engines, driving organic traffic, enhancing user experience, building brand credibility, and offering a cost-effective strategy for long-term online growth and lead generation without relying heavily on paid advertising.",
+    imageSrc: N1,
+    bgColor: "bg-gradient-to-br from-gray-50 via-indigo-100 to-white",
+    textColor: "text-gray-900",
+    link: "/google-ppc",
+    headingColor: "text-indigo-500",
+  },
+  {
+    number: "04",
+    title: "Bulk Email/SMS",
+    description:
+      "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability.",
+    imageSrc: "/assets/images/sms.png",
+    bgColor: "bg-gradient-to-br from-fuchsia-50 via-pink-100 to-white",
+    textColor: "text-gray-800",
+    link: "/bulk-sms",
+    headingColor: "text-pink-500",
+  },
+  {
+    number: "05",
+    title: "Meta Verified Whatsapps",
+    description:
+      "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
+    imageSrc: "/assets/images/meta.avif",
+    bgColor: "bg-gradient-to-br from-emerald-50 via-green-100 to-white",
+    textColor: "text-gray-900",
+    link: "/meta-verified",
+    headingColor: "text-emerald-600",
+  },
+];
+
+
 function P1({
   number: t,
   title: e,
   description: n,
   imageSrc: r,
-  bgColor: i,
-  textColor: s,
+  bgColor: i = "bg-custom-light",
+  textColor: s = "text-black",
   link: l,
-  headingColor: o,
+  headingColor: o = "text-orange-600",
 }) {
   return u.jsxs("div", {
-    className: `d-sm-flex d-grid  gap-xl-15 gap-lg-10 gap-md-8 gap-6 align-items-center justify-content-between p-xl-15 p-lg-10 p-md-8 p-6 border n900-border ${i}`,
+    className: `d-sm-flex d-grid gap-xl-15 gap-lg-10 gap-md-8 gap-6 align-items-center justify-content-between p-xl-15 p-lg-10 p-md-8 p-6 rounded-4 border border-orange-600 shadow-lg ${i}`,
+    style: {
+      backgroundColor: "rgb(231, 238, 223)",
+      width: "100%",
+      maxWidth: "1200px",
+      minHeight: "400px",
+      boxSizing: "border-box",
+    },
     children: [
       u.jsxs("div", {
         className: "project-info",
+        style: {
+          maxWidth: "600px",
+          width: "50%",
+          minHeight: "350px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        },
         children: [
           u.jsx("span", {
             className: `display-one ${o} fw-extra-bold mb-xl-15 mb-lg-10 mb-md-8 mb-6`,
+            style: {
+              fontSize: "3.5rem",
+              lineHeight: "1",
+            },
             children: t,
           }),
           u.jsx("span", {
             className: `reveal-heading text-h2 fw-extra-bold ${s} mb-4`,
+            style: {
+              fontSize: "2rem",
+              fontWeight: 800,
+              lineHeight: "1.3",
+            },
             children: e,
           }),
           u.jsx("span", {
             className: `d-block ${s} mb-lg-8 mb-6`,
+            style: {
+              color: "#1e293b",
+              fontSize: "1.05rem",
+              lineHeight: "1.7",
+              flexGrow: 1,
+            },
             children: n,
           }),
           u.jsx(oe, {
             to: l,
-            className: "outline-btn black-btn small-btn rounded-pill",
+            className: "outline-btn small-btn rounded-pill",
+            style: {
+              border: "2px solid #ea580c",
+              color: "#ea580c",
+              padding: "10px 22px",
+              fontWeight: 600,
+              transition: "all 0.3s ease",
+            },
+            onMouseEnter: (e) => {
+              e.currentTarget.style.backgroundColor = "#ea580c";
+              e.currentTarget.style.color = "#fff";
+            },
+            onMouseLeave: (e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.color = "#ea580c";
+            },
             children: u.jsx("span", {
               className: "text front",
               children: "See All Works",
@@ -26251,17 +26433,41 @@ function P1({
           }),
         ],
       }),
-      u.jsx("div", {
-        className: "project-img",
-        children: u.jsx("img", {
-          className: "w-100",
-          src: r,
-          alt: "project img",
-        }),
-      }),
+     u.jsx("div", {
+  className: "project-img",
+  style: {
+    width: "50%",
+    maxWidth: "500px",
+    height: "100%", // Ensure it fills the parent
+    minHeight: "350px",
+    borderRadius: "20px",
+    overflow: "hidden",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+    display: "flex",
+    alignItems: "center", // Optional: center image vertically
+    justifyContent: "center", // Optional: center image horizontally
+    padding: "0", // Remove internal padding
+    margin: "0",  // Remove external margin
+    boxSizing: "border-box",
+  },
+  children: u.jsx("img", {
+    className: "w-100",
+    src: r,
+    alt: "project img",
+    style: {
+      display: "block", // Remove default spacing from inline img
+      width: "100%",
+      height: "100%",
+      objectFit: "cover", // Ensures image covers fully
+    },
+  }),
+}),
+
     ],
   });
 }
+
+
 function O1({ spaceTop: t, spaceBottom: e }) {
   const n = {
     subHeading: "Digital Marketing",
@@ -26269,10 +26475,16 @@ function O1({ spaceTop: t, spaceBottom: e }) {
     description:
       "Discover what's possible with our IT solutions catalogue — from securing your data to powering your cloud transformation.",
   };
+
   return u.jsx("section", {
-    className: `recent-project-section section-left-margin ${
+    className: `recent-project-section section-left-margin position-relative z-10 ${
       t ? "pt-120" : ""
     } ${e ? "pb-120" : ""}`,
+    style: {
+      // backgroundColor: "rgb(231, 238, 223)",
+      paddingTop: t ? "120px" : "60px",
+      paddingBottom: e ? "120px" : "60px",
+    },
     children: u.jsx("div", {
       className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
       children: u.jsx("div", {
@@ -26280,22 +26492,45 @@ function O1({ spaceTop: t, spaceBottom: e }) {
         children: u.jsxs("div", {
           className: "col-3xl-11",
           children: [
+            // Header
             u.jsxs("div", {
               className:
-                "row g-6 section-blur justify-content-between align-items-end mb-lg-0 mb-md-8 mb-6",
+                "row g-6 section-blur justify-content-between align-items-end mb-6 mb-md-10 mb-xl-15",
+              style: {
+                position: "relative",
+                zIndex: 2,
+                padding: "40px",
+                background: "#fff",
+                borderRadius: "16px",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.08)",
+                border: "1px solid #ea580c",
+              },
               children: [
                 u.jsx("div", {
                   className: "col-lg-6",
-                  children: u.jsx(Hr, {
-                    ...n,
-                  }),
+                  children: u.jsx(Hr, { ...n }),
                 }),
                 u.jsx("div", {
-                  className: "col-lg-2  position-relative",
+                  className: "col-lg-2 position-relative",
                   children: u.jsxs(oe, {
                     to: "/case-studies",
                     className:
-                      "primary-btn text-md-base text-sm border n900-border",
+                      "primary-btn text-md-base text-sm border rounded-pill",
+                    style: {
+                      borderColor: "#ea580c",
+                      color: "#ea580c",
+                      padding: "10px 20px",
+                      fontWeight: "600",
+                      transition: "all 0.3s ease",
+                    },
+                    onMouseEnter: (e) => {
+                      e.currentTarget.style.backgroundColor = "#ea580c";
+                      e.currentTarget.style.color = "#fff";
+                    },
+                    onMouseLeave: (e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "#ea580c";
+                    },
                     children: [
                       u.jsx("span", {
                         className: "text front",
@@ -26310,18 +26545,22 @@ function O1({ spaceTop: t, spaceBottom: e }) {
                 }),
               ],
             }),
-            u.jsx(C1, {
-              children: MC.map((r, i) =>
-                u.jsx(
-                  j1,
-                  {
-                    children: u.jsx(P1, {
-                      ...r,
-                    }),
-                  },
-                  i
-                )
-              ),
+
+            // Cards Section
+            u.jsx("div", {
+              className: "mt-6 mt-md-10 mt-xl-15 position-relative z-1",
+              children: u.jsx(C1, {
+                children: MC.map((r, i) =>
+                  u.jsx(
+                    j1,
+                    {
+                      className: "mb-6",
+                      children: u.jsx(P1, { ...r }),
+                    },
+                    i
+                  )
+                ),
+              }),
             }),
           ],
         }),
@@ -26329,157 +26568,240 @@ function O1({ spaceTop: t, spaceBottom: e }) {
     }),
   });
 }
+
+
 const I1 = [
   {
     id: 1,
     question: "2FA Authentication",
     answer:
-      "Secure every login with Two-Factor Authentication and prevent unauthorized access with industry-standard multi-layered protection.",
+      "Add an extra layer of protection with Two-Factor Authentication, minimizing the risk of unauthorized access to your systems.",
     icon: "🔒",
-    link:"/2fa-Authentication"
+    link: "/2fa-authentication",
+    points: [
+      "Prompts for a secondary verification step during login.",
+      "Supports SMS, email, and authenticator apps for flexibility.",
+      "Reduces threats from stolen or leaked passwords.",
+      "Seamlessly integrates into your existing login flow.",
+    ],
   },
   {
     id: 2,
     question: "Website Security",
     answer:
-      "Protect your website from malware, intrusion attempts, and vulnerabilities with real-time monitoring and firewall defenses.",
+      "Safeguard your website from cyber threats with real-time protection, malware scanning, and traffic monitoring.",
     icon: "🌐",
-        link:"/website-Security"
-
+    link: "/website-security",
+    points: [
+      "Detects and removes malware automatically.",
+      "Blocks attacks with Web Application Firewall (WAF).",
+      "Monitors real-time traffic for unusual behavior.",
+      "Enforces HTTPS to ensure secure content delivery.",
+    ],
   },
   {
     id: 3,
-    question: "Database Security",
+    question: "Network Security",
     answer:
-      "Keep your data safe with encryption, access controls, and frequent audits for leak-proof database management.",
-    icon: "🗄️",
-    link:"/database-Security"
+      "Protect your infrastructure with advanced network security protocols that defend against cyberattacks and unauthorized access.",
+    icon: "🛡️",
+    link: "/network-security",
+    points: [
+      "Uses intrusion prevention systems to block threats.",
+      "Filters harmful traffic with next-gen firewalls.",
+      "Continuously scans network activity for anomalies.",
+      "Secures remote connections via VPN integration.",
+    ],
   },
   {
     id: 4,
-    question: "Network Security",
+    question: "Database Security",
     answer:
-      "Shield your network infrastructure from external threats, unauthorized traffic, and cyberattacks with expert-driven protection systems.",
-    icon: "🛡️",
-    link:"/network-Security"
+      "Keep sensitive data secure with encryption, strict access controls, and proactive vulnerability detection.",
+    icon: "🗄️",
+    link: "/database-security",
+    points: [
+      "Encrypts data at rest and in transit for complete protection.",
+      "Limits access to authorized users only.",
+      "Conducts regular audits to uncover security gaps.",
+      "Defends against SQL injection and data leaks.",
+    ],
   },
   {
     id: 5,
     question: "Code Audit",
     answer:
-      "Get your codebase professionally reviewed to eliminate bugs, security loopholes, and performance issues before deployment.",
+      "Ensure clean, secure, and optimized code by identifying vulnerabilities and inefficiencies before deployment.",
     icon: "💻",
-    link:"/code-Audit"
+    link: "/code-audit",
+    points: [
+      "Finds hidden bugs and security loopholes in source code.",
+      "Checks compliance with industry coding standards.",
+      "Improves overall performance and readability.",
+      "Delivers a detailed audit report with fixes.",
+    ],
   },
   {
     id: 6,
     question: "DDOS Protection",
     answer:
-      "Prevent downtime and traffic overload with enterprise-level DDoS mitigation solutions for stable and secure online operations.",
+      "Prevent outages and downtime during high-traffic events with enterprise-grade DDoS mitigation strategies.",
     icon: "⚡",
-    link:"/ddos-Protection"
+    link: "/ddos-protection",
+    points: [
+      "Blocks both volumetric and application-layer attacks.",
+      "Distributes traffic using a global CDN for stability.",
+      "Offers real-time threat detection and alerts.",
+      "Maintains uptime even during heavy traffic surges.",
+    ],
   },
 ];
 
 function L1() {
   const t = {
-    heading: " Security & Auditing Solutions",
+    heading: "Security & Auditing Solutions",
     description:
       "Dive into our cutting-edge security practices and auditing protocols. We're dedicated to transparency, ensuring your data and operations are safeguarded with unmatched expertise.",
   };
+
+  const subSections = [{ items: I1 }];
+
   return u.jsx("section", {
     className:
-      'section-blur faqs-section section-left-margin pt-120 pb-120 bg-[#e7eedf] relative overflow-hidden before:content-[\'\'] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] before:from-green-400/10 before:via-blue-400/5 before:to-transparent before:z-0 after:content-[\'\'] after:absolute after:inset-0 after:bg-[url(\'data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236B7280" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E\')] after:z-0',
-    children: u.jsx("div", {
-      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10 relative z-10",
-      children: u.jsx("div", {
-        className: "row justify-content-center",
-        children: u.jsxs("div", {
-          className: "col-3xl-11",
-          children: [
-            u.jsx("div", {
-              className: "row justify-content-center mb-lg-15 mb-md-10 mb-8",
-              children: u.jsx("div", {
-                className: "col-xl-5 col-lg-6 text-center",
-                children: u.jsx(Hr, {
-                  ...t,
-                  className: "",
+      "pt-28 pb-28 bg-gradient-to-b from-[#e7eedf] to-[#f7faf3] relative overflow-hidden section-left-margin",
+    children: u.jsxs("div", {
+      className: "container-fluid px-xxl-12 px-xl-10 relative z-10",
+      children: [
+        // Decorative soft backgrounds
+        u.jsx("div", {
+          className:
+            "absolute top-10 right-10 w-40 h-40 bg-orange-600/10 rounded-full blur-2xl",
+        }),
+        u.jsx("div", {
+          className:
+            "absolute bottom-10 left-10 w-32 h-32 bg-white/50 rounded-full blur-xl",
+        }),
+
+        // Section Header
+        u.jsx("div", {
+          className: "row justify-center",
+          children: u.jsxs("div", {
+            className: "col-3xl-11",
+            children: [
+              u.jsx("div", {
+                className: "row justify-center mb-20",
+                children: u.jsx("div", {
+                  className: "col-xl-7 text-center",
+                  children: u.jsxs("div", {
+                    className: "relative",
+                    children: [
+                      u.jsx("div", {
+                        className:
+                          "w-14 h-1 bg-orange-600 mx-auto mb-6 rounded-full",
+                      }),
+                      u.jsx(Hr, {
+                        ...t,
+                        className: "relative z-10 text-gray-800",
+                      }),
+                    ],
+                  }),
                 }),
               }),
-            }),
-            u.jsx("div", {
-              className: "row g-6",
-              children: I1.map((e, index) =>
-                u.jsx(
-                  "div",
-                  {
-                    className: "col-lg-6",
-                    children: u.jsx("a", {
+
+              // Feature Cards Grid
+              u.jsx("div", {
+                className:
+                  "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 relative",
+                children: subSections[0].items.map((e) =>
+                  u.jsx(
+                    "a",
+                    {
                       href: e.link,
-                      className: "block",
+                      className: "block group",
                       children: u.jsxs("div", {
                         className:
-                          "group p-lg-8 p-sm-6 p-4 border border-gray-300/30 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl hover:border-green-400/50 transition-all duration-700 animate__animated animate__fadeInUp hover:scale-105 hover:-translate-y-2 cursor-pointer relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500",
+                          "h-full bg-white rounded-3xl shadow-xl border border-gray-100 p-8 transition-all duration-300 ",
                         children: [
-                          u.jsx("div", {
-                            className:
-                              "absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400/20 to-blue-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-y-16 translate-x-16",
-                          }),
                           u.jsxs("div", {
-                            className:
-                              "flex items-center justify-start mb-lg-6 mb-4 relative z-10",
+                            className: "flex items-start gap-5 mb-6",
                             children: [
                               u.jsx("div", {
-                                className: "relative mr-6",
-                                children: u.jsx("span", {
-                                  className:
-                                    "text-6xl transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 filter drop-shadow-lg group-hover:drop-shadow-2xl inline-block",
-                                  children: e.icon,
-                                }),
-                              }),
-                              u.jsx("h4", {
                                 className:
-                                  "title title-animation-line fw-extra-bold mb-0 text-gray-800 font-extrabold tracking-tight text-xl group-hover:text-green-700 transition-colors duration-500 leading-tight",
-                                children: e.question,
+                                  "w-14 h-14 flex items-center justify-center text-2xl rounded-xl bg-orange-600 text-white shadow-md flex-shrink-0",
+                                children: e.icon,
+                              }),
+                              u.jsxs("div", {
+                                className: "flex-1",
+                                children: [
+                                  u.jsx("h4", {
+                                    className:
+                                      "text-2xl font-bold text-gray-900 leading-tight mb-2 group-hover:text-orange-600 transition-colors",
+                                    children: e.question,
+                                  }),
+                                  u.jsx("div", {
+                                    className:
+                                      "w-10 h-0.5 bg-orange-600 rounded-full",
+                                  }),
+                                ],
                               }),
                             ],
                           }),
-                          u.jsx("div", {
-                            className:
-                              "content ps-xxl-20 ps-lg-15 ps-md-10 ps-sm-6 ps-4 relative z-10",
-                            children: u.jsx("p", {
-                              className:
-                                "text-gray-600 text-base leading-relaxed font-medium group-hover:text-gray-800 transition-colors duration-500 mb-4",
-                              children: e.answer,
-                            }),
-                          }),
-                          u.jsx("div", {
-                            className:
-                              "flex justify-end items-center relative z-10",
-                            children: u.jsx("span", {
-                              className:
-                                "toggle-icon text-2xl text-green-600 group-hover:text-green-800 transition-all duration-500 transform group-hover:translate-x-2 group-hover:scale-110 inline-block",
-                              children: "→",
-                            }),
-                          }),
-                          u.jsx("div", {
-                            className:
-                              "absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full",
+
+                          // Answer section
+                          u.jsxs("div", {
+                            className: "space-y-5",
+                            children: [
+                              u.jsx("div", {
+                                className:
+                                  "bg-gray-50 p-4 rounded-xl border-l-4 border-orange-600",
+                                children: u.jsx("p", {
+                                  className:
+                                    "text-xl font-semibold  text-gray-800 leading-relaxed mb-0",
+                                  children: e.answer,
+                                }),
+                              }),
+
+                              // Bullet Points
+                              u.jsx("ul", {
+                                className: "space-y-3",
+                                children: e.points.map((point, idx) =>
+                                  u.jsxs(
+                                    "li",
+                                    {
+                                      className:
+                                        "flex items-start gap-3 text-sm font-semibold text-gray-700",
+                                      children: [
+                                        u.jsx("div", {
+                                          className:
+                                            "w-2 h-2 rounded-full bg-orange-600 mt-2 flex-shrink-0",
+                                        }),
+                                        u.jsx("span", {
+                                          className: "leading-relaxed",
+                                          children: point,
+                                        }),
+                                      ],
+                                    },
+                                    idx
+                                  )
+                                ),
+                              }),
+                            ],
                           }),
                         ],
                       }),
-                    }),
-                  },
-                  e.id
-                )
-              ),
-            }),
-          ],
+                    },
+                    e.id
+                  )
+                ),
+              }),
+            ],
+          }),
         }),
-      }),
+      ],
     }),
   });
 }
+
 const DC = "/assets/images/blog-1-vPCzt-h7.png",
   RC = "/assets/images/blog-1-vPCzt-h7.png",
   zC = "/assets/images/blog-1-vPCzt-h7.png",
@@ -32184,7 +32506,7 @@ function NIQ1() {
         link: "#",
       },
       {
-        id: 6   ,
+        id: 6,
         name: "White Label & Reseller Panel",
         link: "#",
       },
@@ -32218,7 +32540,8 @@ function NIQ1() {
       },
       {
         id: 3,
-        title: " Why should I choose Payzon over other fintech portal software companies?",
+        title:
+          " Why should I choose Payzon over other fintech portal software companies?",
         description:
           "Choosing Payzon means partnering with a company that truly understands the digital fintech ecosystem. Unlike generic platforms, Payzon provides a fully customizable fintech portal software solution designed for scalability, performance, and profitability. Our software comes with integrated Fintech API, reseller panels, and secure admin access — ideal for businesses of all sizes. Plus, with local support in Bhopal and PAN India service, you're never alone on your journey. We don't just sell software — we build long-term business success with our clients.",
       },
@@ -32249,17 +32572,17 @@ function NIQ1() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -32522,7 +32845,7 @@ function NIQ2() {
       //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
       // },
     ],
-     r = [
+    r = [
       {
         id: 1,
         name: "Fintech Portal Development",
@@ -32548,17 +32871,17 @@ function NIQ2() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -32781,7 +33104,7 @@ function NIQ3() {
         link: "#",
       },
       {
-        id: 6   ,
+        id: 6,
         name: "White Label & Reseller Panel",
         link: "#",
       },
@@ -32815,7 +33138,8 @@ function NIQ3() {
       },
       {
         id: 3,
-        title: "Why should I choose Payzon over other recharge software companies?",
+        title:
+          "Why should I choose Payzon over other recharge software companies?",
         description:
           "Choosing Payzon means partnering with a company that truly understands the digital recharge ecosystem. Unlike generic platforms, Payzon provides a fully customizable multi recharge software solution designed for scalability, performance, and profitability. Our software comes with integrated Recharge API, reseller panels, and secure admin access — ideal for businesses of all sizes. Plus, with local support in Bhopal and PAN India service, you're never alone on your journey. We don't just sell software — we build long-term business success with our clients",
       },
@@ -32846,17 +33170,17 @@ function NIQ3() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -33145,17 +33469,17 @@ function NIQ4() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -33444,17 +33768,17 @@ function NIQ5() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -33743,17 +34067,17 @@ function NIQ6() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -34041,17 +34365,17 @@ function NIQ7() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -34312,7 +34636,7 @@ function NIQ8() {
         description:
           "The best web hosting in India depends on your specific needs — but for overall value, performance, and support, Payzon is highly recommended. We offer Windows hosting, VPS, cloud, and dedicated servers — all optimized for Indian audiences with competitive pricing and 24/7 technical assistance.",
       },
-       {
+      {
         id: 4,
         title: "What are the Top 10 Web Hosting Companies in India?",
         description:
@@ -34345,17 +34669,17 @@ function NIQ8() {
         name: "Gaming Portal Development",
         link: "#",
       },
-         {
+      {
         id: 6,
         name: "Grocery Portal Development",
         link: "#",
       },
-         {
+      {
         id: 7,
         name: "e-KYC Portal",
         link: "#",
       },
-         {
+      {
         id: 8,
         name: "Web Hosting",
         link: "#",
@@ -35127,7 +35451,6 @@ function NAE() {
     ],
   });
 }
-
 
 function NBA() {
   const t = {
@@ -37425,47 +37748,47 @@ const dk = () => {
               path: "/web-hosting",
               element: u.jsx(NIH, {}),
             }),
-              u.jsx(on, {
+            u.jsx(on, {
               path: "/paid-campaign",
               element: u.jsx(NAA, {}),
             }),
-              u.jsx(on, {
+            u.jsx(on, {
               path: "/seo-optimization",
               element: u.jsx(NAB, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/google-ppc",
               element: u.jsx(NAC, {}),
             }),
-              u.jsx(on, {
+            u.jsx(on, {
               path: "/bulk-sms",
               element: u.jsx(NAD, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/meta-verified",
               element: u.jsx(NAE, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/2fa-Authentication",
               element: u.jsx(NBA, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/website-Security",
               element: u.jsx(NBB, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/database-Security",
               element: u.jsx(NBC, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/network-Security",
               element: u.jsx(NBD, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/code-Audit",
               element: u.jsx(NBE, {}),
             }),
-               u.jsx(on, {
+            u.jsx(on, {
               path: "/ddos-Protection",
               element: u.jsx(NBF, {}),
             }),
