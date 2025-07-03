@@ -11450,6 +11450,634 @@ function Cb({}) {
   });
 }
 
+function MM1() {
+  const SERVICE_CARDS = [
+    {
+      img: "./assets/images/MESSAGES.png",
+      title: "KYC Verification",
+      description:
+        "We offer secure and accurate KYC services to help businesses validate customer identities, ensuring compliance and reducing the risk of fraud in digital transactions.",
+    },
+    {
+      img: "./assets/images/contact.png",
+      title: "Business Verification",
+      description:
+        "Authenticate the credibility of businesses with our verification services, helping you build trust and make informed decisions with verified data.",
+    },
+    {
+      img: "./assets/images/dashboad.png",
+      title: "Corporate Authentication",
+      description:
+        "Ensure legal and transparency compliance with corporate authentication, verifying company credentials, directors, and official data completely.",
+    },
+  ];
+
+  return u.jsxs("section", {
+    style: { backgroundColor: "#e7eedf" },
+    className: "trusted-by-section pt-120 pb-120 section-left-margin",
+    children: [
+      // Header
+      u.jsx("div", {
+        className:
+          "container-fluid px-4xl-14 px-3xl-12 px-xxl-10 text-center mb-16 sm:mb-20",
+        children: [
+          // Subheading
+          u.jsx("h4", {
+            className:
+              "text-sm sm:text-base font-semibold tracking-widest uppercase text-orange-500 mb-4 animate-fade-in",
+            children: "Verification Services",
+          }),
+
+          // Main Heading
+          u.jsx("h2", {
+            className:
+              "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-6 animate-slide-in-up",
+            children: u.jsxs("span", {
+              children: [
+                "Secure & Fast ",
+                u.jsx("span", {
+                  className:
+                    "bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent",
+                  children: "Verification Services ",
+                }),
+                "to Build Trust and Compliance",
+              ],
+            }),
+          }),
+
+          // Description
+          u.jsx("p", {
+            className:
+              "text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tracking-wide animate-fade-in delay-200",
+            children:
+              "Boost your credibility and compliance with our seamless, secure verification process. From identity checks to business validations — we’ve got you covered across every digital touchpoint.",
+          }),
+        ],
+      }),
+
+      // Identity Verified Card
+      u.jsx("div", {
+        className: "relative flex justify-center my-20",
+        children: u.jsx("div", {
+          className:
+            "bg-white rounded-2xl shadow-xl p-8 w-56 text-center z-10 border border-gray-200 hover:shadow-2xl transition-all duration-500",
+          children: u.jsxs("div", {
+            children: [
+              u.jsx("span", {
+                className:
+                  "inline-flex w-10 h-10 bg-orange-600 rounded-full items-center justify-center text-white text-lg font-bold shadow-md animate-pulse",
+                children: "✓",
+              }),
+              u.jsx("h3", {
+                className:
+                  "text-xl font-semibold text-slate-800 mt-3 tracking-tight",
+                children: "Identity Verified!",
+              }),
+            ],
+          }),
+        }),
+      }),
+
+      // Cards Section
+      u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsxs("div", {
+          className: "col-3xl-11",
+          children: u.jsx("div", {
+            className:
+              "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6",
+            children: SERVICE_CARDS.map((card, i) =>
+              u.jsxs(
+                "div",
+                {
+                  className:
+                    "bg-white bg-opacity-90 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl border border-slate-200 text-center transition-all duration-500 hover:scale-[1.04] hover:border-orange-400 group relative overflow-hidden",
+                  children: [
+                    // Decorative Gradient Blob
+                    u.jsx("div", {
+                      className:
+                        "absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-orange-400 to-yellow-300 opacity-20 rounded-full blur-2xl z-0",
+                    }),
+
+                    // Icon
+                    u.jsx("div", {
+                      className:
+                        "relative z-10 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 text-white rounded-full mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform duration-300",
+                      children: u.jsx("img", {
+                        src: card.img,
+                        alt: card.title,
+                        className: "w-8 h-8",
+                      }),
+                    }),
+
+                    // Title
+                    u.jsx("h3", {
+                      className:
+                        "relative z-10 text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-orange-600 transition-colors",
+                      children: card.title,
+                    }),
+
+                    // Description
+                    u.jsx("p", {
+                      className:
+                        "relative z-10 text-slate-600 text-sm leading-relaxed px-2",
+                      children: card.description,
+                    }),
+                  ],
+                },
+                i
+              )
+            ),
+          }),
+        }),
+      }),
+    ],
+  });
+}
+function MM2() {
+  return u.jsx("section", {
+    className: "trusted-by-section pt-120 pb-120 section-left-margin",
+    children: u.jsx("div", {
+      className:
+        "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start",
+      children: [
+        // Left Content
+        u.jsxs("div", {
+          className: "text-left max-w-2xl",
+          children: [
+            u.jsx("h4", {
+              className:
+                "text-sm font-bold text-orange-600 uppercase tracking-widest mb-4",
+              children: u.jsxs("span", {
+                children: [
+                  "Security & Auditing",
+                  u.jsx("span", {
+                    className:
+                      "inline-block w-6 h-0.5 bg-black ml-2 align-middle",
+                    children: "",
+                  }),
+                ],
+              }),
+            }),
+            u.jsx("h2", {
+              className:
+                "text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6",
+              children: "Advanced Security and Auditing Solutions",
+            }),
+            u.jsx("p", {
+              className:
+                "text-black/80 text-base sm:text-lg leading-relaxed mb-5",
+              children:
+                "Secure your digital assets with Payzon’s expert security and auditing services. We offer complete protection including 2FA authentication, code audits, website and database security, network vulnerability assessments, and robust DDoS protection.",
+            }),
+            u.jsx("p", {
+              className: "text-black/80 text-base sm:text-lg leading-relaxed",
+              children:
+                "Our tailored solutions help identify risks, strengthen system defenses, and ensure compliance. Trust our experienced team to keep your infrastructure safe and audit-ready.",
+            }),
+          ],
+        }),
+
+        // Right Cards
+        u.jsx("div", {
+          className: "grid sm:grid-cols-1 md:grid-cols-2 gap-8 mt-10",
+          children: [
+            // Card 1 - Website Audit
+            u.jsxs("div", {
+              className:
+                "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
+              children: [
+                u.jsx("div", {
+                  className: "mb-5",
+                  children: u.jsx("img", {
+                    src: "https://cdn-icons-png.flaticon.com/512/1828/1828665.png",
+                    alt: "Audit",
+                    className: "w-12 h-12 mx-auto",
+                  }),
+                }),
+                u.jsx("h3", {
+                  className: "text-xl font-bold text-black mb-1",
+                  children: "Website Audit",
+                }),
+                u.jsx("h4", {
+                  className: "text-sm text-orange-600 font-semibold mb-4",
+                  children: "Boost Website Performance",
+                }),
+                u.jsx("p", {
+                  className: "text-black/70 text-sm leading-relaxed mb-4",
+                  children:
+                    "Get a detailed analysis of your website’s speed, structure, and content.",
+                }),
+                u.jsxs("ul", {
+                  className:
+                    "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
+                  children: [
+                    u.jsx("li", { children: "SEO Optimization" }),
+                    u.jsx("li", { children: "UX/UI Design Review" }),
+                    u.jsx("li", { children: "Technical Fixes" }),
+                    u.jsx("li", { children: "Content Insights" }),
+                  ],
+                }),
+                u.jsx("button", {
+                  className:
+                    "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
+                  children: "START AUDIT NOW",
+                }),
+              ],
+            }),
+
+            // Card 2 - 2FA Auth
+            u.jsxs("div", {
+              className:
+                "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
+              children: [
+                u.jsx("div", {
+                  className: "mb-5",
+                  children: u.jsx("img", {
+                    src: "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
+                    alt: "2FA",
+                    className: "w-12 h-12 mx-auto",
+                  }),
+                }),
+                u.jsx("h3", {
+                  className: "text-xl font-bold text-black mb-1",
+                  children: "2FA Authentication",
+                }),
+                u.jsx("h4", {
+                  className: "text-sm text-orange-600 font-semibold mb-4",
+                  children: "Secure Every Login",
+                }),
+                u.jsx("p", {
+                  className: "text-black/70 text-sm leading-relaxed mb-4",
+                  children:
+                    "Enable two-factor authentication to safeguard access with advanced verification methods:",
+                }),
+                u.jsxs("ul", {
+                  className:
+                    "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
+                  children: [
+                    u.jsx("li", { children: "SMS OTP" }),
+                    u.jsx("li", { children: "Email Code" }),
+                    u.jsx("li", { children: "Biometric Login" }),
+                    u.jsx("li", { children: "Google Authenticator" }),
+                  ],
+                }),
+                u.jsx("button", {
+                  className:
+                    "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
+                  children: "PURCHASE NOW",
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
+
+function MM3() {
+  return u.jsxs("section", {
+    className:
+      "bg-[rgb(214,224,203)] trusted-by-section pt-28 pb-28 section-left-margin",
+    children: [
+      u.jsx("div", {
+        className: "text-center mb-16",
+        children: u.jsxs("div", {
+          className: "max-w-3xl mx-auto",
+          children: [
+            u.jsxs("h4", {
+              className:
+                "text-sm font-semibold text-black uppercase tracking-widest mb-2",
+              children: [
+                "READY TO USE SERVICES ",
+                u.jsx("span", {
+                  className:
+                    "inline-block w-6 h-0.5 bg-black ml-2 align-middle",
+                }),
+              ],
+            }),
+            u.jsx("h2", {
+              className: "text-4xl sm:text-5xl font-extrabold text-black",
+              children: "Online Services Providers",
+            }),
+          ],
+        }),
+      }),
+
+      u.jsx("div", {
+        className:
+          "grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto",
+        children: [
+          // CARD TEMPLATE
+          ...[
+            {
+              img: "./assets/images/sales.png",
+              title:
+                "Sales Funnel to Increase Revenue & Maximise business Growth",
+              desc: "A sales funnel is a marketing model",
+            },
+            {
+              img: "./assets/images/restapi.png",
+              title:
+                "REST API/Cross Border API Development For Travel and Fintech Sectors",
+              desc: "Startups and established technology and financial firms",
+            },
+            {
+              img: "./assets/images/cms.png",
+              title:
+                "CMS Development For large Scale Web Portal Like Finance, News, Loan/Insurance Companies",
+              desc: "A tool that allows you to create website content",
+            },
+          ].map((card, i) =>
+            u.jsxs(
+              "div",
+              {
+                className:
+                  "group bg-white border border-orange-600 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.03] overflow-hidden flex flex-col",
+                children: [
+                  u.jsx("img", {
+                    src: card.img,
+                    alt: card.title,
+                    className: "w-full h-56 object-cover",
+                  }),
+                  u.jsxs("div", {
+                    className: "p-6 flex-1 flex flex-col justify-between",
+                    children: [
+                      u.jsx("h3", {
+                        className:
+                          "text-xl font-bold text-black leading-snug mb-4 group-hover:text-orange-600 transition-colors duration-300",
+                        children: card.title,
+                      }),
+                      u.jsx("p", {
+                        className: "text-gray-700 text-sm leading-relaxed",
+                        children: card.desc,
+                      }),
+                    ],
+                  }),
+                ],
+              },
+              `card-${i}`
+            )
+          ),
+        ],
+      }),
+    ],
+  });
+}
+function MM4() {
+  const cards = [
+    {
+      img: "./assets/images/restapi.png",
+      title: "Social Media Marketing",
+      description:
+        "Engage and grow your audience on platforms like Instagram, Facebook, and LinkedIn with targeted social strategies.",
+      tags: ["Branding", "Marketing"],
+    },
+    {
+      img: "./assets/images/restapi.png",
+      title: "Bulk Email & SMS",
+      description:
+        "Send powerful marketing messages with bulk email and SMS tools to increase engagement and promote offers instantly.",
+      tags: ["Branding", "Marketing"],
+    },
+    {
+      img: "./assets/images/restapi.png",
+      title: "Meta Verified WhatsApp",
+      description:
+        "Building trust and authenticity with verified WhatsApp business accounts.",
+      tags: ["Branding", "Marketing"],
+    },
+    {
+      img: "./assets/images/restapi.png",
+      title: "Google Ads",
+      description:
+        "Reach the right audience with Payzon’s data-driven Google Ads campaigns that boost visibility and conversions.",
+      tags: ["Branding", "Marketing"],
+    },
+  ];
+
+  return u.jsx("section", {
+    className: " trusted-by-section pt-2 pb-2  section-left-margin",
+    children: u.jsx("div", {
+      className: "bg-white py-16",
+      children: [
+        // Header Section with Enhanced Styling
+        u.jsx("div", {
+          className: "relative text-center mb-16 overflow-hidden",
+          children: u.jsxs("div", {
+            className: "max-w-5xl mx-auto px-6 relative z-10",
+            children: [
+              // Animated Background Elements
+              u.jsx("div", {
+                className:
+                  "absolute -top-20 -left-20 w-40 h-40 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full blur-3xl opacity-30 animate-pulse",
+              }),
+              u.jsx("div", {
+                className:
+                  "absolute -top-10 -right-32 w-60 h-60 bg-gradient-to-l from-orange-200 to-orange-300 rounded-full blur-3xl opacity-20 animate-pulse delay-1000",
+              }),
+
+              // Premium Badge
+              // u.jsxs("div", {
+              //   className: "inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200 rounded-full px-6 py-3 mb-6 shadow-sm hover:shadow-md transition-all duration-300",
+              //   children: [
+              //     u.jsx("div", {
+              //       className: "w-2 h-2 bg-orange-500 rounded-full animate-pulse",
+              //     }),
+              //     u.jsx("span", {
+              //       className: "text-sm font-bold text-orange-700 uppercase tracking-wider",
+              //       children: "Premium Services Portfolio",
+              //     }),
+              //     u.jsx("div", {
+              //       className: "w-8 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full",
+              //     }),
+              //   ],
+              // }),
+
+              // Main Heading with Gradient
+              u.jsx("h2", {
+                className:
+                  "text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent leading-tight mb-6",
+                children: "Explore Our Digital Excellence",
+              }),
+
+              // Enhanced Description
+              u.jsx("p", {
+                className:
+                  "text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium",
+                children:
+                  "Transform your digital landscape with our cutting-edge solutions, meticulously crafted to deliver exceptional results and drive unprecedented growth for your business.",
+              }),
+
+              // Stats or Features Preview
+              u.jsx("div", {
+                className:
+                  "flex flex-wrap justify-center gap-8 mt-8 text-sm font-semibold text-gray-500",
+                children: [
+                  u.jsxs("div", {
+                    className: "flex items-center gap-2",
+                    children: [
+                      u.jsx("div", {
+                        className: "w-2 h-2 bg-green-500 rounded-full",
+                      }),
+                      u.jsx("span", { children: "24/7 Support" }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "flex items-center gap-2",
+                    children: [
+                      u.jsx("div", {
+                        className: "w-2 h-2 bg-blue-500 rounded-full",
+                      }),
+                      u.jsx("span", { children: "Enterprise Grade" }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "flex items-center gap-2",
+                    children: [
+                      u.jsx("div", {
+                        className: "w-2 h-2 bg-purple-500 rounded-full",
+                      }),
+                      u.jsx("span", { children: "Custom Solutions" }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        }),
+
+        // Enhanced Cards Grid with Advanced Styling
+        u.jsx("div", {
+          className: "relative max-w-8xl mx-auto px-6 py-8",
+          children: u.jsx("div", {
+            className:
+              "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10",
+            children: cards.map((card, index) =>
+              u.jsx(
+                "div",
+                {
+                  className: "group relative",
+                  children: u.jsxs("div", {
+                    className:
+                      "relative h-full rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-xl hover:shadow-2xl",
+                    children: [
+                      // Premium Image Container
+                      u.jsx("div", {
+                        className: "relative w-full h-64 overflow-hidden",
+                        children: [
+                          // Image with Advanced Effects
+                          u.jsx("img", {
+                            src: card.img,
+                            alt: card.title,
+                            className:
+                              "w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110",
+                          }),
+
+                          // Gradient Overlay
+                          u.jsx("div", {
+                            className:
+                              "absolute inset-0 group-hover:opacity-100 transition-opacity duration-500",
+                          }),
+
+                          // Floating Icon
+                          u.jsx("div", {
+                            className:
+                              "absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500",
+                            children: u.jsx("div", {
+                              className:
+                                "w-6 h-6 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full",
+                            }),
+                          }),
+                        ],
+                      }),
+
+                      // Enhanced Content Section
+                      u.jsxs("div", {
+                        className:
+                          "relative p-8 space-y-4 bg-gradient-to-b from-white to-gray-50/50",
+                        children: [
+                          // Category Badge
+                          u.jsx("div", {
+                            className:
+                              "inline-block px-3 py-1 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-700 text-xs font-bold rounded-full uppercase tracking-wide",
+                            children: `Service ${index + 1}`,
+                          }),
+
+                          // Title with Enhanced Typography
+                          u.jsx("h3", {
+                            className:
+                              "text-2xl font-bold text-gray-900 leading-tight group-hover:text-orange-600 transition-colors duration-300",
+                            children: card.title,
+                          }),
+
+                          // Description with Better Spacing
+                          u.jsx("p", {
+                            className:
+                              "text-gray-600 leading-relaxed text-base line-clamp-3",
+                            children: card.description,
+                          }),
+
+                          // Learn More Link
+                          u.jsxs("div", {
+                            className:
+                              "flex items-center gap-2 text-orange-600 font-semibold text-sm group-hover:gap-3 transition-all duration-300 cursor-pointer",
+                            children: [
+                              u.jsx("span", { children: "Learn More" }),
+                              u.jsx("div", {
+                                className:
+                                  "w-4 h-4 rounded-full bg-orange-600 flex items-center justify-center",
+                                children: u.jsx("div", {
+                                  className:
+                                    "w-1.5 h-1.5 bg-white rounded-full transform group-hover:translate-x-0.5 transition-transform duration-300",
+                                }),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+
+                      // Premium Hover Reveal Section
+                      u.jsx("div", {
+                        className:
+                          "absolute bottom-0 left-0 w-full h-32 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white px-8 py-6 translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out",
+                        children: u.jsxs("div", {
+                          className: "space-y-4",
+                          children: [
+                            // Tags Section
+                            u.jsx("div", {
+                              className: "justify-center flex flex-wrap gap-2",
+                              children: card.tags.map((tag, i) =>
+                                u.jsx(
+                                  "span",
+                                  {
+                                    className:
+                                      "bg-white/20  backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300",
+                                    children: tag,
+                                  },
+                                  `tag-${i}`
+                                )
+                              ),
+                            }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
+                },
+                `premium-card-${index}`
+              )
+            ),
+          }),
+        }),
+
+        // Call to Action Section
+      ],
+    }),
+  });
+}
+
 const Nb = "./assets/images/cropped_circle_image.png";
 
 function kb() {
@@ -25277,98 +25905,98 @@ const Ch = [
     id: 1,
     title: "Web Portal",
     shortDesc:
-      "A web portal is your personalized gateway to a world of services, applications, and data management. Seamlessly access and manage everything you need in one place.",
+      "Payzon India Pvt. Ltd. offers dynamic Web Portal development in Bhopal, tailored for speed, security, and user engagement.",
     icon: "ph-fill ph-shield-checkered",
     link: "/web-portal",
     points: [
-      "Centralized access to multiple services",
-      "Customizable user dashboards",
-      "Secure data management",
-      "Scalable architecture",
+      "Fintech Portals ",
+      "Shopping Portals ",
+      "Travel Booking Portals",
+      "Job & Career Portals ",
     ],
   },
   {
     id: 2,
-    title: "Landing Web Sites",
+    title: "Landing Page Websites",
     shortDesc:
-      "A landing page is a focused web page designed to drive specific actions, guiding visitors toward goals like sign-ups, purchases, or downloads as part of a marketing strategy.",
+      "Get high-converting Landing Page Website Design Services in Bhopal with Payzon India Pvt. Ltd. We craft visually stunning, fast-loading pages that turn visitors into customers.",
     icon: "ph-fill ph-cloud",
-    link: "/digital-marketing",
+    link: "/landing-page-websites",
     points: [
-      "Optimized for conversions",
-      "Clear call-to-action design",
-      "Responsive across devices",
-      "Integrated analytics tracking",
+      "Event Landing Websites",
+      "Webinar Landing Pages",
+      "Product Landing Pages",
+      "Portfolio Landing Sites",
     ],
   },
   {
     id: 3,
-    title: "Fintech Development",
+    title: "Fintech Solutions",
     shortDesc:
-      "A Recharge Portal is an online platform that enables users to securely recharge mobiles, utilities, or subscriptions through a user-friendly interface, offering convenience and access anytime, anywhere.",
+      "Payzon India Pvt. Ltd. delivers advanced Fintech App Development Services in Bhopal—secure, scalable, and built for the digital economy.",
     icon: "ph-fill ph-users-three",
-    link: "/fintech-development",
+    link: "/fintech-solutions",
     points: [
-      "Secure payment processing",
-      "User-friendly interface",
-      "Real-time transaction updates",
-      "Multi-service support",
+      "Payin & Payout Gateways",
+      "Crypto & Blockchain Wallets",
+      "Personal Finance Manager Apps",
+      "Mobile & Neo Banking Platforms",
     ],
   },
   {
     id: 4,
-    title: "Marketing Sales&Funnel",
+    title: "Marketing & Sales Funnel",
     shortDesc:
-      "A Marketing & Sales Funnel guides potential customers from awareness to purchase, converting leads into loyal buyers through targeted messaging, offers, and engagement at each stage of the journey.",
+      "Boost your brand with result-driven Marketing & Sales Funnel Services in Bhopal by Payzon India Pvt. Ltd. We help you attract, convert, and retain customers online.",
     icon: "ph-fill ph-laptop",
-    link: "/marketing&sales",
+    link: "/marketing-sales-funnel",
     points: [
-      "Lead nurturing strategies",
-      "Automated email campaigns",
-      "Conversion rate optimization",
-      "Customer retention tools",
+      "Dropshipping & eCommerce Strategy",
+      "Google & PPC Ads Campaigns",
+      "Meta (Facebook/Instagram) Ads",
+      "Bulk Email & SMS Marketing",
     ],
   },
   {
     id: 5,
-    title: "Blockchain Development",
+    title: "Blockchain Solutions",
     shortDesc:
-      "Blockchain Development creates decentralized systems using distributed ledger technology, enabling secure, transparent, and tamper-proof transactions for cryptocurrencies, smart contracts, dApps, and other innovations.",
+      "Step into the future with Blockchain Development Services in Bhopal by Payzon India Pvt. Ltd. We build secure, scalable, and decentralized applications for modern businesses.",
     icon: "ph-fill ph-app-window",
-    link: "/blockchain-development",
+    link: "/blockchain-solutions",
     points: [
-      "Decentralized architecture",
-      "Smart contract integration",
-      "Enhanced security protocols",
-      "Transparent transaction records",
+      "Smart Contract Development",
+      "Crypto Wallet & Token Creation",
+      "NFT & DeFi Platform Solutions",
+      "Private Blockchain Integration",
     ],
   },
   {
     id: 6,
-    title: "API Development",
+    title: "API Software Solutions",
     shortDesc:
-      "API Development is the process of designing and building Application Programming Interfaces that allow software systems to communicate and share data. APIs define the methods and data formats used for interaction between applications.",
+      "Build faster integrations with API Software Development Services in Bhopal by Payzon India Pvt. Ltd. We develop and integrate secure, scalable APIs tailored to your business needs.",
     icon: "ph-fill ph-device-mobile-camera",
-    link: "/api-development",
+    link: "/api-software-solutions",
     points: [
-      "Seamless system integration",
-      "Secure data exchange",
-      "Scalable API architecture",
-      "Comprehensive documentation",
+      "Payment & Banking APIs",
+      "eCommerce & Dropshipping APIs",
+      "Mobile Recharge & Utility APIs",
+      "Authentication & Verification APIs",
     ],
   },
   {
     id: 7,
-    title: "App Development",
+    title: "App Development Services",
     shortDesc:
-      "App Development is the process of designing and building applications for mobile or desktop devices, enabling seamless user experiences and functionality. Apps are tailored to meet specific business or user needs.",
+      "Launch high-performance apps with App Development Services in Bhopal by Payzon India Pvt. Ltd. We build smart, scalable mobile and web applications tailored to your goals.",
     icon: "ph-fill ph-device-mobile-camera",
-    link: "/app-development",
+    link: "/app-development-services",
     points: [
-      "Cross-platform compatibility",
-      "Intuitive user interfaces",
-      "High-performance backend",
-      "Regular updates and support",
+      "Android & iOS App Development",
+      "Web App & Hybrid App Solutions",
+      "UI/UX Design & Prototype Development",
+      "API-Integrated Custom Applications",
     ],
   },
 ];
@@ -25378,7 +26006,7 @@ function SC() {
     subHeading: "Our Services",
     heading: "Web Development",
     description:
-      "From responsive design to robust backend systems, we deliver end-to-end web solutions tailored to your business goals. Empower your online presence with scalable, high-performance websites and applications",
+      "With 8+ years of software development expertise, Payzon India Pvt. Ltd. is one of Bhopal’s leading IT companies, delivering scalable, modern, and high-performance web solutions.We specialize in creating dynamic websites, business portals, and custom platforms — and we’ve proudly built and launched multiple in-house tech products.",
   };
 
   return u.jsx("section", {
@@ -25399,19 +26027,26 @@ function SC() {
                     ...t,
                   }),
                   u.jsx("div", {
-                    className: "mt-lg-6 mt-4 mb-md-0 mb-6",
+                    className: "mt-lg-6 mt-4 mb-md-0 mb-20",
                     children: u.jsxs("a", {
                       href: "services.html",
-                      className: "primary-btn border n900-border",
+                      className:
+                        "relative  px-7 py-3 rounded-xl border-2 border-orange-600 group bg-orange-500 hover:bg-orange-600 transition duration-300 overflow-hidden shadow-sm hover:shadow-xl",
                       children: [
+                        // Front text
                         u.jsx("span", {
-                          className: "text front",
+                          className:
+                            "relative  text-white font-semibold group-hover:text-white transition duration-300",
                           children: "View All Services",
                         }),
+
+                        // Glow Effect (Optional)
                         u.jsx("span", {
-                          className: "text back",
-                          children: "View All Services",
+                          className:
+                            "absolute inset-0 bg-orange-600 opacity-0 group-hover:opacity-10 transition duration-300 rounded-full blur-sm",
                         }),
+
+                        // Bottom Border Glow (Optional)
                       ],
                     }),
                   }),
@@ -25803,243 +26438,215 @@ function EC() {
   });
 }
 
-function NC({ swiperData: t, swiperBtn: e }) {
-  return u.jsx(u.Fragment, {
-    children: u.jsx(Sc, {
-      slidesPerView: 1,
-      loop: true,
-      spaceBetween: 24,
-      speed: 1000,
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        576: { slidesPerView: 1.1 },
-        768: { slidesPerView: 1.6 },
-        991: { slidesPerView: 2 },
-        1400: { slidesPerView: 2.4 },
-      },
-      modules: [xC],
-      navigation: {
-        nextEl: e.nextBtn,
-        prevEl: e.prevBtn,
-      },
-      className: "testimonial-slider",
+function NC({ swiperData: t }) {
+  return u.jsx("div", {
+    className: " ", // Clean container
+    children: u.jsx("div", {
+      className: "grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-10",
       children: t.map(
-        ({ id: n, heading: r, text: i, link: l, why: w, how: h, icon: ic }) =>
+        ({ id, heading, text, link, whoNeeds, benefits, how, icon }) =>
           u.jsx(
-            _c,
+            "div",
             {
-              className: "h-full",
-              children: u.jsxs("div", {
-                className:
-                  "h-full min-h-[540px] bg-white border-2 border-orange-300 hover:border-orange-400 hover:shadow-lg rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.05)] p-10 flex flex-col justify-between gap-6 transition-all duration-300",
-                children: [
-                  u.jsxs("div", {
-                    className: "flex items-start gap-4",
-                    children: [
-                      u.jsx("div", {
-                        className:
-                          "w-14 h-14 flex items-center justify-center rounded-2xl bg-orange-100 text-orange-600 text-3xl",
-                        children: u.jsx("i", { className: ic }),
-                      }),
-                      l && l !== "#"
-                        ? u.jsx("a", {
-                            href: l,
-                            className:
-                              "text-2xl font-bold text-gray-900 underline decoration-orange-500 underline-offset-4",
-                            children: r,
-                          })
-                        : u.jsx("span", {
-                            className: "text-xl font-bold text-gray-900",
-                            children: r,
-                          }),
-                    ],
-                  }),
-
-                  u.jsx("p", {
-                    className:
-                      "text-sm font-semibold text-gray-700 leading-relaxed mt-2",
-                    children: i,
-                  }),
-
-                  u.jsxs("div", {
-                    className:
-                      "bg-gray-50 p-4 rounded-xl text-sm text-gray-800",
-                    children: [
-                      u.jsxs("div", {
-                        className:
-                          "flex items-center gap-2 font-semibold text-gray-900 mb-1",
-                        children: [
-                          u.jsx("i", {
-                            className: "ph ph-question text-orange-600",
-                          }),
-                          "Why it matters",
-                        ],
-                      }),
-                      u.jsx("p", { className: "pl-6", children: w }),
-                    ],
-                  }),
-
-                  u.jsxs("div", {
-                    className:
-                      "bg-gray-50 p-4 rounded-xl text-sm text-gray-800",
-                    children: [
-                      u.jsxs("div", {
-                        className:
-                          "flex items-center gap-2 font-semibold text-gray-900 mb-1",
-                        children: [
-                          u.jsx("i", {
-                            className: "ph ph-gear text-orange-600",
-                          }),
-                          "How it works",
-                        ],
-                      }),
-                      u.jsx("p", { className: "pl-6", children: h }),
-                    ],
-                  }),
-
-                  l &&
-                    l !== "#" &&
+              className:
+                "bg-white border border-gray-200 hover:border-orange-400 hover:shadow-md rounded-2xl p-5 md:p-6 flex flex-col transition-all duration-300",
+              children: [
+                u.jsxs("div", {
+                  className: "flex items-start gap-4 mb-4",
+                  children: [
                     u.jsx("div", {
-                      className: "pt-4 mt-auto",
-                      children: u.jsx("a", {
-                        href: l,
-                        className:
-                          "inline-block text-sm font-semibold text-white bg-orange-600 px-6 py-2 rounded-full shadow-md hover:bg-orange-700 transition-colors duration-200",
-                        children: "Learn More",
-                      }),
+                      className:
+                        "w-11 h-11 flex items-center justify-center rounded-md bg-orange-100 text-orange-600 text-lg",
+                      children: u.jsx("i", { className: icon }),
                     }),
-                ],
-              }),
+                    link && link !== "#"
+                      ? u.jsx(oe, {
+                          to: link,
+                          className:
+                            "text-base md:text-lg font-bold text-gray-900 hover:underline decoration-orange-400 underline-offset-4",
+                          children: heading,
+                        })
+                      : u.jsx("span", {
+                          className:
+                            "text-base md:text-lg font-bold text-gray-900",
+                          children: heading,
+                        }),
+                  ],
+                }),
+                u.jsx("p", {
+                  className: "text-sm text-gray-700 mb-4",
+                  children: text,
+                }),
+                u.jsxs("div", {
+                  className: "bg-gray-50 p-3 rounded-lg mb-3",
+                  children: [
+                    u.jsxs("div", {
+                      className:
+                        "flex items-center gap-2 font-semibold text-gray-800 mb-2",
+                      children: [
+                        u.jsx("i", {
+                          className: "ph ph-question text-orange-600 text-lg",
+                        }),
+                        "Who Needs This",
+                      ],
+                    }),
+                    u.jsx("p", {
+                      className: "text-sm text-gray-700 pl-6",
+                      children: whoNeeds,
+                    }),
+                  ],
+                }),
+                u.jsxs("div", {
+                  className: "bg-gray-50 p-3 rounded-lg mb-3",
+                  children: [
+                    u.jsxs("div", {
+                      className:
+                        "flex items-center gap-2 font-semibold text-gray-800 mb-2",
+                      children: [
+                        u.jsx("i", {
+                          className: "ph ph-star text-orange-600 text-lg",
+                        }),
+                        "Benefits",
+                      ],
+                    }),
+                    u.jsx("ul", {
+                      className: "text-sm text-gray-700 pl-6 list-disc",
+                      children: benefits
+                        .split("\n")
+                        .map((benefit) => u.jsx("li", { children: benefit })),
+                    }),
+                  ],
+                }),
+                u.jsxs("div", {
+                  className: "bg-gray-50 p-3 rounded-lg",
+                  children: [
+                    u.jsxs("div", {
+                      className:
+                        "flex items-center gap-2 font-semibold text-gray-800 mb-2",
+                      children: [
+                        u.jsx("i", {
+                          className: "ph ph-gear text-orange-600 text-lg",
+                        }),
+                        "How it works",
+                      ],
+                    }),
+                    u.jsx("p", {
+                      className: "text-sm text-gray-700 pl-6",
+                      children: how,
+                    }),
+                  ],
+                }),
+                link &&
+                  link !== "#" &&
+                  u.jsx("div", {
+                    className: "mt-4",
+                    children: u.jsx(oe, {
+                      to: link,
+                      className:
+                        "inline-block text-white bg-orange-600 text-sm font-semibold text-orange-600 border border-orange-600 px-4 py-2 rounded-full hover:bg-orange-600 hover:text-white transition",
+                      children: "Learn More",
+                    }),
+                  }),
+              ],
             },
-            n
+            id
           )
       ),
     }),
   });
 }
-
+// Main section component
 function Nh() {
   const t = {
-      heading: "Verification Services",
-      description:
-        "We got our business website developed by Payzon India – Software Development Company in India, and the result was excellent! The site is fast, SEO-friendly, and mobile responsive. Their team is very professional. Highly recommended for web development services in Bhopal!",
+    heading: "Verification Services",
+    description:
+      "In today’s digital-first world, identity verification has become essential for secure onboarding and compliance. At Payzon India Pvt. Ltd., we offer advanced, API-integrated Verification Services in Bhopal for businesses, fintech platforms, and government-linked services.",
+  };
+
+  const e = [
+    {
+      id: 1,
+      heading: "Aadhaar Verification",
+      text: "Aadhaar Verification is India’s trusted identity authentication system, using UIDAI’s secure biometric and OTP-based methods. It helps validate a person’s identity for access to digital platforms and essential services.",
+      link: "/aadhar-verification",
+      whoNeeds:
+        "Banks, NBFCs, Government Schemes, Fintech Apps, SIM Providers, Insurance Companies",
+      benefits:
+        "Reduces fraud & identity theft\nFast & paperless KYC process\nEnsures user authenticity in real time",
+      how: "Uses biometric, OTP, or QR scanning linked with UIDAI’s database.",
+      icon: "ph ph-fingerprint",
     },
-    e = [
-      {
-        id: 1,
-        heading: "Aadhar Verification",
-        text: "Aadhaar is the world’s largest biometric ID system, managed by UIDAI, providing a 12-digit unique identity to every Indian resident. Aadhaar verification confirms a person’s identity using methods like biometrics, OTP, or QR code scanning. It's widely used in financial services, government schemes, and telecom, ensuring authenticity and preventing fraud.",
-        link: "/aadhar-verification",
-        why: "Aadhaar verification ensures secure identity authentication and helps prevent fraud in essential services.",
-        how: "It uses biometric data, OTP, or QR code scanning to verify identities through UIDAI’s secure systems.",
-        icon: "ph ph-fingerprint",
-      },
-      {
-        id: 2,
-        heading: "Pan Verification",
-        text: "PAN (Permanent Account Number) is a 10-digit alphanumeric ID issued by India’s Income Tax Department to identify taxpayers and monitor financial activities like income and tax filings. It is essential for tasks like opening bank accounts, filing returns, and financial transactions. PAN verification ensures the authenticity of a PAN through official or third-party systems.",
-        link: "/pan-verification",
-        why: "PAN verification ensures compliance with tax regulations and prevents fraudulent financial activities.",
-        how: "Verification is done by checking the PAN against the Income Tax Department’s database or authorized platforms.",
-        icon: "ph ph-cardholder",
-      },
-      {
-        id: 3,
-        heading: "Bank Account Verification",
-        text: "Bank account verification is essential for confirming the authenticity and accuracy of an individual's bank details. It supports customer onboarding, fraud prevention, KYC compliance, and secure payment processing. With the rise of digital banking, the process faces challenges like data mismatches, security risks, and verification delays.",
-        link: "/bank-verification",
-        why: "It ensures secure transactions and compliance with KYC norms, reducing the risk of financial fraud.",
-        how: "Verification involves checking account details against bank records, often using penny drop or API-based systems.",
-        icon: "ph ph-bank",
-      },
-      {
-        id: 4,
-        heading: "GST Verification",
-        text: "GST (Goods and Services Tax) is a unified indirect tax in India that replaces multiple central and state taxes. Businesses dealing in goods or services must register under GST and fulfill tax obligations. GST verification confirms the authenticity of GST registration details, helping ensure compliance, prevent fraud, and maintain tax system integrity.",
-        link: "/gst-verification",
-        why: "GST verification ensures businesses comply with tax laws and prevents fraudulent transactions.",
-        how: "It is performed by validating GSTIN details through the GST portal or authorized third-party services.",
-        icon: "ph ph-file-text",
-      },
-      {
-        id: 5,
-        heading: "Live Face Verification",
-        text: "Live Face Recognition is a technology that verifies identity by capturing a live image or video of a person's face and matching it with a known database. It's widely used in security, banking, retail, and access control for enhanced authentication and fraud prevention. Despite its growth, it faces challenges in ensuring accuracy, efficiency, and security.",
-        link: "/face-verification",
-        why: "Live face verification enhances security by ensuring real-time identity authentication.",
-        how: "It captures live facial data and matches it against a database using advanced AI algorithms.",
-        icon: "ph ph-face-mask",
-      },
-    ];
+    {
+      id: 2,
+      heading: "PAN Verification",
+      text: "PAN Verification confirms a user’s 10-digit PAN via the Income Tax Department database, critical for financial onboarding, tax filing, and regulatory compliance.",
+      link: "/pan-verification",
+      whoNeeds:
+        "Banks, Stock Brokers, Fintech Platforms, CA Firms, Mutual Fund Portals",
+      benefits:
+        "Ensures tax compliance\nDetects fake or invalid PANs\nRequired for KYC, investments, and payments",
+      how: "The PAN is verified in real-time using ITD or authorized APIs.",
+      icon: "ph ph-cardholder",
+    },
+    {
+      id: 3,
+      heading: "Bank Account Verification",
+      text: "Bank Account Verification ensures that an account number belongs to the person claiming it. It is essential before any payout, refund, or financial transaction.",
+      link: "/bank-verification",
+      whoNeeds:
+        "Loan Apps, eCommerce Platforms, Payroll Systems, Freelancing Portals",
+      benefits:
+        "Prevents payment failures & fraud\nConfirms name-account match\nEssential for salary, commission, and refund disbursements",
+      how: "The system cross-verifies account number and IFSC via banking APIs or penny drop method.",
+      icon: "ph ph-bank",
+    },
+    {
+      id: 4,
+      heading: "GST Verification",
+      text: "GST Verification authenticates a business's GSTIN using government databases. It confirms registration status, legal name, and filing track record.",
+      link: "/gst-verification",
+      whoNeeds:
+        "B2B Platforms, SAAS Vendors, Fintech, Suppliers, Tax Consultants",
+      benefits:
+        "Verifies GSTIN legitimacy\nHelps in clean vendor onboarding\nPrevents fake invoice fraud",
+      how: "It validates the GSTIN through the GSTN network using APIs.",
+      icon: "ph ph-file-text",
+    },
+    {
+      id: 5,
+      heading: "Live Face Verification",
+      text: "Live Face Verification uses AI-based facial recognition to match a user’s live image with their official ID photo in real-time — ensuring high security in remote verification.",
+      link: "/face-verification",
+      whoNeeds:
+        "EdTech, Digital Lending, Insurance, Gaming Apps, Secure Login Platforms",
+      benefits:
+        "Prevents identity impersonation\nReal-time liveness check\nUseful for KYC, onboarding & remote access",
+      how: "The camera captures a live face and matches it with uploaded KYC data using facial biometrics.",
+      icon: "ph ph-face-mask",
+    },
+  ];
+
   return u.jsxs("section", {
     className:
-      "section-blur testimonial-section section-left-margin pt-120 pb-120 bg-gradient-to-r from-gray-100 ",
+      "section-blur  section-left-margin pt-12 pb-12 bg-gradient-to-r from-gray-100 to-gray-50",
     children: [
       u.jsx("div", {
-        className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+        className: "container-fluid",
         children: u.jsx("div", {
-          className: "row justify-content-center mb-lg-15 mb-md-10 mb-8",
+          className: "row justify-content-center mb-8 mb-md-10 mb-lg-12",
           children: u.jsx("div", {
-            className: "col-3xl-11",
-            children: u.jsxs("div", {
-              className: "row justify-content-between align-items-end",
-              children: [
-                u.jsx("div", {
-                  className: "col-4xl-6 col-xl-7 col-lg-8 col-sm-10",
-                  children: u.jsx(Hr, {
-                    ...t,
-                  }),
-                }),
-                u.jsxs("div", {
-                  className: "col-4xl-6 col-xl-5 col-sm-2 position-relative",
-                  children: [
-                    u.jsx("div", {
-                      className:
-                        "bolt-shape position-absolute bottom-100 start-50 translate-middle d-none d-xl-block",
-                    }),
-                    u.jsxs("div", {
-                      className:
-                        "swiper-btns d-flex gap-2 align-items-center justify-content-end",
-                      children: [
-                        u.jsx("button", {
-                          className:
-                            "btn-prev ts-prev text-xl fw-extra-bold bg-n900 text-black rounded-full p-3  transition-colors duration-200",
-                          children: u.jsx("i", {
-                            className: "ph ph-arrow-left",
-                          }),
-                        }),
-                        u.jsx("button", {
-                          className:
-                            "btn-next ts-next text-xl fw-extra-bold bg-n900 text-black rounded-full p-3 -600 transition-colors duration-200",
-                          children: u.jsx("i", {
-                            className: "ph ph-arrow-right",
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
-            }),
+            className: "col-11 col-xl-11",
+            children: u.jsx(Hr, { ...t }),
           }),
         }),
       }),
       u.jsx("div", {
-        className: "container-fluid px-lg-0",
+        className: "container-fluid",
         children: u.jsx("div", {
-          className: "row justify-content-end",
+          className: "row justify-content-center",
           children: u.jsx("div", {
-            className: "col-3xl-11",
-            children: u.jsx(NC, {
-              swiperData: e,
-              swiperBtn: {
-                nextBtn: ".ts-next",
-                prevBtn: ".ts-prev",
-              },
-            }),
+            className: "col-11 col-xl-11  ",
+            children: u.jsx(NC, { swiperData: e }),
           }),
         }),
       }),
@@ -26047,7 +26654,19 @@ function Nh() {
   });
 }
 
-function b1({ name: t, position: e, image: n, link: l }) {
+const kC = "./assets/images/fintech.jpg" || "https://via.placeholder.com/400x240?text=Fintech",
+  AC = "./assets/images/shoping.jpeg" || "https://via.placeholder.com/400x240?text=Shopping",
+  PC = "./assets/images/H4.webp" || "https://via.placeholder.com/400x240?text=Recharge",
+  OC = "./assets/images/travel.jpg" || "https://via.placeholder.com/400x240?text=Travel",
+  IC = "./assets/images/shoping.jpeg" || "https://via.placeholder.com/400x240?text=Grocery",
+  LC = "./assets/images/travel.jpg" || "https://via.placeholder.com/400x240?text=Hosting",
+  PP = "./assets/images/shoping.jpeg" || "https://via.placeholder.com/400x240?text=Payin+Payout";
+
+
+// Hr component for rendering section header
+
+// b1 component for rendering individual product cards
+function b1({ name: t, position: e, image: n, link: l, idealFor, features }) {
   return u.jsx("div", {
     className:
       "max-w-sm w-full bg-gradient-to-br from-white to-[#f7faf9] rounded-3xl shadow-lg border border-gray-200 overflow-hidden flex flex-col",
@@ -26062,11 +26681,9 @@ function b1({ name: t, position: e, image: n, link: l }) {
             className: "w-full h-full object-cover",
           }),
         }),
-
         // Info Section
         u.jsxs("div", {
-          className:
-            "px-8 py-8 flex flex-col items-center text-center gap-4 bg-white",
+          className: "px-6 py-4 flex flex-col   gap-4 bg-white",
           children: [
             u.jsx("h3", {
               className:
@@ -26074,9 +26691,43 @@ function b1({ name: t, position: e, image: n, link: l }) {
               children: t,
             }),
             u.jsx("span", {
-              className:
-                " text-black text-sm font-semibold  py-2 border rounded",
+              className: "text-black text-sm font-semibold ",
               children: e,
+            }),
+            u.jsxs("div", {
+              className: "w-full text-left",
+              children: [
+                u.jsxs("div", {
+                  className:
+                    "flex items-center gap-2 font-semibold text-gray-800 mb-2",
+                  children: [
+                    u.jsx("i", {
+                      className: "ph ph-users text-orange-500 text-lg",
+                    }),
+                    "Ideal For",
+                  ],
+                }),
+                u.jsx("p", {
+                  className: "text-sm text-gray-600 mb-4 pl-6",
+                  children: idealFor,
+                }),
+                u.jsxs("div", {
+                  className:
+                    "flex items-center gap-2 font-semibold text-gray-800 mb-2",
+                  children: [
+                    u.jsx("i", {
+                      className: "ph ph-star text-orange-500 text-lg",
+                    }),
+                    "Features",
+                  ],
+                }),
+                u.jsx("ul", {
+                  className: "text-sm text-gray-600 pl-6 list-disc mb-4",
+                  children: features
+                    .split("\n")
+                    .map((feature) => u.jsx("li", { children: feature })),
+                }),
+              ],
             }),
             l &&
               u.jsx("div", {
@@ -26095,78 +26746,79 @@ function b1({ name: t, position: e, image: n, link: l }) {
   });
 }
 
-const kC = "./assets/images/fintech.jpg",
-  AC = "./assets/images/shoping.jpeg",
-  PC = "./assets/images/H4.webp",
-  OC = "./assets/images/travel.jpg",
-  IC = "./assets/images/gaming.jpeg",
-  LC = "./assets/images/grocery.jpeg",
-  T1 = [
-    {
-      id: 1,
-      name: "Fintech Portal Development",
-      position:
-        "Payzon offers secure, scalable fintech portal solutions in Bhopal. We specialize in building custom platforms for finance, lending, and digital payments. Trusted by clients, we deliver innovative, compliant, and reliable fintech development services in Bhopal.",
-      image: kC,
-      link: "/fitech-portal",
-    },
-    {
-      id: 2,
-      name: "Shopping Portal Development",
-      position:
-        "Launch your eCommerce success with the best shopping portal development in Bhopal. Payzon creates fast, mobile-ready online stores tailored to your brand and customers.",
-      image: AC,
-      link: "/shopping-portal",
-    },
-    {
-      id: 3,
-      name: " Recharge Portal Development",
-      position:
-        "Build your online recharge business with our expert recharge portal development services in Bhopal. Easy API integration for mobile, DTH, utility & wallet systems.",
-      image: PC,
-      link: "/recharge-portal",
-    },
-    {
-      id: 4,
-      name: " Travel Portal Development",
-      position:
-        "Create a smart travel booking platform with Bhopal's trusted travel portal developers. Payzon builds portals for flights, hotels & holiday packages—seamless & user-friendly.",
-      image: OC,
-      link: "/travel-portal",
-    },
-    {
-      id: 5,
-      name: "Gaming Portal Development",
-      position:
-        "Level up with custom gaming portal development in Bhopal. Payzon delivers engaging, secure, and scalable gaming solutions tailored to your audience and business goals.  ",
-      image: IC,
-      link: "/gaming-portal",
-    },
-    {
-      id: 6,
-      name: " Grocery Portal Development",
-      position:
-        "Build your online grocery store with Payzon—trusted grocery/mart portal development company in Bhopal. Feature-rich, responsive, and designed for local market success.",
-      image: LC,
-      link: "/grocery-portal",
-    },
-    {
-      id: 7,
-      name: "e-KYC Portal",
-      position:
-        "The KYC Portal is a secure, user-friendly platform that streamlines identity verification with document checks, facial recognition, and automation—helping businesses across industries reduce fraud, ensure compliance, and enhance customer onboarding efficiently and reliably.",
-      image: LC,
-      link: "/e-KYC-portal",
-    },
-    {
-      id: 8,
-      name: "Web Hosting ",
-      position:
-        "Web hosting enables individuals and organizations to publish websites online. Providers offer shared, VPS, dedicated, and cloud hosting options, each suited to different needs. Selecting the right hosting ensures optimal website performance, security, and reliability.",
-      image: LC,
-      link: "/web-hosting",
-    },
-  ];
+const T1 = [
+  {
+    id: 1,
+    name: "Fintech Portal Development",
+    position:
+      "Launch your own digital finance platform with Payzon India Pvt. Ltd., a trusted Fintech Portal Development Company in Bhopal. We build secure, scalable portals for payments, wallets, lending & more.",
+    image: kC,
+    link: "/fintech-portal",
+    idealFor: "NBFCs, loan startups, banks, wallets & payment aggregators",
+    features: "UPI & Payment Gateway Integration\nLending, Wallet & EMI Portals\nSecure Payin/Payout API Solutions"
+  },
+  {
+    id: 2,
+    name: "Shopping Portal Development",
+    position:
+      "Build your eCommerce brand like iWayShoppe.com — our in-house product! At Payzon India Pvt. Ltd., a leading Shopping Portal Development Company in Bhopal, we offer tailored online store solutions with a cordial approach to client success.",
+    image: AC,
+    link: "/shopping-portal",
+    idealFor: "eCommerce startups, D2C brands, wholesalers & retailers",
+    features: "Product Listing & Inventory Modules\nSecure Payment Gateway Integration\nOrder Management & Dropshipping Systems"
+  },
+  {
+    id: 3,
+    name: "Recharge Portal Development",
+    position:
+      "Launch your business like India’s No.1 Multi Recharge Portal — built by Payzon India Pvt. Ltd. We deliver robust, scalable, and secure Recharge Portal Development Services in India with a cordial approach to client success.",
+    image: PC,
+    link: "/recharge-portal",
+    idealFor: "Recharge retailers, wholesalers, distributors, fintech startups",
+    features: "Prepaid/Postpaid Mobile Recharge\nDTH, Data Card & Utility Bill Payments\nAEPS, PAN Card, Wallet & BBPS APIs"
+  },
+  {
+    id: 4,
+    name: "Travel Portal Development",
+    position:
+      "Build your brand like iWayTravels.com — our in-house travel portal product! Payzon India Pvt. Ltd., a top Travel Portal Development Company in Bhopal, creates custom B2B/B2C travel booking platforms.",
+    image: OC,
+    link: "/travel-portal",
+    idealFor: "Travel startups, tour agencies, DMCs & hotel chains",
+    features: "Flight & Hotel Booking Website Development\nOnline Travel Booking Software Solutions\nTour Package Website Design"
+  },
+  {
+    id: 5,
+    name: "Payin & Payout Portal",
+    position:
+      "Launch secure payout platforms with Payzon India Pvt. Ltd., a trusted Payin & Payout Portal Development Company in Bhopal. Power your business with real-time settlement APIs and a cordial support system.",
+    image: PP,
+    link: "/payin-payout-portal",
+    idealFor: "Loan apps, fintech startups, cashback & payroll portals",
+    features: "UPI & Bank Transfer Integration\nAutomated Payout API System\nWallet Dashboard with KYC"
+  },
+  {
+    id: 6,
+    name: "Grocery Portal Development",
+    position:
+      "Create a modern online store like BigBasket with Payzon India Pvt. Ltd., a leading Grocery Portal Development Company in Bhopal. Offer real-time delivery, multi-vendor, and subscription systems.",
+    image: IC,
+    link: "/grocery-portal",
+    idealFor: "Local Kirana stores, grocery startups & wholesalers",
+    features: "Product Listings & Delivery Slots\nCoupon, Wallet & Order Tracking\nMulti-Vendor Admin Panel"
+  },
+  {
+    id: 7,
+    name: "Web Hosting Services",
+    position:
+      "Host your site with the Best Domain and Hosting Provider Company in Bhopal — Payzon India Pvt. Ltd. We offer Cheap, Reliable Windows Hosting in India, with full support and speed.",
+    image: LC,
+    link: "/web-hosting",
+    idealFor: "Developers, agencies, bloggers & gamers",
+    features: "VPS Hosting & Dedicated Servers\nDaily Backup & SSL Security\nGaming Hosting with 99.9% Uptime"
+  }
+];
+
 function E1() {
   const t = {
     subHeading: "OUR PRODUCTS",
@@ -26205,24 +26857,18 @@ function E1() {
             u.jsx("div", {
               className:
                 "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10",
-              children: T1.slice(0).map((e) =>
+              children: T1.map((e) =>
                 u.jsx(
                   "div",
                   {
                     className: "flex justify-center",
                     children: u.jsx(b1, {
-                      ...e,
-                      className:
-                        "bg-white rounded-2xl shadow-md overflow-hidden max-w-sm ring-1 ring-gray-100",
-                      imageClassName: "w-full h-60 object-cover",
-                      titleClassName:
-                        "text-2xl font-semibold text-gray-900 mb-2 px-6 pt-6",
-                      descriptionClassName:
-                        "text-gray-600 text-sm leading-relaxed mb-4 px-6 line-clamp-3",
-                      priceClassName:
-                        "text-orange-500 font-extrabold text-xl px-6 mb-2",
-                      buttonClassName:
-                        "block bg-orange-500 text-white px-6 py-2.5 rounded-xl font-medium mb-6 mx-6 text-center transition-colors duration-200",
+                      name: e.name,
+                      position: e.position,
+                      image: e.image,
+                      link: e.link,
+                      idealFor: e.idealFor,
+                      features: e.features,
                     }),
                   },
                   e.id
@@ -26357,71 +27003,33 @@ function P1({
   headingColor: o = "text-orange-600",
 }) {
   return u.jsxs("div", {
-    className: `d-sm-flex d-grid gap-xl-15 gap-lg-10 gap-md-8 gap-6 align-items-center justify-content-between p-xl-15 p-lg-10 p-md-8 p-6 rounded-4 border border-orange-600 shadow-lg ${i}`,
+    className: `flex flex-col-reverse lg:flex-row gap-6 lg:gap-10 xl:gap-14 justify-between items-center p-6 md:p-8 lg:p-10 xl:p-14 border border-orange-600 shadow-lg rounded-4 ${i}`,
     style: {
       backgroundColor: "rgb(231, 238, 223)",
-      width: "100%",
       maxWidth: "1200px",
-      minHeight: "400px",
-      boxSizing: "border-box",
+      margin: "0 auto",
     },
     children: [
+      // Text Content
       u.jsxs("div", {
-        className: "project-info",
-        style: {
-          maxWidth: "600px",
-          width: "50%",
-          minHeight: "350px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        },
+        className: "w-full lg:w-1/2 space-y-4",
         children: [
           u.jsx("span", {
-            className: `display-one ${o} fw-extra-bold mb-xl-15 mb-lg-10 mb-md-8 mb-6`,
-            style: {
-              fontSize: "3.5rem",
-              lineHeight: "1",
-            },
+            className: `text-4xl md:text-5xl font-extrabold ${o}`,
             children: t,
           }),
-          u.jsx("span", {
-            className: `reveal-heading text-h2 fw-extra-bold ${s} mb-4`,
-            style: {
-              fontSize: "2rem",
-              fontWeight: 800,
-              lineHeight: "1.3",
-            },
+          u.jsx("h2", {
+            className: `text-2xl md:text-3xl font-extrabold ${s}`,
             children: e,
           }),
-          u.jsx("span", {
-            className: `d-block ${s} mb-lg-8 mb-6`,
-            style: {
-              color: "#1e293b",
-              fontSize: "1.05rem",
-              lineHeight: "1.7",
-              flexGrow: 1,
-            },
+          u.jsx("p", {
+            className: `text-base md:text-lg text-slate-800`,
             children: n,
           }),
           u.jsx(oe, {
             to: l,
-            className: "outline-btn small-btn rounded-pill",
-            style: {
-              border: "2px solid #ea580c",
-              color: "#ea580c",
-              padding: "10px 22px",
-              fontWeight: 600,
-              transition: "all 0.3s ease",
-            },
-            onMouseEnter: (e) => {
-              e.currentTarget.style.backgroundColor = "#ea580c";
-              e.currentTarget.style.color = "#fff";
-            },
-            onMouseLeave: (e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.color = "#ea580c";
-            },
+            className:
+              "inline-block text-white bg-orange-600 rounded-full border-2 border-orange-600 text-orange-600 px-6 py-3 font-semibold transition-all duration-300 hover:bg-orange-600 hover:text-white",
             children: u.jsx("span", {
               className: "text front",
               children: "See All Works",
@@ -26429,33 +27037,14 @@ function P1({
           }),
         ],
       }),
+
+      // Image
       u.jsx("div", {
-        className: "project-img",
-        style: {
-          width: "50%",
-          maxWidth: "500px",
-          height: "100%", // Ensure it fills the parent
-          minHeight: "350px",
-          borderRadius: "20px",
-          overflow: "hidden",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-          display: "flex",
-          alignItems: "center", // Optional: center image vertically
-          justifyContent: "center", // Optional: center image horizontally
-          padding: "0", // Remove internal padding
-          margin: "0", // Remove external margin
-          boxSizing: "border-box",
-        },
+        className: "w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-md",
         children: u.jsx("img", {
-          className: "w-100",
           src: r,
           alt: "project img",
-          style: {
-            display: "block", // Remove default spacing from inline img
-            width: "100%",
-            height: "100%",
-            objectFit: "cover", // Ensures image covers fully
-          },
+          className: "w-full h-[280px] md:h-[350px] lg:h-[400px] object-cover",
         }),
       }),
     ],
@@ -27051,7 +27640,14 @@ function UC() {
           spaceTop: !0,
         }),
         u.jsx(L1, {}),
+        u.jsx(MM2, {}),
+
+        u.jsx(MM1, {}),
+
         u.jsx(Cb, {}),
+        u.jsx(MM3, {}),
+        u.jsx(MM4, {}),
+
         u.jsx(R1, {}),
       ],
     }),
