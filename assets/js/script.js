@@ -11272,134 +11272,84 @@ function Cb({}) {
       note: "Includes Windows server license & technical support",
       btn: "PURCHASE NOW",
     },
+    {
+      img: "./assets/images/icon01.png",
+      title: "Gaming Hostinger,",
+      specs: ["16GB RAM", "200GB SSD Storage", "1TB Bandwidth"],
+      price: "Rs. 15000/- + tax / Monthly",
+      note: "Includes Windows server license & premium support",
+      btn: "PURCHASE NOW",
+    },
+       {
+      img: "./assets/images/icon01.png",
+      title: " backup Solution",
+      specs: ["16GB RAM", "200GB SSD Storage", "1TB Bandwidth"],
+      price: "Rs. 15000/- + tax / Monthly",
+      note: "Includes Windows server license & premium support",
+      btn: "PURCHASE NOW",
+    },
+       {
+      img: "./assets/images/icon01.png",
+      title: "Dedicated Hostinger",
+      specs: ["16GB RAM", "200GB SSD Storage", "1TB Bandwidth"],
+      price: "Rs. 15000/- + tax / Monthly",
+      note: "Includes Windows server license & premium support",
+      btn: "PURCHASE NOW",
+    },
   ];
 
   return u.jsxs("section", {
-    style: {
-      // background: "rgb(231, 238, 223)",
-      padding: "100px 24px",
-      fontFamily: "'Inter', sans-serif",
-    },
+    className: "trusted-by-section pt-120 pb-120 section-left-margin bg-gray-100 py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 font-['Inter',sans-serif]",
     children: [
       // Header Section
       u.jsxs("div", {
-        style: {
-          maxWidth: "800px",
-          margin: "0 auto",
-          textAlign: "center",
-          marginBottom: "80px",
-        },
+        className: "max-w-3xl mx-auto text-center mb-12 sm:mb-16",
         children: [
           u.jsx("h4", {
-            style: {
-              color: "#ea580c",
-              fontSize: "0.9rem",
-              fontWeight: "700",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              marginBottom: "12px",
-            },
+            className: "text-orange-600 text-sm font-bold uppercase tracking-wider mb-3",
             children: "Web Hosting",
           }),
           u.jsx("h2", {
-            style: {
-              fontSize: "2.8rem",
-              fontWeight: "800",
-              color: "#000",
-              marginBottom: "20px",
-              lineHeight: "1.2",
-            },
-            children: "Premium VPS Hosting Plans",
+            className: "text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-5 leading-tight",
+            children: "Web Hosting Company In Bhopal",
           }),
           u.jsx("p", {
-            style: {
-              color: "#1e293b",
-              fontSize: "1.1rem",
-              lineHeight: "1.75",
-              maxWidth: "600px",
-              margin: "0 auto",
-            },
+            className: "text-gray-700 text-base sm:text-lg leading-relaxed max-w-xl mx-auto",
             children:
-              "Experience blazing-fast performance with full control over your server, industry-level uptime, and 24/7 technical support — all in one plan.",
+              "Affordable and secure web hosting in Bhopal with Linux/Windows servers, VPS, domain, SSL, backups, and 24/7 support. Boost your website speed, uptime, and performance today.",
           }),
         ],
       }),
 
       // Cards
       u.jsx("div", {
-        style: {
-          display: "flex",
-          justifyContent: "center",
-          gap: "40px",
-          flexWrap: "wrap",
-        },
+        className: "flex flex-wrap justify-center gap-8 max-w-7xl mx-auto",
         children: VPS_CARDS.map((card, i) =>
           u.jsxs(
             "div",
             {
-              style: {
-                background: "#ffffff",
-                borderRadius: "24px",
-                padding: "36px",
-                width: "300px",
-                boxShadow: "0 15px 35px rgba(0,0,0,0.08)",
-                display: "flex",
-                flexDirection: "column",
-                transition: "all 0.4s ease",
-                border: "1px solid #ea580c",
-              },
-              onMouseEnter: (e) =>
-                (e.currentTarget.style.transform = "translateY(-5px)"),
-              onMouseLeave: (e) =>
-                (e.currentTarget.style.transform = "translateY(0)"),
+              className:
+                "bg-white rounded-2xl p-6 sm:p-8 w-full sm:w-80 md:w-96 shadow-lg border border-orange-500 hover:shadow-xl transition-all duration-300 flex flex-col",
               children: [
                 u.jsx("img", {
                   src: card.img,
                   alt: card.title,
-                  style: {
-                    width: "60px",
-                    marginBottom: "24px",
-                    borderRadius: "12px",
-                    objectFit: "cover",
-                  },
+                  className: "w-16 h-16 mb-6 rounded-lg object-cover mx-auto",
                 }),
                 u.jsx("h3", {
-                  style: {
-                    fontSize: "1.25rem",
-                    fontWeight: "700",
-                    color: "#0f172a",
-                    marginBottom: "16px",
-                  },
+                  className: "text-xl font-bold text-gray-900 mb-4",
                   children: card.title,
                 }),
                 u.jsx("ul", {
-                  style: {
-                    padding: "0",
-                    marginBottom: "24px",
-                    color: "#475569",
-                    fontSize: "0.95rem",
-                    listStyle: "none",
-                    lineHeight: "1.8",
-                  },
+                  className: "mb-6 text-gray-600 text-sm list-none",
                   children: card.specs.map((s, idx) =>
                     u.jsxs(
                       "li",
                       {
-                        style: {
-                          marginBottom: "8px",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "10px",
-                        },
+                        className: "mb-2 flex items-center gap-2",
                         children: [
                           u.jsx("span", {
-                            style: {
-                              width: "8px",
-                              height: "8px",
-                              backgroundColor: "#ea580c",
-                              borderRadius: "999px",
-                              display: "inline-block",
-                            },
+                            className: "w-2 h-2 bg-orange-600 rounded-full",
                           }),
                           s,
                         ],
@@ -11409,35 +11359,16 @@ function Cb({}) {
                   ),
                 }),
                 u.jsx("h4", {
-                  style: {
-                    fontSize: "1.1rem",
-                    fontWeight: "700",
-                    color: "#0f172a",
-                    marginBottom: "12px",
-                  },
+                  className: "text-lg font-bold text-gray-900 mb-3",
                   children: card.price,
                 }),
                 u.jsx("p", {
-                  style: {
-                    fontSize: "0.85rem",
-                    color: "#64748b",
-                    marginBottom: "28px",
-                  },
+                  className: "text-gray-500 text-sm mb-6",
                   children: card.note,
                 }),
                 u.jsx("button", {
-                  style: {
-                    background: "#ea580c",
-                    color: "#ffffff",
-                    border: "none",
-                    padding: "12px 24px",
-                    borderRadius: "999px",
-                    fontWeight: "700",
-                    fontSize: "0.95rem",
-                    transition: "background 0.3s",
-                  },
-                  onMouseEnter: (e) => (e.target.style.background = "#c2410c"),
-                  onMouseLeave: (e) => (e.target.style.background = "#ea580c"),
+                  className:
+                    "bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-300",
                   children: card.btn,
                 }),
               ],
@@ -11456,19 +11387,19 @@ function MM1() {
       img: "./assets/images/MESSAGES.png",
       title: "KYC Verification",
       description:
-        "We offer secure and accurate KYC services to help businesses validate customer identities, ensuring compliance and reducing the risk of fraud in digital transactions.",
+        "Verify customer identities with our secure KYC verification services. Support for Aadhar, PAN, bank account, and face match. Prevent fraud, meet KYC/AML compliance, and ensure seamless onboarding for fintech, NBFCs, crypto, and digital platforms.",
     },
     {
       img: "./assets/images/contact.png",
       title: "Business Verification",
       description:
-        "Authenticate the credibility of businesses with our verification services, helping you build trust and make informed decisions with verified data.",
+        "Verify business entities in real-time with our Business Verification services. Validate company registration, directors, and UBOs to prevent fraud, meet AML/KYC compliance, and build trust. Ideal for fintech, NBFCs, B2B onboarding, and digital marketplaces.",
     },
     {
       img: "./assets/images/dashboad.png",
       title: "Corporate Authentication",
       description:
-        "Ensure legal and transparency compliance with corporate authentication, verifying company credentials, directors, and official data completely.",
+        "Our Corporate Authentication solutions help confirm legal existence, ownership structure, and document authenticity of companies globally. Simplify B2B onboarding, ensure compliance, and build secure partnerships with verified corporate entities.",
     },
   ];
 
@@ -11494,13 +11425,13 @@ function MM1() {
               "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-6 animate-slide-in-up",
             children: u.jsxs("span", {
               children: [
-                "Secure & Fast ",
+                "Top Verification Services in ",
                 u.jsx("span", {
                   className:
                     "bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent",
-                  children: "Verification Services ",
+                  children: "Bhopal ",
                 }),
-                "to Build Trust and Compliance",
+                "Aadhar, PAN, Bank & GST Verification",
               ],
             }),
           }),
@@ -11510,33 +11441,33 @@ function MM1() {
             className:
               "text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tracking-wide animate-fade-in delay-200",
             children:
-              "Boost your credibility and compliance with our seamless, secure verification process. From identity checks to business validations — we’ve got you covered across every digital touchpoint.",
+              "Get fast and secure verification services in Bhopal, including Aadhar, PAN, Bank Account, GST, and Live Face verification. Ensure KYC compliance, prevent fraud, and validate identities in real-time. Our solutions are accurate, API-enabled, and ideal for fintech, eCommerce, and digital platforms.",
           }),
         ],
       }),
 
       // Identity Verified Card
-      u.jsx("div", {
-        className: "relative flex justify-center my-20",
-        children: u.jsx("div", {
-          className:
-            "bg-white rounded-2xl shadow-xl p-8 w-56 text-center z-10 border border-gray-200 hover:shadow-2xl transition-all duration-500",
-          children: u.jsxs("div", {
-            children: [
-              u.jsx("span", {
-                className:
-                  "inline-flex w-10 h-10 bg-orange-600 rounded-full items-center justify-center text-white text-lg font-bold shadow-md animate-pulse",
-                children: "✓",
-              }),
-              u.jsx("h3", {
-                className:
-                  "text-xl font-semibold text-slate-800 mt-3 tracking-tight",
-                children: "Identity Verified!",
-              }),
-            ],
-          }),
-        }),
-      }),
+      // u.jsx("div", {
+      //   className: "relative flex justify-center my-20",
+      //   children: u.jsx("div", {
+      //     className:
+      //       "bg-white rounded-2xl shadow-xl p-8 w-56 text-center z-10 border border-gray-200 hover:shadow-2xl transition-all duration-500",
+      //     children: u.jsxs("div", {
+      //       children: [
+      //         u.jsx("span", {
+      //           className:
+      //             "inline-flex w-10 h-10 bg-orange-600 rounded-full items-center justify-center text-white text-lg font-bold shadow-md animate-pulse",
+      //           children: "✓",
+      //         }),
+      //         u.jsx("h3", {
+      //           className:
+      //             "text-xl font-semibold text-slate-800 mt-3 tracking-tight",
+      //           children: "Identity Verified!",
+      //         }),
+      //       ],
+      //     }),
+      //   }),
+      // }),
 
       // Cards Section
       u.jsx("div", {
@@ -11600,138 +11531,144 @@ function MM2() {
     children: u.jsx("div", {
       className:
         "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start",
-      children: [
-        // Left Content
-        u.jsxs("div", {
-          className: "text-left max-w-2xl",
+     children: [
+  // Left Content
+  u.jsxs("div", {
+    className: "text-left max-w-2xl",
+    children: [
+      u.jsx("h4", {
+        className: "text-sm font-bold text-orange-600 uppercase tracking-widest mb-4",
+        children: u.jsxs("span", {
           children: [
-            u.jsx("h4", {
-              className:
-                "text-sm font-bold text-orange-600 uppercase tracking-widest mb-4",
-              children: u.jsxs("span", {
-                children: [
-                  "Security & Auditing",
-                  u.jsx("span", {
-                    className:
-                      "inline-block w-6 h-0.5 bg-black ml-2 align-middle",
-                    children: "",
-                  }),
-                ],
-              }),
-            }),
-            u.jsx("h2", {
-              className:
-                "text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6",
-              children: "Advanced Security and Auditing Solutions",
-            }),
-            u.jsx("p", {
-              className:
-                "text-black/80 text-base sm:text-lg leading-relaxed mb-5",
-              children:
-                "Secure your digital assets with Payzon’s expert security and auditing services. We offer complete protection including 2FA authentication, code audits, website and database security, network vulnerability assessments, and robust DDoS protection.",
-            }),
-            u.jsx("p", {
-              className: "text-black/80 text-base sm:text-lg leading-relaxed",
-              children:
-                "Our tailored solutions help identify risks, strengthen system defenses, and ensure compliance. Trust our experienced team to keep your infrastructure safe and audit-ready.",
+            "Security & Auditing",
+            u.jsx("span", {
+              className: "inline-block w-6 h-0.5 bg-black ml-2 align-middle",
+              children: "",
             }),
           ],
         }),
+      }),
+      u.jsx("h2", {
+        className: "text-4xl sm:text-5xl font-extrabold text-black leading-tight mb-6",
+        children: "Advanced Security and Auditing Solutions",
+      }),
+      u.jsx("p", {
+        className: "text-black/80 text-base sm:text-lg leading-relaxed mb-5",
+        children:
+          "Safeguard your digital infrastructure with our complete suite of cybersecurity and code auditing services. From 2FA authentication to DDoS protection, we cover every layer to ensure your systems are secure, compliant, and audit-ready.",
+      }),
+      u.jsx("span", {
+        className: "text-black/80 text-lg font-bold leading-relaxed mb-5",
+        children: "Services:",
+      }),
+      u.jsxs("ul", {
+        className: "text-black/80 text-base sm:text-lg leading-relaxed mb-5 list-disc pl-5 space-y-1",
+        children: [
+          u.jsx("li", { children: "Source Code Audit & Vulnerability Assessment" }),
+          u.jsx("li", { children: "Firewall, WAF & Network Security Architecture" }),
+          u.jsx("li", { children: "Database Encryption, Access Control & Flow Security" }),
+        ],
+      }),
+      u.jsx("p", {
+        className: "text-black/80 text-base sm:text-lg leading-relaxed",
+        children:
+          "Our tailored solutions help identify risks, strengthen system defenses, and ensure compliance. Trust our experienced team to keep your infrastructure safe and audit-ready.",
+      }),
+    ],
+  }),
 
-        // Right Cards
-        u.jsx("div", {
-          className: "grid sm:grid-cols-1 md:grid-cols-2 gap-8 mt-10",
-          children: [
-            // Card 1 - Website Audit
-            u.jsxs("div", {
-              className:
-                "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
-              children: [
-                u.jsx("div", {
-                  className: "mb-5",
-                  children: u.jsx("img", {
-                    src: "https://cdn-icons-png.flaticon.com/512/1828/1828665.png",
-                    alt: "Audit",
-                    className: "w-12 h-12 mx-auto",
-                  }),
-                }),
-                u.jsx("h3", {
-                  className: "text-xl font-bold text-black mb-1",
-                  children: "Website Audit",
-                }),
-                u.jsx("h4", {
-                  className: "text-sm text-orange-600 font-semibold mb-4",
-                  children: "Boost Website Performance",
-                }),
-                u.jsx("p", {
-                  className: "text-black/70 text-sm leading-relaxed mb-4",
-                  children:
-                    "Get a detailed analysis of your website’s speed, structure, and content.",
-                }),
-                u.jsxs("ul", {
-                  className:
-                    "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
-                  children: [
-                    u.jsx("li", { children: "SEO Optimization" }),
-                    u.jsx("li", { children: "UX/UI Design Review" }),
-                    u.jsx("li", { children: "Technical Fixes" }),
-                    u.jsx("li", { children: "Content Insights" }),
-                  ],
-                }),
-                u.jsx("button", {
-                  className:
-                    "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
-                  children: "START AUDIT NOW",
-                }),
-              ],
+  // Right Cards
+  u.jsx("div", {
+    className: "grid sm:grid-cols-1 md:grid-cols-2 gap-8 mt-10",
+    children: [
+      // Card 1 - Website Audit
+      u.jsxs("div", {
+        className:
+          "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
+        children: [
+          u.jsx("div", {
+            className: "mb-5",
+            children: u.jsx("img", {
+              src: "https://cdn-icons-png.flaticon.com/512/1828/1828665.png",
+              alt: "Audit",
+              className: "w-12 h-12 mx-auto",
             }),
+          }),
+          u.jsx("h3", {
+            className: "text-xl font-bold text-black mb-1",
+            children: "Website Audit",
+          }),
+          u.jsx("h4", {
+            className: "text-sm text-orange-600 font-semibold mb-4",
+            children: "Boost Website Performance",
+          }),
+          u.jsx("p", {
+            className: "text-black/70 text-sm leading-relaxed mb-4",
+            children:
+              "Get a detailed analysis of your website’s speed, structure, and content.",
+          }),
+          u.jsxs("ul", {
+            className: "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
+            children: [
+              u.jsx("li", { children: "SEO Optimization" }),
+              u.jsx("li", { children: "UX/UI Design Review" }),
+              u.jsx("li", { children: "Technical Fixes" }),
+              u.jsx("li", { children: "Content Insights" }),
+            ],
+          }),
+          u.jsx("button", {
+            className:
+              "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
+            children: "START AUDIT NOW",
+          }),
+        ],
+      }),
 
-            // Card 2 - 2FA Auth
-            u.jsxs("div", {
-              className:
-                "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
-              children: [
-                u.jsx("div", {
-                  className: "mb-5",
-                  children: u.jsx("img", {
-                    src: "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
-                    alt: "2FA",
-                    className: "w-12 h-12 mx-auto",
-                  }),
-                }),
-                u.jsx("h3", {
-                  className: "text-xl font-bold text-black mb-1",
-                  children: "2FA Authentication",
-                }),
-                u.jsx("h4", {
-                  className: "text-sm text-orange-600 font-semibold mb-4",
-                  children: "Secure Every Login",
-                }),
-                u.jsx("p", {
-                  className: "text-black/70 text-sm leading-relaxed mb-4",
-                  children:
-                    "Enable two-factor authentication to safeguard access with advanced verification methods:",
-                }),
-                u.jsxs("ul", {
-                  className:
-                    "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
-                  children: [
-                    u.jsx("li", { children: "SMS OTP" }),
-                    u.jsx("li", { children: "Email Code" }),
-                    u.jsx("li", { children: "Biometric Login" }),
-                    u.jsx("li", { children: "Google Authenticator" }),
-                  ],
-                }),
-                u.jsx("button", {
-                  className:
-                    "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
-                  children: "PURCHASE NOW",
-                }),
-              ],
+      // Card 2 - 2FA Auth
+      u.jsxs("div", {
+        className:
+          "bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-400 hover:shadow-xl transition-shadow duration-300 text-center",
+        children: [
+          u.jsx("div", {
+            className: "mb-5",
+            children: u.jsx("img", {
+              src: "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
+              alt: "2FA",
+              className: "w-12 h-12 mx-auto",
             }),
-          ],
-        }),
-      ],
+          }),
+          u.jsx("h3", {
+            className: "text-xl font-bold text-black mb-1",
+            children: "2FA Authentication",
+          }),
+          u.jsx("h4", {
+            className: "text-sm text-orange-600 font-semibold mb-4",
+            children: "Secure Every Login",
+          }),
+          u.jsx("p", {
+            className: "text-black/70 text-sm leading-relaxed mb-4",
+            children:
+              "Enable two-factor authentication to safeguard access with advanced verification methods:",
+          }),
+          u.jsxs("ul", {
+            className: "text-black text-sm mb-6 list-disc pl-5 space-y-1 text-left",
+            children: [
+              u.jsx("li", { children: "SMS OTP" }),
+              u.jsx("li", { children: "Email Code" }),
+              u.jsx("li", { children: "Biometric Login" }),
+              u.jsx("li", { children: "Google Authenticator" }),
+            ],
+          }),
+          u.jsx("button", {
+            className:
+              "bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white text-sm font-bold py-2 px-5 rounded-full",
+            children: "PURCHASE NOW",
+          }),
+        ],
+      }),
+    ],
+  }),
+],
     }),
   });
 }
@@ -11831,34 +11768,84 @@ function MM4() {
       img: "./assets/images/restapi.png",
       title: "Social Media Marketing",
       description:
-        "Engage and grow your audience on platforms like Instagram, Facebook, and LinkedIn with targeted social strategies.",
-      tags: ["Branding", "Marketing"],
+        "Engage and grow your audience with targeted strategies on platforms like Instagram, Facebook, and LinkedIn.",
+      tags: [
+        "Profile optimization for Facebook, Instagram & LinkedIn",
+        "Strategic hashtag planning & engaging content",
+        "Organic follower growth & brand reach",
+        "Storytelling reels & carousel creatives",
+        "Consistent engagement to drive conversions",
+      ],
     },
     {
       img: "./assets/images/restapi.png",
-      title: "Bulk Email & SMS",
+      title: "Advanced SEO Solutions",
       description:
-        "Send powerful marketing messages with bulk email and SMS tools to increase engagement and promote offers instantly.",
-      tags: ["Branding", "Marketing"],
+        "Boost your website’s ranking with comprehensive SEO services tailored for Bhopal businesses and beyond.",
+      tags: [
+        "Keyword research & competitor analysis",
+        "Technical SEO with website audit & optimization",
+        "Local SEO for Bhopal businesses (Maps + GMB)",
+        "Link building + article & blog submission",
+        "Monthly performance reporting & Google indexing",
+      ],
     },
     {
       img: "./assets/images/restapi.png",
-      title: "Meta Verified WhatsApp",
+      title: "Paid Ads Campaign (ROI-Focused)",
       description:
-        "Building trust and authenticity with verified WhatsApp business accounts.",
-      tags: ["Branding", "Marketing"],
+        "Maximize ROI with data-driven ad campaigns across Google, Meta, and YouTube for targeted conversions.",
+      tags: [
+        "Google Ads, Meta Ads, and YouTube Campaigns",
+        "ROI-based targeting with conversion tracking",
+        "CTA-driven ad creatives & copywriting",
+        "Audience segmentation for better CPC & leads",
+        "Weekly insights with campaign optimization",
+      ],
     },
     {
       img: "./assets/images/restapi.png",
-      title: "Google Ads",
+      title: "YouTube Marketing",
       description:
-        "Reach the right audience with Payzon’s data-driven Google Ads campaigns that boost visibility and conversions.",
-      tags: ["Branding", "Marketing"],
+        "Grow your YouTube channel with optimized content and strategies to boost views, engagement, and monetization.",
+      tags: [
+        "YouTube SEO with optimized titles, tags & description",
+        "Engaging video editing & voiceover options",
+        "Custom thumbnails to boost CTR",
+        "Shorts & long-form content strategy",
+        "Audience retention + monetization roadmap",
+      ],
+    },
+    {
+      img: "./assets/images/restapi.png",
+      title: "Dropshipping & E-commerce Marketing",
+      description:
+        "Launch and scale your e-commerce business with end-to-end marketing and dropshipping solutions.",
+      tags: [
+        "E-commerce store setup with product listing",
+        "Product photoshoot & SEO-friendly descriptions",
+        "Facebook/Google sales campaigns",
+        "Conversion funnel with upsell strategy",
+        "Dropshipping business roadmap & automation tools",
+      ],
+    },
+    {
+      img: "./assets/images/restapi.png",
+      title: "Business Branding Solutions",
+      description:
+        "Build a strong brand identity with professional design and strategic campaigns for maximum impact.",
+      tags: [
+        "Logo, packaging & identity design",
+        "Company profile & brochure creation",
+        "Brand tone, content strategy & story building",
+        "Hashtag & reel-based awareness campaigns",
+        "Verified Meta/Google profile management",
+      ],
     },
   ];
 
   return u.jsx("section", {
-    className: " trusted-by-section pt-2 pb-2  section-left-margin",
+    className: "trusted-by-section pt-2 pb-2 section-left-margin",
     children: u.jsx("div", {
       className: "bg-white py-16",
       children: [
@@ -11878,28 +11865,11 @@ function MM4() {
                   "absolute -top-10 -right-32 w-60 h-60 bg-gradient-to-l from-orange-200 to-orange-300 rounded-full blur-3xl opacity-20 animate-pulse delay-1000",
               }),
 
-              // Premium Badge
-              // u.jsxs("div", {
-              //   className: "inline-flex items-center gap-3 bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200 rounded-full px-6 py-3 mb-6 shadow-sm hover:shadow-md transition-all duration-300",
-              //   children: [
-              //     u.jsx("div", {
-              //       className: "w-2 h-2 bg-orange-500 rounded-full animate-pulse",
-              //     }),
-              //     u.jsx("span", {
-              //       className: "text-sm font-bold text-orange-700 uppercase tracking-wider",
-              //       children: "Premium Services Portfolio",
-              //     }),
-              //     u.jsx("div", {
-              //       className: "w-8 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full",
-              //     }),
-              //   ],
-              // }),
-
               // Main Heading with Gradient
               u.jsx("h2", {
                 className:
-                  "text-5xl sm:text-6xl lg:text-7xl font-black bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent leading-tight mb-6",
-                children: "Explore Our Digital Excellence",
+                  "text-4xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent leading-tight mb-6",
+                children: "Top Digital Marketing Company in Bhopal | SEO, Ads & Branding Experts",
               }),
 
               // Enhanced Description
@@ -11907,7 +11877,7 @@ function MM4() {
                 className:
                   "text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium",
                 children:
-                  "Transform your digital landscape with our cutting-edge solutions, meticulously crafted to deliver exceptional results and drive unprecedented growth for your business.",
+                  "Boost your business with Bhopal’s best digital marketing company. We offer SEO, Google Ads, social media marketing, content, and branding to grow your online presence.",
               }),
 
               // Stats or Features Preview
@@ -11953,7 +11923,7 @@ function MM4() {
           className: "relative max-w-8xl mx-auto px-6 py-8",
           children: u.jsx("div", {
             className:
-              "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10",
+              "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10",
             children: cards.map((card, index) =>
               u.jsx(
                 "div",
@@ -12019,6 +11989,15 @@ function MM4() {
                             children: card.description,
                           }),
 
+                          // Tags as List
+                          u.jsx("ul", {
+                            className:
+                              "text-gray-600 text-sm leading-relaxed list-disc pl-5 space-y-2",
+                            children: card.tags.map((tag, i) =>
+                              u.jsx("li", { children: tag }, `tag-${i}`)
+                            ),
+                          }),
+
                           // Learn More Link
                           u.jsxs("div", {
                             className:
@@ -12039,30 +12018,7 @@ function MM4() {
                       }),
 
                       // Premium Hover Reveal Section
-                      u.jsx("div", {
-                        className:
-                          "absolute bottom-0 left-0 w-full h-32 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white px-8 py-6 translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out",
-                        children: u.jsxs("div", {
-                          className: "space-y-4",
-                          children: [
-                            // Tags Section
-                            u.jsx("div", {
-                              className: "justify-center flex flex-wrap gap-2",
-                              children: card.tags.map((tag, i) =>
-                                u.jsx(
-                                  "span",
-                                  {
-                                    className:
-                                      "bg-white/20  backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300",
-                                    children: tag,
-                                  },
-                                  `tag-${i}`
-                                )
-                              ),
-                            }),
-                          ],
-                        }),
-                      }),
+                      
                     ],
                   }),
                 },
@@ -12071,8 +12027,6 @@ function MM4() {
             ),
           }),
         }),
-
-        // Call to Action Section
       ],
     }),
   });
@@ -12080,350 +12034,252 @@ function MM4() {
 
 const Nb = "./assets/images/cropped_circle_image.png";
 
-function kb() {
-  const t = [
-      {
-        id: 1,
-        logo: "ph-fill ph-facebook-logo",
-        link: "https://www.facebook.com/PAYZONINDIA/",
-      },
-      {
-        id: 2,
-        logo: "ph-fill ph-instagram-logo",
-        link: "https://www.instagram.com/thepayzonindia/",
-      },
-      {
-        id: 3,
-        logo: "ph-fill ph-youtube-logo",
-        link: "https://www.youtube.com/",
-      },
-      {
-        id: 4,
-        logo: "ph-fill ph-linkedin-logo",
-        link: "https://www.linkedin.com/company/payzonindiabhopal/",
-      },
-    ],
-    e = [
-      { id: 1, title: "Web Development", link: "/service-details" },
-      { id: 2, title: "Digital Marketing", link: "/digital-marketing" },
-      { id: 3, title: "Fintech Solutions", link: "/service-details" },
-      { id: 4, title: "Shopping Portal API", link: "/service-details" },
-      { id: 5, title: "Articles & Blogs", link: "/service-details" },
-      { id: 6, title: "Contact Details", link: "/service-details" },
-    ],
-    n = [
-      { id: 1, title: "REST API Development", link: "/service-details" },
-      { id: 2, title: "VPS Server Hosting", link: "/service-details" },
-      { id: 3, title: "Portal Development", link: "/service-details" },
-      { id: 4, title: "VPS Server Hosting", link: "/service-details" },
-      { id: 5, title: "Web Security", link: "/service-details" },
-      { id: 6, title: "Verification API", link: "/service-details" },
-    ],
-    m = [
-      {
-        id: 1,
-        title: "www.payzonindia.com",
-        link: "https://www.payzonindia.com/",
-      },
-      { id: 2, title: "www.payzonapi.com", link: "https://www.payzonapi.com/" },
-      {
-        id: 3,
-        title: "www.payzonmarketing.com",
-        link: "https://www.payzonmarketing.com/",
-      },
-      {
-        id: 4,
-        title: "www.payzonshoppy.com",
-        link: "https://www.payzonshoppy.com/",
-      },
-      {
-        id: 5,
-        title: "www.payzonitservices.com",
-        link: "https://www.payzonitservices.com/",
-      },
-      {
-        id: 6,
-        title: "www.sadaivsatya.com",
-        link: "https://www.sadaivsatya.com/",
-      },
-      {
-        id: 7,
-        title: "www.sadaivyuvafoundation.com",
-        link: "https://www.sadaivyuvafoundation.com/",
-      },
-    ],
-    r = [
-      {
-        id: 1,
-        title: "Address:",
-        text: "B1, Patel Nagar, Raisen road Near HP Petrol Pump, Bhopal (MP) Pin: 462022",
-        link: "#",
-      },
-      { id: 2, title: "Email:", text: "info@payzonindia.com", link: "#" },
-      {
-        id: 3,
-        title: "Phone:",
-        text: "+91 755 485 9540, +91 7554923296",
-        link: "#",
-      },
-    ],
-    L = [
-      {
-        id: 1,
-        title: "Sadaiv Satya",
-        text: "",
-        link: "https://www.dnb.co.in/",
-        image: "./assets/images/jkk.png",
-      },
-      {
-        id: 2,
-        title: "Sadaiv Yuva",
-        text: "",
-        link: "https://www.sadaivsatya.com/",
-        image: "./assets/images/Sadaiv MEDIA 1.png",
-      },
-      {
-        id: 3,
-        title: "Dun & Bradstreet",
-        text: "",
-        link: "https://www.dnb.com/",
-        image: "assets/images/inffablesparklogo (1).png",
-      },
-      {
-        id: 4,
-        title: "Ineffable Spark",
-        text: "",
-        link: "https://smarttaxidea.com/",
-        image: "./assets/images/SMART TAX !DEA.png",
-      },
-      {
-        id: 5,
-        title: "Ineffable Spark",
-        text: "",
-        link: "https://www.sadaivyuvafoundation.com/",
-        image: "./assets/images/sadaivsatyalogo.jpeg",
-      },
-    ];
 
+
+const t = [
+  { id: 1, logo: "ph-fill ph-facebook-logo", link: "https://www.facebook.com/PAYZONINDIA/" },
+  { id: 2, logo: "ph-fill ph-instagram-logo", link: "https://www.instagram.com/thepayzonindia/" },
+  { id: 3, logo: "ph-fill ph-youtube-logo", link: "https://www.youtube.com/" },
+  { id: 4, logo: "ph-fill ph-linkedin-logo", link: "https://www.linkedin.com/company/payzonindiabhopal/" },
+];
+
+const e = [
+  { id: 1, title: "Web Development", link: "/service-details" },
+  { id: 2, title: "Digital Marketing", link: "/digital-marketing" },
+  { id: 3, title: "Fintech Solutions", link: "/service-details" },
+  { id: 4, title: "Shopping Portal API", link: "/service-details" },
+  { id: 5, title: "Articles & Blogs", link: "/service-details" },
+  { id: 6, title: "Contact Details", link: "/service-details" },
+];
+
+const n = [
+  { id: 1, title: "REST API Development", link: "/service-details" },
+  { id: 2, title: "VPS Server Hosting", link: "/service-details" },
+  { id: 3, title: "Portal Development", link: "/service-details" },
+  { id: 4, title: "VPS Server Hosting", link: "/service-details" },
+  { id: 5, title: "Web Security", link: "/service-details" },
+  { id: 6, title: "Verification API", link: "/service-details" },
+];
+
+const m = [
+  { id: 1, title: "www.payzonindia.com", link: "https://www.payzonindia.com/" },
+  { id: 2, title: "www.payzonapi.com", link: "https://www.payzonapi.com/" },
+  { id: 3, title: "www.payzonmarketing.com", link: "https://www.payzonmarketing.com/" },
+  { id: 4, title: "www.payzonshoppy.com", link: "https://www.payzonshoppy.com/" },
+  { id: 5, title: "www.payzonitservices.com", link: "https://www.payzonitservices.com/" },
+  { id: 6, title: "www.sadaivsatya.com", link: "https://www.sadaivsatya.com/" },
+  { id: 7, title: "www.sadaivyuvafoundation.com", link: "https://www.sadaivyuvafoundation.com/" },
+];
+
+const r = [
+  { id: 1, title: "Address:", text: "B1, Patel Nagar, Raisen road Near HP Petrol Pump, Bhopal (MP) Pin: 462022", link: "#" },
+  { id: 2, title: "Email:", text: "info@payzonindia.com", link: "#" },
+  { id: 3, title: "Phone:", text: "+91 755 485 9540, +91 7554923296", link: "#" },
+];
+
+const L = [
+  { id: 1, title: "Sadaiv Satya", link: "https://www.dnb.co.in/", image: "./assets/images/jkk.png" },
+  { id: 2, title: "Sadaiv Yuva", link: "https://www.sadaivsatya.com/", image: "./assets/images/Sadaiv MEDIA 1.png" },
+  { id: 3, title: "Dun & Bradstreet", link: "https://www.dnb.com/", image: "assets/images/inffablesparklogo (1).png" },
+  { id: 4, title: "Ineffable Spark", link: "https://smarttaxidea.com/", image: "./assets/images/SMART TAX !DEA.png" },
+  { id: 5, title: "Ineffable Spark", link: "https://www.sadaivyuvafoundation.com/", image: "./assets/images/sadaivsatyalogo.jpeg" },
+];
+
+export default function kb() {
   return u.jsxs(u.Fragment, {
     children: [
       u.jsx("footer", {
-        className: "section-blur footer-section section-left-margin bg-n900",
+        className: "section-blur footer-section section-left-margin bg-[rgb(231,238,223)] text-black py-12",
         children: u.jsx("div", {
-          className: "px-4xl-14 px-3xl-12",
+          className: "container mx-auto px-4",
           children: u.jsx("div", {
-            className: "justify-content-center",
+            className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8",
             children: u.jsxs("div", {
-              className: "col-3xl-11",
+              className: "col-span-1 md:col-span-2 lg:col-span-4",
               children: [
                 u.jsxs("div", {
-                  className: "px-xxl-10 row g-6 pt-100 pb-4 pl-4",
+                  className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-10 pb-4",
                   children: [
-                    // Left columns: logo + useful, trending, versatility menus
+                    // Contact Info and Social Links
                     u.jsxs("div", {
-                      className: "col-lg-12 col-sm-12",
+                      className: "col-span-1",
                       children: [
-                        u.jsxs("div", {
-                          className: "row g-6",
-                          children: [
-                            u.jsx("div", {
-                              className: "col-lg-3 col-sm-6",
-                              children: [
-                                u.jsx("div", {
-                                  className: "footer-logo mb-4",
-                                  children: u.jsx("img", {
-                                    className: "w-100",
-                                    src: Nb,
-                                    alt: "logo",
+                        u.jsx("div", {
+                          className: "footer-logo mb-6",
+                          children: u.jsx("img", {
+                            className: "w-32",
+                            src: "./assets/images/cropped_circle_image.png",
+                            alt: "Payzon India Logo",
+                          }),
+                        }),
+                        u.jsx("ul", {
+                          className: "space-y-3",
+                          children: r.map(({ id: i, title: s, text: l, link: o }) =>
+                            u.jsx(
+                              "li",
+                              {
+                                children: u.jsxs(oe, {
+                                  to: o,
+                                  className: "text-black hover:text-orange-500",
+                                  children: [
+                                    u.jsx("span", {
+                                      className: "font-semibold",
+                                      children: s,
+                                    }),
+                                    " ",
+                                    l,
+                                  ],
+                                }),
+                              },
+                              i
+                            )
+                          ),
+                        }),
+                        u.jsx("ul", {
+                          className: "flex gap-4 mt-6",
+                          children: t.map(({ id: i, logo: l, link: s }) =>
+                            u.jsx(
+                              "li",
+                              {
+                                children: u.jsx(oe, {
+                                  to: s,
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                  className: "text-2xl text-black hover:text-orange-500",
+                                  children: u.jsx("i", {
+                                    className: l,
                                   }),
                                 }),
-                                u.jsx("ul", {
-                                  className: "footer-menu-items d-grid gap-4",
-                                  children: r.map(
-                                    ({ id: i, title: s, text: l, link: o }) =>
-                                      u.jsx(
-                                        "li",
-                                        {
-                                          children: u.jsxs(oe, {
-                                            to: o,
-                                            className: "text-n0",
-                                            children: [
-                                              u.jsx("span", {
-                                                className: "fw-bold",
-                                                children: s,
-                                              }),
-                                              " ",
-                                              l,
-                                            ],
-                                          }),
-                                        },
-                                        i
-                                      )
-                                  ),
-                                }),
-                                u.jsx("ul", {
-                                  className: "social-items d-flex gap-3 mt-4",
-                                  children: t.map(({ logo: i, link: s }) =>
-                                    u.jsx(
-                                      "li",
-                                      {
-                                        children: u.jsx(oe, {
-                                          to: s,
-                                          className: "icon text-xl",
-                                          children: u.jsx("i", {
-                                            className: i,
-                                          }),
-                                        }),
-                                      },
-                                      i
-                                    )
-                                  ),
-                                }),
-                              ],
-                            }),
-                            u.jsx("div", {
-                              className: "col-lg-3 col-sm-6",
-                              children: u.jsxs("div", {
-                                className: "footer-menu",
-                                children: [
-                                  u.jsx("span", {
-                                    className:
-                                      "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                    children: "USEFUL MENU",
-                                  }),
-                                  u.jsx("ul", {
-                                    className: "footer-menu-items d-grid gap-4",
-                                    children: e.map(
-                                      ({ id: i, title: s, link: l }) =>
-                                        u.jsx(
-                                          "li",
-                                          {
-                                            children: u.jsx(oe, {
-                                              to: l,
-                                              className: "text-n0",
-                                              children: s,
-                                            }),
-                                          },
-                                          i
-                                        )
-                                    ),
-                                  }),
-                                ],
-                              }),
-                            }),
-                            u.jsx("div", {
-                              className: "col-lg-3 col-sm-6",
-                              children: u.jsxs("div", {
-                                className: "footer-menu",
-                                children: [
-                                  u.jsx("span", {
-                                    className:
-                                      "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                    children: "TRENDING SERVICES",
-                                  }),
-                                  u.jsx("ul", {
-                                    className: "footer-menu-items d-grid gap-4",
-                                    children: n.map(
-                                      ({ id: i, title: s, link: l }) =>
-                                        u.jsx(
-                                          "li",
-                                          {
-                                            children: u.jsx(oe, {
-                                              to: l,
-                                              className: "text-n0",
-                                              children: s,
-                                            }),
-                                          },
-                                          i
-                                        )
-                                    ),
-                                  }),
-                                ],
-                              }),
-                            }),
-                            u.jsx("div", {
-                              className: "col-lg-3 col-sm-6",
-                              children: u.jsxs("div", {
-                                className: "footer-menu",
-                                children: [
-                                  u.jsx("span", {
-                                    className:
-                                      "text-2xl text-n0 fw-extra-bold mb-lg-6 mb-4 d-block",
-                                    children: "OUR ONLINE VERSATILITY",
-                                  }),
-                                  u.jsx("ul", {
-                                    className: "footer-menu-items d-grid gap-4",
-                                    children: m.map(
-                                      ({ id: i, title: s, link: l }) =>
-                                        u.jsx(
-                                          "li",
-                                          {
-                                            children: u.jsx(oe, {
-                                              to: l,
-                                              className: "text-n0",
-                                              children: s,
-                                            }),
-                                          },
-                                          i
-                                        )
-                                    ),
-                                  }),
-                                ],
-                              }),
-                            }),
-                          ],
+                              },
+                              i
+                            )
+                          ),
                         }),
                       ],
                     }),
-
-                    u.jsx("div", {
-                      className: "col-12 mt-6",
-                      children: u.jsx("div", {
-                        className:
-                          "footer-menu d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-4",
-                        children: [
-                          u.jsx("span", {
-                            className:
-                              "text-2xl text-n0 fw-extra-bold d-block text-center text-md-start",
-                            style: { minWidth: "180px" },
-                            children: [
-                              "OUR BUSINESS",
-                              u.jsx("br", {}),
-                              "COLLABORATION",
-                            ],
-                          }),
-                          u.jsx("ul", {
-                            className:
-                              "footer-menu-items d-flex flex-wrap justify-content-center justify-content-md-start gap-3 align-items-center mb-0",
-                            style: { listStyle: "none", padding: 0, margin: 0 },
-                            children: L.map(
-                              ({ id: i, title: s, link: o, image: img }) =>
-                                u.jsx(
-                                  "li",
-                                  {
-                                    className: "d-inline-block",
-                                    children: u.jsx(oe, {
-                                      to: o,
-                                      className: "text-n1",
-                                      children: u.jsx("img", {
-                                        src: img,
-                                        alt: s,
-                                        className:
-                                          "collaboration-logo img-fluid",
-                                        style: {
-                                          maxHeight: "60px",
-                                          width: "auto",
-                                          objectFit: "contain",
-                                        },
-                                      }),
-                                    }),
-                                  },
-                                  i
-                                )
-                            ),
-                          }),
-                        ],
-                      }),
+                    // Useful Menu
+                    u.jsxs("div", {
+                      className: "col-span-1",
+                      children: [
+                        u.jsx("span", {
+                          className: "text-xl text-orange-500 font-bold mb-6 block",
+                          children: "USEFUL MENU",
+                        }),
+                        u.jsx("ul", {
+                          className: "space-y-3",
+                          children: e.map(({ id: i, title: s, link: l }) =>
+                            u.jsx(
+                              "li",
+                              {
+                                children: u.jsx(oe, {
+                                  to: l,
+                                  className: "text-black hover:text-orange-500",
+                                  children: s,
+                                }),
+                              },
+                              i
+                            )
+                          ),
+                        }),
+                      ],
+                    }),
+                    // Trending Services
+                    u.jsxs("div", {
+                      className: "col-span-1",
+                      children: [
+                        u.jsx("span", {
+                          className: "text-xl text-orange-500 font-bold mb-6 block",
+                          children: "TRENDING SERVICES",
+                        }),
+                        u.jsx("ul", {
+                          className: "space-y-3",
+                          children: n.map(({ id: i, title: s, link: l }) =>
+                            u.jsx(
+                              "li",
+                              {
+                                children: u.jsx(oe, {
+                                  to: l,
+                                  className: "text-black hover:text-orange-500",
+                                  children: s,
+                                }),
+                              },
+                              i
+                            )
+                          ),
+                        }),
+                      ],
+                    }),
+                    // Online Versatility
+                    u.jsxs("div", {
+                      className: "col-span-1",
+                      children: [
+                        u.jsx("span", {
+                          className: "text-xl text-orange-500 font-bold mb-6 block",
+                          children: "OUR ONLINE VERSATILITY",
+                        }),
+                        u.jsx("ul", {
+                          className: "space-y-3",
+                          children: m.map(({ id: i, title: s, link: l }) =>
+                            u.jsx(
+                              "li",
+                              {
+                                children: u.jsx(oe, {
+                                  to: l,
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                  className: "text-black hover:text-orange-500",
+                                  children: s,
+                                }),
+                              },
+                              i
+                            )
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                // Business Collaborations
+                u.jsxs("div", {
+                  className: "col-span-1 md:col-span-2 lg:col-span-4 mt-10",
+                  children: [
+                    u.jsxs("span", {
+                      className: "text-xl text-orange-500 font-bold mb-6 block text-center md:text-left",
+                      style: { minWidth: "180px" },
+                      children: [
+                        "OUR BUSINESS",
+                        u.jsx("br", {}),
+                        "COLLABORATION",
+                      ],
+                    }),
+                    u.jsx("ul", {
+                      className: "flex flex-wrap justify-center  gap-4 items-center mb-0",
+                      style: { listStyle: "none", padding: 0, margin: 0 },
+                      children: L.map(({ id: i, title: s, link: o, image: img }) =>
+                        u.jsx(
+                          "li",
+                          {
+                            className: "inline-block",
+                            children: u.jsx(oe, {
+                              to: o,
+                              target: "_blank",
+                              rel: "noopener noreferrer",
+                              className: "text-black",
+                              children: u.jsx("img", {
+                                src: img,
+                                alt: s,
+                                className: "img-fluid",
+                                style: {
+                                  maxHeight: "60px",
+                                  width: "auto",
+                                  objectFit: "contain",
+                                },
+                              }),
+                            }),
+                          },
+                          i
+                        )
+                      ),
                     }),
                   ],
                 }),
@@ -12433,9 +12289,9 @@ function kb() {
         }),
       }),
       u.jsx("div", {
-        className: "py-lg-6 py-4 text-center",
+        className: "section-blur footer-section section-left-margin py-6 text-center bg-black text-white",
         children: u.jsxs("p", {
-          className: "text-n900",
+          className: "text-white",
           children: [
             "Copyright © ",
             u.jsx("span", { children: new Date().getFullYear() }),
@@ -12444,25 +12300,21 @@ function kb() {
         }),
       }),
       u.jsx("div", {
-        className: "py-lg-2 py-1 text-center",
+        className: "section-blur footer-section section-left-margin py-2 text-center bg-black text-white",
         children: u.jsxs("p", {
-          className: "text-n900",
+          className: "text-white",
           children: [
-            u.jsx(oe, { to: "/privacy-policy", children: "Privacy Policy" }),
+            u.jsx(oe, { to: "/privacy-policy", className: "text-white hover:text-orange-500", children: "Privacy Policy" }),
             " | ",
-            u.jsx(oe, { to: "/refund-policy", children: "Refund Policy" }),
+            u.jsx(oe, { to: "/refund-policy", className: "text-white hover:text-orange-500", children: "Refund Policy" }),
             " | ",
-            u.jsx(oe, {
-              to: "/cancellation-policy",
-              children: "Cancellation Policy",
-            }),
+            u.jsx(oe, { to: "/cancellation-policy", className: "text-white hover:text-orange-500", children: "Cancellation Policy" }),
           ],
         }),
       }),
     ],
   });
 }
-
 function jr(t) {
   if (t === void 0)
     throw new ReferenceError(
@@ -25963,7 +25815,7 @@ const Ch = [
     shortDesc:
       "Step into the future with Blockchain Development Services in Bhopal by Payzon India Pvt. Ltd. We build secure, scalable, and decentralized applications for modern businesses.",
     icon: "ph-fill ph-app-window",
-    link: "/blockchain-solutions",
+    link: "/blockchain-development",
     points: [
       "Smart Contract Development",
       "Crypto Wallet & Token Creation",
@@ -26510,7 +26362,7 @@ function NC({ swiperData: t }) {
                       ],
                     }),
                     u.jsx("ul", {
-                      className: "text-sm text-gray-700 pl-6 list-disc",
+                      className: "text-sm font-semibold text-gray-700 pl-6 list-disc",
                       children: benefits
                         .split("\n")
                         .map((benefit) => u.jsx("li", { children: benefit })),
@@ -26934,63 +26786,64 @@ const j1 = ({ children: t }) =>
   N1 = "./assets/images/ppc.jpg",
   k1 = "./assets/images/seo.avif",
   A1 = "./assets/images/ad-campaign.jpg",
-  MC = [
-    {
-      number: "01",
-      title: "Paid AD Campaign",
-      description:
-        "Paid ad campaigns, commonly referred to as paid advertising or pay-per-click (PPC) campaigns, are a powerful tool for businesses to drive targeted traffic, increase brand visibility, and achieve measurable results. These campaigns allow businesses to reach their ideal audience through various platforms such as Google Ads, Facebook Ads, LinkedIn Ads, and more.",
-      imageSrc: A1,
-      bgColor: "bg-gradient-to-br from-yellow-50 via-orange-100 to-yellow-50",
-      textColor: "text-gray-800",
-      link: "/paid-campaign",
-      headingColor: "text-orange-500",
-    },
-    {
-      number: "02",
-      title: "SEO/SME Optimization",
-      description:
-        "Launch your online store with a secure, scalable shopping portal. We create SEO-optimized eCommerce websites for Bhopal’s top retailers, complete with payment gateway, product catalog, and easy navigation.",
-      imageSrc: k1,
-      bgColor: "bg-gradient-to-br from-gray-100 via-blue-50 to-white",
-      textColor: "text-gray-900",
-      link: "/seo-optimization",
-      headingColor: "text-blue-500",
-    },
-    {
-      number: "03",
-      title: "Google PPC",
-      description:
-        "SEO improves website visibility on search engines, driving organic traffic, enhancing user experience, building brand credibility, and offering a cost-effective strategy for long-term online growth and lead generation without relying heavily on paid advertising.",
-      imageSrc: N1,
-      bgColor: "bg-gradient-to-br from-gray-50 via-indigo-100 to-white",
-      textColor: "text-gray-900",
-      link: "/google-ppc",
-      headingColor: "text-indigo-500",
-    },
-    {
-      number: "04",
-      title: "Bulk Email/SMS",
-      description:
-        "The Bulk Email & SMS platform is a powerful communication solution designed for businesses, marketers, and organizations looking to reach their audience instantly. Whether you need to send promotional campaigns, transactional alerts, or personalized messages, our platform offers high deliverability and scalability.",
-      imageSrc: "./assets/images/sms.png",
-      bgColor: "bg-gradient-to-br from-fuchsia-50 via-pink-100 to-white",
-      textColor: "text-gray-800",
-      link: "/bulk-sms",
-      headingColor: "text-pink-500",
-    },
-    {
-      number: "05",
-      title: "Meta Verified Whatsapps",
-      description:
-        "Meta Verified is a premium subscription service offered by Meta Platforms, which includes platforms like Facebook and Instagram. This service provides users with additional tools to verify their identity and enhance their social media experience. It offers a variety of benefits, mainly focused on improving account security, user authenticity, and credibility on Meta platforms.",
-      imageSrc: "./assets/images/meta.avif",
-      bgColor: "bg-gradient-to-br from-emerald-50 via-green-100 to-white",
-      textColor: "text-gray-900",
-      link: "/meta-verified",
-      headingColor: "text-emerald-600",
-    },
-  ];
+ MC = [
+  {
+    number: "01",
+    title: "Paid AD Campaign",
+    description:
+      "Drive targeted traffic and maximize ROI with performance-based ad campaigns across Google, Meta, and YouTube. We craft high-converting ads with advanced targeting, strong CTAs, and ongoing optimization.",
+    imageSrc: A1,
+    bgColor: "bg-gradient-to-br from-yellow-50 via-orange-100 to-yellow-50",
+    textColor: "text-gray-800",
+    link: "/paid-campaign",
+    headingColor: "text-orange-500",
+  },
+  {
+    number: "02",
+    title: "SEO/SME Optimization",
+    description:
+      "Promote your Android/iOS apps with strategic marketing—ASO, install campaigns, and in-app engagement. Reach the right audience, grow downloads, and increase app retention across multiple platforms.",
+    imageSrc: k1,
+    bgColor: "bg-gradient-to-br from-blue-50 via-sky-100 to-blue-50",
+    textColor: "text-gray-900",
+    link: "/seo-optimization",
+    headingColor: "text-sky-500",
+  },
+  {
+    number: "03",
+    title: "Google PPC",
+    description:
+      "Launch data-backed Google PPC campaigns to capture high-intent users. From keyword bidding and ad copy to A/B testing and conversion tracking—we manage your ads for max ROI and reduced cost per click.",
+    imageSrc: N1,
+    bgColor: "bg-gradient-to-br from-indigo-50 via-violet-100 to-white",
+    textColor: "text-gray-900",
+    link: "/google-ppc",
+    headingColor: "text-violet-600",
+  },
+  {
+    number: "04",
+    title: "Bulk Email/SMS",
+    description:
+      "Boost conversions with our powerful bulk email and SMS marketing tools. Promote offers, send alerts, and drive engagement using verified databases and automated delivery with real-time tracking.",
+    imageSrc: "./assets/images/sms.png",
+    bgColor: "bg-gradient-to-br from-rose-50 via-pink-100 to-white",
+    textColor: "text-gray-800",
+    link: "/bulk-sms",
+    headingColor: "text-rose-500",
+  },
+  {
+    number: "05",
+    title: "Meta Verified Whatsapps",
+    description:
+      "Build trust with verified WhatsApp Business accounts. We help you get verified, manage green tick setup, automate messages, and run campaigns through Meta’s official WhatsApp Business API.",
+    imageSrc: "./assets/images/meta.avif",
+    bgColor: "bg-gradient-to-br from-green-50 via-emerald-100 to-white",
+    textColor: "text-gray-900",
+    link: "/meta-verified",
+    headingColor: "text-emerald-600",
+  },
+];
+
 
 function P1({
   number: t,
@@ -27053,10 +26906,10 @@ function P1({
 
 function O1({ spaceTop: t, spaceBottom: e }) {
   const n = {
-    subHeading: "Digital Marketing",
-    heading: "Sales And Marketing",
+    subHeading: "Digital Marketing Services",
+    heading: "Result-Driven Sales & Marketing Solutions for Your Business",
     description:
-      "Discover what's possible with our IT solutions catalogue — from securing your data to powering your cloud transformation.",
+      "Power your brand with our full-suite digital marketing services in Bhopal—covering paid ads, app marketing, Google PPC, bulk email/SMS, and Meta-verified WhatsApp solutions to boost visibility and ROI.",
   };
 
   return u.jsx("section", {
@@ -27153,88 +27006,88 @@ function O1({ spaceTop: t, spaceBottom: e }) {
 }
 
 const I1 = [
-  {
+   {
     id: 1,
     question: "2FA Authentication",
     answer:
-      "Add an extra layer of protection with Two-Factor Authentication, minimizing the risk of unauthorized access to your systems.",
+      "Add an extra layer of protection with Two-Factor Authentication, minimizing the risk of unauthorized access to your systems and ensuring your digital assets stay safe.",
     icon: "🔒",
     link: "/2fa-authentication",
     points: [
-      "Prompts for a secondary verification step during login.",
-      "Supports SMS, email, and authenticator apps for flexibility.",
-      "Reduces threats from stolen or leaked passwords.",
-      "Seamlessly integrates into your existing login flow.",
+      "Ideal for apps, portals, dashboards & CRMs.",
+      "Prevents password theft & unauthorized logins.",
+      "Works via SMS, Email, Authenticator & TOTP.",
+      "Easily integrates into any existing system.",
     ],
   },
   {
     id: 2,
     question: "Website Security",
     answer:
-      "Safeguard your website from cyber threats with real-time protection, malware scanning, and traffic monitoring.",
+      "Safeguard your website from hacks, malware, and data breaches with real-time protection, threat scanning, and performance optimization at an affordable price.",
     icon: "🌐",
     link: "/website-security",
     points: [
-      "Detects and removes malware automatically.",
-      "Blocks attacks with Web Application Firewall (WAF).",
-      "Monitors real-time traffic for unusual behavior.",
-      "Enforces HTTPS to ensure secure content delivery.",
+      "Malware removal & vulnerability patching.",
+      "Real-time security monitoring & firewall setup.",
+      "SSL, backups & DDoS protection.",
+      "Speed boost with CDN & secure caching.",
     ],
   },
   {
     id: 3,
     question: "Network Security",
     answer:
-      "Protect your infrastructure with advanced network security protocols that defend against cyberattacks and unauthorized access.",
+      "Protect your systems and sensitive data from cyber threats with a powerful Network Security setup, ensuring safe access and high performance across your digital operations.",
     icon: "🛡️",
     link: "/network-security",
     points: [
-      "Uses intrusion prevention systems to block threats.",
-      "Filters harmful traffic with next-gen firewalls.",
-      "Continuously scans network activity for anomalies.",
-      "Secures remote connections via VPN integration.",
+      "Real-time protection with Firewall & DLP.",
+      "Secure access via VPN & ZTNA.",
+      "Access Control & Network Segmentation.",
+      "Cloud-based security & breach prevention.",
     ],
   },
   {
     id: 4,
     question: "Database Security",
     answer:
-      "Keep sensitive data secure with encryption, strict access controls, and proactive vulnerability detection.",
+      "Keep your sensitive business data safe from leaks, unauthorized access, and internal misuse with smart policies and secure configurations.",
     icon: "🗄️",
     link: "/database-security",
     points: [
-      "Encrypts data at rest and in transit for complete protection.",
-      "Limits access to authorized users only.",
-      "Conducts regular audits to uncover security gaps.",
-      "Defends against SQL injection and data leaks.",
+      "Multi-layered Authentication & Access Control.",
+      "Inference & Flow Control to restrict data leakage.",
+      "Encryption & Statistical Methods to safeguard stored data.",
+      "Integrated with your Firewall, 2FA, and Hosting Security.",
     ],
   },
   {
     id: 5,
-    question: "Code Audit",
+    question: "Code Audit Services",
     answer:
-      "Ensure clean, secure, and optimized code by identifying vulnerabilities and inefficiencies before deployment.",
+      "Ensure your codebase is secure, scalable, and ready for growth with comprehensive audits that identify and fix vulnerabilities, bugs, and compliance gaps.",
     icon: "💻",
     link: "/code-audit",
     points: [
-      "Finds hidden bugs and security loopholes in source code.",
-      "Checks compliance with industry coding standards.",
-      "Improves overall performance and readability.",
-      "Delivers a detailed audit report with fixes.",
+      "In-depth security & vulnerability assessment.",
+      "Performance & architecture optimization.",
+      "Compliance check (PCI-DSS, GDPR, HIPAA, etc.).",
+      "Technical debt & maintainability review.",
     ],
   },
   {
     id: 6,
-    question: "DDOS Protection",
+    question: "DDoS Protection",
     answer:
-      "Prevent outages and downtime during high-traffic events with enterprise-grade DDoS mitigation strategies.",
+      "Prevent downtime from sudden traffic spikes or brute-force cyber attacks with robust DDoS Protection Services, ensuring your business stays online and accessible.",
     icon: "⚡",
     link: "/ddos-protection",
     points: [
-      "Blocks both volumetric and application-layer attacks.",
-      "Distributes traffic using a global CDN for stability.",
-      "Offers real-time threat detection and alerts.",
-      "Maintains uptime even during heavy traffic surges.",
+      "Always-on attack detection (Layer 3–7).",
+      "Web Application Firewall + rate limiting.",
+      "Global CDN scrubbing & anomaly-based filtering.",
+      "Real-time alerts, expert support & cost-safe scalability.",
     ],
   },
 ];
@@ -33071,68 +32924,68 @@ function NIQ1() {
   const t = [
       {
         id: 1,
-        name: "Digital Payments (UPI/Cards/Net Banking)",
+        name: "Payment Portals",
         link: "#",
       },
       {
         id: 2,
-        name: "Bill Payment Software",
+        name: "Landing Platforms",
         link: "#",
       },
       {
         id: 3,
-        name: "Money Transfer Services",
+        name: "Wealth Management Apps",
         link: "#",
       },
       {
         id: 4,
-        name: "Fintech API Services",
+        name: "Insurance Tech",
         link: "#",
       },
-      {
-        id: 5,
-        name: "Commission-based Admin Panel",
-        link: "#",
-      },
-      {
-        id: 6,
-        name: "White Label & Reseller Panel",
-        link: "#",
-      },
+      // {
+      //   id: 5,
+      //   name: "Commission-based Admin Panel",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6,
+      //   name: "White Label & Reseller Panel",
+      //   link: "#",
+      // },
     ],
     e = [
       {
         id: 1,
-        title: "Real-Time Data Analytics:",
-        desc: "Access actionable insights with real-time financial data aggregation and analytics for smarter decision-making in Bhopal.",
+        title: "UPI & Payment Gateway Integration",
+        desc: "Seamless money transfer and instant payment collection with secured UPI and gateway APIs.",
         img: _N,
       },
       {
         id: 2,
-        title: "Robust Security & Compliance",
-        desc: "Ensure secure transactions and regulatory compliance with KYC, AML, and GDPR-ready features tailored for India’s fintech landscape.",
+        title: "Secure Payin/Payout API Solution",
+        desc: "Enable safe inward and outward fund transfers with real-time, encrypted payin/payout APIs.",
         img: bN,
       },
     ],
     n = [
       {
         id: 1,
-        title: "Why We Are the Best Company?",
+        title: "What is a fintech company?",
         description:
-          "At Payzon, we take pride in being the best fintech API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable fintech solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+          "A fintech company develops financial technology solutions to improve how people manage and move money. Payzon India Pvt. Ltd. is a leading fintech development company in Bhopal with expertise in UPI, gateway integration, and secure payin/payout systems.",
       },
       {
         id: 2,
-        title: "How the Process Works",
+        title: "What are the top 10 fintech companies in India?",
         description:
-          "When it comes to choosing the best company for fintech portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete fintech portal software solution that is secure, scalable, and fully customizable.",
+          "Some of India’s top fintech firms include Razorpay, Paytm, PhonePe, Cred, PolicyBazaar, Zerodha, Pine Labs, Groww, MobiKwik, and BharatPe.",
       },
       {
         id: 3,
         title:
-          " Why should I choose Payzon over other fintech portal software companies?",
+          "What are examples of fintech software?",
         description:
-          "Choosing Payzon means partnering with a company that truly understands the digital fintech ecosystem. Unlike generic platforms, Payzon provides a fully customizable fintech portal software solution designed for scalability, performance, and profitability. Our software comes with integrated Fintech API, reseller panels, and secure admin access — ideal for businesses of all sizes. Plus, with local support in Bhopal and PAN India service, you're never alone on your journey. We don't just sell software — we build long-term business success with our clients.",
+          "Examples include mobile wallets (Google Pay), loan apps (KreditBee), investment platforms (Groww), and banking-as-a-service tools (Open).",
       },
     ],
     r = [
@@ -33219,7 +33072,7 @@ function NIQ1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "Payzon offers a reliable fintech portal software solution designed for businesses across India, with a strong presence in Bhopal. Our cutting-edge platform combines powerful features like Payment Gateway API Integration, bill payment support, multi-service handling, and admin control to deliver seamless and secure services. Whether you're a startup or an enterprise, our system ensures uninterrupted performance, scalability, and full white-label support. With Payzon, stay ahead in the fast-growing fintech industry with an all-in-one solution tailored to your business needs.",
+                            "Fintech, or financial technology, refers to innovative software and digital tools that revolutionize how individuals and businesses manage money. It includes payment gateways, UPI systems, mobile wallets, banking apps, and investment platforms. As demand for digital finance grows, fintech development has become essential for secure, scalable, and efficient transactions.Main Fintech Software Applications",
                           ],
                         }),
                       }),
@@ -33266,7 +33119,7 @@ function NIQ1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                            "In today’s digital-first world, fintech development is vital for banks, NBFCs, startups, and e-commerce platforms. At Payzon India Pvt. Ltd., a trusted Fintech Development Company in Bhopal, we offer tailor-made software that automates transactions, enhances user experience, and complies with strict financial regulations. Our solutions are ideal for businesses looking to scale securely and meet growing digital demands.",
                         }),
                       }),
                     ],
@@ -33290,7 +33143,7 @@ function NIQ1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Discover India’s leading fintech portal software company – Payzon. We empower businesses with all-in-one solutions for digital payments, bill payments, money transfers, and more. With 24/7 support, secure architecture, and customized admin dashboards, we simplify operations. Our software includes reseller panels, commission setup, and supports Payment Gateway API Integration for maximum scalability. Whether you operate in Bhopal or across India, we ensure your digital fintech business runs smoothly and profitably.",
+                            "Fintech portals cover various digital financial operations and services. These platforms streamline financial activities, support compliance needs, and offer robust tools for seamless customer experiences. They empower businesses with smart automation, integration capabilities, and advanced data analytics.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -33330,7 +33183,7 @@ function NIQ1() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Our fintech portal software company delivers scalable, affordable, and secure solutions tailored to your business. Partnering with Payzon ensures uninterrupted digital service delivery with automated features, real-time reports, and API customization. Enjoy benefits like low-cost setup, multi-service support, bill payments, full control panel, and 24/7 uptime. Whether you're in Bhopal or expanding pan-India, we help you grow your fintech business with peace of mind.",
+                            "Fintech software offers fast, cost-effective, and secure digital financial services. It helps businesses reduce manual errors, improve transparency, and enhance customer satisfaction. From startups to large enterprises, fintech enables innovation and growth in the digital economy.",
                         }),
                       }),
                     ],
@@ -33371,29 +33224,29 @@ function NIQ2() {
   const t = [
       {
         id: 1,
-        name: "Online Store Creation",
+        name: "Amazon India",
         link: "#",
       },
       {
         id: 2,
-        name: "Multi-Vendor Marketplace Software",
+        name: "Flipkart",
         link: "#",
       },
       {
         id: 3,
-        name: "Payment Gateway Integration",
+        name: "Myntra",
         link: "#",
       },
       {
         id: 4,
-        name: "Product & Inventory Management",
+        name: "Snapdeal",
         link: "#",
       },
-      {
-        id: 5,
-        name: "Commission-based Admin Panel",
-        link: "#",
-      },
+      // {
+      //   id: 5,
+      //   name: "Commission-based Admin Panel",
+      //   link: "#",
+      // },
       // {
       //   id: 6   ,
       //   name: "API-Based Bulk Account Verification",
@@ -33403,36 +33256,36 @@ function NIQ2() {
     e = [
       {
         id: 1,
-        title: "Multi-Factor Authentication (MFA)",
-        desc: "Effortlessly manage multiple vendors with dedicated seller dashboards and commission tracking in Bhopal.",
+        title: "Dropshipping Store",
+        desc: "Build your online store without inventory hassles through reliable dropshipping models.",
         img: _N,
       },
       {
         id: 2,
-        title: "Advanced Product Search",
-        desc: "AI-powered search and filtering for a seamless shopping experience, optimized for customer satisfaction.",
+        title: "E-commerce store",
+        desc: "Create a powerful and feature-rich online store to showcase, manage, and sell products with ease.",
         img: bN,
       },
     ],
     n = [
       {
         id: 1,
-        title: "Why we are the best shopping portal software company?",
+        title: "What is a shopping portal?",
         description:
-          "At Payzon, we take pride in being the best e-commerce API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable shopping portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency",
+          "A shopping portal is an e-commerce website that allows businesses to list and sell products online, with integrated payment systems and customer management tools.",
       },
       {
         id: 2,
-        title: "Which Company is Best for Shopping Portal Software?",
+        title: ". Why choose Payzon for shopping portal development?",
         description:
-          "When it comes to choosing the best company for shopping portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete shopping portal software solution that is secure, scalable, and fully customizable.",
+          "Payzon India Pvt. Ltd. provides robust, scalable, and SEO-friendly shopping portals tailored to your business needs with quick deployment and advanced support.",
       },
-      // {
-      //   id: 3,
-      //   title: " What Are the Benefits of Our Services?",
-      //   description:
-      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
-      // },
+      {
+        id: 3,
+        title: "What are some top e-commerce platforms?",
+        description:
+          "Popular platforms include Amazon, Flipkart, Shopify, WooCommerce, and Payzon IWay Shopping.",
+      },
     ],
     r = [
       {
@@ -33518,7 +33371,7 @@ function NIQ2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "Payzon offers a reliable shopping portal software solution designed for businesses across India, with a strong presence in Bhopal. Our cutting-edge platform combines powerful features like Payment Gateway API Integration, multi-vendor support, product management, and admin control to deliver seamless and secure e-commerce services. Whether you're a startup or an enterprise, our system ensures uninterrupted performance, scalability, and full white-label support. With Payzon, stay ahead in the fast-growing e-commerce industry with an all-in-one solution tailored to your business needs.",
+                            "Shopping portal development involves creating an online e-commerce platform that enables businesses to sell products digitally. In today's fast-paced digital world, companies are launching their own online stores to increase visibility and sales. E-commerce portals offer complete product listing, secure transactions, inventory control, and user-friendly interfaces.",
                           ],
                         }),
                       }),
@@ -33565,7 +33418,7 @@ function NIQ2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                            "We develop shopping software like IWay Shopping, Payzon Shopify, and IWayShoppe—our in-house products designed for small to large-scale online businesses. Our tools support scalable stores, multi-vendor support, product uploads, order tracking, payment gateways, and SEO-friendly features to ensure online growth.",
                         }),
                       }),
                     ],
@@ -33579,7 +33432,7 @@ function NIQ2() {
                         child: "line",
                         staggerDelay: 0.03,
                         children: u.jsx("h2", {
-                          children: "We provide best services:",
+                          children: "Examples of Shopping Portals in India",
                         }),
                       }),
                       u.jsx(W, {
@@ -33589,7 +33442,7 @@ function NIQ2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Discover India’s leading shopping portal software company – Payzon. We empower businesses with all-in-one e-commerce solutions for online stores, multi-vendor marketplaces, payment processing, and more. With 24/7 support, secure architecture, and customized admin dashboards, we simplify operations. Our software includes reseller panels, commission setup, and supports Payment Gateway API Integration for maximum scalability. Whether you operate in Bhopal or across India, we ensure your digital shopping business runs smoothly and profitably.",
+                            "Shopping portals in India have revolutionized digital commerce by providing seamless shopping experiences. These platforms help businesses reach a broader audience, streamline inventory, and manage payments effectively while ensuring trust and speed.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -33619,7 +33472,7 @@ function NIQ2() {
                         child: "line",
                         staggerDelay: 0.03,
                         children: u.jsx("h3", {
-                          children: "We provide Work Benefits",
+                          children: "What Are the Benefits of Shopping Portals?",
                         }),
                       }),
                       u.jsx(W, {
@@ -33629,7 +33482,7 @@ function NIQ2() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Our shopping portal software company delivers scalable, affordable, and secure solutions tailored to your business. Partnering with Payzon ensures uninterrupted digital service delivery with automated features, real-time reports, and API customization. Enjoy benefits like low-cost setup, multi-vendor support, secure payments, full control panel, and 24/7 uptime. Whether you're in Bhopal or expanding pan-India, we help you grow your e-commerce business with peace of mind.",
+                            "Businesses are rapidly going online to tap into a growing customer base. Shopping portals reduce physical limitations, offer round-the-clock availability, and enable quick product search, comparison, and delivery—all while collecting valuable customer insights to improve future services.",
                         }),
                       }),
                     ],
@@ -33969,29 +33822,29 @@ function NIQ4() {
   const t = [
       {
         id: 1,
-        name: "Real-Time Flight Booking",
+        name: "MakeMyTrip",
         link: "#",
       },
       {
         id: 2,
-        name: "Hotel & Resort Reservations",
+        name: "Yatra",
         link: "#",
       },
       {
         id: 3,
-        name: "Tour & Activity Planning",
+        name: "Goibibo",
         link: "#",
       },
       {
         id: 4,
-        name: "Travel API Connectivity",
+        name: "Cleartrip",
         link: "#",
       },
-      {
-        id: 5,
-        name: "Flexible Commission Management",
-        link: "#",
-      },
+      // {
+      //   id: 5,
+      //   name: "Flexible Commission Management",
+      //   link: "#",
+      // },
       // {
       //   id: 6   ,
       //   name: "API-Based Bulk Account Verification",
@@ -34001,36 +33854,36 @@ function NIQ4() {
     e = [
       {
         id: 1,
-        title: "Global API Connectivity",
-        desc: "Integrate with leading travel APIs (e.g., Amadeus, Sabre) for real-time flight, hotel, and car rental bookings in Bhopal.",
+        title: "Tour Package Website",
+        desc: "Create and manage customizable tour packages for domestic and international travelers.",
         img: _N,
       },
       {
         id: 2,
-        title: "Smart Itinerary Builder",
-        desc: "Enable travelers to create and manage personalized travel plans with integrated maps and schedules.",
+        title: "Hotel & Flight Booking Website",
+        desc: "Enable users to book hotels and flights in real-time with secure payment integration.",
         img: bN,
       },
     ],
     n = [
       {
         id: 1,
-        title: "Why We Are the Best Travel Portal Software Company?",
+        title: " What is a travel portal?",
         description:
-          "At Payzon, we take pride in being the best travel API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable travel portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+          "A travel portal is a web platform that allows users to book flights, hotels, and holiday packages online through a single interface.",
       },
       {
         id: 2,
-        title: "How the Process Works for Our Travel Portal Software?",
+        title: "How does travel software help travel agents?",
         description:
-          "When it comes to choosing the best company for travel portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete travel portal software solution that is secure, scalable, and fully customizable.",
+          "It automates bookings, provides real-time availability, and reduces manual errors, saving time and boosting business.",
       },
-      // {
-      //   id: 3,
-      //   title: " What Are the Benefits of Our Services?",
-      //   description:
-      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
-      // },
+      {
+        id: 3,
+        title: " Can I customize the travel software?",
+        description:
+          "Yes, Payzon offers fully customizable modules for tours, bookings, and more to suit your business needs.",
+      },
     ],
     r = [
       {
@@ -34116,7 +33969,7 @@ function NIQ4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "Payzon provides a robust travel portal software solution crafted for businesses across India, with a strong foothold in Bhopal. Our state-of-the-art platform integrates advanced features like Booking API Integration, support for flights, hotels, and tour packages, and powerful admin controls to ensure seamless and secure travel services. Whether you’re a startup or a large enterprise, our solution guarantees high performance, scalability, and complete white-label customization. With Payzon, lead the booming travel industry with a comprehensive, tailored platform.",
+                            "Travel portal development is the process of building a digital platform for tour and travel businesses to manage bookings and offer services like flight, hotel, and holiday package reservations. In today's online-driven world, travel portals help agencies grow their reach and sales by providing customers with 24/7 booking options and convenience.",
                           ],
                         }),
                       }),
@@ -34163,7 +34016,7 @@ function NIQ4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                            "Travel software is now essential for tour operators. In today’s fast-moving digital world, travel agencies are scaling their businesses by launching their own websites and software tools. From holiday bookings to hotel reservations, customers now prefer quick online options, and agencies that use booking software are growing faster than ever.",
                         }),
                       }),
                     ],
@@ -34187,7 +34040,7 @@ function NIQ4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Payzon leads as India’s premier travel portal development company, equipping businesses with comprehensive solutions for online travel bookings, itinerary planning, and customer management. Our platform offers 24/7 technical support, secure payment systems, and customizable dashboards to optimize operations. Featuring reseller modules, flexible commission structures, and seamless Booking API integration, Payzon ensures scalability and profitability. Whether based in Bhopal or expanding nationwide, our travel portal software drives your business toward success with efficiency and innovation.",
+                            "India’s leading travel portals and agencies have seen exponential growth by investing in smart travel software. These platforms streamline operations, automate bookings, and deliver a better user experience to stay ahead in the competitive market.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -34227,7 +34080,7 @@ function NIQ4() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Payzon’s travel portal software offers powerful, cost-efficient, and secure platforms designed for your travel business. By partnering with us, you gain access to automated booking systems, detailed analytics, and customizable APIs that streamline operations. Enjoy low startup costs, support for multiple travel services, secure payment processing, intuitive admin panels, and uninterrupted uptime. From Bhopal to pan-India expansion, Payzon fuels your travel business growth with reliability and innovation.",
+                            "Payzon is trusted because we use our own software solutions. Our platform IWayTravels has helped us and our clients scale operations efficiently. We understand the challenges travel companies face and provide scalable, tested software that’s already producing results in the market.",
                         }),
                       }),
                     ],
@@ -34268,22 +34121,22 @@ function NIQ5() {
   const t = [
       {
         id: 1,
-        name: "Online Game Hosting",
+        name: "Instant Settlements",
         link: "#",
       },
       {
         id: 2,
-        name: "Multiplayer Game Support",
+        name: "Real-Time Tracking",
         link: "#",
       },
       {
         id: 3,
-        name: "Esports Tournament Management",
+        name: "Secure Transactions",
         link: "#",
       },
       {
         id: 4,
-        name: "Gaming API Integration",
+        name: "Customizable APIs",
         link: "#",
       },
       {
@@ -34300,36 +34153,36 @@ function NIQ5() {
     e = [
       {
         id: 1,
-        title: "Multiplayer Game Integration",
-        desc: "Enable seamless multiplayer gaming with real-time connectivity and API support for Bhopal-based gaming businesses.",
+        title: "Payment Gateway",
+        desc: "Enables secure and seamless online transactions for businesses accepting digital payments.",
         img: _N,
       },
       {
         id: 2,
-        title: "Interactive Leaderboards",
-        desc: "Engage players with dynamic, real-time leaderboards and reward systems to boost competition and retention.",
+        title: "Payment Processors",
+        desc: "Handles the backend operations to verify, authorize, and transfer funds during digital transactions.",
         img: bN,
       },
     ],
     n = [
       {
         id: 1,
-        title: " Why We Are the Best Gaming Portal Software Company?",
+        title: " What are the benefits of payin and payout software?",
         description:
-          "At Payzon, we take pride in being the best gaming API provider with a focus on innovation and customer satisfaction. Our experienced team builds secure, scalable, and profitable gaming portal solutions tailored for your success. From API setup to business support, we provide complete ownership and full transparency.",
+          "These systems automate financial transactions, reduce delays, enhance security, and simplify reconciliation.",
       },
       {
         id: 2,
-        title: "How the Process Works for Our Gaming Portal Software?",
+        title: "What are the types of payin and payout software?",
         description:
-          "When it comes to choosing the best company for gaming portal software, Payzon stands out as a trusted and innovative name in the industry. With a strong presence across India, including top-tier services in Bhopal, Payzon offers a complete gaming portal software solution that is secure, scalable, and fully customizable.",
+          "Payment gateways, banking APIs, wallet integration systems, and bulk transfer platforms are common types.",
       },
-      // {
-      //   id: 3,
-      //   title: " What Are the Benefits of Our Services?",
-      //   description:
-      //     "From enhancing system communication to improving development workflows and enabling automation, our API solutions reduce complexity and boost operational efficiency — making your digital ecosystem smarter, faster, and more connected.",
-      // },
+      {
+        id: 3,
+        title: " What is the purpose of payin and payout software?",
+        description:
+          "Its main purpose is to ensure timely, secure, and accurate digital transactions for both incoming and outgoing payments.",
+      },
     ],
     r = [
       {
@@ -34415,7 +34268,7 @@ function NIQ5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            "At Payzon India Pvt. Ltd, our Live Verification solution empowers businesses to verify user identities in real time via secure video or selfie-based checks. Ideal for compliance, fraud prevention, and user trust enhancement—our system delivers instant, authenticated results with zero friction.",
+                            "Payin and payout systems refer to financial technologies that manage incoming (payin) and outgoing (payout) transactions. These solutions are essential for automating and streamlining payment flows between businesses, vendors, and customers.",
                           ],
                         }),
                       }),
@@ -34462,7 +34315,7 @@ function NIQ5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                            "Payin and payout systems play a critical role in today’s digital economy. Businesses rely on them for smooth transaction handling, real-time settlements, and fraud protection. Whether it's an e-commerce company, fintech platform, or freelancer network, these systems ensure faster and secure money flow.",
                         }),
                       }),
                     ],
@@ -34476,7 +34329,7 @@ function NIQ5() {
                         child: "line",
                         staggerDelay: 0.03,
                         children: u.jsx("h2", {
-                          children: "We provide best services:",
+                          children: "Payin and Payout Benefits",
                         }),
                       }),
                       u.jsx(W, {
@@ -34486,7 +34339,7 @@ function NIQ5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Payzon stands as India’s premier gaming portal development company, empowering businesses with comprehensive solutions for online gaming, esports platforms, and community engagement. Our platform offers 24/7 support, secure infrastructure, and customizable dashboards to streamline game management. Featuring reseller modules, commission systems, and robust Gaming API integration, Payzon ensures scalability and profitability. Whether operating in Bhopal or expanding across India, we make your gaming business engaging, secure, and successful.",
+                            "Businesses using automated payin and payout solutions enjoy enhanced financial control, faster settlements, improved customer experience, and reduced manual errors. These tools also reduce compliance risks and improve operational efficiency.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -34516,7 +34369,7 @@ function NIQ5() {
                         child: "line",
                         staggerDelay: 0.03,
                         children: u.jsx("h3", {
-                          children: "We provide Work Benefits",
+                          children: " Who Needs Payin and Payout Services?",
                         }),
                       }),
                       u.jsx(W, {
@@ -34526,7 +34379,7 @@ function NIQ5() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Payzon’s gaming portal software delivers dynamic, cost-effective, and secure platforms tailored for your gaming business. Partnering with us provides access to automated game management, real-time player analytics, and flexible API integration for a seamless experience. Benefit from low setup costs, support for diverse gaming services, secure transactions, intuitive admin panels, and 24/7 uptime. From Bhopal to nationwide growth, Payzon fuels your gaming portal’s success with innovation and reliability.",
+                            "E-commerce platforms, digital wallets, subscription-based services, fintech companies, freelancers, logistics providers, and marketplaces all require payin and payout solutions to simplify bulk payments, manage vendor settlements, or enable smooth fund transfers.",
                         }),
                       }),
                     ],
@@ -35163,22 +35016,22 @@ function NIQ8() {
   const t = [
       {
         id: 1,
-        name: " VPS Hosting",
+        name: "99.9% Uptime Guarantee",
         link: "#",
       },
       {
         id: 2,
-        name: "Cloud Hosting",
+        name: "Easy cPanel Access",
         link: "#",
       },
       {
         id: 3,
-        name: "Dedicated Server ",
+        name: "Daily Backup Solution",
         link: "#",
       },
       {
         id: 4,
-        name: " Shared Hosting",
+        name: "24/7 Technical Support",
         link: "#",
       },
       // {
@@ -35195,42 +35048,42 @@ function NIQ8() {
     e = [
       {
         id: 1,
-        title: " VPS Hosting",
-        desc: " High-performance, flexible VPS hosting with full root access for businesses that need control, speed, and scalability.",
+        title: "VPS Hosting",
+        desc: "VPS Hosting gives flexible control, better speed, and security—ideal for growing websites needing scalability.",
         img: _N,
       },
       {
         id: 2,
-        title: "Cloud Hosting",
-        desc: " Ultra-fast, secure cloud hosting ideal for modern web apps and sites — powered by top-tier data centers.",
+        title: "Dedicated Hosting",
+        desc: "Dedicated Hosting offers complete server access for high performance, top security, and maximum control.",
         img: bN,
       },
     ],
     n = [
       {
         id: 1,
-        title: "What is Web Hosting?",
+        title: " What are the top 10 web hosting companies in India?",
         description:
-          " Web hosting is a service that allows individuals and businesses to publish their websites online. It involves storing your website files on a secure server that is accessible via the internet. At Payzon, we offer affordable web hosting in India with high uptime, fast load speeds, and 24/7 support for seamless website performance.",
+          " Top names include Payzon, Hostinger, Bluehost, HostGator, A2 Hosting, GoDaddy, BigRock, SiteGround, MilesWeb, and DreamHost.",
       },
       {
         id: 2,
-        title: "What are the Top 10 Web Hosting Services in Bhopal?",
+        title: "What are the types of web hosting available in India?",
         description:
-          "While there are several hosting providers in Bhopal, Payzon leads the list due to its powerful infrastructure, local support, and reliable hosting services. Other services may include Hostinger, Bluehost, GoDaddy, Hostgator, A2 Hosting, SiteGround, etc., but Payzon stands out for localized support and performance for businesses in Bhopal.",
+          "Common types include Shared Hosting, VPS Hosting, Dedicated Hosting, Cloud Hosting, and Reseller Hosting.",
       },
       {
         id: 3,
-        title: "hich is the Best Web Hosting in India?",
+        title: "How do I choose the right hosting service for my business?",
         description:
-          "The best web hosting in India depends on your specific needs — but for overall value, performance, and support, Payzon is highly recommended. We offer Windows hosting, VPS, cloud, and dedicated servers — all optimized for Indian audiences with competitive pricing and 24/7 technical assistance.",
+          "Evaluate your traffic needs, budget, security expectations, and technical expertise. VPS and dedicated hosting are ideal for businesses.",
       },
-      {
-        id: 4,
-        title: "What are the Top 10 Web Hosting Companies in India?",
-        description:
-          " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
-      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
     ],
     r = [
       {
@@ -35316,7 +35169,7 @@ function NIQ8() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children: [
-                            " Looking for a reliable web hosting company in Bhopal? Payzon offers powerful hosting solutions for every need — from startups to enterprise-grade projects. We are recognized as the best domain and hosting provider company in India, trusted for fast servers, 99.9% uptime, and professional support. Whether you need the best Windows hosting in India or scalable cloud infrastructure, our hosting plans are designed to match your growth and performance needs.",
+                            " Web hosting is a service that enables businesses and individuals to make their websites accessible on the internet. It involves storing website files on a secure server and delivering them to users when requested. A reliable hosting solution ensures fast loading, minimal downtime, and high-level security. If you're looking for the best domain and hosting provider company in India, Payzon delivers unmatched reliability, affordability, and customer support. We ensure your digital presence is always live, fast, and protected.",
                           ],
                         }),
                       }),
@@ -35363,7 +35216,2036 @@ function NIQ8() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Whether you are an enterprise, fintech, or digital platform, our solution helps reduce risks by detecting spoofed or mismatched faces, preventing identity fraud, and enabling secure, real-time KYC/KYB verification workflows.",
+                            "As a Web Hosting Company in Bhopal, Payzon offers Cheap, Reliable Windows Hosting in India. Our hosting services are designed to meet the needs of startups, agencies, and enterprises, delivering performance-driven results with 24/7 support.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: " Explore Our Excellent and Affordable Web Hosting Services",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our Windows Web Hosting services in Bhopal are tailored for seamless performance, fast speeds, and secure environments. Whether it's shared, VPS, or dedicated hosting, we have a solution that fits your business size and budget perfectly.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "The Best Server According to Your Requirement",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you're launching a blog or managing a corporate portal, we provide the best-fit hosting solutions. From gaming servers to scalable VPS and powerful dedicated servers, Payzon ensures optimized performance based on your business needs.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NYA() {
+  const t = [
+      {
+        id: 1,
+        name: "Sales Campaigns",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Awareness Campaigns",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Retargeting Campaigns",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Video Ad Campaigns",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Facebook Campaign",
+        desc: "Facebook Ads help in targeting specific audiences through interest, demographics, and behavior filters.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Google Campaign",
+        desc: "Google Ads target users searching for specific terms, making them highly effective for intent-based conversions.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What are the benefits of running Paid Ad Campaigns?",
+        description:
+          "They offer fast visibility, measurable ROI, and precise audience targeting.",
+      },
+      {
+        id: 2,
+        title: "What platforms are best for running paid ads?",
+        description:
+          "Google, Facebook, Instagram, YouTube, and LinkedIn are top choices for different business goals.",
+      },
+      {
+        id: 3,
+        title: "How can I track performance and conversions?",
+        description:
+          "By using tools like Google Analytics, Meta Pixel, and UTM tracking, you can monitor ad performance in real-time.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+   r = [
+      {
+        id: 1,
+        name: "Paid AD Campaign",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "SEO/SME Optimization",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Google PPC",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bulk Email/SMS",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Meta Verified Whatsapps",
+        link: "#",
+      },
+  
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            " Paid Ad Campaigns are targeted digital marketing strategies where businesses invest in ads on platforms like Google and Facebook to reach potential customers. These campaigns drive traffic, generate leads, and increase brand awareness through paid placements.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "At Payzon India Pvt. Ltd., we craft result-driven campaigns using Google Ads, Meta Ads, and YouTube Campaigns. Our approach focuses on ROI-based targeting with smart conversion tracking. We use CTA-driven ad creatives and compelling copywriting, alongside audience segmentation strategies to lower CPC and increase lead generation. Weekly performance reports and continuous optimization ensure maximum returns.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "Importance of Paid Ads",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Paid advertising is essential for businesses aiming to grow quickly in competitive markets. It offers measurable results, boosts brand visibility, and allows instant targeting of potential customers, making it ideal for generating quality leads and sales conversions.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "Why Choose Payzon India Pvt. Ltd.",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We combine data, design, and digital expertise to deliver impactful ad campaigns that convert. Our team ensures every rupee spent brings results—through deep market analysis, creative excellence, and smart ad distribution across platforms.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NYB() {
+  const t = [
+    
+  {
+    "id": 1,
+    "name": "Brand Awareness",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "name": "Audience Engagement",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "name": "Lead Generation",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "name": "Community Building",
+    "link": "#"
+  }
+
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+  {
+    "id": 1,
+    "title": "SEO",
+    "desc": "Boost search visibility and rankings with targeted SEO strategies from Payzon India Pvt. Ltd.",
+    "img": null
+  },
+  {
+    "id": 2,
+    "title": "SME",
+    "desc": "Grow your online audience with powerful social media strategies and creative brand engagement.",
+    "img": null
+  }
+],
+    n = [
+     
+  {
+    "id": 1,
+    "title": "Why is SEO important for businesses?",
+    "description": "SEO helps increase visibility, attract organic traffic, and generate leads by ranking higher in search results."
+  },
+  {
+    "id": 2,
+    "title": "What are the benefits of social media engagement (SME)?",
+    "description": "SME builds brand awareness, encourages customer interaction, and supports long-term business growth."
+  },
+  {
+    "id": 3,
+    "title": "How do SEO and SME work together?",
+    "description": "Together, they enhance online visibility and engagement—SEO drives search traffic, while SME nurtures connections."
+  }
+
+    ],
+   r = [
+      {
+        id: 1,
+        name: "Paid AD Campaign",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "SEO/SME Optimization",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Google PPC",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bulk Email/SMS",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Meta Verified Whatsapps",
+        link: "#",
+      },
+  
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "SEO (Search Engine Optimization) and SME (Social Media Engagement) are essential digital marketing strategies that help businesses grow their visibility and engagement online. SEO improves search engine rankings, while SME boosts brand reach and connection on social platforms. Together, they power up digital presence.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "As the Best Digital Marketing Company in Bhopal, Payzon India Pvt. Ltd. helps businesses build powerful online identities. With expert SEO and SME services, we increase visibility, generate quality leads, and enhance engagement for long-term digital success.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "Our Social Media Marketing Services",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our social media marketing strategies are designed to create impact and deliver results. We provide Profile Optimization for Facebook, Instagram & LinkedIn, Strategic Hashtag Planning & Engaging Content, Organic Follower Growth & Brand Reach, and Storytelling Reels & Carousel Creatives to boost brand loyalty and conversions.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "Advanced SEO Solutions",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our SEO services include Keyword Research & Competitor Analysis, Technical SEO with Website Audit & Optimization, Local SEO for Bhopal Businesses (Maps + GMB), Link Building + Article & Blog Submission, and Monthly Performance Reporting & Google Indexing to ensure high rankings and online authority.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NYC() {
+  const t = [
+
+  {
+    "id": 1,
+    "name": "Instant Traffic",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "name": "Targeted Reach",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "name": "ROI Tracking",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "name": "Conversion Boost",
+    "link": "#"
+  }
+
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+  {
+    "id": 1,
+    "title": "CTR (Click-Through Rate)",
+    "desc": "Measure how often users click your ad after seeing it—boost engagement with better CTR.",
+    "img": null
+  },
+  {
+    "id": 2,
+    "title": "Impressions",
+    "desc": "Track how many times your ad is shown—more impressions mean higher brand visibility.",
+    "img": null
+  }
+],
+    n = [
+  {
+    "id": 1,
+    "title": "What is Google PPC and how does it work?",
+    "description": "PPC lets advertisers bid on keywords to appear on top of  Google search results. You pay only when users click on your ad."
+  },
+  {
+    "id": 2,
+    "title": "How does PPC help local businesses in Bhopal?",
+    "description": "It offers instant visibility to potential local customers searching for your services, increasing traffic and inquiries."
+  },
+  {
+    "id": 3,
+    "title": "What makes a PPC campaign successful?",
+    "description": "Targeted keywords, engaging ad copy, proper landing pages, and continuous optimization ensure PPC campaign success."
+  }
+],
+    r = [
+      {
+        id: 1,
+        name: "Paid AD Campaign",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "SEO/SME Optimization",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Google PPC",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bulk Email/SMS",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Meta Verified Whatsapps",
+        link: "#",
+      },
+  
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Google Pay-Per-Click (PPC) advertising is a paid digital marketing strategy where businesses display ads on Google search and pay only when a user clicks on the ad. It's one of the fastest and most measurable ways to drive targeted traffic and boost conversions.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            " Google PPC helps businesses rank at the top of search results instantly. As a Digital Marketing Company in Bhopal, Payzon India Pvt. Ltd. offers ROI-focused PPC strategies with keyword targeting, compelling ad copy, and conversion tracking to boost sales and visibility.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "Short Benefits of Google PPC",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our Google PPC services include ROI-Based Campaigns, Keyword Research, Conversion Tracking, A/B Testing, Audience Targeting, and Regular Campaign Optimization. We help you generate high-quality leads and lower your cost per conversion with expert management.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "Why Choose Payzon for Google PPC in Bhopal ",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "At Payzon India Pvt. Ltd., we specialize in creating high-converting PPC campaigns for local and national businesses. With deep expertise, tailored strategies, and constant optimization, we help you achieve your business goals efficiently and profitably.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NYD() {
+  const t = [
+  {
+    "id": 1,
+    "name": "Instant Outreach",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "name": "Cost-Effective Campaigns",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "name": "High Open Rates",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "name": "Personalized Messaging",
+    "link": "#"
+  }
+
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+  {
+    "id": 1,
+    "title": "Bulk SMS",
+    "desc": "Send instant text messages to thousands—ideal for promotions, alerts, and updates.",
+    "img": null
+  },
+  {
+    "id": 2,
+    "title": "Bulk Email",
+    "desc": "Deliver personalized emails at scale—boost engagement, leads, and brand visibility.",
+    "img": null
+  }
+],
+    n =[
+  {
+    "id": 1,
+    "title": "What is bulk SMS and how does it work?",
+    "description": "Bulk SMS allows you to send messages to thousands of users at once via a secure and fast SMS gateway."
+  },
+  {
+    "id": 2,
+    "title": "Are bulk emails effective for promotions?",
+    "description": "Yes, they are great for newsletters, offers, and announcements, with measurable open and click rates."
+  },
+  {
+    "id": 3,
+    "title": "Can I track bulk campaign performance?",
+    "description": "Yes, we provide analytics such as delivery status, open rate, click-through rate, and conversions."
+  }
+],
+    r = [
+      {
+        id: 1,
+        name: "Paid AD Campaign",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "SEO/SME Optimization",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Google PPC",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bulk Email/SMS",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Meta Verified Whatsapps",
+        link: "#",
+      },
+  
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            " Bulk Email and SMS marketing is a direct communication strategy used by businesses to reach a large audience quickly and cost-effectively. It's widely used for promotions, updates, offers, and lead nurturing. Payzon India Pvt. Ltd. offers reliable bulk marketing solutions to help businesses boost conversions.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Bulk Email and SMS campaigns are powerful tools to deliver your message directly to users. As a digital marketing company in Bhopal, Payzon India Pvt. Ltd. helps businesses run permission-based campaigns with high delivery rates, click-throughs, and conversion tracking.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: " Our Bulk Marketing Services",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We craft personalized Bulk Email and SMS strategies including list segmentation, campaign automation, performance tracking, and A/B testing—ensuring your message hits the right inbox at the right time for better engagement and ROI.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: " Why Choose Payzon for Bulk Email/SMS Marketing",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We offer a reliable platform, secure database handling, template design, real-time analytics, and expert support to help you run successful Bulk Email and SMS campaigns. Whether it’s promotional or transactional, we ensure your messages are impactful and deliver results.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NYE() {
+  const t = [
+    {
+    "id": 1,
+    "name": "Verified Identity",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "name": "Trusted Branding",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "name": "Secure Messaging",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "name": "Improved Reach",
+    "link": "#"
+  },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+       {
+    "id": 1,
+    "title": "Trust Badge",
+    "desc": "Build instant credibility",
+    "img": null
+  },
+  {
+    "id": 2,
+    "title": "Secure Messaging",
+    "desc": "Protect user conversations",
+    "img": null
+  },
+    ],
+    n = [
+      {
+    "id": 1,
+    "title": "What is Meta Verified WhatsApp and how does it work?",
+    "description": "It’s a verified business profile on WhatsApp with a green tick badge that shows customers they are chatting with a legitimate business. It improves engagement and trust."
+  },
+  {
+    "id": 2,
+    "title": "How to get your business verified on WhatsApp?",
+    "description": "To become Meta Verified, your business must meet eligibility criteria, apply via WhatsApp Business API providers, and complete business verification through Meta."
+  },
+  {
+    "id": 3,
+    "title": "Why does a green tick matter for businesses?",
+    "description": "The green tick builds customer trust, confirms authenticity, improves open rates, and reduces spam complaints."
+  }
+    ],
+    r = [
+      {
+        id: 1,
+        name: "Paid AD Campaign",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "SEO/SME Optimization",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Google PPC",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Bulk Email/SMS",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Meta Verified Whatsapps",
+        link: "#",
+      },
+  
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Meta Verified WhatsApp is a powerful solution for businesses to build trust, credibility, and a verified presence on WhatsApp. With a green tick badge and verified identity, it ensures users that they’re interacting with an authentic brand. It enhances branding, enables secure communication, and improves customer engagement on one of the most widely used messaging platforms in India.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Meta Verified WhatsApp allows your brand to stand out with a verified green tick, proving your business's authenticity. It’s ideal for brands handling bulk chats, running ads, or offering customer support. Trusted by top businesses for secure and verified communication.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "Why Businesses Choose Meta Verified WhatsApp",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Meta Verified WhatsApp is not just a green tick; it's a credibility booster. It helps brands offer reliable, official communication and builds user trust. For businesses that rely on WhatsApp for customer engagement, it improves deliverability and brand recognition—especially in crowded markets like India. From customer support to product updates, verified WhatsApp profiles assure users of authentic communication. Improve message delivery, brand image, and response rates by verifying your business account. It’s the future of trust-based messaging.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "How Meta Verified WhatsApp Enhances Communication",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "With rising fraud and spam, users are cautious about who they interact with. A verified business profile with a green tick builds confidence and clarity. Customers are more likely to engage with a verified sender, which results in better CTR, lead generation, and overall ROI for businesses.Meta Verified WhatsApp filters out fake identities and allows only trusted businesses to communicate with customers. Whether it's for marketing, sales, or support, verified messaging drives better outcomes by reinforcing brand trust and ensuring authenticity.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWA() {
+  const t = [
+      {
+        id: 1,
+        name: "Enhanced login security",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Protection from hacking",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Better user trust",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Compliance-ready access",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "SMS-Based OTP Verification",
+        desc: " Get instant one-time passwords via mobile for fast, secure login.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Email Authentication",
+        desc: " Email-based codes for identity confirmation with custom branding options.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What is a Two-Factor Authentication Code?",
+        description:
+          " A unique code generated or sent to verify identity after password entry—via SMS, email, or authenticator apps.",
+      },
+      {
+        id: 2,
+        title: "How to Turn Off Two-Factor Authentication?",
+        description:
+          " You can turn off 2FA from your security settings, but it's advised only if alternate protection exists.",
+      },
+      {
+        id: 3,
+        title: "How Does the 2FA Process Work?",
+        description:
+          " Login starts with your password, followed by a second step like OTP or biometric verification. Only after both, access is granted.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Enhance your digital security with Two-Factor Authentication (2FA)—a proven method that adds an extra layer of identity verification beyond passwords. It's essential for protecting sensitive accounts and systems from modern cyber threats.2FA adds an extra security step to login systems by combining something you know (password) with something you have (OTP, device, biometric). This powerful combination drastically reduces the risk of hacking, phishing, and identity theft. At Payzon India Pvt. Ltd., we offer robust 2FA security and auditing solutions across Bhopal and India, tailored for websites, apps, admin panels, and cloud systems.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Payzon India Pvt. Ltd. provides advanced security and auditing services in Bhopal, including 2FA integration, website security, code audits, and network protection. We help businesses stay safe from cyber threats, ensure compliance, and secure digital systems with expert monitoring and customized security solutions.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "Benefits Of 2Fa Authentication",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Two-Factor Authentication (2FA) adds an extra layer of protection to your accounts, reducing the risk of hacking, identity theft, and data breaches. It ensures that only authorized users can access sensitive systems by requiring a second step beyond passwords—like OTP, biometrics, or app codes.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Two-Factor Authentication (2FA) adds an extra layer of security, protecting your accounts from unauthorized access and cyber threats. It boosts user trust and ensures compliance. Common 2FA types include SMS-based OTP, email verification, authenticator apps, and biometric scans.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWB() {
+  const t = [
+      {
+        id: 1,
+        name: " 24/7 Support",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Malware Scan",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Firewall Setup ",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "SSL Integration",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Website Firewall",
+        desc: "Safeguard your site from hackers and bots with an advanced Web Application Firewall (WAF) that filters malicious traffic.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "SSL Certification",
+        desc: "Encrypt your website and protect user data with trusted SSL certificates that boost SEO and trust.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What makes website security so simple?",
+        description:
+          "With our one-click SSL setup, auto malware scans, and user-friendly firewall dashboards, securing your website is easier than ever.",
+      },
+      {
+        id: 2,
+        title: ". Where can I find my SSL certificate?",
+        description:
+          " Once installed, you can view your SSL certificate details via your hosting panel or by clicking the padlock icon in your browser's address bar.",
+      },
+      {
+        id: 3,
+        title: "How does a Web Application Firewall (WAF) secure my site?",
+        description:
+          " A WAF filters incoming traffic, blocks malicious bots and hackers, and prevents threats like SQL injection and cross-site scripting (XSS) before they reach your server.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Website security is the practice of protecting your site, data, and users from cyber threats like hacking, malware, data breaches, and DDoS attacks. At Payzon India Pvt. Ltd., we offer reliable website security solutions in Bhopal including 2FA, SSL, firewalls, vulnerability scanning, and malware protection—customized for startups, businesses, and enterprise platforms.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We offer all essential services under website security—SSL setup, malware scanning, vulnerability patching, firewall integration, 2FA setup, DDoS protection, database security, and server monitoring. As the best website security services provider in Bhopal, we deliver fast, affordable, and custom-fit protection.  ",
                         }),
                       }),
                     ],
@@ -35387,7 +37269,615 @@ function NIQ8() {
                         staggerDelay: 0.01,
                         children: u.jsx("p", {
                           children:
-                            "Finding the right server is essential for your online success. At Payzon, we provide hosting services that suit all business sizes — whether you’re launching your first website or managing complex applications. Our hosting includes:",
+                            "Website security protects your business from cyber threats like malware, hacking, and data breaches. It ensures customer trust, secure transactions, and higher search rankings. Features like SSL certificates, firewall protection, 2FA, and malware scanning reduce risk and enhance website credibility. At Payzon India Pvt. Ltd., we offer trusted website security services in Bhopal to keep your digital presence secure, fast, and compliant.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "A secure website builds trust and shows users their data is protected. Features like SSL certificates, HTTPS, firewall protection, and secure login systems help users feel safe browsing or making transactions. At Payzon India Pvt. Ltd., we ensure your website not only stays protected but also looks secure to every visitor.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWC() {
+  const t = [
+      {
+        id: 1,
+        name: " Role-based Access",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Data Encryption",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Backup & Recovery",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Real-Time Monitoring",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Access Control",
+        desc: " Limit data access only to authorized users using role-based permissions.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Encryption",
+        desc: "Encrypt sensitive data to protect it during storage and transmission.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: " What Are the Basics of Database Security?",
+        description:
+          "It includes user authentication, access control, encryption, auditing, and regular patching to keep your data safe and compliant.",
+      },
+      {
+        id: 2,
+        title: " What Type of Data Needs Protection?",
+        description:
+          " Personal details, financial records, intellectual property, login credentials, and customer info all require strong database security.",
+      },
+      {
+        id: 3,
+        title: "How Can I Tell If My Database Is Secure?",
+        description:
+          " You need a security audit. If you're not using encryption, firewalls, or tracking access, your data is at risk. Contact us for a full audit.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+   r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            " Code audit is a systematic review of software source code to identify bugs, security vulnerabilities, performance bottlenecks, and code quality issues. It helps developers follow best practices, ensures clean and scalable architecture, and prevents future breakdowns. Code audits are essential before product launches, major updates, or integration with third-party APIs. At Payzon India Pvt. Ltd., we offer expert code audit services in Bhopal, tailored to boost performance and security.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Optimizes code for speed, stability, and maintainability with best coding practices.Our Code Audit Services in Bhopal include detailed security vulnerability checks and performance reviews. We identify hidden threats, fix poor coding practices, and ensure your software is secure, fast, and scalable — ready for growth and long-term success.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            " Whether you're launching a new product, scaling an existing app, or migrating systems, auditing your codebase ensures it’s secure, efficient, and error-free. Our team uncovers hidden vulnerabilities, outdated libraries, and logic flaws. With Payzon’s professional code auditing in Bhopal, you get a detailed report with actionable fixes for clean, high-performing code.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We ensure your code meets modern security standards, adheres to best practices, and performs well under stress. From fintech to e-commerce apps, our audits cover it all. With deep manual inspection and automated tools, we detect weak points, prevent future breakdowns, and ensure full regulatory compliance.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWD() {
+  const t = [
+      {
+        id: 1,
+        name: "Malware Attacks",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Data Breaches",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Phishing Scams",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "DDOS Attacks",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " Firewall Protection",
+        desc: " Blocks unauthorized access and filters malicious traffic effectively.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: " Endpoint Security  ",
+        desc: "  Secures all connected devices across your network infrastructure.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What Are the Essential Components of Network Security?",
+        description:
+          " Firewalls, intrusion prevention systems, antivirus software, encryption, VPNs, and endpoint protection form the core of secure network infrastructure.",
+      },
+      {
+        id: 2,
+        title: " What Are the Different Types of Vulnerabilities in Network Security?",
+        description:
+          " Weak passwords, outdated software, misconfigured firewalls, unsecured devices, and social engineering are common vulnerabilities exploited by attackers.",
+      },
+      {
+        id: 3,
+        title: "How to Achieve Strong Network Security?",
+        description:
+          " Regular audits, firewall setup, encrypted data, 2FA, strong policies, and trusted tools from providers like Payzon India Pvt. Ltd. ensure network protection.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Network security is the practice of protecting digital networks, data, and infrastructure from unauthorized access, cyberattacks, and data breaches. At Payzon India Pvt. Ltd., we offer reliable Network Security Services in Bhopal tailored to secure your business operations, users, and assets 24/7.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "People often search for network monitoring, remote access VPN, intrusion detection systems (IDS), data loss prevention, and cloud network security. At Payzon India Pvt. Ltd., we offer all-in-one network security services in Bhopal tailored to your needs.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            " Network security safeguards your systems from malware, phishing, ransomware, and DDoS attacks. It ensures your digital infrastructure is protected 24/7 through firewalls, real-time monitoring, and threat response tools—keeping your business data safe from every angle.",
                         }),
                       }),
                       u.jsx("ul", {
@@ -35428,6 +37918,614 @@ function NIQ8() {
                         children: u.jsx("p", {
                           children:
                             "We specialize in cheap, reliable Windows hosting in India, optimized for performance and affordability. Whether you're a developer, freelancer, or enterprise, our robust infrastructure, expert support, and easy control panels make us the first choice in Bhopal and across India.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWE() {
+  const t = [
+      {
+        id: 1,
+        name: " Enhances Code Security",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Improves Performance",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Ensures Code Quality ",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Reduces Future Risks",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: " Security Vulnerability Assessment",
+        desc: "Detects code flaws to prevent hacking, data breaches, and ensure secure software.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Performance & Code Quality Review",
+        desc: " Optimizes code for speed, stability, and maintainability with best coding practices.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "What is the purpose of a code audit?",
+        description:
+          "  To detect bugs, security flaws, and performance issues before they impact users or systems. It ensures quality and minimizes future risks.",
+      },
+      {
+        id: 2,
+        title: " When should I perform a code audit?",
+        description:
+          " Before launching, after major updates, or during security reviews. It’s essential after mergers, vendor changes, or sudden crashes.",
+      },
+      {
+        id: 3,
+        title: "What tools do you use for auditing code?",
+        description:
+          " We use a mix of static code analysis tools, manual review, vulnerability scanners, and performance benchmarking tools for thorough evaluation.",
+      },
+      // {
+      //   id: 4,
+      //   title: "What are the Top 10 Web Hosting Companies in India?",
+      //   description:
+      //     " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+      // },
+    ],
+    r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Code audit is a systematic review of software source code to identify bugs, security vulnerabilities, performance bottlenecks, and code quality issues. It helps developers follow best practices, ensures clean and scalable architecture, and prevents future breakdowns. Code audits are essential before product launches, major updates, or integration with third-party APIs. At Payzon India Pvt. Ltd., we offer expert code audit services in Bhopal, tailored to boost performance and security.",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Our Code Audit Services in Bhopal include detailed security vulnerability checks and performance reviews. We identify hidden threats, fix poor coding practices, and ensure your software is secure, fast, and scalable — ready for growth and long-term success.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Whether you're launching a new product, scaling an existing app, or migrating systems, auditing your codebase ensures it’s secure, efficient, and error-free. Our team uncovers hidden vulnerabilities, outdated libraries, and logic flaws. With Payzon’s professional code auditing in Bhopal, you get a detailed report with actionable fixes for clean, high-performing code.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "We ensure your code meets modern security standards, adheres to best practices, and performs well under stress. From fintech to e-commerce apps, our audits cover it all. With deep manual inspection and automated tools, we detect weak points, prevent future breakdowns, and ensure full regulatory compliance.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsx(W, {
+                    className: "text-n900 fw-extra-bold mb-lg-6 mb-4",
+                    splitType: "words",
+                    child: "word",
+                    staggerDelay: 0.01,
+                    children: u.jsx("h4", {
+                      children: "Why Choose Us?",
+                    }),
+                  }),
+                  u.jsx(TN, {
+                    accordionData: n,
+                  }),
+                ],
+              }),
+              u.jsxs("div", {
+                className:
+                  "col-lg-4 ps-xxl-15 ps-xl-10 ps-lg-8 position-sticky sticky-lg-top z-3",
+                children: [
+                  u.jsx(jN, {
+                    serviceList: r,
+                  }),
+                  u.jsx(EN, {}),
+                ],
+              }),
+            ],
+          }),
+        }),
+      }),
+    }),
+  });
+}
+function NWF() {
+  const t = [
+      {
+        id: 1,
+        name: "Traffic Filtering",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "IP Rate-Limiting",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "CDN Shielding ",
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "Real-Time Monitoring",
+        link: "#",
+      },
+      // {
+      //   id: 5,
+      //   name: "API‑Based Bulk Live Verification",
+      //   link: "#",
+      // },
+      // {
+      //   id: 6   ,
+      //   name: "API-Based Bulk Account Verification",
+      //   link: "#",
+      // },
+    ],
+    e = [
+      {
+        id: 1,
+        title: "Downtime",
+        desc: "Website crashing due to attacks? Get 24/7 DDoS protection to keep your site always live.",
+        img: _N,
+      },
+      {
+        id: 2,
+        title: "Overload",
+        desc: " Too many fake requests slowing your site? We filter traffic and block bot floods instantly.",
+        img: bN,
+      },
+    ],
+    n = [
+      {
+        id: 1,
+        title: "How to protect your site against a DDoS attack?",
+        description:
+          "Start with a trusted DDoS mitigation service. Use a web application firewall (WAF), scalable cloud hosting, and traffic monitoring tools. Deploy rate-limiting, geo-IP filtering, and alert-based response systems. Always keep your security software updated.",
+      },
+      {
+        id: 2,
+        title: "How does DDoS protection work?",
+        description:
+          "DDoS protection works by identifying abnormal traffic patterns and blocking malicious IPs in real-time. It filters out fake or excessive requests before they hit your server, using methods like load balancing, WAFs, and advanced monitoring to keep your site running smoothly.",
+      },
+      {
+        id: 3,
+        title: "What are the 2 types of DDoS attacks and examples?",
+        description:
+          " UDP floods that consume bandwidth., HTTP floods that mimic legitimate user traffic.",
+      },
+    //   {
+    //     id: 4,
+    //     title: "What are the Top 10 Web Hosting Companies in India?",
+    //     description:
+    //       " India hosts many web hosting companies, including Hostinger, Bluehost, GoDaddy, A2 Hosting, BigRock, SiteGround, and more. However, Payzon ranks among the top Indian web hosting companies due to our secure infrastructure, affordable plans, and customized solutions for local and national businesses.",
+    //   },
+     ],
+    r = [
+      {
+        id: 1,
+        name: "2FA Authentication",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "Web Security",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: "Network Security",
+        link: "/fintech-development",
+      },
+      {
+        id: 4,
+        name: "Database Security",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "Code Audit",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "DDoS Prodection",
+        link: "#",
+      },
+      // {
+      //   id: 7,
+      //   name: "e-KYC Portal",
+      //   link: "#",
+      // },
+      // {
+      //   id: 8,
+      //   name: "Web Hosting",
+      //   link: "#",
+      // },
+    ];
+  return u.jsx("section", {
+    className:
+      "service-details-section section-blur section-left-margin pt-120 pb-120 ",
+    children: u.jsx("div", {
+      className: "container-fluid px-4xl-14 px-3xl-12 px-xxl-10",
+      children: u.jsx("div", {
+        className: "row justify-content-center",
+        children: u.jsx("div", {
+          className: "col-3xl-11",
+          children: u.jsxs("div", {
+            className: "row g-6",
+            children: [
+              u.jsxs("div", {
+                className: "col-lg-8",
+                children: [
+                  u.jsx("div", {
+                    className: "service-details-banner mb-lg-10 mb-8",
+                    children: u.jsx("img", {
+                      className: "w-100",
+                      src: SN,
+                      alt: "service details banner",
+                    }),
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h1", {
+                          children: "Service Overview",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children: [
+                            "Fintech, or financial technology, refers to innovative software and digital tools that revolutionize how individuals and businesses manage money. It includes payment gateways, UPI systems, mobile wallets, banking apps, and investment platforms. As demand for digital finance grows, fintech development has become essential for secure, scalable, and efficient transactions.Main Fintech Software Applications",
+                          ],
+                        }),
+                      }),
+                      u.jsx("div", {
+                        className:
+                          "d-flex flex-wrap flex-sm-nowrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: e.map((i) =>
+                          u.jsxs(
+                            "div",
+                            {
+                              className:
+                                "d-flex gap-lg-6 gap-4 justify-content-between align-items-center",
+                              children: [
+                                u.jsx("div", {
+                                  className: "rounded-circle overflow-hidden",
+                                  children: u.jsx("img", {
+                                    className: "w-100",
+                                    src: i.img,
+                                    alt: "service icon",
+                                  }),
+                                }),
+                                u.jsxs("div", {
+                                  children: [
+                                    u.jsx("h4", {
+                                      className: "text-n900 fw-extra-bold mb-4",
+                                      children: i.title,
+                                    }),
+                                    u.jsx("p", {
+                                      className: "text-n500",
+                                      children: i.desc,
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "In today’s digital-first world, fintech development is vital for banks, NBFCs, startups, and e-commerce platforms. At Payzon India Pvt. Ltd., a trusted Fintech Development Company in Bhopal, we offer tailor-made software that automates transactions, enhances user experience, and complies with strict financial regulations. Our solutions are ideal for businesses looking to scale securely and meet growing digital demands.",
+                        }),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h2", {
+                          children: "We provide best services:",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Fintech portals cover various digital financial operations and services. These platforms streamline financial activities, support compliance needs, and offer robust tools for seamless customer experiences. They empower businesses with smart automation, integration capabilities, and advanced data analytics.",
+                        }),
+                      }),
+                      u.jsx("ul", {
+                        className:
+                          "list-w-50 list-disc d-flex flex-wrap gap-lg-6 gap-4 justify-content-between align-items-center",
+                        children: t.map((i) =>
+                          u.jsx(
+                            "li",
+                            {
+                              children: u.jsx(oe, {
+                                to: i.link,
+                                children: i.name,
+                              }),
+                            },
+                            i.id
+                          )
+                        ),
+                      }),
+                    ],
+                  }),
+                  u.jsxs("div", {
+                    className: "d-grid gap-lg-6 gap-4 mb-lg-10 mb-md-8 mb-6",
+                    children: [
+                      u.jsx(W, {
+                        className: "text-n900 fw-extra-bold",
+                        splitType: "lines",
+                        child: "line",
+                        staggerDelay: 0.03,
+                        children: u.jsx("h3", {
+                          children: "We provide Work Benefits",
+                        }),
+                      }),
+                      u.jsx(W, {
+                        className: "text-n500",
+                        splitType: "words",
+                        child: "word",
+                        staggerDelay: 0.01,
+                        children: u.jsx("p", {
+                          children:
+                            "Fintech software offers fast, cost-effective, and secure digital financial services. It helps businesses reduce manual errors, improve transparency, and enhance customer satisfaction. From startups to large enterprises, fintech enables innovation and growth in the digital economy.",
                         }),
                       }),
                     ],
@@ -35780,7 +38878,7 @@ function NIA() {
     subHeading: "Service Details",
     heading: "Fintech Portal  Development ",
     description:
-      "Payzon offers India’s top Fintech Portal Software Solution with Payment Gateway API Integration, bill payment support & multi-service software for businesses.",
+      "Leading Fintech Development Company in Bhopal. Get secure UPI, payin/payout APIs & fintech software solutions with Payzon India Pvt. Ltd.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35799,7 +38897,7 @@ function NIB() {
     subHeading: "Service Details",
     heading: "Shopping Portal ",
     description:
-      "Payzon offers India’s top Shopping Portal Software Solution with Payment Gateway API Integration, multi-vendor support & e-commerce software for businesses.",
+      "Get professional shopping portal development with Payzon India Pvt. Ltd. in Bhopal. Build secure, scalable, and SEO-ready online stores.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35837,7 +38935,7 @@ function NID() {
     subHeading: "Service Details",
     heading: "Travel Portal  Development ",
     description:
-      "yzon delivers India’s premier Travel Portal Software with advanced booking API integration, multi-service travel solutions, and scalable platforms for travel businesses.",
+      "Build your travel portal with Payzon India Pvt. Ltd. in Bhopal. Hotel, flight, and tour booking software to grow your travel business fast and securely.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35854,9 +38952,9 @@ function NID() {
 function NIE() {
   const t = {
     subHeading: "Service Details",
-    heading: "Gaming Portal  Development ",
+    heading: "Payin and payout software",
     description:
-      " Payzon crafts India’s top Gaming Portal Software with seamless API integration, multiplayer support, and dynamic platforms for gaming businesses.",
+      " Payzon offers Payin & Payout software solutions in Bhopal. Secure, fast, and automated transactions for digital businesses and platforms.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35911,9 +39009,9 @@ function NIG() {
 function NIH() {
   const t = {
     subHeading: "Service Details",
-    heading: "Web Hosting ",
+    heading: " Web Hosting service",
     description:
-      "Payzon is the best domain and hosting provider company offering VPS, Cloud, Shared & Windows hosting solutions in Bhopal and across India.",
+      "Reliable Web Hosting Company in Bhopal – Payzon offers Cheap, Secure Windows Hosting in India with VPS, Dedicated Hosting, and daily backup solutions.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35951,7 +39049,7 @@ function NAA() {
     subHeading: "Service Details",
     heading: "Paid AD Campaign",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Boost your business with ROI-focused Paid Ad Campaigns in Bhopal by Payzon. Google Ads, Meta Ads & YouTube marketing with complete optimization support.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35959,7 +39057,7 @@ function NAA() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NYA, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -35970,7 +39068,7 @@ function NAB() {
     subHeading: "Service Details",
     heading: "SEO/SME Optimization",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      " Boost visibility & engagement with Payzon’s expert SEO & Social Media Marketing services in Bhopal. Drive traffic, leads & conversions.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35978,7 +39076,7 @@ function NAB() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NYB, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -35989,7 +39087,7 @@ function NAC() {
     subHeading: "Service Details",
     heading: "Google PPC",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Drive instant traffic and quality leads with Google PPC Ads. Maximize ROI through targeted keywords, optimized ad copy, and conversion-focused campaigns.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -35997,7 +39095,7 @@ function NAC() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NYC, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36008,7 +39106,7 @@ function NAD() {
     subHeading: "Service Details",
     heading: "Bulk Email/SMS",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Reach your audience instantly with Bulk Email & SMS Marketing. Boost engagement, drive sales, and grow your business with targeted messaging solutions.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36016,7 +39114,7 @@ function NAD() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NYD, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36027,7 +39125,7 @@ function NAE() {
     subHeading: "Service Details",
     heading: "Meta Verified Whatsapps",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      " Build trust with Meta Verified WhatsApp. Get a green tick badge, secure messaging & boost brand credibility with verified business communication.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36035,7 +39133,7 @@ function NAE() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NYE, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36046,7 +39144,7 @@ function NBA() {
     subHeading: "Service Details",
     heading: "2FA Authentication",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Secure your accounts with 2FA. Protect data using SMS OTP, email, biometrics & app codes. Enhance login safety with Payzon’s security solutions in Bhopal.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36054,7 +39152,7 @@ function NBA() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWA, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36064,7 +39162,7 @@ function NBB() {
     subHeading: "Service Details",
     heading: "Website Security",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Protect your website with SSL, firewall, and 24/7 monitoring. Get trusted website security services in Bhopal from Payzon India Pvt. Ltd.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36072,7 +39170,7 @@ function NBB() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWB, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36083,7 +39181,7 @@ function NBC() {
     subHeading: "Service Details",
     heading: "Database Security",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Protect your business data with trusted Database Security Services in Bhopal. Get encryption, access control & threat monitoring by Payzon India Pvt. Ltd.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36091,7 +39189,7 @@ function NBC() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWC, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36102,7 +39200,7 @@ function NBD() {
     subHeading: "Service Details",
     heading: "Network Security",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Get advanced Network Security Services in Bhopal including firewall setup, VPN access, endpoint security, and intrusion detection by Payzon India Pvt. Ltd.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36110,7 +39208,7 @@ function NBD() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWD, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36120,7 +39218,7 @@ function NBE() {
     subHeading: "Service Details",
     heading: "Code Audit",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "Get expert code audit services in Bhopal with Payzon India Pvt. Ltd. Improve security, performance & compliance with deep manual and automated code reviews. ",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36128,7 +39226,7 @@ function NBE() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWE, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -36136,9 +39234,9 @@ function NBE() {
 function NBF() {
   const t = {
     subHeading: "Service Details",
-    heading: "DDOS Protection",
+    heading: "DDoS Protection",
     description:
-      "Ensure real-time identity confirmation and fraud prevention through our Live Verification service. Enable secure, instantaneous user validation to enhance trust and streamline digital onboarding.",
+      "A DDoS attack (Distributed Denial of Service) is a malicious attempt to overwhelm a server, network, or website with excessive internet traffic. It disrupts services, slows down performance, and causes website crashes — affecting customer trust and business operations.",
   };
 
   return u.jsxs(u.Fragment, {
@@ -36146,7 +39244,7 @@ function NBF() {
       u.jsx(yr, {
         pageHeading: t,
       }),
-      u.jsx(NIQ8, {}),
+      u.jsx(NWF, {}),
       // u.jsx(NN, {}),
     ],
   });
@@ -38306,7 +41404,7 @@ const dk = () => {
               element: u.jsx(NhD, {}),
             }),
             u.jsx(on, {
-              path: "/fitech-portal",
+              path: "/fintech-portal",
               element: u.jsx(NIA, {}),
             }),
             u.jsx(on, {
@@ -38322,7 +41420,7 @@ const dk = () => {
               element: u.jsx(NID, {}),
             }),
             u.jsx(on, {
-              path: "/gaming-portal",
+              path: "/payin-payout-portal",
               element: u.jsx(NIE, {}),
             }),
             u.jsx(on, {
@@ -38435,7 +41533,7 @@ function fk() {
       });
     }, []),
     u.jsx("div", {
-      className: `back-to-top position-fixed end-0 bottom-0 z-3 d-center me-5 ${
+      className: `back-to-top position-fixed end-0 bottom-0 z-10 d-center me-5 ${
         t ? "show" : ""
       }`,
       onClick: n,
