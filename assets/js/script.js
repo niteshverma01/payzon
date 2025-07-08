@@ -28814,6 +28814,7 @@ function wN() {
     ],
   });
 }
+// hello
 const SN = "./assets/images/service-details-banner-BFch8xzX.png",
   _N = "./assets/images/endpoint-security-lO6qB5mk.png",
   bN = "./assets/images/network-security-e89DiW7s.png";
@@ -28825,7 +28826,7 @@ function TN({ accordionData: t }) {
       u.jsxs(
         "div",
         {
-          className: `accordion-item p-lg-6 p-4 bg-primary-75 ${
+          className: `accordion-item p-lg-6 md:p-6 p-4 bg-primary-75 ${
             e === r.id ? "show" : ""
           }`,
           children: [
